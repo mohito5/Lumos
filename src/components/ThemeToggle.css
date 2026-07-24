@@ -1,0 +1,67 @@
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle-label {
+  font-size: 16px;
+  color: var(--text-color);
+  user-select: none;
+}
+
+.theme-toggle-switch {
+  position: relative;
+  width: 60px;
+  height: 34px;
+  background-color: var(--primary-color-2-tr);
+  border-radius: 34px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* Убираем подсветку при касании на мобильных */
+}
+
+.theme-toggle-switch .icons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7px;
+    box-sizing: border-box;
+}
+
+.theme-toggle-switch .icons .icon {
+    font-size: 16px;
+    transition: opacity 0.2s ease, transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    color: var(--accent-color-1);
+}
+
+/* Скрываем неактивную иконку */
+.theme-toggle-switch[data-theme="light"] .icon.dark {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.8);
+}
+
+.theme-toggle-switch[data-theme="dark"] .icon.light {
+    opacity: 0;
+    transform: translateX(10px) scale(0.8);
+}
+
+.theme-toggle-slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 26px;
+  height: 26px;
+  background-color: var(--accent-color-2);
+  border-radius: 50%;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Та самая "прыгучая" анимация */
+}
+
+/* Двигаем ползунок для тёмной темы */
+.theme-toggle-switch[data-theme="dark"] .theme-toggle-slider {
+  transform: translateX(26px);
+}

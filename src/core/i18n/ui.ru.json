@@ -1,0 +1,391 @@
+{
+    "navigation": {
+        "characters": "Персонажи",
+        "home": "Главная",
+        "weapon": "Оружие",
+        "weapons": "Оружие",
+        "date": "Архив",
+        "profile": "Профиль"
+    },
+    "search": {
+        "placeholder": "Поиск по имени..."
+    },
+    "pages": {
+        "home": {
+            "title": "Добро пожаловать в Lumos",
+            "welcome": "Этот проект поможет вам отслеживать ваш прогресс в Genshin Impact.",
+            "birthdays": {
+                "title": "Сегодняшние дни рождения",
+                "announcementFormat": "Сегодня день рождения у {name}!",
+                "noBirthdayToday": "Сегодня нет дней рождения",
+                "imageAlt": "День рождения {name}",
+                "calendar": {
+                    "error": "Ошибка загрузки календаря.",
+                    "months": [
+                        "Январь",
+                        "Февраль",
+                        "Март",
+                        "Апрель",
+                        "Май",
+                        "Июнь",
+                        "Июль",
+                        "Август",
+                        "Сентябрь",
+                        "Октябрь",
+                        "Ноябрь",
+                        "Декабрь"
+                    ],
+                    "weekdays": [
+                        "Пн",
+                        "Вт",
+                        "Ср",
+                        "Чт",
+                        "Пт",
+                        "Сб",
+                        "Вс"
+                    ]
+                }
+            },
+            "serverTimer": {
+                "title": "Таймер сброса серверов",
+                "serverAsia": "Азиатский сервер",
+                "serverEurope": "Европейский сервер",
+                "serverAmerica": "Американский сервер",
+                "timeLeft": "Осталось: {{hours}}ч {{minutes}}м",
+                "soon": "Скоро сброс!",
+                "yourTimezone": "Ваш часовой пояс",
+                "showServerTime": "Показать серверное время",
+                "showLocalTime": "Показать локальное время"
+            },
+            "talentBooks": {
+                "title": "Книги талантов",
+                "todayWeekdays": "Сегодня"
+            },
+            "common": {
+                "talentBooks": "Книги талантов",
+                "weaponMaterials": "Материалы оружия"
+            }
+        },
+        "characters": {
+            "title": "Персонажи",
+            "pageMaterials": {
+                "total": "Материалы"
+            }
+        },
+        "weapons": {
+            "title": "Оружия"
+        },
+        "profile": {
+            "title": "Профиль"
+        },
+        "inventory": {
+            "title": "Инвентарь"
+        },
+        "fishing": {
+            "title": "Рыбалка",
+            "description": "Информация о рыбах, наживках и местах для рыбалки."
+        }
+    },
+    "home": {
+        "title": "Добро пожаловать в Lumos",
+        "description": "Этот проект поможет вам отслеживать ваш прогресс в Genshin Impact.",
+        "birthdays": {
+            "title": "Сегодняшние дни рождения",
+            "announcementFormat": "Сегодня день рождения у {name}!",
+            "noBirthdayToday": "Сегодня нет дней рождения",
+            "imageAlt": "День рождения {name}",
+            "calendar": {
+                "error": "Ошибка загрузки календаря.",
+                "months": [
+                    "Январь",
+                    "Февраль",
+                    "Март",
+                    "Апрель",
+                    "Май",
+                    "Июнь",
+                    "Июль",
+                    "Август",
+                    "Сентябрь",
+                    "Октябрь",
+                    "Ноябрь",
+                    "Декабрь"
+                ],
+                "weekdays": [
+                    "Пн",
+                    "Вт",
+                    "Ср",
+                    "Чт",
+                    "Пт",
+                    "Сб",
+                    "Вс"
+                ]
+            }
+        },
+        "serverTimer": {
+            "title": "Таймер сброса серверов",
+            "serverAsia": "Азиатский сервер",
+            "serverEurope": "Европейский сервер",
+            "serverAmerica": "Американский сервер",
+            "timeLeft": "Осталось: {{hours}}ч {{minutes}}м",
+            "soon": "Скоро сброс!",
+            "yourTimezone": "Ваш часовой пояс",
+            "showServerTime": "Показать серверное время",
+            "showLocalTime": "Показать локальное время"
+        },
+        "talentBooks": {
+            "title": "Книги талантов",
+            "todayWeekdays": "Сегодня"
+        },
+        "dailyFarmableMaterials": {
+            "title": "Материалы дня",
+            "todayWeekdays": "Сегодня"
+        },
+        "farmingSchedule": {
+            "title": "Расписание фарма"
+        }
+    },
+    "character": {
+        "guide": "Гайд по персонажу",
+        "builds": "Сборки",
+        "upgradeMaterials": "Материалы для улучшения",
+        "talentLevel": "Уровень таланта",
+        "talentStats": "Атрибуты таланта",
+        "noUpgradeNeeded": "Улучшение не требуется",
+        "error": "Ошибка расчета"
+    },
+    "archive": {
+        "title": "Архив",
+        "fishing": {
+            "title"  : "Рыбалка",
+            "folder" : "Папка Рыбалки"
+        },
+        "creatures": {
+            "title"  : "Существа",
+            "folder" : "Папка Существ"
+        },
+        "artifacts": {
+            "title" : "Артефакты",
+            "folder" : "Папка Артефактов"
+        }
+    },
+    "calculator": {
+        "fromPrevious": "С предыдущего уровня",
+        "totalFromFirst": "Всего с 1 уровня",
+        "title": "Калькулятор персонажа",
+        "selectCharacter": "Выберите персонажа",
+        "selectWeapon": "Выберите оружие",
+        "level": "Уровень",
+        "weaponLevel": "Уровень оружия",
+        "selectArtifacts": "Артефакты",
+        "setBonuses": "Бонусы сетов",
+        "noActiveBonuses": "Активных бонусов нет",
+        "finalStats": "Итоговые характеристики",
+        "reset": "Сбросить",
+        "deleteBuild": "Удалить сборку",
+        "updateBuild": "Обновить сборку",
+        "saveBuild": "Сохранить сборку",
+        "buildName": "Название сборки"
+    },
+    "birthdays": {
+        "title": "Сегодняшние дни рождения",
+        "announcementFormat": "Сегодня день рождения у {name}!",
+        "noBirthdayToday": "Сегодня нет дней рождения",
+        "imageAlt": "День рождения {name}"
+    },
+    "filters": {
+        "title": "Фильтры",
+        "rarity": "Редкость",
+        "vision": "Глаз бога",
+        "weapon": "Оружие",
+        "region": "Фильтр по региону:",
+        "all_regions": "Все регионы"
+    },
+    "buttons": {
+        "apply": "Применить",
+        "reset": "Сбросить",
+        "details": "Подробнее",
+        "filterTooltip": "Фильтр",
+        "resetTooltip": "Сбросить фильтры",
+        "close": "Закрыть",
+        "cancel": "Отмена",
+        "delete": "Удалить",
+        "overwrite": "Перезаписать",
+        "update_schedule": "Обновить расписание",
+        "pin_to_home": "Закрепить на главной",
+        "unpin_from_home": "Открепить"
+    },
+    "deleteConfirmation": {
+        "title": "Подтверждение",
+        "message": "Удалить «{{itemName}}»?"
+    },
+    "serverTimer": {
+        "title": "Таймер сброса серверов",
+        "serverAsia": "Азиатский сервер",
+        "serverEurope": "Европейский сервер",
+        "serverAmerica": "Американский сервер",
+        "timeLeft": "Осталось: {{hours}}ч {{minutes}}м",
+        "soon": "Скоро сброс!",
+        "yourTimezone": "Ваш часовой пояс",
+        "showServerTime": "Показать серверное время",
+        "showLocalTime": "Показать локальное время"
+    },
+    "talentsModal": {
+        "characterLevel": "Уровень персонажа",
+        "backButton": "Назад"
+    },
+    "modal": {
+        "stats": {
+            "title": "Характеристики по уровням",
+            "level": "Уровень",
+            "attack": "Атака",
+            "defense": "Защита"
+        },
+        "resistances": {
+            "title": "Сопротивления элементам"
+        },
+        "drops": {
+            "title": "Дроп"
+        },
+        "behavior": {
+            "title": "Поведение"
+        },
+        "fishing": {
+            "details_title": "Детали",
+            "region": "Регион",
+            "location": "Место",
+            "bait": "Наживка",
+            "difficulty": "Сложность"
+        }
+    },
+    "rarity": {
+        "common": "Обычная",
+        "uncommon": "Необычная",
+        "rare": "Редкая",
+        "epic": "Эпическая",
+        "legendary": "Легендарная"
+    },
+    "difficulty": {
+        "easy": "Легкая",
+        "medium": "Средняя",
+        "hard": "Сложная"
+    },
+    "region": {
+        "mondstadt": "Мондштадт",
+        "liyue": "Ли Юэ",
+        "inazuma": "Инадзума",
+        "sumeru": "Сумеру",
+        "fontaine": "Фонтейн"
+    },
+    "enemy_type": {
+        "common": "Обычные",
+        "elite": "Элитные",
+        "boss": "Боссы"
+    },
+    "damaged_mask": "Разбитая маска",
+    "stained_mask": "Грязная маска",
+    "ominous_mask": "Зловещая маска",
+    "heavy_horn": "Прочный рог",
+    "black_bronze_horn": "Чёрный бронзовый рог",
+    "black_crystal_horn": "Чёрный кристаллический рог",
+    "days": {
+        "monday": "Понедельник",
+        "tuesday": "Вторник",
+        "wednesday": "Среда",
+        "thursday": "Четверг",
+        "friday": "Пятница",
+        "saturday": "Суббота",
+        "sunday": "Воскресенье"
+    },
+    "days_short": {
+        "monday": "Пн",
+        "tuesday": "Вт",
+        "wednesday": "Ср",
+        "thursday": "Чт",
+        "friday": "Пт",
+        "saturday": "Сб",
+        "sunday": "Вс"
+    },
+    "talent_books": {
+        "description": "Материалы сгруппированы по региону и домену",
+        "reset_time": "Сброс доменов — каждый день в 4:00 по серверному времени"
+    },
+    "weapon_materials": {
+        "description": "Материалы возвышения оружия, открытые сегодня"
+    },
+    "settings": {
+        "title": "Настройки"
+    },
+    "profile": {
+        "description": "Настройте профиль вручную или войдите через Enka.Network",
+        "usernamePlaceholder": "Ваш никнейм",
+        "defaultUsername": "Путешественник",
+        "profileSaved": "Профиль сохранён",
+        "functions": "Разделы",
+        "calculatorTitle": "Калькулятор характеристик",
+        "calculatorDescription": "Считайте характеристики персонажей с оружием и артефактами",
+        "inventoryTitle": "Инвентарь",
+        "inventoryDescription": "Управляйте вашими игровыми предметами",
+        "enkaImportTitle": "Витрина Enka.Network",
+        "enkaImportDescription": "Смотрите витрину персонажей с Enka.Network",
+        "priorityTitle": "Приоритет",
+        "priorityDescription": "Сборки, которые фармятся в первую очередь",
+        "addToPriority": "Добавить в приоритет:",
+        "savedTitle": "Сохранённое",
+        "savedDescription": "Ваши сохранённые сборки",
+        "characters": "Персонажи",
+        "weapons": "Оружие",
+        "calculator": "Калькулятор",
+        "deleteProfileButton": "Удалить профиль",
+        "deleteProfileSuccess": "Профиль удалён",
+        "enkaMode": {
+            "ar": "УР",
+            "wl": "МУ",
+            "abyss": "Бездна",
+            "refresh": "Обновить",
+            "refreshing": "Обновление…",
+            "unlink": "Отвязать",
+            "unlinkSuccess": "Профиль отвязан от Enka",
+            "uidPlaceholder": "UID вместо ника — импорт из Enka",
+            "linkButton": "Импортировать",
+            "linking": "Импорт…",
+            "linkSuccess": "Профиль привязан к Enka.Network",
+            "loading": "Загрузка…",
+            "fetchButton": "Получить данные",
+            "showcaseOf": "Витрина персонажей",
+            "useAsProfile": "Использовать как мой профиль",
+            "alreadyLinked": "Уже используется",
+            "errors": {
+                "empty_uid": "Введите UID",
+                "invalid_uid": "UID должен быть числом (6-12 цифр)",
+                "not_found": "Профиль не найден или скрыт",
+                "rate_limited": "Enka.Network временно ограничивает запросы — попробуйте через минуту",
+                "game_maintenance": "Серверы игры на техобслуживании — попробуйте позже",
+                "network_error": "Не удалось связаться с Enka.Network",
+                "empty_showcase": "На витрине нет персонажей или профиль скрыт"
+            }
+        }
+    },
+    "materials_page": {
+        "view_schedule": "Расписание фарма",
+        "farming_schedule": "Расписание фарма",
+        "needed": "нужно",
+        "no_materials_for_this_day": "На этот день ничего не запланировано",
+        "weekly_tag": "еженед.",
+        "scroll_prev": "Прокрутить влево",
+        "scroll_next": "Прокрутить вправо"
+    },
+    "weapon": {
+        "guide": "Гайд по оружию",
+        "builds": "Сборки"
+    },
+    "common": {
+        "comingSoon": "Скоро будет доступно"
+    },
+    "errors": {
+        "pageNotFound": "Страница не найдена",
+        "pageNotFoundDesc": "Возможно, страница была удалена или вы перешли по неверной ссылке",
+        "goHome": "← На главную",
+        "somethingWentWrong": "Что-то пошло не так",
+        "tryAgain": "Попробовать снова"
+    }
+}

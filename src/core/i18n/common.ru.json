@@ -1,0 +1,10 @@
+{
+    "name": "Имя",
+    "description": "Описание",
+    "unknown_talent_name": "Название таланта отсутствует",
+    "unknown_talent_description": "Описание таланта отсутствует",
+    "unknown_fish_name": "Неизвестная рыба",
+    "unknown_fish_description": "Описание отсутствует",
+    "unknown_location": "Неизвестная локация",
+    "unknown_bait": "Неизвестная наживка"
+}
