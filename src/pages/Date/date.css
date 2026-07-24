@@ -1,0 +1,349 @@
+/* === General Subpage Styles === */
+.date-subpage-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.date-subpage-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.date-subpage-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.page-controls {
+    margin-bottom: 30px;
+}
+
+.page-filters {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* === Creatures Page Styles === */
+.creatures-categories-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.category-header {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.category-title {
+    font-size: 1.8rem;
+}
+
+.category-count {
+    font-size: 1rem;
+    color: #888;
+}
+
+.creatures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.creature-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background: #fff;
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.creature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.creature-card-inner {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.creature-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.creature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f0f4f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    position: relative;
+}
+
+.creature-type {
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+    background: #78909c;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.creature-name-container {
+    flex: 1;
+}
+
+.creature-name {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.creature-region {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.creature-card-body {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.creature-drops-preview {
+    font-size: 0.9rem;
+}
+
+.drops-label {
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.drops-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.drop-tag {
+    background: #e8f5e9;
+    color: #4caf50;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.more-drops {
+    background: #f5f5f5;
+    color: #757575;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.creature-card-footer {
+    text-align: right;
+}
+
+.view-details-btn {
+    background: none;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.view-details-btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+
+/* === Artifacts Page Styles === */
+.artifacts-sets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.artifact-set-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background: #fff;
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.artifact-set-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.artifact-set-card-inner {
+    padding: 20px;
+}
+
+.artifact-set-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.artifact-set-icon {
+    font-size: 30px;
+    position: relative;
+}
+
+.artifact-rarity {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #ffc107;
+}
+
+.artifact-set-name {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.artifact-set-bonuses {
+    margin-bottom: 20px;
+}
+
+.bonus-item {
+    margin-bottom: 15px;
+}
+
+.bonus-count {
+    font-weight: bold;
+    background-color: #f1f1f1;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+
+.bonus-text {
+    display: inline;
+    color: #555;
+}
+
+.artifact-set-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.set-pieces-preview .piece-icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* === Fishing Page Styles === */
+.fishing-spots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.region-section .region-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+.spots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.fishing-spot-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.spot-title {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.spot-fish-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.spot-fish-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This will push the button to the right */
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+}
+
+.fish-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fish-icon-small {
+    font-size: 1.5rem;
+}
+
+.fish-name-in-list {
+    font-size: 1rem;
+}
+
+.details-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+}
+
+.details-btn:hover {
+    background-color: #0056b3;
+}

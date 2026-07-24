@@ -1,0 +1,17 @@
+{
+    "books_of_freedom": { "name": "Freedom" },
+    "books_of_resistance": { "name": "Resistance" },
+    "books_of_ballad": { "name": "Ballad" },
+    "books_of_prosperity": { "name": "Prosperity" },
+    "books_of_diligence": { "name": "Diligence" },
+    "books_of_gold": { "name": "Gold" },
+    "books_of_transience": { "name": "Transience" },
+    "books_of_elegance": { "name": "Elegance" },
+    "books_of_light": { "name": "Light" },
+    "books_of_admonition": { "name": "Admonition" },
+    "books_of_ingenuity": { "name": "Ingenuity" },
+    "books_of_praxis": { "name": "Praxis" },
+    "books_of_equity": { "name": "Equity" },
+    "books_of_justice": { "name": "Justice" },
+    "books_of_order": { "name": "Order" }
+}

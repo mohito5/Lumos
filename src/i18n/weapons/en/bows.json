@@ -1,0 +1,20 @@
+{
+  "amos-bow": {
+    "name": "Amos' Bow",
+    "description": "A longbow that was meticulously constructed by a fletcher from a faraway land. It was made with materials that are rarely seen in Teyvat, and it is adorned with intricate patterns.",
+    "passiveName": "Strong-Willed",
+    "passiveDescription": "Increases Normal Attack and Aimed Shot DMG by {0}%. After a Normal or Aimed Shot is fired, DMG dealt increases by a further {1}% every 0.1s the arrow is in the air for up to 5 times."
+  },
+  "skyward-harp": {
+    "name": "Skyward Harp",
+    "description": "A greatbow that symbolizes the Anemo Archon's affiliation with the azure sky. The sound of the bowstring is music to the Anemo Archon's ears, starting with the very first arrow fired.",
+    "passiveName": "Echoing Ballad",
+    "passiveDescription": "Increases CRIT DMG by {0}%. Hits have a {1}% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every {2}s."
+  },
+  "rust": {
+    "name": "Rust",
+    "description": "A completely rusted greatbow. The average person would lack the strength to even lift it, let alone fire it.",
+    "passiveName": "Rapid Firing",
+    "passiveDescription": "Increases Normal Attack DMG by {0}% but decreases Aimed Shot DMG by 10%."
+  }
+}

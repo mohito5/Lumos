@@ -1,0 +1,33 @@
+{
+    "HILICHURLS": "Hilichurls",
+    "hilichurl": {
+        "name": "Hilichurl",
+        "description": "Primitive monsters found in the wilds of Teyvat. They seem to lack intelligence and possess a simple social structure.",
+        "behavior": "Attacks on sight with simple club swings."
+    },
+    "hilichurl_fighter": {
+        "name": "Hilichurl Fighter",
+        "description": "A Hilichurl that uses a club for offense. More aggressive than a standard Hilichurl.",
+        "behavior": "Charges and attacks with its club, sometimes performing jumping attacks."
+    },
+    "hilichurl_grenadier": {
+        "name": "Hilichurl Grenadier",
+        "description": "A Hilichurl that throws slimes as projectiles. Keeps its distance.",
+        "behavior": "Throws Pyro slimes that explode on impact."
+    },
+    "hilichurl_berserker": {
+        "name": "Hilichurl Berserker",
+        "description": "Wields two clubs and rushes into combat. Very aggressive.",
+        "behavior": "Quickly closes the distance and unleashes a flurry of attacks with both clubs."
+    },
+    "mitachurl_wooden_shield": {
+        "name": "Mitachurl with Wooden Shield",
+        "description": "A large Hilichurl protected by a large wooden shield. The shield can be burned away to make it vulnerable.",
+        "behavior": "Defends with its shield, and attacks with powerful swings and charges."
+    },
+    "lavachurl_stonehide": {
+        "name": "Stonehide Lawachurl",
+        "description": "The king of Hilichurls, encased in tough Geo armor. Incredibly strong and resilient.",
+        "behavior": "Uses Geo armor which can be broken with Geo attacks or a claymore. Performs jumping attacks that create shockwaves."
+    }
+}
