@@ -1,8 +1,0 @@
-{
-  "primordial-jade-winged-spear": {
-    "name": "Primordial Jade Winged-Spear",
-    "description": "A jade spear made by the archons, capable of slaying ancient beasts.",
-    "passiveName": "Eagle Spear of Justice",
-    "passiveDescription": "On hit, increases ATK by {0}% for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by {1}%."
-  }
-}

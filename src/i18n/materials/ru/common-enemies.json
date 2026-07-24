@@ -1,8 +1,0 @@
-{
-    "slime-condensate": { "name": "Слизь слайма" },
-    "slime-secretions": { "name": "Секреции слайма" },
-    "slime-concentrate": { "name": "Концентрат слайма" },
-    "chaos-device": { "name": "Устройство хаоса" },
-    "chaos-circuit": { "name": "Схема хаоса" },
-    "chaos-core": { "name": "Ядро хаоса" }
-}

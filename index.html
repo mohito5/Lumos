@@ -17,16 +17,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Link to the main stylesheet -->
-  <link rel="stylesheet" href="./src/assets/styles/main.css">
-  <link rel="stylesheet" href="./src/assets/styles/filterPanel.css">
   <!-- /opencv.js (~7МБ wasm) больше НЕ грузится здесь блокирующе/eagerly для
        каждого пользователя — инжектится динамически из CvLoaderContext.jsx,
        только когда реально открыт инвентарь или /dev/digit-calibration. -->
   
   <!-- Новый основной скрипт приложения -->
-  <script type="module" src="./src/main.jsx" defer></script>
 
-</head>
+  <script type="module" crossorigin src="/Lumos/assets/index-BjAy_gC0.js"></script>
+  <link rel="stylesheet" crossorigin href="/Lumos/assets/index-qCSp_aN8.css">
+<script id="vite-plugin-pwa:register-sw" src="/Lumos/registerSW.js"></script></head>
 <body>
   <!-- Основной контейнер приложения -->
   <main id="content" class="p-2"></main>
