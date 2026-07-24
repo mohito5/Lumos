@@ -1,0 +1,211 @@
+/* Список персонажей*/ 
+.cards-container { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18vmin, 1fr));
+}
+
+  .characters-cards-container,
+  .weapons-cards-container { 
+    grid-template-columns: repeat(auto-fill, minmax(18vmin, 1fr));
+    gap: 2vmin; 
+  }
+  .characters-cards-container .card-character,
+  .weapons-cards-container .card-weapon{
+    border-radius: 4vmin;
+    padding: 1vmin;
+  }
+
+.page.characters,
+.page.weapon {
+  gap: 2vmin; padding: 0;
+  width:100%; 
+  margin:0;
+}
+
+
+.characters-cards-container,
+.weapons-cards-container { 
+  display: grid;
+  width: 100%; height:100%;
+  justify-content: start;
+  align-content: start; 
+}
+.characters-cards-container .card-character,
+.weapons-cards-container .card-weapon {  
+  height: min-content;
+  aspect-ratio: 4/6; 
+  flex-direction: column;
+  position: relative; 
+  overflow: hidden;
+  transition: 1s ease;
+  opacity: 1;
+  border: 1px solid var(--dark);
+  margin: 0;
+}
+
+
+.characters-cards-container .card-character a,
+.weapons-cards-container .card-weapon a { 
+  height: 100%;
+  width: 100%; 
+  display: flex; 
+  border-radius: 3vmin; 
+  gap: 1vmin;
+  overflow: hidden;
+  position: relative; 
+  flex-direction: column;
+  transition: all 450ms ease-in-out; 
+}
+
+.characters-cards-container .card-character .card-avatar,
+.weapons-cards-container .card-weapon .weapon-avatar { 
+  position: relative; border: var(--dark) 1px solid;
+  width: 100%; border-radius: 3vmin;
+  flex: 1; /* Ключевое изменение - занимает всё доступное пространство */
+  min-height: 0; /* Важно для правильной работы flex: 1 */
+  overflow: hidden;
+}
+.characters-cards-container .card-character .card-avatar img ,
+.weapons-cards-container .card-weapon .weapon-avatar img{
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+.characters-cards-container .card-character .name,
+.weapons-cards-container .card-weapon .weapon-name{ 
+  display: flex; padding: 1vmin; 
+  border-radius: 3vmin;
+  text-align: center; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; color: var(--light);
+  overflow: hidden; background: var(--dark);
+}
+.characters-cards-container .card-character .name p,
+.weapons-cards-container .card-weapon .weapon-name p { margin: 0; width: 100%; text-decoration: none;}
+
+.characters-cards-container .rarity-5.card-character .card-avatar,
+.weapons-cards-container .rarity-5.card-weapon .weapon-avatar{
+  background-color: var(--geo);
+}
+.characters-cards-container .rarity-4.card-character .card-avatar,
+.weapons-cards-container .rarity-4.card-weapon .weapon-avatar{
+  background-color: var(--electro);
+}
+.element-Electro::after{
+  content: '';
+  background-image: url('/assets/elements/Element_Electro.svg'); 
+  background-size: cover;
+  width: 5vw; height: 5vw; 
+  filter: 
+    drop-shadow(var(--dark) -2px 0px 0px)
+    drop-shadow(var(--dark)  2px 0px 0px)
+    drop-shadow(var(--dark) 0px -2px 0px)
+    drop-shadow(var(--dark)  0px 2px 0px);
+  position: absolute; top: 2vw; left: 2vw;
+}
+
+
+.section {display: flex;}
+
+
+.modal-tabs {border: #DE9350 1px solid;}
+
+
+
+
+/* Добавьте в ваш CSS файл */
+.filter-button { 
+  position: relative;
+}
+
+.filter-button.active {
+  background-color: var(--light) !important; color: var(--dark);
+}
+.filter-button.sword.active {background-color: var(--electro);}
+.filter-indicator {
+  fill: #ff4757;
+  stroke: none;
+  animation: pulse 1.5s infinite;
+}
+
+.filter-clear {
+  margin-left: 5px;
+  background: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
+
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+  grid-column: 1 / -1;
+}
+
+.character-counter {
+  font-size: 16px;
+  color: #666;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.filter-option[data-type="element"]::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.filter-option[data-value="Pyro"]::before {
+  background-image: url('assets/elements/pyro.png');
+}
+
+.filter-option[data-value="Hydro"]::before {
+  background-image: url('assets/elements/hydro.png');
+}
+
+.filter-option[data-value="Electro"]::after {
+  background-image: url('/assets/elements/Element_Electro.svg');
+}
+
+.filter-option[data-value="Cryo"]::before {
+  background-image: url('assets/elements/cryo.png');
+}
+
+.filter-option[data-value="Anemo"]::before {
+  background-image: url('assets/elements/anemo.png');
+}
+
+.filter-option[data-value="Geo"]::before {
+  background-image: url('assets/elements/geo.png');
+}
+
+.filter-option[data-value="Dendro"]::before {
+  background-image: url('assets/elements/dendro.png');
+}
+
+
+.svg { color: #45a049;}

@@ -1,0 +1,249 @@
+/* общие стили header */
+header {
+  display: flex;
+  margin: 0;
+  transform: translateZ(0);
+  z-index: 1000;
+}
+
+.main-nav {
+  display: flex;
+  margin: 0;
+  flex: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* общие стили верхней части header */
+.nav-top-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-left-area {
+  display: flex;
+  align-items: center;
+}
+
+/* общие стили для навигации header */
+.nav-links {
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.nav-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  
+  z-index: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  will-change: left, width;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(0);
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.nav-item:not(.active) {
+  opacity: 1;
+}
+
+.nav-icon {
+  transition: transform 0.3s ease;
+}
+
+.nav-item:not(.active) .nav-icon{
+  color: var(--pineberry);
+}
+
+.nav-item:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+.nav-label {
+  white-space: nowrap;
+}
+.logo h4{
+  font-family: Lumo H;
+}
+.logo{
+  border-bottom: 1px solid currentColor;
+}
+.nav-toggle{
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:
+        background .25s,
+        color .25s,
+        transform .25s;
+}
+
+.nav-toggle:hover{
+    background:var(--blueberry);
+}
+
+
+
+.nav-toggle .icon-mini{
+    transition:
+        transform .45s cubic-bezier(.22,1,.36,1),
+        color .3s;
+}
+.nav-toggle.active .icon-mini{
+    transform:rotate(180deg);
+}
+
+
+.nav-links.collapsed .nav-label,
+.nav-links.collapsed .logo h4{
+    opacity:0; display: none;
+    max-width:0;
+    margin:0;
+    transform:translateX(-10px);
+}
+
+.nav-links.collapsed .nav-item{
+    justify-content:center;
+    gap:0;
+}
+
+.nav-links.collapsed .logo{
+    justify-content:center;
+}
+
+/* Portrait orientation: Navigation at the bottom */
+@media only screen and (orientation: portrait) {
+  .header {
+    position: sticky;
+    bottom: 2vmin;
+    width: 100%;
+    padding: 0 2vmin;
+    box-sizing: border-box;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-top-bar {
+    justify-content: flex-end;
+  }
+
+  .language-switcher{
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1vw;
+    width: 100%;
+  }
+
+  .nav-item {
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    flex: 1 1 auto;
+  }
+
+  .nav-item:not(.active) .nav-label {
+    display: none;
+  }
+  .nav-links .logo{
+    display: none;
+  }
+
+  /* Кнопка сворачивания — фича для десктопа/landscape. На мобильном
+     портрете иконки и так уже показываются как надо всегда (см. правило
+     .nav-item:not(.active) .nav-label выше) — кнопка здесь не нужна и
+     только отъедала бы место в нижней навигации. */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* React-состояние collapsed не сбрасывается сменой ориентации (это чистый
+     JS state, а не CSS) — если пользователь свернул навигацию в landscape,
+     потом повернул телефон в портрет, .collapsed остаётся true. Без строк
+     ниже это перебило бы правило выше и спрятало подпись даже у активной
+     страницы. Специфичность та же (0,3,0), но эти строки идут позже в
+     каскаде — принудительно возвращаем подпись активной странице. */
+  .nav-links.collapsed .nav-item.active .nav-label {
+    display: block;
+    opacity: 1;
+    max-width: none;
+    
+    transform: none;
+  }
+}
+
+/* Landscape orientation: Navigation on the left */
+@media only screen and (orientation: landscape) {
+  .header {
+    position: sticky;
+    top: 2vmin;
+    height: calc(100dvh - 4vmin);
+    box-sizing: border-box;
+  }
+
+  .main-nav {
+    flex-direction: row-reverse;
+    height: 100%;
+    
+    box-sizing: border-box;
+  }
+
+  .nav-top-bar {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-left-area {
+    flex-direction: column;
+  }
+
+  .language-switcher {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5vw;
+    align-items: flex-start;
+  }
+
+  .nav-item {
+    width: 100%;
+    flex-direction: column;
+  }
+  .nav-item.profile {
+  margin-top: auto;
+  }
+  .nav-item:not(.active) .nav-label {
+    color: var(--pineberry);
+  }
+}

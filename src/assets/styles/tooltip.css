@@ -1,0 +1,48 @@
+.tooltip{
+    position: relative;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    bottom: 125%;
+    z-index: 500;
+    opacity: 0;
+    border: 1px solid var(--pineberry);
+    transition:all 0.5s ease-in-out, visibility;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip:hover .tooltip-text::after {
+    position: absolute; 
+    bottom: -10px; 
+    left: 20px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--billberry);
+    border-left: 1px solid var(--pineberry);
+    border-bottom: 1px solid var(--pineberry);
+    border-right: 1px solid var(--pineberry);
+}
+
+.filter-reset-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+    padding: 2px;
+    opacity: 0.75;
+}
+
+.filter-reset-icon svg {
+    width: 12px;
+    height: 12px;
+}
+
+.filter-reset-icon:hover {
+    opacity: 1;
+}
