@@ -1,0 +1,145 @@
+.enka-accordion-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.enka-accordion {
+    display: flex;
+    gap: 0.6vmin;
+    height: 32vmin;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 0;
+}
+
+.enka-accordion-panel {
+    position: relative;
+    flex: 0 0 12vmin;
+    min-width: 8vmin;
+    height: 100%;
+    border: none;
+    border-radius: 3vmin;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    background-color: var(--dark);
+    outline: 3px solid var(--dark);
+    outline-offset: -3px;
+    transition: flex-basis 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                min-width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                outline-color 0.2s ease;
+}
+
+.enka-accordion-panel.is-active {
+    flex: 1 1 32vmin;
+    min-width: 32vmin;
+    outline-color: var(--cherry);
+}
+
+.enka-accordion-panel.is-unmapped {
+    outline-color: var(--star4);
+}
+
+.enka-accordion-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.enka-accordion-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lumo H', sans-serif;
+    font-size: 6vmin;
+    color: var(--light0-5);
+    background-color: var(--dark);
+}
+
+.enka-accordion-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(25, 26, 26, 0) 45%, rgba(25, 26, 26, 0.92) 100%);
+    pointer-events: none;
+}
+
+.enka-accordion-name {
+    position: absolute;
+    left: 1.4vmin;
+    bottom: 1.2vmin;
+    font-family: 'Lumo H', sans-serif;
+    font-size: 2.4vmin;
+    color: var(--light);
+    white-space: nowrap;
+    max-width: calc(100% - 2.8vmin);
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* В свёрнутом состоянии — вертикальный текст вдоль узкой панели,
+       раскрывается в обычную горизонтальную подпись у активной панели. */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    bottom: 1.4vmin;
+    top: 1.4vmin;
+    height: calc(100% - 2.8vmin);
+}
+
+.enka-accordion-panel.is-active .enka-accordion-name {
+    writing-mode: horizontal-tb;
+    transform: none;
+    top: auto;
+    height: auto;
+}
+
+.enka-accordion-level {
+    position: absolute;
+    top: 1.2vmin;
+    left: 1.2vmin;
+    font-family: 'Lumo p', monospace;
+    font-size: 1.8vmin;
+    color: var(--light);
+    background-color: var(--dark0-8);
+    padding: 0.3vmin 0.9vmin;
+    border-radius: 1.5vmin;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+}
+
+.enka-accordion-constellation {
+    position: absolute;
+    top: 1.2vmin;
+    right: 1.2vmin;
+    font-family: 'Lumo p', monospace;
+    font-size: 1.8vmin;
+    color: var(--dark);
+    background-color: var(--star4);
+    width: 3.4vmin;
+    height: 3.4vmin;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.enka-accordion-panel.is-active .enka-accordion-level,
+.enka-accordion-panel.is-active .enka-accordion-constellation {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .enka-accordion-panel,
+    .enka-accordion-level,
+    .enka-accordion-constellation {
+        transition: none;
+    }
+}

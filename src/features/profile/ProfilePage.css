@@ -1,0 +1,301 @@
+/* General Profile Page Layout */
+.profile-page-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.profile-user-section {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* ... existing styles ... */
+
+/* Functions Section */
+.profile-functions-section {
+    margin-bottom: 30px;
+}
+
+.profile-functions-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.functions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.function-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #e3f2fd;
+    text-decoration: none;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.function-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.function-card.disabled {
+    background: #f1f8e9;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.function-icon {
+    font-size: 32px;
+}
+
+.function-info h3 {
+    margin: 0 0 5px 0;
+}
+
+.function-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* Saved Data Section */
+.saved-content-section h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* ... rest of the existing styles ... */
+
+.saves-grid {display: grid;width: 100%; height:100%;
+  justify-content: start; grid-template-columns: repeat(auto-fill, minmax(32vmin, 1fr));
+  align-content: start; }
+.saved-material-card{height: min-content; 
+  aspect-ratio: 6/4; 
+  
+  position: relative; 
+  overflow: hidden;
+  transition: 1s ease;
+  border: 1px solid var(--dark);
+  margin: 0;}
+
+  .card-avatar{ min-width: 8vmin;  object-fit: cover;}
+
+  .card-header{display: flex;}
+/* ─── Priority List (unified) ─────────────────────────────────────── */
+
+.priority-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.priority-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    transition: opacity 0.15s;
+}
+
+.priority-item.dragging {
+    opacity: 0.85;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+.priority-drag-handle {
+    cursor: grab;
+    font-size: 1.2rem;
+    opacity: 0.4;
+    flex-shrink: 0;
+    user-select: none;
+    padding: 0 4px;
+}
+
+.priority-drag-handle:active { cursor: grabbing; }
+
+.priority-rank {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-accent, #5c7aad);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.priority-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.priority-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+}
+
+.priority-type-icon { font-size: 0.85rem; }
+
+.priority-name {
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.priority-actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.priority-btn-open,
+.priority-btn-remove {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.priority-btn-open  { background: var(--color-accent, #5c7aad); color: #fff; }
+.priority-btn-remove { background: transparent; opacity: 0.45; }
+.priority-btn-remove:hover { opacity: 0.9; }
+
+/* Панель добавления */
+.priority-available { margin-bottom: 16px; }
+
+.priority-available-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.priority-add-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    background: transparent;
+    font-size: 0.85rem;
+    border: none;
+}
+
+.priority-add-btn:hover { opacity: 0.7; }
+
+/* ── Enka-режим профиля ──────────────────────────────────────────────────
+   Новый блок, в отличие от остального этого файла, использует токены темы
+   (--text-color/--border/--overlay), а не захардкоженные светлые цвета —
+   поэтому корректно смотрится и в тёмной теме. */
+
+.enka-linked-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.enka-nickname-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.enka-nickname {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+.enka-uid-badge {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    padding: 1px 8px;
+    border: 1px solid var(--text-color);
+    border-radius: 999px;
+}
+
+.enka-stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.enka-stat {
+    font-size: 0.8rem;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: var(--overlay);
+    color: var(--text-color);
+}
+
+.enka-actions-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.enka-actions-row button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.enka-actions-row button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.enka-unlink-btn {
+    opacity: 0.7;
+}
+
+.enka-link-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.enka-link-row input {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.enka-error-text {
+    color: #d9534f;
+    font-size: 0.8rem;
+    margin: 6px 0 0;
+}

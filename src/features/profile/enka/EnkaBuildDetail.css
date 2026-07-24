@@ -1,0 +1,224 @@
+/*
+ * Вся карточка билда завязана на РАЗМЕР СВОЕГО КОНТЕЙНЕРА (container query
+ * units, cqw), а не на vmin (вьюпорт). Так шрифты/иконки/отступы масштабируются
+ * от фактической ширины блока, а не от экрана целиком — на узких контейнерах
+ * (или в ландшафтной ориентации, где vmin считался бы от высоты) больше не
+ * вылезает за padding. max-width — просто страховка от слишком крупного
+ * масштаба на широких экранах, сам дизайн/раскладка не меняются.
+ */
+.enka-build-detail-wrapper {
+    container-type: inline-size;
+    container-name: enka-card;
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 2cqw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5cqw;
+}
+
+.enka-build-detail {
+    display: flex;
+    position: relative;
+    gap: 2cqw;
+}
+
+.enka-download-button {
+    align-self: center;
+    font-family: 'Lumo p', monospace;
+    font-size: clamp(0.8rem, 3.2cqw, 1rem);
+    color: var(--light);
+    background-color: var(--dark0-5);
+    padding: 1.4cqw 4cqw;
+    border-radius: 2.5cqw;
+    cursor: pointer;
+}
+
+.enka-download-button:active {
+    background-color: var(--dark0-8);
+}
+
+.enka-char-name {
+    font-family: 'Lumo H', sans-serif;
+    padding: 1cqw; text-overflow: ellipsis; 
+    text-align: end;
+    font-size: 4cqw;
+    margin: 0;
+}
+.enka-char-summary {
+    gap: 1cqw;
+}
+.enka-char-meta {
+    justify-content: end;
+    
+    font-size: clamp(0.6rem, 4cqw, 1rem);
+    flex-wrap: wrap;
+}
+
+.enka-detail-title {
+    font-family: 'Lumo H', sans-serif;
+    
+    font-size: clamp(0.7rem, 3cqw, 1.1rem);
+    margin: 0 0 1cqw 0.5cqw;
+}
+
+.enka-detail-card {
+    display: flex;
+    gap: 1cqw;
+    align-items: flex-start;
+}
+.weapon-icon{
+    width: 16cqw;
+    height: 16cqw;
+}
+.enka-detail-icon {
+    width: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: drop-shadow( 2cqw 0px 0px var(--cherry));
+}
+
+.enka-detail-card-body {
+    flex: 1;
+    min-width: 0;
+}
+.weapon-name {
+    text-align: end;
+    padding: 1cqw;
+    font-size: 2cqw;
+    margin: 0;
+    line-height: 1.5;
+}
+.enka-detail-name {
+    
+    
+    display: flex;
+    align-items: center;
+    gap: 1cqw;
+    flex-wrap: wrap;
+}
+
+.enka-refine-badge {
+    font-size: clamp(0.55rem, 1.6cqw, 0.8rem);
+    background-color: var(--cherry);
+    color: var(--dark);
+    padding: 0.2cqw 1cqw;
+    border-radius: 2cqw;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.enka-detail-meta {
+    
+    font-size: clamp(0.55rem, 1.8cqw, 0.85rem);
+    margin: 0.6cqw 0 1.2cqw 0;
+}
+
+.enka-stat-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8cqw;
+    font-family: 'Lumo p', monospace;
+    font-size: clamp(0.6rem, 1.8cqw, 0.9rem);
+    padding: 0.4cqw 0.8cqw;
+    
+}
+
+.enka-stat-row.enka-stat-main {
+    color: var(--star5);
+    
+    padding-bottom: 0.8cqw;
+    margin-bottom: 0.4cqw;
+}
+
+.enka-stat-icon {
+    width: 2.4cqw;
+    height: 2.4cqw;
+    flex-shrink: 0;
+    opacity: 1;
+}
+
+.enka-stat-value {
+    font-weight: bold;
+}
+
+.enka-final-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8cqw;
+}
+
+.enka-artifacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16cqw, 1fr));
+    gap: 1cqw;
+}
+
+.enka-artifact-card {
+    padding: 1cqw;
+    min-width: 0;
+}
+
+.enka-artifact-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6cqw;
+    min-height: 14cqw;
+    opacity: 0.5;
+}
+
+.enka-artifact-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0.6cqw;
+}
+
+.enka-slot-label {
+    font-family: 'Lumo H', sans-serif;
+    color: var(--blueberry);
+    font-size: clamp(0.55rem, 1.8cqw, 0.85rem);
+    text-transform: uppercase;
+}
+
+.enka-artifact-level {
+    font-family: 'Lumo p', monospace;
+    color: var(--light);
+    background-color: var(--dark);
+    padding: 0.2cqw 1cqw;
+    font-size: clamp(0.55rem, 1.6cqw, 0.8rem);
+}
+
+.enka-artifact-set-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4cqw;
+    min-height: 6cqw;
+}
+
+.enka-artifact-rarity .rarity-star {
+    color: var(--blueberry);
+    width: 1.4794520547945205cqw; 
+    height: 1.4794520547945205cqw;
+    
+}
+
+.enka-empty-text {
+    font-family: 'Lumo p', monospace;
+    color: var(--light0-5);
+    font-size: clamp(0.6rem, 1.8cqw, 0.9rem);
+}
+
+/* Сабстаты артефакта — сетка в 2 колонки с иконками вместо названий статов
+   (см. .enka-stat-row/.enka-stat-icon выше — тот же StatRow, просто в grid). */
+.enka-substats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6cqw;
+}
+
+.enka-substats .enka-stat-row {
+    border-radius: 0cqw;
+}
