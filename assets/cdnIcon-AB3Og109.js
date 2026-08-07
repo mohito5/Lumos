@@ -1,0 +1,1 @@
+const i="https://enka.network/ui/";function s(r){return r?r.startsWith("/")?r:`/${r}`:null}function e(r){return r?`${i}${r}.png`:null}function f({enkaIconMap:r},n,u){const t=r==null?void 0:r[n];return t?e(t):s(u)}export{f as r};

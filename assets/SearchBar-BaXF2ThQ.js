@@ -1,0 +1,1 @@
+import{u as o,j as a}from"./vendor-CfDThJYp.js";const l=({searchTerm:e,setSearchTerm:r})=>{const{t:s}=o();return a.jsx("div",{className:"search-bar",children:a.jsx("input",{className:"p-1 border radius-4 color",type:"text",placeholder:s("search.placeholder"),value:e,onChange:t=>r(t.target.value)})})};export{l as S};
