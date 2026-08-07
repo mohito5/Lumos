@@ -1,0 +1,23 @@
+.button.active {
+    background-color: var(--blueberry);
+}
+
+.reset-btn{
+    color:var(--cherry);
+    background: none;
+}
+.reset-btn:hover {
+    border-color: var(--cherry) ;
+    background-color: var(--cherry);
+    color: var(--pineberry);
+}
+
+.apply-btn {
+    color: var(--billberry);
+    background-color: var(--lime);
+}
+.apply-btn:hover{
+    color: var(--billberry);
+    outline: 2px solid currentColor;
+    outline-offset: -5px;
+}

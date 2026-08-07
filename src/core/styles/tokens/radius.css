@@ -1,0 +1,70 @@
+/*  ============================================================
+    SECTION : BORDER RADIUS
+    СЕКЦИЯ  : СКРУГЛЕНИЯ
+    ============================================================ */
+/* --radius-N = --radius-1 + (N-1) * --space-1. Отсюда:                */
+/* --radius-N - --space-K = --radius-(N-K), всегда, на любом viewport. */
+/* Правило для вложенных контейнеров: отступ K -> внутренний радиус    */
+/* "на K ступеней меньше" внешнего. Если N-K < 1 -> --radius-none.     */
+
+:root {
+    --radius-none: 0;
+    --radius-full: 9999px;
+    --radius-1: 0.3750rem; /* 6.00px */
+    --radius-2: 0.6250rem; /* 10.00px */
+    --radius-3: 0.8750rem; /* 14.00px */
+    --radius-4: 1.1250rem; /* 18.00px */
+    --radius-5: 1.3750rem; /* 22.00px */
+    --radius-6: 1.6250rem; /* 26.00px */
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --radius-1: clamp(0.4200rem, calc(0.3624rem + 0.0900vw), 0.4704rem); /* 6.7px -> 7.5px, +12% */
+        --radius-2: clamp(0.7000rem, calc(0.6040rem + 0.1500vw), 0.7840rem); /* 11.2px -> 12.5px, +12% */
+        --radius-3: clamp(0.9800rem, calc(0.8456rem + 0.2100vw), 1.0976rem); /* 15.7px -> 17.6px, +12% */
+        --radius-4: clamp(1.2600rem, calc(1.0872rem + 0.2700vw), 1.4112rem); /* 20.2px -> 22.6px, +12% */
+        --radius-5: clamp(1.5400rem, calc(1.3288rem + 0.3300vw), 1.7248rem); /* 24.6px -> 27.6px, +12% */
+        --radius-6: clamp(1.8200rem, calc(1.5704rem + 0.3900vw), 2.0384rem); /* 29.1px -> 32.6px, +12% */
+    }
+}
+
+@media (min-width: 1920px) {
+    :root {
+        --radius-1: clamp(0.4704rem, calc(0.3011rem + 0.1411vw), 0.5268rem); /* 7.5px -> 8.4px, +12% */
+        --radius-2: clamp(0.7840rem, calc(0.5018rem + 0.2352vw), 0.8781rem); /* 12.5px -> 14.0px, +12% */
+        --radius-3: clamp(1.0976rem, calc(0.7025rem + 0.3293vw), 1.2293rem); /* 17.6px -> 19.7px, +12% */
+        --radius-4: clamp(1.4112rem, calc(0.9032rem + 0.4234vw), 1.5805rem); /* 22.6px -> 25.3px, +12% */
+        --radius-5: clamp(1.7248rem, calc(1.1039rem + 0.5174vw), 1.9318rem); /* 27.6px -> 30.9px, +12% */
+        --radius-6: clamp(2.0384rem, calc(1.3046rem + 0.6115vw), 2.2830rem); /* 32.6px -> 36.5px, +12% */
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        --radius-1: clamp(0.5268rem, calc(0.4004rem + 0.0790vw), 0.5901rem); /* 8.4px -> 9.4px, +12% */
+        --radius-2: clamp(0.8781rem, calc(0.6673rem + 0.1317vw), 0.9834rem); /* 14.0px -> 15.7px, +12% */
+        --radius-3: clamp(1.2293rem, calc(0.9343rem + 0.1844vw), 1.3768rem); /* 19.7px -> 22.0px, +12% */
+        --radius-4: clamp(1.5805rem, calc(1.2012rem + 0.2371vw), 1.7702rem); /* 25.3px -> 28.3px, +12% */
+        --radius-5: clamp(1.9318rem, calc(1.4681rem + 0.2898vw), 2.1636rem); /* 30.9px -> 34.6px, +12% */
+        --radius-6: clamp(2.2830rem, calc(1.7351rem + 0.3425vw), 2.5570rem); /* 36.5px -> 40.9px, +12% */
+    }
+}
+
+/*  ============================================================
+    SECTION : NESTED RADIUS EXAMPLE
+    СЕКЦИЯ  : ПРИМЕР ВЛОЖЕННОГО РАДИУСА
+    ============================================================ */
+/*
+    .card {
+        border-radius: var(--radius-4);
+        padding: var(--space-2);
+    }
+    .card__inner {
+        border-radius: var(--radius-2);  -- было radius-4, минус 2 ступени отступа
+    }
+
+    Если ступень отступа неизвестна заранее (динамический компонент) —
+    calc() с max(0px, ...) как раньше, для случаев не по чистым индексам:
+    border-radius: max(0px, calc(var(--radius-4) - var(--space-3)));
+*/

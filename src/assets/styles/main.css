@@ -1,0 +1,839 @@
+
+
+/* ===== АТОМАРНЫЕ КЛАССЫ ===== */
+
+/* ----- LINE-HEIGHT ----- */
+.leading-0 { line-height: var(--line-0); }
+.leading-1 { line-height: var(--line-1); }
+/* … до leading-8 */
+
+/* ----- WIDTH & HEIGHT ----- */
+.w-0 { width: var(--size-0); }
+.w-1 { width: var(--size-1); }
+/* … до w-8 */
+.h-0 { height: var(--size-0); }
+.h-1 { height: var(--size-1); }
+/* … до h-8 */
+
+
+/* ----- Отдельно row-gap и column-gap (если нужно) ----- */
+.gap-x-0 { column-gap: var(--gap-0); }
+.gap-x-1 { column-gap: var(--gap-1); }
+/* … до gap-x-8 */
+.gap-y-0 { row-gap: var(--gap-0); }
+.gap-y-1 { row-gap: var(--gap-1); }
+/* … до gap-y-8 */
+.flex {display: flex;}
+.flex-r {display: flex; flex-direction: row;}
+.flex-c {display: flex; flex-direction: column;}
+
+/* ----- 6. FLEX (все основные свойства) ----- */
+/* display */
+.flex         { display: flex; }
+.inline-flex  { display: inline-flex; }
+
+/* direction */
+.flex-row         { flex-direction: row; }
+.flex-row-reverse { flex-direction: row-reverse; }
+.flex-col         { flex-direction: column; }
+.flex-col-reverse { flex-direction: column-reverse; }
+
+/* wrap */
+.flex-wrap        { flex-wrap: wrap; }
+.flex-nowrap      { flex-wrap: nowrap; }
+.flex-wrap-reverse{ flex-wrap: wrap-reverse; }
+
+
+/* flex‑grow / shrink / basis (базовые) */
+.grow-0 { flex-grow: 0; }
+.grow-1 { flex-grow: 1; }
+.shrink-0 { flex-shrink: 0; }
+.shrink-1 { flex-shrink: 1; }
+.basis-auto { flex-basis: auto; }
+.basis-0    { flex-basis: 0; }
+/* Можно добавить basis с размерами от size-* */
+
+/* order (несколько значений) */
+.order-0 { order: 0; }
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+.order-3 { order: 3; }
+.order-4 { order: 4; }
+.order-5 { order: 5; }
+
+
+/* ----- 7. ТЕКСТОВЫЕ СВОЙСТВА (выравнивание, начертание) ----- */
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+.text-center  { text-align: center; }
+.text-justify { text-align: justify; }
+
+.text-uppercase   { text-transform: uppercase; }
+.text-lowercase   { text-transform: lowercase; }
+.text-capitalize  { text-transform: capitalize; }
+.text-normal-case { text-transform: none; }
+
+.font-thin      { font-weight: 100; }
+.font-extralight{ font-weight: 200; }
+.font-light     { font-weight: 300; }
+.font-normal    { font-weight: 400; }
+.font-medium    { font-weight: 500; }
+.font-semibold  { font-weight: 600; }
+.font-bold      { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-black     { font-weight: 900; }
+
+.italic   { font-style: italic; }
+.not-italic{ font-style: normal; }
+
+
+/* ----- 8. ПОЗИЦИОНИРОВАНИЕ, OVERFLOW, CURSOR ----- */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed    { position: fixed; }
+.sticky   { position: sticky; }
+.static   { position: static; }
+
+/* top/left/right/bottom – можно добавить числовые, но часто используют проценты или авто */
+.top-0   { top: 0; }
+.left-0  { left: 0; }
+.right-0 { right: 0; }
+.bottom-0{ bottom: 0; }
+.top-auto   { top: auto; }
+/* … при необходимости можно добавить другие значения */
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto   { overflow: auto; }
+.overflow-scroll { overflow: scroll; }
+.overflow-visible{ overflow: visible; }
+
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+.cursor-text    { cursor: text; }
+.cursor-move    { cursor: move; }
+.cursor-not-allowed { cursor: not-allowed; }
+
+
+/* ----- 9. ДОПОЛНИТЕЛЬНО (часто используемые) ----- */
+.block  { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.hidden { display: none; }
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+
+
+html, body {
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  width: 100%;
+}
+.page{display: flex; flex: 1;}
+
+
+#content { 
+  display: flex; 
+  min-height: 100dvh;  
+  @media only screen and (orientation: landscape) {
+    flex-direction: row;
+  };
+  @media only screen and (orientation: portrait) {
+    flex-direction: column-reverse;
+  };
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Page Placeholder Styles */
+.page-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 70vh;
+}
+
+.page-placeholder h2 {
+  font-family: 'Oswald', sans-serif;
+  
+}
+
+/* save */
+
+/* Контейнер для кнопок */
+.save-button-container {
+  display: flex;
+  justify-content: center; border: 1px solid black;
+}
+/* Общие стили для всех кнопок сохранения */
+.save-btn {
+  border: var(--dark) 1px solid; 
+  padding: 2vw 4vw;
+  border-radius: 2vw;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer; opacity: 1;
+}
+.save-btn:disabled {
+  cursor: not-allowed; opacity: 1;
+  background-color: none; border: var(--white) 1px solid; color: var(--white);
+}
+
+
+/* Кнопка "Сохранить" (синяя) */
+.save-btn.primary {
+  background-color: var(--dark);
+  color: var(--hydro); 
+}
+
+.save-btn.primary:not(:disabled):hover {
+  background: var(--hydro);
+  color: var(--dark);
+}
+
+/* Кнопка "Обновить" (зеленая) */
+.save-btn.update {
+  background-color: var(--dark);
+  color: var(--dendro);
+}
+
+.save-btn.update:disabled {
+  background-color: var(--light); color: var(--white); opacity: 1;
+}
+
+.save-btn.update:not(:disabled):hover {
+  background-color: var(--dendro); color: var(--dark); opacity: 1;
+}
+
+/* Кнопка "Перезаписать" (оранжевая) */
+.save-btn.overwrite {
+  background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+  color: white;
+}
+
+.save-btn.overwrite:not(:disabled):hover {
+  background: linear-gradient(135deg, #F57C00 0%, #e56c00 100%);
+}
+
+/* Иконки в кнопках */
+.save-btn svg {
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+}
+
+/* Уведомления */
+.save-notification {
+  position: fixed;
+  top: 3vw;
+  right: 3vw;
+  padding: 3vw 5vw;
+  border-radius: 4vw;
+  
+  z-index: 10000;
+  animation: slideIn 0.3s ease;
+}
+
+.save-notification.success {
+  background: var(--dendro);
+  color: var(--dark);
+}
+
+.save-notification.error {
+  background: #f44336;
+  color: white;
+}
+
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+
+.back-button {
+  background-color: var(--dark);
+}
+
+/* Индикатор активного фильтра */
+.filter-indicator {
+  fill: #ff4757;
+  stroke: none;
+  animation: pulse 1.5s infinite;
+}
+
+.filter-clear {
+  margin-left: 5px;
+  background: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Модальное окно фильтра */
+
+
+
+
+
+.filter-option {
+  
+  cursor: pointer;
+  
+  
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+
+.filter-option.active {
+  
+  color: var(--dark);
+}
+
+/* Иконки элементов в фильтре */
+.filter-option[data-type="element"] {
+  position: relative;
+  
+}
+
+.filter-option[data-type="element"]::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
+/* Сообщение "нет результатов" */
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: var(--dark);
+  font-size: 16px;
+  grid-column: 1 / -1;
+}
+
+
+
+/* Добавьте в ваш CSS файл */
+.modal-content-updating {
+  animation: modalUpdate 0.3s ease;
+}
+
+@keyframes modalUpdate {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Добавьте в ваш CSS файл */
+.language-switcher {
+  display: flex;
+  gap: 5px;
+}
+
+
+
+/* Анимация для плавного перехода */
+.lang-btn {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}
+
+/* ===== КОМПАКТНЫЕ КЛАССЫ (f-c, g-2, br-4, b-d, c-l и т.д.) =====
+   Отдельная от "АТОМАРНЫЕ КЛАССЫ" выше система (короче, на vmin/vw вместо
+   var(--space-N)) — на практике по коду используется именно она. Полная
+   легенда/справочник: src/assets/styles/STYLE_GUIDE.md */
+.f {display: flex;}
+.f-c {
+  display: flex; 
+  flex-direction: column;
+}
+.f-r {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.m-t-3 { margin-top: 3vw; }
+.m-1-0 {margin: 1rem 0;}
+.m-0-1 {margin: 0 1rem;}
+
+
+.bg-l { background-color: var(--light); }
+.bg-d { background-color: var(--dark); }
+.bg-b { background-color: var(--blueberry);}
+
+.c-l { color: var(--light); }
+.c-d { color: var(--dark); }
+
+.ta-l { text-align: left; }
+.ta-c { text-align: center; }
+
+.ac-c {align-content: center;}
+.ai-c {align-items: center;}
+
+/* .g-2 здесь дублировалась (2vw) и перебивалась версией на vmin ниже — удалено, см. комментарий у .p-1/.p-2/.p-3 выше */
+
+.out-l { outline: 3px dashed var(--light); outline-offset: 5px; }
+.out-d { outline: 5px solid var(--dark); outline-offset: 5px; }
+
+
+.ov-h {overflow: hidden;}
+
+.p-r {position: relative;}
+
+
+.jc-sb { justify-content: space-between;}
+.jc-c {justify-content: center;}
+
+.wd {width: 100%;}
+.hd {height: 100%;}
+
+.character-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s forwards;
+}
+.close-btn{  position: absolute; z-index: 1; border: none;}
+.close-butt{  position: absolute; z-index: 50; border: none;}
+.modal-content {  max-height: 80%; max-width: 512px;}
+
+
+
+.charImg{overflow: hidden; outline: 5px solid var(--dark);outline-offset: -5px;}
+.character-avatar-container img{ aspect-ratio: 16/9;
+  filter: drop-shadow(var(--billberry) -16px 0px);object-fit: cover; object-position: top;
+}
+
+
+
+
+.character-avatar-container.element-electro .charImg{
+  background-size:100%; background-repeat: no-repeat; background-position: center; 
+  background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 1920 1080" fill="%23c5a0d5" xmlns="http://www.w3.org/2000/svg"><path d="M395.94 577.245C418.292 599.838 420.678 635.411 401.544 660.787L102.563 1057.31C91.7872 1071.6 74.927 1080 57.0284 1080C25.5325 1080 0 1054.47 0 1022.97V332.716C0 275.532 69.2804 247.053 109.498 287.705L395.94 577.245ZM637 820.911C666.53 850.76 659.801 900.48 623.4 921.406L362.344 1071.48C352.64 1077.06 341.641 1080 330.447 1080H263.958C211.144 1080 181.06 1019.64 212.857 977.469L418.743 704.417C442.234 673.261 487.899 670.198 515.341 697.937L637 820.911ZM867.915 1054.32C870.191 1056.62 871.666 1059.59 872.123 1062.8C873.416 1071.88 866.37 1080 857.198 1080H667.525C601.984 1080 578.807 993.181 635.628 960.515L681.811 933.965C706.997 919.486 738.775 923.786 759.206 944.439L867.915 1054.32ZM1169.61 1021.68C1166.67 1054.7 1139.01 1080 1105.86 1080H976.296C959.202 1080 942.819 1073.16 930.798 1061.01L924.034 1054.17C914.372 1044.41 908.109 1031.79 906.172 1018.19L884.21 864.031C880.519 838.117 892.98 812.566 915.673 799.52L1097.65 694.904C1142.54 669.099 1197.89 704.502 1193.29 756.074L1169.61 1021.68ZM1716.61 993.475C1732.35 1035.32 1701.41 1080 1656.7 1080H1274.53C1236.94 1080 1207.44 1047.76 1210.78 1010.32L1243.58 642.501C1245.44 621.699 1257.32 603.11 1275.43 592.701L1448.99 492.923C1483.21 473.252 1526.9 488.939 1540.79 525.883L1716.61 993.475ZM1920 1016C1920 1051.35 1891.35 1080 1856 1080H1836.19C1809.53 1080 1785.67 1063.48 1776.28 1038.52L1568.57 486.09C1557.53 456.737 1569.39 423.71 1596.57 408.081L1824.1 277.277C1866.77 252.748 1920 283.547 1920 332.761V1016ZM847.707 891.41C852.245 923.265 813.536 942.48 790.906 919.606C775.498 904.031 779.008 878.088 798.002 867.169C818.481 855.396 844.375 868.024 847.707 891.41ZM828.564 757.037C832.256 782.952 819.795 808.502 797.101 821.548L774.044 834.804C748.859 849.283 717.08 844.982 696.649 824.33L526.559 652.4C504.207 629.807 501.821 594.235 520.955 568.859L664.397 378.62C698.685 333.147 770.827 351.744 778.859 408.125L828.564 757.037ZM1211.51 551.821C1209.65 572.623 1197.77 591.212 1179.66 601.621L953.952 731.377C914.705 753.939 865.079 729.736 858.694 684.918L794.868 236.884C792.468 220.032 796.879 202.918 807.128 189.327L930.68 25.4686C942.773 9.43034 961.694 0 981.781 0H1190.76C1228.35 0 1257.84 32.243 1254.5 69.6846L1211.51 551.821ZM745.424 173.422C747.824 190.274 743.413 207.388 733.165 220.979L503.756 525.228C480.265 556.384 434.6 559.447 407.157 531.708L18.5025 138.851C6.64869 126.869 0 110.695 0 93.8401V64C0 28.6538 28.6538 0 64 0H665.19C697.049 0 724.057 23.4332 728.55 54.974L745.424 173.422ZM1480.88 366.544C1491.92 395.897 1480.06 428.924 1452.87 444.553L1357.44 499.417C1312.55 525.222 1257.2 489.819 1261.8 438.247L1298.74 23.9168C1299.95 10.3775 1311.29 0 1324.89 0C1335.82 0 1345.61 6.77673 1349.46 17.0102L1480.88 366.544ZM1920 138.979C1920 161.887 1907.76 183.047 1887.9 194.464L1600.46 359.71C1566.24 379.381 1522.54 363.693 1508.65 326.75L1418.33 86.5245C1402.59 44.6759 1433.52 0 1478.23 0H1856C1891.35 0 1920 28.6538 1920 64V138.979ZM846.763 70.3227C823.246 101.511 773.766 88.7563 768.257 50.0862C764.491 23.6475 785.008 0 811.714 0C847.938 0 868.571 41.3996 846.763 70.3227Z"/></svg>');
+}
+
+
+.character-avatar-container.element-anemo img::before{content: '111'; color: #000; top: 0; position: absolute;
+  background-size:90%; background-repeat: no-repeat; background-position: center;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 850" fill="%23a0d5b5"><path  d="M1126 0C1161.35 0 1190 28.6538 1190 64V106C1190 141.346 1218.65 170 1254 170H1466C1501.35 170 1530 141.346 1530 106V64C1530 28.6538 1558.65 6.76473e-07 1594 0H1636C1671.35 0 1700 28.6538 1700 64V106C1700 141.346 1671.35 170 1636 170H1594C1558.65 170 1530 198.654 1530 234V446C1530 481.346 1558.65 510 1594 510H1636C1671.35 510 1700 538.654 1700 574V616C1700 651.346 1671.35 680 1636 680H1594C1558.65 680 1530 708.654 1530 744V786C1530 821.346 1501.35 850 1466 850H1254C1218.65 850 1190 821.346 1190 786V744C1190 708.654 1218.65 680 1254 680H1466C1501.35 680 1530 651.346 1530 616V574C1530 538.654 1501.35 510 1466 510H1424C1388.65 510 1360 481.346 1360 446V404C1360 368.654 1331.35 340 1296 340H1254C1218.65 340 1190 311.346 1190 276V234C1190 198.654 1161.35 170 1126 170H914C878.654 170 850 141.346 850 106V64C850 28.6538 878.654 6.76473e-07 914 0H1126Z" fill="var(--cherry)"/><path d="M446 0C481.346 0 510 28.6538 510 64V106C510 141.346 538.654 170 574 170H616C651.346 170 680 198.654 680 234V276C680 311.346 708.654 340 744 340H956C991.346 340 1020 368.654 1020 404V446C1020 481.346 991.346 510 956 510H914C878.654 510 850 538.654 850 574V616C850 651.346 821.346 680 786 680H744C708.654 680 680 708.654 680 744V786C680 821.346 651.346 850 616 850H574C538.654 850 510 821.346 510 786V744C510 708.654 481.346 680 446 680H404C368.654 680 340 708.654 340 744V786C340 821.346 311.346 850 276 850H234C198.654 850 170 821.346 170 786V744C170 708.654 141.346 680 106 680H64C28.6538 680 6.76561e-07 651.346 0 616V234C0 198.654 28.6538 170 64 170H106C141.346 170 170 198.654 170 234V616C170 651.346 198.654 680 234 680H276C311.346 680 340 651.346 340 616V404C340 368.654 368.654 340 404 340H446C481.346 340 510 311.346 510 276V234C510 198.654 481.346 170 446 170H404C368.654 170 340 141.346 340 106V64C340 28.6538 368.654 6.76473e-07 404 0H446ZM574 340C538.654 340 510 368.654 510 404V616C510 651.346 538.654 680 574 680H616C651.346 680 680 651.346 680 616V404C680 368.654 651.346 340 616 340H574Z" /></svg>');
+}
+
+
+
+
+.modal-header {display: flex; width: 100%; justify-content: space-between;}
+.modal-header img {display: flex; width: 12vmin; height: 12vmin;}
+.modal-header button {display: flex; width: 6vmin; height: 6vmin;}
+
+
+
+.avatar-selector{max-width: 90%; max-height: 80%; display: flex; aspect-ratio: 1/1; overflow: hidden;}
+.avatar-grid { overflow-y: auto ;
+  justify-content: start;
+  align-content: start; 
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(16vmin, 1fr));}
+.avatar-item { display: flex; overflow: hidden; aspect-ratio: 1/1;}
+.avatar-item img {width: 100%; object-fit: cover;}
+
+
+
+
+
+
+.calculated-materials{display: grid; width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(16vmin, 1fr));}
+ 
+
+  .toggle-switch label { overflow: hidden; 
+    position: relative;
+  display: flex;
+
+  width: 12vmin; 
+  height: 6vmin;
+}
+
+.toggle-switch label input{display: none;}
+.toggle-switch label span { overflow: hidden;   display: flex;
+  position: absolute; align-items: center;
+cursor: pointer;
+top: 0; left: 0; right: 0; bottom: 0; 
+}
+
+.toggle-switch label span::before{ content: ''; border-radius: 50%; align-items: center;
+position: absolute; height: 4vmin; aspect-ratio: 1/1; top: 1vmin; bottom: 1vmin; left: 1vmin;
+background-color: var(--dark); transition: all 0.3s ease-in-out;
+}
+
+.toggle-switch label input:checked + span{ 
+background-color: var(--dark);
+}
+
+.toggle-switch label input:checked + span::before{ 
+background-color: var(--blueberry); transform: translateX(5.5vmin); transition: all 0.3s ease-in-out;
+}
+
+.character-profile-sub div .character-avatar-sub {filter:drop-shadow( var(--billberry) -8px 16px 0px);}
+
+
+
+.character-header-sub{width: 100%; flex: 1;}
+
+.character-sub-page {margin: 0; width: 100%;}
+
+
+
+/* Контейнер Masonry для всей страницы */
+.page-masonry-grid {
+  column-count: 1;
+  column-gap: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 2 колонки в landscape / на планшетах и десктопе */
+@media (min-width: 992px) {
+  .page-masonry-grid {
+    column-count: 2;
+    
+  }
+}
+
+/* Элементы сетки (карточки) */
+.masonry-item {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: block; /* Важно для корректного потока */
+}
+
+/* Фикс для изображений внутри карточек */
+.masonry-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.daily-books-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+
+
+.daily-books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.region-books-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid;
+  padding: 16px;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.region-books-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.region-name {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.book-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.book-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.book-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-grow: 1;
+}
+
+.region-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+
+.region-icon {
+  font-size: 1rem;
+}
+
+.additional-info {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-text {
+  margin: 8px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .daily-books-block {
+    padding: 16px;
+    margin: 12px 0;
+  }
+  
+  .daily-books-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .daily-books-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .daily-books-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .region-books-card {
+    padding: 12px;
+  }
+  
+  .region-name {
+    font-size: 0.95rem;
+  }
+  
+  .book-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .book-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .daily-books-block {
+    padding: 12px;
+  }
+  
+  .daily-books-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .region-books-card {
+    padding: 10px;
+  }
+  
+  .book-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .region-info {
+    font-size: 0.8rem;
+  }
+}
+
+.calculator-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.calculator-modal .modal-content {
+    max-width: 900px;
+    width: 80vw;
+    max-height: 700px;
+    height: 80vh;
+}
+
+/* Substat validation styles */
+.substat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.substat-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.substat-row.invalid .substat-input-wrapper input {
+    border: 1px solid var(--cherry);
+    background-color: rgba(216, 96, 114, 0.1);
+}
+
+.roll-indicator {
+    position: absolute;
+    right: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--dendro);
+}
+
+.invalid-indicator {
+    position: absolute;
+    right: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--cherry);
+}
+
+
+.scrollable-y {overflow-y: auto;}
+
+
+
+
+.button{justify-content: center; text-align: center; position: relative;
+  background-color: var(--cherry);
+  appearance: none;
+  font-size: var(--font-0);
+  transition: .1s ease;
+  box-shadow: 0px 2px 0 0px var(--billberry);
+}
+.button h5 {z-index: 2;}
+.button:hover {
+  box-shadow: 0px 0px 0 0px var(--billberry);
+  translate: 0px 2px;
+
+}
+
+/* CvLoaderContext.jsx — индикатор фоновой загрузки OpenCV.js (~7МБ wasm),
+   виден на любой странице приложения, пока идёт загрузка. */
+.cv-loading-indicator {
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  right: 8px;
+  z-index: 9999;
+  margin-top: 6px;
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 2vmin;
+  background-color: var(--dark);
+  color: var(--light);
+  opacity: 0.85;
+  pointer-events: none;
+}
+.cv-loading-spinner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--light);
+  border-top-color: transparent;
+  animation: cvSpin 0.8s linear infinite;
+}
+@keyframes cvSpin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,48 @@
+
+.filter-panel-header { width: 100%; 
+    justify-content: space-between;
+    align-items: start; 
+}
+
+
+.close-button {
+    background-color: var(--billberry); 
+    border: none; 
+     display:flex;
+     }
+.close-button:hover{
+  background-color: aqua;
+}
+
+.filter-group h3{ width: 100%;}
+.filter-options{width: 100%; flex-wrap: wrap;}
+
+.filter-section {scroll-behavior: auto;}
+
+
+/* Кнопки фильтра и назад */
+.filter-button,
+.back-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+
+.filter-button.active {
+  border-color: var(--blueberry);
+  color: var(--blueberry);
+  background: aqua;
+}
+.filter-button{ background-color: var(--billberry);
+  border: 1px solid var(--pineberry);
+}
+
+
+
+
+.reset:focus,
+.reset:hover {border: 1px solid var(--cherry); color: var(--cherry);transition: all 0.2s ease-in-out;}
+
+

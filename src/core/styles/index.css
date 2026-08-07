@@ -1,0 +1,24 @@
+/*  ============================================================
+    SECTION : IMPORT TOKENS / ROOT
+    СЕКЦИЯ  : ИМПОРТ ТОКЕНОВ / ROOT
+    ============================================================ */
+    @import './tokens/typography.css';
+    @import './tokens/spacing.css';
+    @import './tokens/z-index.css';
+    @import './tokens/radius.css';
+    @import './tokens/icon-size.css';
+    @import './tokens/colors.css';
+    @import './tokens/animation.css';
+/*  ============================================================
+    SECTION : IMPORT ATOMIC CLASS
+    СЕКЦИЯ  : ИМПОРТ АТОМАРНЫХ КЛАССОВ
+    ============================================================ */
+    @import './utilites.css';
+    @import './components/searchBar.css';
+    @import './components/modal.css';
+    @import './components/filterPanel.css';
+    @import './components/button.css';
+    @import './components/background.css';
+    @import '../../shared/ui/Range/Range.css';
+    @import './components/scrollbar.css';
+   

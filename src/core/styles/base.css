@@ -1,0 +1,30 @@
+/*  ============================================================
+    SECTION : THEMES
+    СЕКЦИЯ  : ТЕМЫ
+    ============================================================ */
+
+/* Примените переменные к элементам */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* background color */
+.background{ background-color: var(--background);}
+.background-r { background-color: var(--background-reverse);}
+.background-bill {background-color: var(--billberry);}
+
+.bg {background-color: var(--background);}
+.bg-bl {background-color: var(--billberry);}
+.bg-p {background-color: var(--pineberry);}
+.bg-r {background-color: var(--background-reverse);}
+/* color */
+.color { color: var(--color);}
+.color-r { color: var(--color-reverse);}
+.color-pine{ color: var(--pineberry)}
+.c {color: var(--text-color)}
+.c-r {color: var(--text-color-reverse);}
+.c-p {color: var(--pineberry);}
+.c-bl {color: var(--billberry);}
+
+

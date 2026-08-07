@@ -1,0 +1,238 @@
+/*
+ * В отличие от EnkaCharacterAccordion.css (--dark/--light/--dark0-8/--light0-5)
+ * здесь используются реальные, определённые в themes.css токены темы —
+ * --background/--text-color/--border/--overlay — чтобы аккордеон корректно
+ * следовал переключению светлой/тёмной темы.
+ */
+
+.farming-accordion-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 0;
+    flex: 1 1 auto;
+}
+
+.farming-accordion-controls {
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-2);
+    min-height: 0;
+    flex: 1 1 auto;
+}
+
+.farming-accordion-nav-btn {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-4);
+    background: var(--background);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.15s ease;
+}
+
+.farming-accordion-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.farming-accordion-nav-btn.next .farming-accordion-nav-icon {
+    transform: rotate(180deg);
+}
+
+.farming-accordion-nav-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.farming-accordion-viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: 420px;
+    touch-action: pan-x;
+    cursor: grab;
+    scrollbar-width: none;
+}
+
+.farming-accordion-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.farming-accordion-viewport.is-dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
+.farming-accordion-track {
+    display: flex;
+    gap: var(--space-2);
+    height: 100%;
+}
+
+.farming-accordion-panel {
+    position: relative;
+    flex: 0 0 40px;
+    min-width: 40px;
+    height: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-5);
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    background: var(--overlay);
+    color: var(--text-color);
+    box-sizing: border-box;
+    transition: flex-basis 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                min-width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.2s ease;
+}
+
+.farming-accordion-panel.is-today {
+    border-color: var(--star5);
+}
+
+.farming-accordion-panel.is-active {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1 1 240px;
+    min-width: 220px;
+    background: var(--background);
+    border-color: var(--text-color);
+    cursor: default;
+}
+
+.farming-accordion-panel.is-active.is-today {
+    border-color: var(--star5);
+}
+
+.farming-accordion-daylabel {
+    position: absolute;
+    left: var(--space-2);
+    top: var(--space-2);
+    bottom: var(--space-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lumo H', sans-serif;
+    font-size: clamp(11px, 1.4vmin, 14px);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+
+    /* Свёрнуто — вертикальный текст вдоль узкой панели (как в
+       EnkaCharacterAccordion), разворачивается в обычную строку у активной. */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.farming-accordion-panel.is-active .farming-accordion-daylabel {
+    position: static;
+    writing-mode: horizontal-tb;
+    transform: none;
+    display: block;
+    flex: 0 0 auto;
+    padding: var(--space-3) var(--space-3) 0;
+}
+
+.farming-accordion-today-dot {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--star5);
+}
+
+.farming-accordion-panel.is-active .farming-accordion-today-dot {
+    top: var(--space-3);
+    right: var(--space-3);
+}
+
+.farming-accordion-panel.is-active .farming-accordion-content {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    padding: var(--space-2) var(--space-3) var(--space-3);
+    box-sizing: border-box;
+    /* Обычный курсор внутри списка — драг полосы дней не должен начинаться
+       здесь, см. .closest('.farming-accordion-content') в обработчике. */
+    cursor: auto;
+}
+
+.farming-accordion-empty {
+    margin: var(--space-4) 0;
+    text-align: center;
+    opacity: 0.6;
+    font-family: 'Lumo p', sans-serif;
+    font-size: clamp(12px, 1.4vmin, 14px);
+}
+
+.farming-accordion-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.farming-accordion-material {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-align: left;
+}
+
+.farming-accordion-material-icon {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 auto;
+    object-fit: contain;
+    background: var(--overlay);
+    border-radius: var(--radius-4);
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.farming-accordion-material-name {
+    flex: 1 1 auto;
+    font-size: clamp(12px, 1.5vmin, 14px);
+}
+
+.farming-accordion-material-tag {
+    margin-left: var(--space-2);
+    padding: 1px 6px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: clamp(9px, 1.1vmin, 11px);
+    text-transform: uppercase;
+    opacity: 0.6;
+    vertical-align: middle;
+}
+
+.farming-accordion-material-needed {
+    flex: 0 0 auto;
+    padding: 2px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: clamp(11px, 1.3vmin, 13px);
+    opacity: 0.8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .farming-accordion-panel,
+    .farming-accordion-viewport {
+        transition: none;
+        scroll-behavior: auto;
+    }
+}

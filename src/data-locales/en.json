@@ -1,0 +1,38 @@
+{
+    "navigation": {
+        "home": "Home",
+        "characters": "Characters",
+        "weapon": "Weapon",
+        "weapons": "Weapons",
+        "date": "Date",
+        "profile": "Profile"
+    },
+    "buttons": {
+        "save": "Save",
+        "update": "Update",
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "overwrite": "Overwrite",
+        "add_to_main_page": "Add to Main Page",
+        "already_added": "Already Added",
+        "close": "Close"
+    },
+    "notifications": {
+        "saveSuccess": "Build saved successfully",
+        "updateSuccess": "Build updated successfully",
+        "deleteSuccess": "Build deleted",
+        "deleteError": "Failed to delete build",
+        "loading": "Loading data...",
+        "schedule_added": "Schedule added to the main page",
+        "schedule_overwritten": "Schedule on the main page has been updated"
+    },
+    "deleteConfirmation": {
+        "title": "Confirm Deletion",
+        "message": "Are you sure you want to delete the build for {{itemName}}?"
+    },
+    "materials_page": {
+        "overwrite_title": "Confirm Overwrite",
+        "overwrite_text_weapon": "There is already another weapon on the main page. Overwrite?",
+        "overwrite_text_character": "There is already another character on the main page. Overwrite?"
+    }
+}

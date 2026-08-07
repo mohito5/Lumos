@@ -1,0 +1,10 @@
+{
+    "vajrada_amethyst_sliver":{"name": "Осколок аметиста Ваджрада"},
+    "vayuda_turquoise_sliver":{"name":"Осколок бирюзы Вайюда"} ,
+    "vajrada_amethyst_fragment":{"name":"Фрагмент аметиста Ваджрада"} ,
+    "vayuda_turquoise_fragment":{"name":"Фрагмент бирюзы Вайюда"} ,
+    "vajrada_amethyst_chunk":{"name":"Кусок аметиста Ваджрада"} ,
+    "vayuda_turquoise_chunk":{"name":"Кусок бирюзы Вайюда"} ,
+    "vajrada_amethyst_gemstone":{"name":"Драгоценный аметист Ваджрада"} ,
+    "vayuda_turquoise_gemstone":{"name":"Драгоценная бирюза Вайюда"}
+}

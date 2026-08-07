@@ -1,0 +1,523 @@
+{
+    "navigation": {
+        "characters": "Characters",
+        "home": "Home",
+        "weapon": "Weapon",
+        "weapons": "Weapons",
+        "date": "Archive",
+        "profile": "Profile"
+    },
+    "search": {
+        "placeholder": "Search by name..."
+    },
+    "calculator": {
+        "fromPrevious": "From Previous Level",
+        "totalFromFirst": "Total from Level 1",
+        "title": "Character Calculator",
+        "selectCharacter": "Select character",
+        "selectWeapon": "Select weapon",
+        "level": "Level",
+        "weaponLevel": "Weapon level",
+        "selectArtifacts": "Artifacts",
+        "setBonuses": "Set bonuses",
+        "noActiveBonuses": "No active bonuses",
+        "finalStats": "Final stats",
+        "reset": "Reset",
+        "deleteBuild": "Delete build",
+        "updateBuild": "Update build",
+        "saveBuild": "Save build",
+        "buildName": "Build name"
+    },
+    "pages": {
+        "home": {
+            "title": "Welcome to Lumos",
+            "welcome": "This project will help you track your progress in Genshin Impact.",
+            "birthdays": {
+                "title": "Today's Birthdays",
+                "announcementFormat": "Today is {name}'s birthday!",
+                "noBirthdayToday": "No birthdays today",
+                "imageAlt": "{name}'s birthday",
+                "calendar": {
+                    "error": "Error loading calendar.",
+                    "months": [
+                        "January",
+                        "February",
+                        "March",
+                        "April",
+                        "May",
+                        "June",
+                        "July",
+                        "August",
+                        "September",
+                        "October",
+                        "November",
+                        "December"
+                    ],
+                    "weekdays": [
+                        "Mo",
+                        "Tu",
+                        "We",
+                        "Th",
+                        "Fr",
+                        "Sa",
+                        "Su"
+                    ]
+                }
+            },
+            "serverTimer": {
+                "title": "Server Reset Timers",
+                "serverAsia": "Asia Server",
+                "serverEurope": "Europe Server",
+                "serverAmerica": "America Server",
+                "timeLeft": "Time left: {{hours}}h {{minutes}}m",
+                "soon": "Reset soon!",
+                "yourTimezone": "Your timezone",
+                "showServerTime": "Show server time",
+                "showLocalTime": "Show local time"
+            },
+            "talentBooks": {
+                "title": "Talent Books",
+                "todayWeekdays": "Today's weekdays"
+            },
+            "common": {
+                "talentBooks": "Talent Books",
+                "weaponMaterials": "Weapon Materials"
+            }
+        },
+        "characters": {
+            "title": "Characters",
+            "pageMaterials": {
+                "total": "Total Materials"
+            }
+        },
+        "weapons": {
+            "title": "Weapons"
+        },
+        "info": {
+            "title": "arcivec"
+        },
+        "profile": {
+            "title": "Profile",
+            "selectAvatar": "Select Avatar"
+        },
+        "inventory": {
+            "title": "Inventory"
+        },
+        "fishing": {
+            "title": "Fishing",
+            "description": "Information about fish, bait, and fishing spots."
+        }
+    },
+    "home": {
+        "title": "Welcome to Lumos",
+        "description": "This project will help you track your progress in Genshin Impact.",
+        "birthdays": {
+            "title": "Today's Birthdays",
+            "announcementFormat": "Today is `{name}`'s birthday!",
+            "noBirthdayToday": "No birthdays today",
+            "imageAlt": "{name}'s birthday",
+            "calendar": {
+                "error": "Error loading calendar.",
+                "months": [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+                "weekdays": [
+                    "Mo",
+                    "Tu",
+                    "We",
+                    "Th",
+                    "Fr",
+                    "Sa",
+                    "Su"
+                ]
+            }
+        },
+        "serverTimer": {
+            "title": "Server Reset Timers",
+            "serverAsia": "Asia Server",
+            "serverEurope": "Europe Server",
+            "serverAmerica": "America Server",
+            "timeLeft": "Time left: {{hours}}h {{minutes}}m",
+            "soon": "Reset soon!",
+            "yourTimezone": "Your timezone",
+            "showServerTime": "Show server time",
+            "showLocalTime": "Show local time"
+        },
+        "talentBooks": {
+            "title": "Talent Books",
+            "todayWeekdays": "Today's weekdays"
+        },
+        "dailyFarmableMaterials": {
+            "weaponMaterials": "Weapon Materials",
+            "title": "Materials of the Day",
+            "todayWeekdays": "Today's weekdays"
+        },
+        "farmingSchedule": {
+            "title": "Farming Schedule"
+        }
+    },
+    "character": {
+        "title": "Characters",
+        "materials": {
+            "total": "Total Materials",
+            "level": "Level",
+            "attack": "Normal Attack",
+            "skill": "Elemental Skill",
+            "burst": "Elemental Burst"
+        },
+        "guide": "Character Guide",
+        "builds": "Builds",
+        "upgradeMaterials": "Upgrade Materials",
+        "talentLevel": "Talent Level",
+        "talentStats": "Talent Stats",
+        "noUpgradeNeeded": "No upgrade needed",
+        "error": "Calculation Error"
+    },
+    "archive": {
+        "title": "Archive",
+        "artifacts": {
+            "title": "Artifacts",
+            "sub"  : "Artifacts folder",
+            "desc" : "Full Data Artifacts"
+        },
+        "creatures": {
+            "title": "Creatures",
+            "sub"  : "Creatures folder",
+            "desc" : "Full Data Creatures"
+        },
+        "fishing"  : {
+            "title": "Fishing",
+            "sub"  : "Fishing folder",
+            "desc" : "Full Data Fishing"
+        }
+    },
+    "weekdays": [],
+    "birthdays": {
+        "title": "Today's Birthdays",
+        "announcementFormat": "Today is {name}'s birthday!",
+        "noBirthdayToday": "No birthdays today",
+        "imageAlt": "{name}'s birthday"
+    },
+    "filters": {
+        "title": "Filters",
+        "rarity": "Rarity",
+        "vision": "Vision",
+        "weapon": "Weapon",
+        "type": "Type",
+        "category": "Category",
+        "region": "Filter by region:",
+        "all_regions": "All Regions"
+    },
+    "button": {
+        "open": "Open"
+    },
+    "buttons": {
+        "apply": "Apply",
+        "reset": "Reset",
+        "details": "Details",
+        "filterTooltip": "Filter",
+        "resetTooltip": "Reset filters",
+        "close": "Close",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "overwrite": "Overwrite",
+        "update_schedule": "Update schedule",
+        "pin_to_home": "Pin to home",
+        "unpin_from_home": "Unpin"
+    },
+    "deleteConfirmation": {
+        "title": "Confirm",
+        "message": "Delete \"{{itemName}}\"?",
+        "types": {
+            "character": {
+                "title": "Delete character?",
+                "message": "The \"{{itemName}}\" build will be permanently deleted."
+            },
+            "weapon": {
+                "title": "Delete weapon?",
+                "message": "The \"{{itemName}}\" build will be permanently deleted."
+            },
+            "calculate": {
+                "title": "Delete calculation?",
+                "message": "The \"{{itemName}}\" calculation will be permanently deleted."
+            },
+            "schedule": {
+                "title": "Remove from schedule?",
+                "message": "\"{{itemName}}\" will be removed from your pinned farming schedule."
+            },
+            "profile": {
+                "title": "Delete profile?",
+                "message": "ALL saved data will be permanently deleted: characters, weapons, calculations, inventory, priority, farming schedule, accumulated character library, nickname/avatar, and Enka link."
+            },
+            "team": {
+                "title": "Delete team?",
+                "message": "The team card \"{{itemName}}\" will be permanently deleted."
+            }
+        }
+    },
+    "serverTimer": {
+        "title": "Server Reset Timers",
+        "serverAsia": "Asia Server",
+        "serverEurope": "Europe Server",
+        "serverAmerica": "America Server",
+        "timeLeft": "Time left: {{hours}}h {{minutes}}m",
+        "soon": "Reset soon!",
+        "yourTimezone": "Your timezone",
+        "showServerTime": "Show server time",
+        "showLocalTime": "Show local time"
+    },
+    "talentsModal": {
+        "characterLevel": "Character Level",
+        "backButton": "Back"
+    },
+    "modal": {
+        "stats": {
+            "title": "Stats by Level",
+            "level": "Level",
+            "attack": "Attack",
+            "defense": "Defense"
+        },
+        "resistances": {
+            "title": "Elemental Resistances"
+        },
+        "drops": {
+            "title": "Drops"
+        },
+        "behavior": {
+            "title": "Behavior"
+        },
+        "fishing": {
+            "details_title": "Details",
+            "region": "Region",
+            "location": "Location",
+            "bait": "Bait",
+            "difficulty": "Difficulty"
+        }
+    },
+    "rarity": {
+        "common": "Common",
+        "uncommon": "Uncommon",
+        "rare": "Rare",
+        "epic": "Epic",
+        "legendary": "Legendary",
+        "1": "★",
+        "2": "★★",
+        "3": "★★★",
+        "4": "★★★★",
+        "5": "★★★★★"
+    },
+    "category": {
+        "common_currencies": "Common currencies",
+        "character_weapon_enhancement": "Weapon enhancement",
+        "character_talent": "Talents",
+        "weapon_enhancement_materials": "Weapon materials",
+        "local_specialty": "Local specialties",
+        "character_exp": "Character EXP",
+        "character_ascention": "Character ascension"
+    },
+    "difficulty": {
+        "very_easy": "Very Easy",
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard"
+    },
+    "region": {
+        "mondstadt": "Mondstadt",
+        "liyue": "Liyue",
+        "inazuma": "Inazuma",
+        "sumeru": "Sumeru",
+        "fontaine": "Fontaine"
+    },
+    "bait": {
+        "rain_worm": "Rain Worm"
+    },
+    "game_time": {
+        "any_time": "Any Time"
+    },
+    "days": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+    },
+    "days_short": {
+        "monday": "Mo",
+        "tuesday": "Tu",
+        "wednesday": "We",
+        "thursday": "Th",
+        "friday": "Fr",
+        "saturday": "Sa",
+        "sunday": "Su"
+    },
+    "talent_books": {
+        "description": "Materials are grouped by region and domain",
+        "reset_time": "Domains reset daily at 4:00 server time"
+    },
+    "weapon_materials": {
+        "description": "Weapon ascension materials open today"
+    },
+    "settings": {
+        "title": "Settings"
+    },
+    "profile": {
+        "description": "Set up your profile manually or sign in via Enka.Network",
+        "usernamePlaceholder": "Your nickname",
+        "defaultUsername": "Traveler",
+        "profileSaved": "Profile saved",
+        "functions": "Sections",
+        "calculatorTitle": "Stats Calculator",
+        "calculatorDescription": "Calculate character stats with weapons and artifacts",
+        "inventoryTitle": "Inventory",
+        "inventoryDescription": "Manage your in-game items",
+        "enkaImportTitle": "Enka.Network Showcase",
+        "enkaImportDescription": "View your character showcase from Enka.Network",
+        "teamCardsTitle": "Team Cards",
+        "teamCardsDescription": "Build and download shareable team cards",
+        "onboarding": {
+            "ocrScan": "New: scan your inventory from a photo — materials are recognized automatically, and results from multiple scans are summed together.",
+            "priorityList": "Mark builds as priority so materials get allocated to them first."
+        },
+        "priorityTitle": "Priority",
+        "priorityDescription": "Builds that get farmed first",
+        "teamCards": {
+            "title": "Team Cards",
+            "hint": "Build a team of 4 characters from your library and export a PNG card to share with friends.",
+            "empty": "No saved team cards yet.",
+            "maxReached": "Limit reached: {{max}} cards",
+            "needMoreCharacters": "Your library needs at least {{needed}} characters",
+            "createNew": "New team",
+            "namePlaceholder": "Team name (optional)",
+            "mainDpsHint": "Usually the main DPS — the first slot appears larger on the card",
+            "pickCharacter": "Pick a character",
+            "untitled": "Team",
+            "mainDps": "Main DPS",
+            "level": "Lv.",
+            "missingCharacters": "{{count}} character(s) no longer in the library",
+            "downloadPng": "Download PNG",
+            "talents": {
+                "attack": "Normal Attack",
+                "skill": "Elemental Skill",
+                "burst": "Elemental Burst",
+                "attackShort": "A",
+                "skillShort": "S",
+                "burstShort": "B"
+            },
+            "variants": {
+                "compact": "Compact",
+                "build": "Build",
+                "detailed": "Detailed"
+            },
+            "variantHints": {
+                "compact": "Characters and weapons only — minimal detail.",
+                "build": "Characters, weapons, main stats, and set bonuses.",
+                "detailed": "Maximum detail: talents and a full per-artifact breakdown."
+            }
+        },
+        "addToPriority": "Add to priority:",
+        "savedTitle": "Saved",
+        "savedDescription": "Your saved builds",
+        "characters": "Characters",
+        "weapons": "Weapons",
+        "calculator": "Calculator",
+        "deleteProfileButton": "Delete profile",
+        "deleteProfileSuccess": "Profile deleted",
+        "enkaMode": {
+            "ar": "AR",
+            "wl": "WL",
+            "abyss": "Abyss",
+            "refresh": "Refresh",
+            "refreshing": "Refreshing…",
+            "unlink": "Unlink",
+            "unlinkSuccess": "Profile unlinked from Enka",
+            "uidPlaceholder": "UID instead of a nickname — import from Enka",
+            "linkButton": "Import",
+            "linking": "Importing…",
+            "linkSuccess": "Profile linked to Enka.Network",
+            "loading": "Loading…",
+            "fetchButton": "Fetch data",
+            "showcaseOf": "Character showcase of",
+            "useAsProfile": "Use as my profile",
+            "alreadyLinked": "Already in use",
+            "accumulate": "Add to library",
+            "accumulateHint": "Add characters from this showcase to your persistent library (up to {{max}}) — doesn't replace profile linking",
+            "libraryTitle": "Character library",
+            "libraryRemove": "Remove from library",
+            "libraryAdded": "added: {{count}}",
+            "libraryUpdated": "updated: {{count}}",
+            "libraryFull": "Library is full ({{max}}/{{max}}) — some characters weren't added, remove some or update them manually",
+            "errors": {
+                "empty_uid": "Enter a UID",
+                "invalid_uid": "UID must be a number (6-12 digits)",
+                "not_found": "Profile not found or hidden",
+                "rate_limited": "Enka.Network is temporarily rate-limiting requests — try again in a minute",
+                "game_maintenance": "Game servers are under maintenance — try again later",
+                "network_error": "Could not reach Enka.Network",
+                "empty_showcase": "No characters on the showcase, or the profile is hidden"
+            }
+        }
+    },
+    "materials_page": {
+        "view_schedule": "Farming schedule",
+        "farming_schedule": "Farming schedule",
+        "needed": "needed",
+        "no_materials_for_this_day": "Nothing planned for this day",
+        "weekly_tag": "weekly",
+        "scroll_prev": "Scroll left",
+        "scroll_next": "Scroll right"
+    },
+    "weapon": {
+        "guide": "Weapon Guide",
+        "builds": "Builds"
+    },
+    "common": {
+        "comingSoon": "Coming soon",
+        "close": "Close",
+        "cancel": "Cancel"
+    },
+    "ocr": {
+        "title": "Import Inventory",
+        "description": "Upload a screenshot of your Genshin Impact materials screen. Material containers will be found automatically.",
+        "multiPartTip": "Big inventory? Scan it in parts — results from each scan are summed automatically.",
+        "chooseFile": "Choose file",
+        "dropHint": "or drop an image here",
+        "formats": "PNG, JPG, WebP — any resolution",
+        "scan": "Scan",
+        "scanning": "Scanning...",
+        "scanAnother": "Scan more",
+        "processing": "Scanning...",
+        "done": "Done!",
+        "cvLoading": "Loading OpenCV...",
+        "cvLoadingNote": "The first load may take a few seconds",
+        "cvError": "Failed to load OpenCV. Please reload the page.",
+        "reviewTitle": "Review the result",
+        "reviewHint": "Fix the quantity wherever OCR got it wrong, or remove a row entirely.",
+        "reviewQtyLabel": "Quantity",
+        "reviewRemove": "Remove from result",
+        "reviewEmpty": "All rows were removed — nothing to save.",
+        "reviewDiscard": "Discard",
+        "reviewConfirm": "Save to inventory",
+        "savedCount": "Saved to inventory: {{count}} material types.",
+        "savedNone": "Nothing was saved — all rows were removed."
+    },
+    "errors": {
+        "pageNotFound": "Page not found",
+        "pageNotFoundDesc": "The page may have been removed, or you followed a broken link",
+        "goHome": "← Home",
+        "somethingWentWrong": "Something went wrong",
+        "tryAgain": "Try again"
+    }
+}

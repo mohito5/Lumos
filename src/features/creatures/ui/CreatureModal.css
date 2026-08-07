@@ -1,0 +1,30 @@
+table{
+    padding: var(--space-1);
+}
+
+.stats-table th,
+.stats-table td {
+    padding: var(--space-1);
+    text-align: left; border-radius: var(--radius-1);
+}
+th {
+    border: 1px solid currentColor;
+}
+
+.resistance-table tbody  {
+    display: flex;
+} 
+.resistance-table tbody tr {
+    
+    display: flex; flex-direction: column;
+} 
+
+.resistance-table tbody td {
+    display: flex; flex-direction: column;
+    
+} 
+.resistance-table tbody td td {
+    border: 1px solid rgba(0, 0, 0, 0);
+    
+} 
+

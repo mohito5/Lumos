@@ -1,0 +1,16 @@
+/*  ============================================================
+    SECTION : ANIMATION
+    СЕКЦИЯ  : АНИМАЦИЯ 
+    ============================================================ */
+   :root{ 
+        --duration-instant: .08s;
+        --duration-fast: .15s;
+        --duration-normal: .25s;
+        --duration-slow: .4s;
+        --duration-page: .55s;
+
+        --ease-standard: cubic-bezier(.2,.8,.2,1);
+        --ease-decelerate: cubic-bezier(0,0,.2,1);
+        --ease-accelerate: cubic-bezier(.4,0,1,1);
+        --ease-bounce: cubic-bezier(.34,1.56,.64,1);
+    }

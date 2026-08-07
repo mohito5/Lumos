@@ -1,0 +1,53 @@
+name: CI
+
+# Раньше тесты (см. tests/) существовали, но нигде не запускались
+# автоматически — сломанный импорт мог месяцами лежать незамеченным (именно
+# так и произошло с tests/materialsCalculator.test.js — см. историю
+# изменений). Эта задача не "поймать больше багов", а "не дать
+# существующим тестам молча перестать работать".
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Тесты (vitest)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx vitest run
+
+  build:
+    name: Сборка (vite build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+  typecheck:
+    name: Типы (tsc, информационно)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      # continue-on-error: проект смешанный JS/TS, часть .jsx-импортов пока
+      # без деклараций типов (несколько таких мест были и до этой правки) —
+      # это не должно блокировать пуш/мердж, но полезно видеть в CI, а не
+      # только при случайном локальном запуске tsc.
+      - run: npx tsc --noEmit -p tsconfig.json
+        continue-on-error: true

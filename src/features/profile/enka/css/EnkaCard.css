@@ -1,0 +1,205 @@
+.enka-card{
+    aspect-ratio: 3/2;
+    padding: 2cqw;
+    display: flex; 
+    flex-direction: row;
+    overflow: hidden;
+    z-index: 0;
+}
+.star{
+    position: absolute;
+    transform: rotate(16deg) translate(42cqw , -12cqw);
+    z-index: 6;
+    width: 12cqw;
+    height: 12cqw;
+}
+.star2{
+    position: absolute;
+    transform: rotate(16deg) translate(92cqw , 0cqw);
+    mix-blend-mode:hard-light;
+    color: var(--color);
+    z-index: 6;
+    width: 12cqw;
+    height: 12cqw;
+}
+.left{ flex: 3;
+    display: flex; flex-direction: column;
+}
+.right{ flex: 2; gap: 2cqw; display: flex; flex-direction: column;
+    z-index: 2;
+}
+.character-banner{
+    z-index: 0; 
+    position: relative;
+    transform: rotate(16deg);
+    left: 6%;
+}
+.character-img {
+   width: 100%; object-fit: cover; ; 
+   filter: drop-shadow(var(--cherry) 4cqw 0px 0px);
+}
+.character-back { position: absolute; left: 0; z-index: -1;
+   width: 100%; height: 100%; object-fit: cover; 
+    transform: translate(-32%,32%) scale(1.5);
+    mix-blend-mode:luminosity; filter: blur(0.1cqw);
+    
+}
+.character-banner .char-back {
+     width: 100%; z-index: -2; aspect-ratio: 16/9;
+     display: block; position: absolute; bottom: 0;
+    
+}
+.background-Electro{ --color: var(--electro); }
+.background-Anemo { --color: var(--anemo); }
+.background {
+    content: ''; 
+    position: absolute;
+    transform: translate(-32%, 32%) rotate(16deg); 
+    aspect-ratio: 16/9;
+    width: 64%;  
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 25%,
+    var(--color) 25% 50%,
+    transparent 50% 75%,
+    var(--color) 75%
+    );
+    background-size: 4cqw 4cqw; 
+}
+.background::after {
+    content: ''; 
+    position: absolute;
+    transform: translate(96%, -96%) ; 
+    aspect-ratio: 16/9;
+    width: 100%;  
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 25%,
+    var(--color) 25% 50%,
+    transparent 50% 75%,
+    var(--color) 75%
+    );
+    background-size: 4cqw 4cqw; 
+}
+.char-back.vision-Electro {
+    background-color: var(--electro);
+}
+.char-back.vision-Anemo {
+    background-color: var(--anemo);
+}
+.character-info{
+    z-index: 1;
+}
+.banner{display: flex; position: relative; max-height: 64%;}
+.rarity { top: 0; left: 4%; height: min-content;
+    display: inline-block; position: absolute; transform: rotate(16deg);
+    gap: 0.5cqw;
+}
+.rarity-star {
+    width: 2.4cqw;
+    height: 2.4cqw;
+    
+}
+.enka-artifact-card{
+    position: relative;
+}
+
+.enka-artifact-rarity {
+    position: absolute; display: block; top: 10%; left: -5%;
+}
+
+/* Созвездия: пилюля на 6 иконок, лежит вдоль нижнего края повёрнутого
+   баннера — тот же наклон (16deg), что и у .rarity/.character-banner. */
+.const {
+    gap: 0.8cqw;
+    position: absolute;
+    transform: rotate(16deg);
+    top: 84%;
+    left: 14%;
+    display: flex;
+    background-color: var(--dark0-8);
+    padding: 0.8cqw;
+    border-radius: 2cqw;
+}
+
+.const-item {
+    width: clamp(0.85rem, 4.2cqw, 1.4rem);
+    height: clamp(0.85rem, 4.2cqw, 1.4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0.4;
+    filter: grayscale(1);
+    flex-shrink: 0;
+}
+
+.const-item.is-active {
+    opacity: 1;
+    filter: none;
+    box-shadow: 0 0 0 2px var(--star4);
+    border-radius: 50%;
+}
+
+.const-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.const-fallback {
+    font-family: 'Lumo p', monospace;
+    font-size: clamp(0.5rem, 2.2cqw, 0.75rem);
+    color: var(--light);
+}
+
+/* Таланты: 3 группы (атака/навык/взрыв) столбиком у нижне-правого края
+   баннера. Группа повёрнута вместе с баннером (16deg) ради позиции, но
+   содержимое внутри повёрнуто обратно (-16deg), чтобы иконка и уровень
+   читались ровно, а не по диагонали. */
+.talent { transform: rotate(16deg);
+    display: flex; gap: 0.8cqw; flex-direction: column; position: absolute; bottom: -12%; right: -4%;
+}
+.talent div { background-color: var(--dark0-8); transform: rotate(-16deg); padding: 0.6cqw 1cqw;
+    display: flex; gap: 0.8cqw; align-items: center; border-radius: 1.6cqw;
+}
+
+.talent div div {  transform: rotate(0deg); 
+  
+}
+
+.talent-icon,
+.talent-icon-empty {
+    width: clamp(0.9rem, 5cqw, 1.6rem);
+    height: clamp(0.9rem, 5cqw, 1.6rem);
+    object-fit: contain;
+    border-radius: 0.6cqw;
+    flex-shrink: 0;
+}
+
+.talent-icon-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark0-5);
+    color: var(--light0-5);
+    font-family: 'Lumo p', monospace;
+}
+
+.talent-level {
+    font-family: 'Lumo p', monospace;
+    font-weight: bold;
+    color: var(--light);
+    font-size: clamp(0.6rem, 2.6cqw, 0.9rem);
+    min-width: 1.4em;
+    text-align: center;
+}

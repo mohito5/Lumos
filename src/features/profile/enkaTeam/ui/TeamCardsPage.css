@@ -1,0 +1,287 @@
+.team-cards-page {
+    
+    
+    margin: 0 auto;
+}
+
+
+.team-cards-hint {
+    font-family: 'Lumo p', monospace;
+    
+    
+    
+}
+
+.team-cards-empty {
+    font-family: 'Lumo p', monospace;
+    color: var(--pineberry_oparity);
+}
+
+.team-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vmin;
+    margin-bottom: 3vmin;
+}
+
+/* Компактный блок в списке — превью отряда, полная карточка открывается в
+   модалке по клику (см. .team-cards-view-modal ниже). Раньше здесь
+   рендерился весь TeamCardExport целиком на каждый отряд в списке. */
+.team-cards-compact-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2vmin;
+    width: 100%;
+    padding: 1.5vmin 2vmin;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Lumo p', monospace;
+    color: var(--pineberry);
+}
+
+.team-cards-compact-avatars {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.team-cards-compact-avatar {
+    width: 6vmin;
+    height: 6vmin;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--background);
+    background-color: var(--dark0-5, rgba(255,255,255,0.06));
+}
+
+.team-cards-compact-avatar:not(:first-child) {
+    margin-left: -1.8vmin;
+}
+
+.team-cards-compact-avatar-empty {
+    opacity: 0.3;
+}
+
+.team-cards-compact-name {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.6vmin;
+}
+
+.team-cards-compact-delete {
+    flex-shrink: 0;
+    width: 3.2vmin;
+    height: 3.2vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--pineberry_oparity);
+    font-size: 1.8vmin;
+    cursor: pointer;
+}
+
+.team-cards-compact-delete:hover {
+    color: var(--cherry);
+    background-color: var(--dark0-5, rgba(255,255,255,0.06));
+}
+
+.team-cards-create-btn {
+    font-family: 'Lumo p', monospace;
+    padding: 1.5vmin 3vmin;
+    border-radius: 2vmin;
+    border: 1px dashed var(--cherry);
+    background: transparent;
+    color: var(--cherry);
+    cursor: pointer;
+    width: 100%;
+}
+
+.team-cards-create-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.team-cards-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+}
+
+.team-cards-name-input {
+    font-family: 'Lumo p', monospace;
+    padding: 1.5vmin;
+    border-radius: 2vmin;
+    border: 1px solid var(--pineberry_oparity);
+    background: transparent;
+    color: var(--pineberry);
+}
+
+.team-cards-slots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5vmin;
+}
+
+.team-cards-slot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5vmin;
+    padding: 2vmin;
+    border-radius: 2vmin;
+    background: transparent;
+    cursor: pointer;
+    min-height: 8vmin;
+}
+
+.team-cards-slot-main {
+    border-color: var(--cherry);
+}
+
+.team-cards-slot-hint {
+    position: absolute;
+    bottom: -2.2vmin;
+    left: 0;
+    font-family: 'Lumo p', monospace;
+    font-size: 1vmin;
+    color: var(--cherry);
+    white-space: nowrap;
+}
+
+.team-cards-slot-avatar {
+    width: 6vmin;
+    height: 6vmin;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-cards-slot-empty {
+    font-family: 'Lumo p', monospace;
+    color: var(--pineberry_oparity);
+}
+
+.team-cards-editor-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5vmin;
+    margin-top: 2vmin;
+}
+
+.team-cards-picker {
+    max-width: 500px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.team-cards-picker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12vmin, 1fr));
+    gap: 1.5vmin;
+    margin: 2vmin 0;
+}
+
+.team-cards-picker-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vmin;
+    padding: 1vmin;
+    border-radius: 2vmin;
+    border: 1px solid var(--pineberry_oparity);
+    background: transparent;
+    color: var(--pineberry);
+    cursor: pointer;
+    font-family: 'Lumo p', monospace;
+    font-size: 1.2vmin;
+}
+
+.team-cards-picker-item:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.team-cards-picker-avatar {
+    width: 6vmin;
+    height: 6vmin;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ============================================================================
+   МОДАЛКА ПРОСМОТРА ОТРЯДА — полная карточка + выбор варианта экспорта
+   ============================================================================ */
+.team-cards-view-modal {
+    max-width: 700px;
+    max-height: 85vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vmin;
+}
+
+.team-cards-view-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vmin;
+}
+
+.team-cards-view-header h2 {
+    margin: 0;
+    font-family: 'Lumo H', sans-serif;
+    color: var(--pineberry);
+}
+
+.team-cards-variant-picker {
+    display: flex;
+    gap: 1vmin;
+}
+
+.team-cards-variant-btn {
+    flex: 1 1 0;
+    font-family: 'Lumo p', monospace;
+    font-size: 1.3vmin;
+    padding: 1vmin 1.5vmin;
+    border-radius: 1.5vmin;
+    border: 1px solid var(--pineberry_oparity);
+    background: transparent;
+    color: var(--pineberry_oparity);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.team-cards-variant-btn.active {
+    border-color: var(--cherry);
+    color: var(--cherry);
+    background-color: var(--dark0-5, rgba(255,255,255,0.06));
+}
+
+.team-cards-variant-hint {
+    margin: 0;
+    font-family: 'Lumo p', monospace;
+    font-size: 1.2vmin;
+    color: var(--pineberry_oparity);
+    text-align: center;
+}
+
+.team-cards-delete-btn {
+    align-self: center;
+    font-family: 'Lumo p', monospace;
+    font-size: 1.3vmin;
+    padding: 0.8vmin 2vmin;
+    border-radius: 2vmin;
+    border: 1px solid var(--pineberry_oparity);
+    background: transparent;
+    color: var(--pineberry_oparity);
+    cursor: pointer;
+}
+
+.team-cards-delete-btn:hover {
+    color: var(--cherry);
+    border-color: var(--cherry);
+}

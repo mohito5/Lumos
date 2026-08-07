@@ -1,0 +1,9 @@
+{
+  "amos-bow": {
+    "name": "Amos' Bow",
+    "passive": {
+      "name": "Strong-Willed",
+      "description_template": "Increases Normal Attack and Aimed Shot DMG by {0}%. After a Normal or Aimed Shot is fired, DMG dealt increases by a further {1}% every 0.1s the arrow is in the air for up to 5 times."
+    }
+  }
+}

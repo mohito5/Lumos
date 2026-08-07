@@ -1,0 +1,17 @@
+{
+    "books_of_freedom": { "name": "Свобода" },
+    "books_of_resistance": { "name": "Книги о Борьбе" },
+    "books_of_ballad": { "name": "Поэзия" },
+    "books_of_prosperity": { "name": "Процветание" },
+    "books_of_diligence": { "name": "Усердие" },
+    "books_of_gold": { "name": "Золото" },
+    "books_of_transience": { "name": "Бренность" },
+    "books_of_elegance": { "name": "Изящество" },
+    "books_of_light": { "name": "Свет" },
+    "books_of_admonition": { "name": "Наставления" },
+    "books_of_ingenuity": { "name": "Остроумие" },
+    "books_of_praxis": { "name": "Практика" },
+    "books_of_equity": { "name": "Справедливость" },
+    "books_of_justice": { "name": "Правосудие" },
+    "books_of_order": { "name": "Порядок" }
+}

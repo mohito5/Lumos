@@ -1,0 +1,1224 @@
+/* ============================================================================
+   OCR IMPORT MODAL STYLES
+   ============================================================================ */
+
+   .ocr-modal {
+    /* Центрирование модального окна */
+    
+    
+    
+    
+    /* Размеры */
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    
+    /* Flex column layout */
+    display: flex;
+    flex-direction: column;
+    
+    /* Стили */
+    background: var(--color-bg-secondary, #1a1a2e);
+    border: 2px solid var(--color-border, #3a3a5a);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Overlay - затемнение фона */
+.ocr-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    
+    /* 🔥 ЦЕНТРИРОВАНИЕ ЧЕРЕЗ FLEXBOX */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: 999;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* 🔥 ПРОКРУТКА ЕСЛИ КОНТЕНТ НЕ ВЛЕЗАЕТ */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* ============================================================================
+   HEADER
+   ============================================================================ */
+.ocr-modal .filter-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--color-border, #3a3a5a);
+    background: var(--color-bg-tertiary, #0f0f1a);
+    flex-shrink: 0;
+}
+
+.ocr-modal .filter-modal-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text, #ffffff);
+}
+
+.ocr-modal .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-text-muted, #8888aa);
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.ocr-modal .close-button:hover {
+    color: var(--color-text, #ffffff);
+}
+
+.ocr-modal .close-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ============================================================================
+   BODY - FLEX GROW + SCROLL
+   ============================================================================ */
+.ocr-modal .filter-modal-body {
+    /* Занимает всё доступное место */
+    flex: 1 1 auto;
+    
+    /* Прокрутка если контент не влезает */
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    /* Отступы */
+    padding: 20px;
+    
+    /* Flex column для внутреннего контента */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Скрытие скроллбара для чистоты */
+.ocr-modal .filter-modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ocr-modal .filter-modal-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ocr-modal .filter-modal-body::-webkit-scrollbar-thumb {
+    background: var(--color-border, #3a3a5a);
+    border-radius: 3px;
+}
+
+/* ============================================================================
+   FOOTER - FIXED AT BOTTOM
+   ============================================================================ */
+.ocr-modal .filter-modal-footer {
+    /* Прижат к низу */
+    flex-shrink: 0;
+    
+    /* Стили */
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--color-border, #3a3a5a);
+    background: var(--color-bg-tertiary, #0f0f1a);
+}
+
+/* ============================================================================
+   PROGRESS VIEW
+   ============================================================================ */
+.ocr-progress-notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.ocr-progress-notice h3 {
+    margin: 0;
+    color: var(--color-text, #ffffff);
+    font-size: 1.1rem;
+}
+
+.ocr-progress-notice p {
+    margin: 0;
+    color: var(--color-text-muted, #8888aa);
+}
+
+.ocr-progress-notice progress {
+    width: 100%;
+    max-width: 300px;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.ocr-progress-notice progress::-webkit-progress-bar {
+    background: var(--color-bg-secondary, #1a1a2e);
+    border-radius: 4px;
+}
+
+.ocr-progress-notice progress::-webkit-progress-value {
+    background: var(--color-primary, #4a9eff);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.ocr-progress-notice .complete-message {
+    font-weight: 600;
+    color: var(--color-success, #4ade80);
+    margin: 8px 0 0 0;
+}
+
+/* ============================================================================
+   FILE UPLOAD
+   ============================================================================ */
+.file-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    border: 2px dashed var(--color-border, #3a3a5a);
+    border-radius: 8px;
+    background: var(--color-bg-secondary, #1a1a2e);
+}
+
+.file-input {
+    display: none;
+}
+
+.file-input-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--color-primary, #4a9eff);
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.file-input-label:hover {
+    background: var(--color-primary-hover, #3a8eef);
+}
+
+.file-input-label:active {
+    transform: scale(0.98);
+}
+
+.file-name {
+    font-size: 0.9rem;
+    color: var(--color-text-muted, #8888aa);
+    word-break: break-all;
+    text-align: center;
+    max-width: 100%;
+}
+
+/* ============================================================================
+   CALIBRATION SECTION
+   ============================================================================ */
+.calibration-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--color-border, #3a3a5a);
+    border-radius: 8px;
+    background: var(--color-bg-secondary, #1a1a2e);
+}
+
+.calibration-hint {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted, #8888aa);
+    text-align: center;
+}
+
+.calibration-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.calibration-status {
+    margin: 0;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.calibration-status.success {
+    color: var(--color-success, #4ade80);
+    background: rgba(74, 222, 128, 0.1);
+}
+
+.calibration-status.info {
+    color: var(--color-text-muted, #8888aa);
+    background: rgba(136, 136, 170, 0.1);
+}
+
+/* ============================================================================
+   CALIBRATION MODAL VIEW
+   ============================================================================ */
+.calibration-modal {
+    max-width: 95vw;
+    max-height: 95vh;
+}
+
+.calibration-modal .filter-modal-body {
+    padding: 16px;
+    align-items: center;
+}
+
+.calibration-instructions {
+    margin: 0 0 12px 0;
+    font-size: 1rem;
+    color: var(--color-text, #ffffff);
+    text-align: center;
+    padding: 12px 16px;
+    background: var(--color-bg-tertiary, #0f0f1a);
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 🔥 CANVAS НА ВСЮ ШИРИНУ */
+.calibration-canvas-wrapper {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg-tertiary, #0f0f1a);
+    border-radius: 8px;
+    overflow: hidden;
+    /* Занимает всё доступное место по высоте */
+    flex: 1 1 auto;
+    min-height: 200px;
+}
+
+.calibration-canvas {
+    /* 🔥 КАНВАС НА ВСЮ ШИРИНУ КОНТЕЙНЕРА */
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    display: block;
+    cursor: crosshair;
+    border: 2px solid var(--color-primary, #4a9eff);
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.calibration-progress {
+    margin: 12px 0 0 0;
+    font-size: 0.95rem;
+    color: var(--color-primary, #4a9eff);
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+.button-primary,
+.button-secondary,
+.button-text {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.button-primary {
+    background: var(--color-primary, #4a9eff);
+    color: white;
+}
+
+.button-primary:hover:not(:disabled) {
+    background: var(--color-primary-hover, #3a8eef);
+}
+
+.button-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button-secondary {
+    background: var(--color-bg-secondary, #1a1a2e);
+    color: var(--color-text, #ffffff);
+    border: 1px solid var(--color-border, #3a3a5a);
+}
+
+.button-secondary:hover:not(:disabled) {
+    background: var(--color-bg-tertiary, #0f0f1a);
+}
+
+.button-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button-text {
+    background: none;
+    color: var(--color-text-muted, #8888aa);
+    padding: 8px 12px;
+}
+
+.button-text:hover:not(:disabled) {
+    color: var(--color-text, #ffffff);
+    text-decoration: underline;
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+@media (max-width: 480px) {
+    .ocr-modal {
+        width: 95%;
+        max-height: 95vh;
+    }
+    
+    .ocr-modal .filter-modal-header,
+    .ocr-modal .filter-modal-footer {
+        padding: 12px 16px;
+    }
+    
+    .ocr-modal .filter-modal-body {
+        padding: 16px;
+        gap: 12px;
+    }
+    
+    .calibration-instructions {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+    
+    .calibration-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .button-primary,
+    .button-secondary {
+        width: 100%;
+    }
+}
+
+/* ============================================================================
+   CV LOADING / ERROR STATES
+   ============================================================================ */
+.cv-loading-notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--color-text-muted, #8888aa);
+}
+
+.cv-loading-notice.error {
+    color: var(--color-error, #ef4444);
+}
+
+.cv-loading-note {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* ============================================================================
+   MODAL ACTIONS (CENTERED)
+   ============================================================================ */
+.modal-actions-centered {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+}
+
+
+/* ============================================================================
+   SELECTION MODE STYLES
+   ============================================================================ */
+   .selection-modal {
+    max-width: 900px;
+    width: 95%;
+}
+
+.selection-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.selection-instructions {
+    margin: 0;
+    padding: 12px 16px;
+    background: var(--color-bg-tertiary, #0f0f1a);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--color-text, #ffffff);
+    text-align: center;
+}
+
+.canvas-container {
+    position: relative;
+    width: 100%;
+    max-height: 600px;
+    overflow: auto;
+    border: 2px solid var(--color-border, #3a3a5a);
+    border-radius: 8px;
+    background: var(--color-bg-tertiary, #0f0f1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection-canvas {
+    cursor: crosshair;
+    max-width: 100%;
+    max-height: 600px;
+    display: block;
+    user-select: none;
+}
+
+.selection-info {
+    padding: 12px 16px;
+    background: var(--color-bg-secondary, #1a1a2e);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.selection-info p {
+    margin: 4px 0;
+    color: var(--color-text, #ffffff);
+}
+
+.selection-hint {
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #8888aa) !important;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--color-border, #3a3a5a);
+    border-radius: 8px;
+    background: var(--color-bg-secondary, #1a1a2e);
+}
+
+@media (min-width: 480px) {
+    .action-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.canvas-container {
+    background: #1a1a2e;
+    border: 2px solid #3a3a5a;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.selection-canvas {
+    display: block;
+    max-width: 100%;
+    max-height: 600px;
+    cursor: crosshair;
+    background: #0f0f1a;
+}
+
+
+/* ============================================================================
+   SELECTION MODE
+   ============================================================================ */
+   .selection-modal {
+    max-width: 900px;
+    width: 95%;
+    max-height: 95vh;
+}
+
+.selection-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 70vh;
+}
+
+.selection-instructions {
+    margin: 0;
+    padding: 10px 14px;
+    background: var(--color-bg-tertiary, #0f0f1a);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--color-text, #ffffff);
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* 🔥 КОНТЕЙНЕР CANVAS */
+.canvas-wrapper {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+    border: 2px solid var(--color-border, #3a3a5a);
+    border-radius: 8px;
+    background: var(--color-bg-tertiary, #0f0f1a);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    min-height: 300px;
+}
+
+.selection-canvas {
+    display: block;
+    cursor: crosshair;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    background: #1a1a2e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.selection-info {
+    padding: 12px 16px;
+    background: var(--color-bg-secondary, #1a1a2e);
+    border-radius: 8px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.selection-size {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-success, #4ade80);
+}
+
+.selection-hint {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #8888aa);
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+    border: 1px solid var(--color-border, #3a3a5a);
+    border-radius: 8px;
+    background: var(--color-bg-secondary, #1a1a2e);
+}
+
+@media (min-width: 480px) {
+    .action-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Скроллбар для canvas wrapper */
+.canvas-wrapper::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.canvas-wrapper::-webkit-scrollbar-track {
+    background: var(--color-bg-tertiary, #0f0f1a);
+    border-radius: 5px;
+}
+
+.canvas-wrapper::-webkit-scrollbar-thumb {
+    background: var(--color-border, #3a3a5a);
+    border-radius: 5px;
+}
+
+.canvas-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary, #4a9eff);
+}
+/* ============================================================================
+   GRID SETTINGS
+   ============================================================================ */
+   .grid-settings {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    background: var(--color-bg-secondary, #1a1a2e);
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.grid-setting-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grid-setting-item label {
+    font-size: 0.9rem;
+    color: var(--color-text, #ffffff);
+    font-weight: 500;
+}
+
+.grid-input {
+    width: 60px;
+    padding: 6px 10px;
+    background: var(--color-bg-tertiary, #0f0f1a);
+    border: 2px solid var(--color-border, #3a3a5a);
+    border-radius: 6px;
+    color: var(--color-text, #ffffff);
+    font-size: 0.95rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.grid-input:focus {
+    outline: none;
+    border-color: var(--color-primary, #4a9eff);
+}
+
+.grid-total {
+    font-size: 0.9rem;
+    color: var(--color-primary, #4a9eff);
+    font-weight: 600;
+    padding: 4px 12px;
+    background: rgba(74, 158, 255, 0.1);
+    border-radius: 6px;
+}
+
+.selection-hint {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #8888aa);
+}
+/* ============================================================================
+   GRID SETTINGS - УЛУЧШЕННЫЙ ВИЗУАЛ
+   ============================================================================ */
+   .grid-settings {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+    border: 1px solid var(--color-primary, #4a9eff);
+    border-radius: 10px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 12px rgba(74, 158, 255, 0.1);
+}
+
+.grid-setting-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: rgba(74, 158, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(74, 158, 255, 0.2);
+}
+
+.grid-setting-item label {
+    font-size: 0.95rem;
+    color: var(--color-primary, #4a9eff);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.grid-input {
+    width: 70px;
+    padding: 8px 12px;
+    background: var(--color-bg-tertiary, #0f0f1a);
+    border: 2px solid var(--color-primary, #4a9eff);
+    border-radius: 6px;
+    color: var(--color-text, #ffffff);
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.grid-input:focus {
+    outline: none;
+    border-color: var(--color-success, #4ade80);
+    box-shadow: 0 0 12px rgba(74, 222, 128, 0.3);
+}
+
+.grid-total {
+    font-size: 1rem;
+    color: var(--color-success, #4ade80);
+    font-weight: 700;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.15) 0%, rgba(74, 222, 128, 0.05) 100%);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    border-radius: 8px;
+    text-shadow: 0 0 8px rgba(74, 222, 128, 0.3);
+}
+
+/* ============================================================================
+   CANVAS GRID OVERLAY - БОЛЕЕ ЗАМЕТНАЯ СЕТКА
+   ============================================================================ */
+.selection-canvas {
+    display: block;
+    cursor: crosshair;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    background: #1a1a2e;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .selection-modal {
+        width: 98%;
+        max-height: 98vh;
+    }
+    
+    .grid-settings {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .grid-setting-item {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .canvas-wrapper {
+        max-height: 400px;
+    }
+    
+    .selection-canvas {
+        touch-action: none; /* Отключаем зум на мобильных */
+    }
+}
+
+/* ============================================================================
+   TOUCH EVENTS ДЛЯ МОБИЛЬНЫХ
+   ============================================================================ */
+@media (pointer: coarse) {
+    .selection-canvas {
+        touch-action: none;
+    }
+    
+    .grid-input {
+        font-size: 1.2rem; /* Больше для пальцев */
+        padding: 12px 16px;
+    }
+}
+/* ============================================================================
+   SELECTION MODE - ЯРКАЯ СЕТКА
+   ============================================================================ */
+   .selection-modal {
+    max-width: 950px;
+    width: 95%;
+    max-height: 95vh;
+}
+
+.selection-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 75vh;
+}
+
+.selection-instructions {
+    margin: 0;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #00ffff;
+    text-align: center;
+    flex-shrink: 0;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* ============================================================================
+   GRID SETTINGS - ЯРКИЙ ДИЗАЙН
+   ============================================================================ */
+.grid-settings {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+    border: 2px solid #4a9eff;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 15px rgba(74, 158, 255, 0.2);
+}
+
+.grid-setting-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: rgba(74, 158, 255, 0.1);
+    border: 2px solid #4a9eff;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.grid-setting-item:hover {
+    background: rgba(74, 158, 255, 0.15);
+    border-color: #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.grid-setting-item label {
+    font-size: 1rem;
+    color: #4a9eff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.grid-input {
+    width: 70px;
+    padding: 10px 14px;
+    background: #0f0f1a;
+    border: 2px solid #4a9eff;
+    border-radius: 8px;
+    color: #00ffff;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.grid-input:focus {
+    outline: none;
+    border-color: #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+    color: #00ff00;
+}
+
+.grid-total {
+    font-size: 1.1rem;
+    color: #00ff00;
+    font-weight: 700;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.2) 0%, rgba(0, 255, 0, 0.05) 100%);
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* ============================================================================
+   CANVAS WRAPPER
+   ============================================================================ */
+.canvas-wrapper {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+    border: 3px solid #4a9eff;
+    border-radius: 12px;
+    background: #0f0f1a;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    min-height: 300px;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.selection-canvas {
+    display: block;
+    cursor: crosshair;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    background: #1a1a2e;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+    touch-action: none;
+}
+
+/* ============================================================================
+   SELECTION INFO
+   ============================================================================ */
+.selection-info {
+    padding: 14px 18px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+    border: 2px solid #4a9eff;
+    border-radius: 10px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.selection-size {
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.selection-hint {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #00ffff;
+    font-weight: 600;
+}
+
+/* ============================================================================
+   MOBILE DEVICES
+   ============================================================================ */
+@media (max-width: 768px) {
+    .selection-modal {
+        width: 98%;
+        max-height: 98vh;
+    }
+    
+    .grid-settings {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .grid-setting-item {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .canvas-wrapper {
+        max-height: 400px;
+    }
+    
+    .selection-canvas {
+        touch-action: none;
+    }
+    
+    .grid-input {
+        font-size: 1.3rem;
+        padding: 12px 16px;
+        width: 80px;
+    }
+    
+    .selection-instructions {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+}
+
+@media (pointer: coarse) {
+    .selection-canvas {
+        touch-action: none;
+    }
+    
+    .grid-input {
+        font-size: 1.4rem;
+        padding: 14px 18px;
+    }
+}
+
+/* ============================================================================
+   SCROLLBAR STYLING
+   ============================================================================ */
+.canvas-wrapper::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.canvas-wrapper::-webkit-scrollbar-track {
+    background: #0f0f1a;
+    border-radius: 6px;
+}
+
+.canvas-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #4a9eff 0%, #00ffff 100%);
+    border-radius: 6px;
+    border: 2px solid #0f0f1a;
+}
+
+.canvas-wrapper::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #00ffff 0%, #00ff00 100%);
+}
+/* ============================================================================
+   НОВЫЕ СТИЛИ ДЛЯ АВТО-ДЕТЕКЦИИ (без сетки)
+   ============================================================================ */
+
+/* Описание */
+.ocr-description {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text, #ffffff);
+    line-height: 1.5;
+    text-align: center;
+    padding: 12px 16px;
+    background: var(--color-bg-tertiary, #0f0f1a);
+    border-radius: 8px;
+}
+
+.ocr-hint {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--color-text-muted, #8888aa);
+    text-align: center;
+}
+
+/* Drag & drop активное состояние */
+.file-input-wrapper.drag-over {
+    border-color: var(--color-primary, #4a9eff);
+    background: rgba(74, 158, 255, 0.08);
+    transform: scale(1.01);
+    transition: all 0.15s;
+}
+
+/* Спиннер загрузки OpenCV */
+.ocr-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--color-border, #3a3a5a);
+    border-top-color: var(--color-primary, #4a9eff);
+    border-radius: 50%;
+    animation: ocr-spin 0.8s linear infinite;
+}
+
+@keyframes ocr-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ============================================================================
+   ЭКРАН ПРОВЕРКИ РЕЗУЛЬТАТА (вариант C) + ПОДСКАЗКА ПРО СКАН ПО ЧАСТЯМ (A)
+   ============================================================================ */
+.ocr-tip {
+    margin-top: 4px;
+}
+
+.ocr-review {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 0;
+}
+
+.ocr-review-title {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-text, #ffffff);
+}
+
+.ocr-review-hint {
+    margin-bottom: 4px;
+}
+
+.ocr-review-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 45vh;
+}
+
+.ocr-review-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    background: var(--color-bg-tertiary, #0f0f1a);
+    border: 1px solid var(--color-border, #3a3a5a);
+    border-radius: 8px;
+}
+
+.ocr-review-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.ocr-review-name {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--color-text, #ffffff);
+    font-size: 0.9rem;
+}
+
+.ocr-review-qty {
+    width: 70px;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 6px 4px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border, #3a3a5a);
+    background: var(--color-bg-secondary, #1a1a2e);
+    color: var(--color-text, #ffffff);
+    font-size: 0.9rem;
+}
+
+.ocr-review-remove {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border, #3a3a5a);
+    background: transparent;
+    color: var(--color-text-muted, #8888aa);
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.ocr-review-remove:hover {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.ocr-review-empty {
+    text-align: center;
+    color: var(--color-text-muted, #8888aa);
+    padding: 16px 0;
+    font-size: 0.9rem;
+}

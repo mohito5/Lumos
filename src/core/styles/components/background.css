@@ -1,0 +1,21 @@
+.vision-Anemo{
+    background-color: var(--anemo);
+}
+.vision-Electro{
+    background-color: var(--electro);
+}
+.vision-Pyro{
+    background-color: var(--pyro);
+}
+.vision-Geo{
+    background-color: var(--geo);
+}
+.vision-Cryo{
+    background-color: var(--cryo);
+}
+.vision-Hydro{
+    background-color: var(--hydro);
+}
+.vision-Dendro{
+    background-color: var(--dendro);
+}

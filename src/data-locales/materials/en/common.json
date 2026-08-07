@@ -1,0 +1,18 @@
+{
+    "mora": { "name": "Mora" },
+    "crown_of_insight": { "name": "Crown of Insight" },
+    "wanderer,s_advice": { "name": "Wanderer's Advice" },
+    "Adventurer,s_experience": { "name": "Adventurer's Experience" },
+    "hero,s_wit": { "name": "Hero's Wit" },
+    "unknown": {
+        "local_specialty": "Unknown local specialty",
+        "talent_book": "Unknown talent book",
+        "enemy_drop": "Unknown enemy drop",
+        "weapon_material": "Unknown weapon material",
+        "ascension_gem": "Unknown ascension gem",
+        "boss_material": "Unknown boss material",
+        "ascension_material": "Unknown ascension material",
+        "material": "Unknown material",
+        "hint": "Not specified in character/weapon data — please verify the exact material manually"
+    }
+}

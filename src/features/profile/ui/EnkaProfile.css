@@ -1,0 +1,180 @@
+.enka-profile-page {
+    padding: 3vmin 2.5vmin;
+}
+
+.enka-page-title {
+    line-height: normal;
+    margin-top: 0;
+}
+
+.enka-uid-row {
+    display: flex;
+    gap: 1.5vmin;
+    margin-bottom: 2vmin;
+}
+
+.enka-uid-input {
+    flex: 1;
+    min-width: 0;
+    font-family: 'Lumo p', monospace;
+    font-size: 2vmin;
+    padding: 1.5vmin 2vmin;
+    border-radius: 3vmin;
+    border: 1px solid var(--light0-5);
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.enka-uid-input:focus {
+    outline: 2px solid var(--cherry);
+    outline-offset: 1px;
+}
+
+.enka-fetch-button {
+    font-family: 'Lumo H', sans-serif;
+    
+    padding: 1.5vmin 3vmin;
+    border-radius: 3vmin;
+    border: none;
+    background-color: var(--cherry);
+    color: var(--dark);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.15s ease;
+}
+
+.enka-fetch-button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.enka-error {
+    font-family: 'Lumo p', monospace;
+    color: var(--cherry);
+    font-size: 1.9vmin;
+}
+
+.enka-showcase-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+    margin-bottom: 1.5vmin;
+}
+
+.enka-showcase-title {
+    font-family: 'Lumo H', sans-serif;
+    color: var(--light);
+    
+    margin: 0;
+}
+
+.enka-use-as-profile-btn {
+    font-family: 'Lumo p', monospace;
+    padding: 1vmin 2.5vmin;
+    border-radius: 2vmin;
+    border: 1px solid var(--light);
+    background: transparent;
+    color: var(--light);
+    cursor: pointer;
+    font-size: 1.6vmin;
+    white-space: nowrap;
+}
+
+.enka-use-as-profile-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.enka-results {
+    margin-top: 1vmin;
+}
+
+.enka-accumulate-btn {
+    font-family: 'Lumo p', monospace;
+    padding: 1vmin 2.5vmin;
+    border-radius: 2vmin;
+    border: 1px solid var(--cherry);
+    background: transparent;
+    color: var(--cherry);
+    cursor: pointer;
+    font-size: 1.6vmin;
+    white-space: nowrap;
+}
+
+.enka-accumulate-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.enka-library {
+    margin-top: 4vmin;
+    padding-top: 3vmin;
+    border-top: 1px solid var(--light0-5);
+}
+
+.enka-library-title {
+    font-family: 'Lumo H', sans-serif;
+    color: var(--light);
+    margin: 0 0 2vmin;
+}
+
+.enka-library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14vmin, 1fr));
+    gap: 1.5vmin;
+}
+
+.enka-library-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vmin;
+    padding: 1.5vmin 1vmin;
+    border-radius: 2vmin;
+    text-align: center;
+}
+
+.enka-library-avatar {
+    width: 8vmin;
+    height: 8vmin;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.enka-library-name {
+    font-family: 'Lumo p', monospace;
+    font-size: 1.5vmin;
+    color: var(--light);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.enka-library-level {
+    font-family: 'Lumo p', monospace;
+    font-size: 1.3vmin;
+    color: var(--light0-5);
+}
+
+.enka-library-remove {
+    position: absolute;
+    top: 0.5vmin;
+    right: 0.5vmin;
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cherry);
+    color: var(--dark);
+    cursor: pointer;
+    font-size: 1.4vmin;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}

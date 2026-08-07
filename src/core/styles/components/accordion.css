@@ -1,0 +1,196 @@
+/*=============================
+  new folder design
+  =============================*/
+
+/* accordion.css
+   Reworked accordion animation.
+   Drop-in replacement for the accordion styles.
+*/
+
+.accordion{
+    position:relative;
+    min-width:256px;
+    transform-origin:top center;
+    transition:transform .35s cubic-bezier(.22,1,.36,1);
+    height: min-content;
+    flex: 1;
+}
+
+
+
+.accordion:active{
+    transform:scale(1);
+}
+
+.folder_tab h6{
+    display:flex;
+    width:min-content;
+    transform-origin:left bottom;
+    transition:
+        transform .45s cubic-bezier(.34,1.56,.64,1),
+        filter .35s ease,
+        opacity .3s ease;
+    border-top-left-radius: var(--radius-4);
+    border-top-right-radius: var(--radius-4);
+    border-bottom-right-radius: var(--radius-4);
+}
+
+.accordion__open,
+.accordion__close{
+    display:none;
+}
+
+.accordion__wrapper{
+    position:relative;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    overflow:hidden;
+    cursor:pointer;
+    transform-origin:top center;
+    transition:
+        transform .55s cubic-bezier(.22,1,.36,1),
+        box-shadow .45s ease,
+        filter .45s ease,
+        background-color .35s ease;
+    border-bottom-left-radius: var(--radius-4);
+    border-top-right-radius: var(--radius-4);
+    border-bottom-right-radius: var(--radius-4);
+}
+
+.accordion__box{
+    margin:0;
+    opacity:1;
+    
+    transition:
+        opacity .35s ease,
+        transform .45s cubic-bezier(.22,1,.36,1);
+}
+
+.icon-page{
+    transition:transform .6s cubic-bezier(.34,1.56,.64,1);
+}
+
+.icon-page .icon{
+    transition:transform .45s cubic-bezier(.22,1,.36,1);
+}
+
+.accordion__wrapper h3{
+    opacity:1;
+    transform:translateX(16px);
+    transition:
+        transform .45s ease,
+        opacity .35s ease;
+}
+
+.accordion__text{
+    margin:0;
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transform:translateY(-12px);
+    transition:
+        max-height .6s cubic-bezier(.22,1,.36,1),
+        opacity .35s ease,
+        transform .45s ease;
+}
+
+.accordion__button{
+    position: relative;
+    opacity:0;
+    pointer-events:none;
+    transform: translateX(-16px);
+    transition:
+        transform .55s cubic-bezier(.34,1.56,.64,1),
+        opacity .35s ease;
+}
+
+/* OPEN */
+
+.accordion__open:checked ~ .folder_tab{
+    width: 100%;
+    filter:brightness(1.05);
+}
+
+.accordion__open:checked ~ .accordion__wrapper{
+    cursor:default;
+    
+    
+}
+
+.accordion__open:checked ~ .accordion__wrapper .accordion__box{
+    opacity:1;
+    transform:none;
+}
+
+.accordion__open:checked ~ .accordion__wrapper .icon-page{
+    transform: rotate(-10deg) scale(1.15);
+}
+
+.accordion__open:checked ~ .accordion__wrapper .icon-page .icon{
+    transform:rotate(-6deg);
+}
+
+.accordion__open:checked ~ .accordion__wrapper h3{
+    opacity:1;
+    transform:none;
+    transition-delay:.15s;
+}
+
+.accordion__open:checked ~ .accordion__wrapper .accordion__text{
+    max-height:220px;
+    opacity:1;
+    transform:none;
+    transition-delay:0s,.25s,.25s;
+}
+
+.accordion__open:checked ~ .folder_tab .accordion__button{
+    opacity:1;
+    transform: translateX(0px);
+    pointer-events:auto;
+    transition-delay:.35s;
+}
+
+
+/* CLOSE */
+
+.accordion__close:checked ~ .folder_tab{
+    transform:none;
+    filter:none;
+}
+
+.accordion__close:checked ~ .accordion__wrapper{
+    transform:none;
+    box-shadow:none;
+}
+
+.accordion__close:checked ~ .accordion__wrapper .accordion__box{
+    opacity:1;
+    transform:translateY(-6px);
+}
+
+.accordion__close:checked ~ .accordion__wrapper .icon-page,
+.accordion__close:checked ~ .accordion__wrapper .icon-page .icon{
+    transform:none;
+}
+
+.accordion__close:checked ~ .accordion__wrapper h3{
+    opacity:1;
+    transform:translateX(0px);
+}
+
+.accordion__close:checked ~ .accordion__wrapper .accordion__text{
+    max-height:0;
+    opacity:0;
+    transform:translateY(-12px);
+}
+
+.accordion__close:checked ~ .accordion__button{
+    opacity:0;
+    transform:translateX(40px);
+    pointer-events:none;
+}
+
+.accordion__close:checked ~ .accordion__button .accordion__buttonText{
+    opacity:0;
+}

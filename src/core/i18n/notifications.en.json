@@ -1,0 +1,9 @@
+{
+  "saveSuccess":          "Build saved",
+  "updateSuccess":        "Build updated",
+  "deleteSuccess":        "Build deleted",
+  "scheduleAdded":        "Schedule pinned to home",
+  "scheduleRemoved":      "Schedule unpinned",
+  "scheduleSaveRequired": "Save the build first — then you can pin its schedule",
+  "dataNotReady":         "Data is still loading — wait a moment and try again"
+}

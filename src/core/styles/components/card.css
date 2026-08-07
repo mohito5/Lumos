@@ -1,0 +1,49 @@
+.card {
+    overflow: hidden;
+    aspect-ratio: 4/6;
+    height: min-content;
+    transition: 1s ease;
+  
+}
+
+.link {  
+  transition: all 450ms ease-in-out; 
+    height: 100%;
+  width: 100%; 
+}
+
+.card-avatar {
+  flex: 1; /* Ключевое изменение - занимает всё доступное пространство */
+  min-height: 0; /* Важно для правильной работы flex: 1 */
+  overflow: hidden;
+}
+
+.card a .card-avatar img { 
+  object-fit: cover; flex: 1; 
+}
+
+.rarity { 
+   position: relative;   z-index: 2;   margin: 8px; bottom: 32px;
+   border: 1px solid violet;
+}
+.rarity-5 {
+  background-color: var(--geo);
+}
+.rarity-4 {
+  background-color: var(--electro);
+}
+.name{
+  text-align: center;
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
+.name p {
+    text-overflow: ellipsis;
+}
+
+.amount {
+  position: absolute; text-align: center;
+  bottom: 5%; left: 10%; right: 10%;
+  transform: translate();
+}

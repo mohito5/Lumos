@@ -1,0 +1,178 @@
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.calculator-left, .calculator-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calculator-section h2 {
+    
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.calculator-build-name-label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.calculator-build-name-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid var(--border, #ccc);
+    border-radius: 6px;
+    background: var(--background, #fff);
+    color: var(--text-color, inherit);
+    font-size: 0.95rem;
+}
+
+.calculator-build-name-input:focus {
+    outline: none;
+    border-color: var(--text-color, #4CAF50);
+}
+
+/* Character Selector Styles кнопка выора персонажа  */
+.character-selector-container .select-button {
+    width: 100%;
+    border: none ;
+    background-color: var(--blueberry);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.character-selector-container .select-button:hover {
+    border: none;
+    outline: 1px solid var(--billberry);
+    outline-offset: -5px;
+    
+}
+
+.selected-char-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.selected-char-info img {
+    height: var(--icon-xl);
+    width: var(--icon-xl);
+    
+    object-fit: cover;
+}
+
+.artifacts-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.final-stats-section .final-stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 6px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.calculator-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.calc-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.calc-btn.primary {
+    background: #4CAF50;
+    color: white;
+}
+
+.calc-btn.secondary {
+    background: #f44336;
+    color: white;
+}
+
+.calc-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* Character Selector Modal Styles */
+.character-select-modal .modal-body {
+    height: 60vh; width: auto;
+    
+}
+
+.character-card-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.character-card-select:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #4CAF50;
+}
+
+.char-select-avatar img {
+    width: 80px;
+    height: 80px;
+    
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.character-card-select:hover .char-select-avatar img {
+    border-color: #4CAF50;
+}
+
+.char-select-info {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.char-select-info h4 {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.char-select-meta {
+    font-size: 0.8rem;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.char-rarity {
+    color: #ffab00;
+}

@@ -1,0 +1,262 @@
+.team-card-export-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vmin;
+}
+
+.team-card {
+    width: 100%;
+    padding: 3vmin;
+    background-color: var(--background);
+    display: flex;
+    gap: 1.5vmin; aspect-ratio: 16/9;
+    
+}
+
+.team-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 1.5vmin;
+    border-bottom: 1px solid var(--pineberry_oparity);
+}
+
+.team-card-name {
+    font-family: 'Lumo H', sans-serif;
+    font-size: 2.4vmin;
+    color: var(--pineberry);
+}
+
+.team-card-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.team-card-uid {
+    font-family: 'Lumo p', monospace;
+    font-size: 1.2vmin;
+    color: var(--pineberry_oparity);
+}
+
+.team-card-logo {
+    font-family: 'Lumo H', sans-serif;
+    font-size: 1.6vmin;
+    color: var(--cherry);
+}
+
+.team-card-missing-note {
+    font-family: 'Lumo p', monospace;
+    font-size: 1.3vmin;
+    color: var(--cherry);
+    margin: 0;
+}
+
+.team-char-block {
+    position: relative;
+    display: flex;
+    gap: 1vmin;
+    padding: 1.5vmin;
+    
+}
+
+.team-char-main {
+    border-color: var(--cherry);
+}
+
+.team-char-main-badge {
+    position: absolute;
+    top: -1.2vmin;
+    right: 1.5vmin;
+    background-color: var(--cherry);
+    color: var(--billberry);
+    font-family: 'Lumo p', monospace;
+    font-size: 1vmin;
+    padding: 0.3vmin 1vmin;
+    border-radius: 1vmin;
+}
+
+.team-char-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.team-char-avatar {
+    width: 7vmin;
+    height: 7vmin;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.team-char-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vmin;
+}
+
+.team-char-name {
+    font-family: 'Lumo H', sans-serif;
+    font-size: 1.8vmin;
+    color: var(--pineberry);
+}
+
+.team-char-meta {
+    font-family: 'Lumo p', monospace;
+    font-size: 1.3vmin;
+    color: var(--pineberry_oparity);
+}
+
+.team-char-weapon {
+    display: flex;
+    align-items: center;
+    gap: 1vmin;
+    font-family: 'Lumo p', monospace;
+    font-size: 1.3vmin;
+    color: var(--pineberry);
+}
+
+.team-weapon-icon {
+    width: 3.5vmin;
+    height: 3.5vmin;
+    object-fit: contain;
+}
+
+.team-weapon-refine {
+    color: var(--pineberry_oparity);
+}
+
+.team-char-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vmin 2vmin;
+}
+
+.team-stat-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5vmin;
+    font-family: 'Lumo p', monospace;
+    font-size: 1.3vmin;
+    color: var(--pineberry);
+}
+
+.team-stat-icon {
+    width: 1.8vmin;
+    height: 1.8vmin;
+}
+
+.team-char-sets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vmin;
+}
+
+.team-set-chip {
+    font-family: 'Lumo p', monospace;
+    font-size: 1.2vmin;
+    padding: 0.4vmin 1.2vmin;
+    border-radius: 1.5vmin;
+    background-color: var(--dark0-5, rgba(255,255,255,0.06));
+    color: var(--pineberry_oparity);
+}
+
+.team-card-footer {
+    text-align: right;
+    font-family: 'Lumo p', monospace;
+    font-size: 1.1vmin;
+    color: var(--pineberry_oparity);
+    padding-top: 1vmin;
+}
+
+.team-card-download-btn {
+    font-family: 'Lumo p', monospace;
+    padding: 1.2vmin 3vmin;
+    border-radius: 2vmin;
+    border: 1px solid var(--cherry);
+    background: transparent;
+    color: var(--cherry);
+    cursor: pointer;
+    font-size: 1.6vmin;
+}
+
+/* ============================================================================
+   ВАРИАНТ "DETAILED" — заметно больше контента на персонажа (таланты +
+   разбивка по 5 слотам артефактов), фиксированный aspect-ratio: 16/9 (задан
+   на .team-card выше, рассчитан на compact/build) для него не годится —
+   сжал бы всё до нечитаемого. Высота карточки — по контенту; ширина
+   остаётся прежней для визуальной последовательности между вариантами.
+   ============================================================================ */
+.team-card-detailed {
+    aspect-ratio: unset;
+}
+
+.team-card-detailed .team-char-block {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.team-char-talents {
+    display: flex;
+    gap: 1.5vmin;
+}
+
+.team-talent-chip {
+    font-family: 'Lumo p', monospace;
+    font-size: 1.3vmin;
+    padding: 0.3vmin 1vmin;
+    border-radius: 1vmin;
+    background-color: var(--dark0-5, rgba(255,255,255,0.06));
+    color: var(--pineberry);
+}
+
+.team-char-artifacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6vmin;
+}
+
+.team-artifact-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8vmin;
+    font-family: 'Lumo p', monospace;
+    font-size: 1.2vmin;
+    color: var(--pineberry_oparity);
+    padding: 0.4vmin 0;
+    border-top: 1px solid var(--dark0-5, rgba(255,255,255,0.05));
+}
+
+.team-artifact-slot-icon {
+    font-size: 1.4vmin;
+    flex-shrink: 0;
+}
+
+.team-artifact-set {
+    color: var(--pineberry);
+    flex-shrink: 0;
+}
+
+.team-artifact-mainstat {
+    display: flex;
+    align-items: center;
+    gap: 0.4vmin;
+    flex-shrink: 0;
+}
+
+.team-artifact-substats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8vmin;
+    margin-left: auto;
+}
+
+.team-substat-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.3vmin;
+    opacity: 0.85;
+}

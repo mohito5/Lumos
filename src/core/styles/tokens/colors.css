@@ -1,0 +1,50 @@
+/*  ============================================================
+    SECTION : COLORS AND DATA-THEME
+    СЕКЦИЯ  : ЦВЕТА И ТЕМЫ
+    ============================================================ */
+:root {
+  --pineberry: #d2d3d2;
+  --billberry: #191a1a;
+  --pyro: #D59880;
+  --hydro: #80a0d5; 
+  --anemo: #a0d5b5; 
+  --electro: #c5a0d5; 
+  --dendro: #b5d580; 
+  --cryo: #a0d5d5; 
+  --geo: #d5b580;
+  --star5: #f4bb60;
+  --star4: #9b60f4;
+  --star51: #daa520;
+  --cherry:#d86072;
+  --lime:#d6dc82;
+  --blueberry: #8da5bb;
+
+  --pineberry_oparity: rgba(210, 211, 210, 0.5); 
+  --billberry_oparity: rgba(25, 26, 26, 0.5);
+}
+
+
+:root[data-theme='light'] {
+    --border: var(--billberry);
+    --background: var(--pineberry);
+    --background-reverse: var(--billberry);
+
+    --color: var(--billberry);
+    --color-reverse: var(--pineberry);
+    --text-color: var(--billberry);
+    --text-color-reverse: var(--pineberry);
+
+    --overlay: var(--billberry_oparity)
+}
+
+:root[data-theme='dark'] {
+    --border: var(--pineberry);
+    --background: var(--billberry);
+    --background-reverse: var(--pineberry);
+
+    --color: var(--pineberry);
+    --color-reverse: var(--billberry);
+    --text-color: var(--pineberry);
+
+    --overlay: var(--pineberry_oparity)
+}

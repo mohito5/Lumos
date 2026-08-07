@@ -1,0 +1,38 @@
+.farming-schedule-widget {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.character-schedule h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0;
+}
+
+.character-schedule h3 span {
+    flex: 1 1 auto;
+}
+
+.item-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.remove-schedule-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text-color);
+    opacity: 0.6;
+    padding: 0 var(--space-1);
+}
+
+.remove-schedule-btn:hover {
+    opacity: 1;
+}

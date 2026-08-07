@@ -1,0 +1,10 @@
+.search-bar input[type=text]{
+ font-size: var(--font-button);
+ background: none;
+    font-family: FicaCode;
+}
+
+.search-bar input[type=text]:focus{
+    border: 2px solid var(--cherry);
+ 
+}

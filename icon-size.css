@@ -1,0 +1,38 @@
+/*  ============================================================
+    SECTION : ICON SIZE
+    СЕКЦИЯ  : РАЗМЕР ИКОНОК
+    ============================================================ */
+
+:root {
+    --icon-sm: 1.1250rem; /* 18.00px */
+    --icon-md: 1.5000rem; /* 24.00px */
+    --icon-lg: 2.2500rem; /* 36.00px */
+    --icon-xl: 3rem; /* 48.00px */
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --icon-sm: clamp(1.2600rem, calc(1.0872rem + 0.2700vw), 1.4112rem); /* 20.2px -> 22.6px, +12% */
+        --icon-md: clamp(1.6800rem, calc(1.4496rem + 0.3600vw), 1.8816rem); /* 26.9px -> 30.1px, +12% */
+        --icon-lg: clamp(2.5200rem, calc(2.1744rem + 0.5400vw), 2.8224rem); /* 40.3px -> 45.2px, +12% */
+        --icon-xl: clamp(3.3600rem, calc(2.8992rem + 0.7200vw), 3.7632rem); /* 53.8px -> 60.2px, +12% */
+    }
+}
+
+@media (min-width: 1920px) {
+    :root {
+        --icon-sm: clamp(1.4112rem, calc(0.9032rem + 0.4234vw), 1.5805rem); /* 22.6px -> 25.3px, +12% */
+        --icon-md: clamp(1.8816rem, calc(1.2042rem + 0.5645vw), 2.1074rem); /* 30.1px -> 33.7px, +12% */
+        --icon-lg: clamp(2.8224rem, calc(1.8063rem + 0.8467vw), 3.1611rem); /* 45.2px -> 50.6px, +12% */
+        --icon-xl: clamp(3.7632rem, calc(2.4084rem + 1.1290vw), 4.2148rem); /* 60.2px -> 67.4px, +12% */
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        --icon-sm: clamp(1.5805rem, calc(1.2012rem + 0.2371vw), 1.7702rem); /* 25.3px -> 28.3px, +12% */
+        --icon-md: clamp(2.1074rem, calc(1.6016rem + 0.3161vw), 2.3603rem); /* 33.7px -> 37.8px, +12% */
+        --icon-lg: clamp(3.1611rem, calc(2.4024rem + 0.4742vw), 3.5404rem); /* 50.6px -> 56.6px, +12% */
+        --icon-xl: clamp(4.2148rem, calc(3.2032rem + 0.6322vw), 4.7206rem); /* 67.4px -> 75.5px, +12% */
+    }
+}

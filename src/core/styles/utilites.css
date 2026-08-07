@@ -1,0 +1,231 @@
+/*  ============================================================
+    SECTION : ATOMIC CLASS
+    СЕКЦИЯ  : - 
+    ------------------------------------------------------------
+    Здесь собираются атомарные классы всех свойств с 
+    использованием root
+    ============================================================ */
+/*  ------------------------------------------------------------
+    Sub : Typography
+    Саб : -
+    ------------------------------------------------------------ */
+    /*  Font faces / Шрифты ------------------------------------ */
+    @font-face {
+        font-family: 'LumoPixel';
+        src:  url('/fonts/LumoPixel.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'FiraCode';
+        src:  url('/fonts/FiraCode-VariableFont_wght.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    /*  Family, size, margin / Семейство, размер и отступ ------ */
+    h1 { 
+        font-family: LumoPixel;
+        font-size: var(--font-h1); 
+        margin: var(--space-0);
+    }
+    h2 { 
+        font-family: LumoPixel;
+        font-size: var(--font-h2); 
+        margin: var(--space-0);
+    }
+    h3 {
+        font-family: FiraCode;
+        font-size: var(--font-h3); 
+        margin: var(--space-0);
+    }
+    h4 { 
+        font-family: FiraCode;
+        margin: var(--space-0);
+        font-size: var(--font-h4); 
+    }
+    h5 { 
+        font-family: FiraCode;
+        margin: var(--space-0);
+        font-size: var(--font-h5); 
+    }
+    h6 {
+        font-family: FiraCode;
+        margin: var(--space-0);
+        font-size: var(--font-h6); 
+    }
+
+    p {
+        font-family: FiraCode;
+        margin: var(--space-0);
+        font-size: var(--font-body);
+    }
+
+    span, li, a, small {
+        font-family: FiraCode;
+        margin: var(--space-0);
+        font-size: var(--font-small);
+        font-weight: bold;
+    }
+
+    button, input {
+        font-family: FiraCode;
+        margin: var(--space-0);
+        font-size: var(--font-button);
+    }
+    /*  Font Height / Между строками --------------------------- */
+    h1,h2,h3{
+        line-height:1.1;
+    }
+
+    h4,h5,h6{
+        line-height:1.25;
+    }
+
+    p{
+        line-height:1.6;
+    }
+/*  ------------------------------------------------------------
+    Sub : Padding
+    Саб : -
+    ------------------------------------------------------------ */
+    /*  Full / Все стороны ------------------------------------- */
+    .p-0  { padding: var(--space-0); }
+    .p-1  { padding: var(--space-1); }
+    .p-2  { padding: var(--space-2); }
+    .p-3  { padding: var(--space-3); }
+    .p-4  { padding: var(--space-4); }
+    .p-5  { padding: var(--space-5); }
+    .p-6  { padding: var(--space-6); }
+    .p-7  { padding: var(--space-7); }
+    .p-8  { padding: var(--space-8); }
+    /*  Full / Горизонтальные стороны -------------------------- */
+    .px-0 { padding-left: var(--space-0); padding-right: var(--space-0); }
+    .px-1 { padding-left: var(--space-1); padding-right: var(--space-1); }
+    .px-2 { padding-left: var(--space-2); padding-right: var(--space-2); }
+    .px-3 { padding-left: var(--space-3); padding-right: var(--space-3); }
+    .px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
+    /* … до px-8 (по аналогии) */
+    .px-8 { padding-left: var(--space-8); padding-right: var(--space-8); }
+    /*  Full / Вертикальные стороны ---------------------------- */
+    .py-0 { padding-top: var(--space-0); padding-bottom: var(--space-0); }
+    .py-1 { padding-top: var(--space-1); padding-bottom: var(--space-1); }
+    .py-2 { padding-top: var(--space-2); padding-bottom: var(--space-2); }
+    .py-8 { padding-top: var(--space-8); padding-bottom: var(--space-8); }
+    /* … до py-8 */
+    /* Отдельные стороны: pt, pb, pl, pr */
+    .pt-0 { padding-top: var(--space-0); }
+/* … до pt-8 */
+    .pb-0 { padding-bottom: var(--space-0); }
+/* … до pb-8 */
+    .pl-0 { padding-left: var(--space-0); }
+/* … до pl-8 */
+    .pr-0 { padding-right: var(--space-0); }
+/* … до pr-8 */
+
+/* ----- BORDER-RADIUS ----- */
+
+
+.radius-1{border-radius: var(--radius-1)}
+.radius-2{ border-radius: var(--radius-2)}
+.radius-3{ border-radius: var(--radius-3)}
+.radius-4{ border-radius: var(--radius-4)}
+.radius-5 {border-radius: var(--radius-5)}
+.radius-6{border-radius: var(--radius-6)}
+.radius-full{border-radius: var(--radius-full)}
+
+.gap-1 {gap:var(--layout-space-1)}
+.gap-2 {gap:var(--layout-space-2)}
+.gap-3 {gap:var(--layout-space-3)}
+.gap-4 {gap:var(--layout-space-4)}
+
+
+/* ----- MARGIN ----- */
+.m-0  { margin: var(--space-0); }
+/* … до m-8 */
+.mx-0 { margin-left: var(--space-0); margin-right: var(--space-0); }
+/* … до mx-8 */
+.my-0 { margin-top: var(--space-0); margin-bottom: var(--space-0); }
+/* … до my-8 */
+.mt-0 { margin-top: var(--space-0); }
+/* … до mt-8 */
+.mb-0 { margin-bottom: var(--space-0); }
+.mb-2 { margin-bottom: var(--space-2); }
+/* … до mb-8 */
+.ml-0 { margin-left: var(--space-0); }
+/* … до ml-8 */
+.mr-0 { margin-right: var(--space-0); }
+/* … до mr-8 */
+
+
+/* Простой border (можно добавить адаптивные толщины, но обычно статика) */
+.border       { border: 1px solid currentColor; }
+.border-0     { border: 0; }
+.border-t     { border-top: 1px solid currentColor; }
+.border-b     { border-bottom: 1px solid currentColor; }
+.border-l     { border-left: 1px solid currentColor; }
+.border-r     { border-right: 1px solid currentColor; }
+/* Цвета задаются отдельными классами (не входят в этот набор) */
+
+
+.position-r {position: relative;}
+
+.overflow-h {overflow: hidden;}
+.scrollable-y {overflow-y: scroll;}
+
+/* justify‑content */
+.justify-start   { justify-content: flex-start; }
+.justify-end     { justify-content: flex-end; }
+.justify-center  { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around  { justify-content: space-around; }
+.justify-evenly  { justify-content: space-evenly; }
+
+/* align‑items */
+.items-start    { align-items: flex-start; }
+.items-end      { align-items: flex-end; }
+.items-center   { align-items: center; }
+.items-baseline { align-items: baseline; }
+.items-stretch  { align-items: stretch; }
+
+/* align‑content (для многострочных) */
+.content-start    { align-content: flex-start; }
+.content-end      { align-content: flex-end; }
+.content-center   { align-content: center; }
+.content-between  { align-content: space-between; }
+.content-around   { align-content: space-around; }
+.content-stretch  { align-content: stretch; }
+
+/* align‑self */
+.self-auto      { align-self: auto; }
+.self-start     { align-self: flex-start; }
+.self-end       { align-self: flex-end; }
+.self-center    { align-self: center; }
+.self-baseline  { align-self: baseline; }
+.self-stretch   { align-self: stretch; }
+
+
+.icon {
+    width: var(--icon-md);
+    height: var(--icon-md);
+}
+
+.icon-mini {
+    width: var(--icon-sm);
+    height: var(--icon-sm);
+}
+/*  ------------------------------------------------------------
+    Sub : Icon Size
+    Саб : Размеры иконок
+    ------------------------------------------------------------ */
+    .icon-xs{width: var(--icon-xs); height: var(--icon-xs);}
+.icon-sm { width: var(--icon-sm); height: var(--icon-sm); }
+.icon-md { width: var(--icon-md); height: var(--icon-md); }
+.icon-lg { width: var(--icon-lg); height: var(--icon-lg); }
+.icon-xl { width: var(--icon-xl); height: var(--icon-xl); }
+.icon-2xl { width: var(--icon-2xl); height: var(--icon-2xl); }
+
+
+.color-pine { color: var(--pineberry); }
+.color-cherry { color: var(--cherry)}

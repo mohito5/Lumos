@@ -1,0 +1,28 @@
+{
+    "golden_koi": {
+        "name": "Golden Koi",
+        "description": "A rare fish found in the waters of Mondstadt."
+    },
+    "snow_strider": {
+        "name": "Snow Strider",
+        "description": "A fish adapted to cold waters."
+    },
+    "jade_loach": {
+        "name": "Jade Loach",
+        "description": "A loach with a jade-colored sheen to its scales."
+    },
+    "baits": {
+        "rain_worm": "Rain Worm",
+        "cricket": "Cricket",
+        "medlar_fruit": "Medlar Fruit"
+    },
+    "regions": {
+        "mondstadt": "Mondstadt",
+        "liyue": "Liyue"
+    },
+    "title": "Fishing",
+    "description": "Information about fish, bait, and fishing spots.",
+    "filter_by_region": "Filter by region:",
+    "all_regions": "All Regions",
+    "details": "Details"
+}
