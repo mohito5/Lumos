@@ -30,7 +30,13 @@
   background-color: var(--geo);
 }
 .rarity-4 {
-  background-color: var(--electro);
+  background-color: var(--epic);
+}
+.rarity-3 {
+  background-color: var(--rare);
+}
+.rarity-2 {
+  background-color: var(--uncommon);
 }
 .name{
   text-align: center;

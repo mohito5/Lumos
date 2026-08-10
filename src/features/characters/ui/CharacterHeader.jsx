@@ -13,7 +13,7 @@ const CharacterHeader = ({ character, charName, currentPage }) => {
             <div className="character-profile-sub flex-c">
                 <div className={`radius-1 flex-c ov-h p-r vision-${character.element}`}>
                     <DitheredLandscape />
-                    <img loading="lazy" src={avatarUrl} alt={charName} className="character-avatar-sub wd"/>
+                    <img loading="lazy" src={character.avatar} alt={charName} className="character-avatar-sub wd"/>
                 </div>
                 <div className="character-info-sub">
                     <h1 className='m-1-0'>{charName}</h1>

@@ -40,7 +40,7 @@ const MiniCalendar = ({ date, birthdaysThisMonth, onNavClick }) => {
         days.push(
             <div key={day} className={`day radius-1 ${isToday ? 'today background-r color-r' : ''} ${hasBirthday ? 'has-birthday border color-cherry' : ''}`}>
                 <span>{day}</span>
-                {hasBirthday && <span className="birthday-icon color-cherry border"></span>}
+               
             </div>
         );
     }
@@ -52,9 +52,11 @@ const MiniCalendar = ({ date, birthdaysThisMonth, onNavClick }) => {
                     <svg className='icon-mini'><use href='#icon-arrow-left'></use></svg>
                 </button>
                 <div className="mini-calendar-month"><p>{months[showMonth]} {showYear}</p></div>
-                <button className="nav-btn next" onClick={() => onNavClick('next')}>&gt;</button>
+                <button className="nav-btn next flex p-1 border background-r color-r radius-1" onClick={() => onNavClick('next')}>
+                    <svg className='icon-mini'><use href='#icon-arrow-right'></use></svg>
+                </button>
             </div>
-            <div className="mini-calendar-weekdays border radius-1 background-r color-r">
+            <div className="mini-calendar-weekdays border radius-1 background-r p-1 color-r">
                 {weekdays.map(day => <div key={day} className="weekday"><p>{day}</p></div>)}
             </div>
             <div className="mini-calendar-days">
@@ -95,22 +97,25 @@ const BirthdayBanner = () => {
     });
   };
 
-  const characterNames = birthdayChars.map(c => t(c.id, { ns: 'characters' })).join(', ');
+  const charsRarity = allCharacters.filter(char => char.rarity);
+
+
+  const characterNames = birthdayChars.map(c => t(`${c.id}.name`, { ns: 'characters' })).join(', ');
 
   const birthdayAnnouncement = birthdayChars.length > 0
-    ? t('pages.home.birthdays.announcementFormat', { name: characterNames })
-    : t('pages.home.birthdays.noBirthdayToday');
+    ? t('home.birthdays.announcementFormat', { name: characterNames })
+    : t('home.birthdays.noBirthdayToday');
 
   const birthdayImage = birthdayChars.length > 0 ? birthdayChars[0].avatar : t('pages.home.birthdays.noBirthdayToday');
   const imageAlt = birthdayChars.length > 0 ? t('pages.home.birthdays.imageAlt', { name: characterNames }) : t('pages.home.birthdays.noBirthdayToday');
 
   return (
-    <div className="birthday-banner border radius-4 p-3 gap-4">
-        <div className='border position-r radius-1 banner overflow-h'>
+    <div className="birthday-banner flex-c border radius-4 p-3 gap-4">
+        <div className={`border position-r radius-1 banner overflow-h rarity-${charsRarity}`}>
             <img loading="lazy" src={birthdayImage} alt={imageAlt} className="banner-image radius-1" />
-            <DitheredLandscape className='dither-banner'/>
+            <DitheredLandscape/>
         </div>
-      <div className="calendar-wrapper jc-sb">
+      <div className="calendar-wrapper flex gap-2 jc-sb">
         <div id="birthday-announcement"><h3>{birthdayAnnouncement}</h3></div>
         <MiniCalendar date={calendarDate} birthdaysThisMonth={birthdaysThisMonth} onNavClick={handleNavClick} />
       </div>

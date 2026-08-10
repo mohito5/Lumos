@@ -159,6 +159,7 @@ export const pyro = [
         element: VISION.PYRO,
         weapon: WEAPON_TYPE.BOW,
         birthday: "8-10",
+        avatar: "assets/avatar/Amber_Profile.webp",
         avatar_icon: "assets/avatar-icon/amber.png",
         baseStats: {
             [STATS.HP]: [980, 2540, 4920, 6370, 8060, 9850, 11870, 14120],

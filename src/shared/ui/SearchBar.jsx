@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import './SearchBar.css';
+import './searchBar.css';
 
 export const SearchBar = ({ searchTerm, setSearchTerm }) => {
   const { t } = useTranslation();

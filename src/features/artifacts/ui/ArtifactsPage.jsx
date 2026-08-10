@@ -9,6 +9,8 @@ import { useDebounce } from '../../../shared/lib/hooks/useDebounce';
 import { useTranslation } from 'react-i18next';
 import { REGION } from '../../../shared/config/constants';
 import '../../archive/ui/date.css';
+import { resolveIconUrl } from '../../../shared/lib/cdnIcon.js';
+import artifactIcons from '../../../data/cdn/artifactIcons.generated.json';
 
 const artifactRarities = [...new Set(allArtifactSets.flatMap(s => s.rarity))].sort((a, b) => a - b).map(String);
 
@@ -120,6 +122,7 @@ const ArtifactsPage = () => {
                         item={artifactSet}
                         onClick={() => handleSelectArtifactSet(artifactSet)}
                         name={t(`${artifactSet.id}.name`, { ns: 'artifacts' })}
+                        icon={resolveIconUrl({ enkaIconMap: artifactIcons }, artifactSet.id, artifactSet.icon)}
                         rarity={Math.max(...artifactSet.rarity)}
                         baseClass=""
                         renderRarity={renderRarity}

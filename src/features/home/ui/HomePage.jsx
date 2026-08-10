@@ -17,12 +17,12 @@ const HomePage = () => {
     <section className="page home wd m-0">
       <MasonryGrid>
         <article className="grid-item">
-          <div className="title f-c g-2">
+          <div className="title flex-c gap-4">
             <h1>{t('ui:home.title')}</h1>
             <p>{t('ui:home.description')}</p>
           </div>
         </article>
-        <article className="grid-item f-c g-2">
+        <article className="grid-item flex-c gap-4">
           <h2>{t('ui:home.birthdays.title')}</h2>
           <BirthdayBanner />
         </article>

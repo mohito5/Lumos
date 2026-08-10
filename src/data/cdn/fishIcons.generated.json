@@ -1,1 +1,25 @@
-{}
+{
+  "abiding_angelfish": "UI_ItemIcon_131016",
+  "betta": "UI_ItemIcon_131007",
+  "bitter_pufferfish": "UI_ItemIcon_131020",
+  "brown_shirakodai": "UI_ItemIcon_131013",
+  "divda_ray": "UI_ItemIcon_131021",
+  "glaze_medaka": "UI_ItemIcon_131001",
+  "golden_koi": "UI_ItemIcon_131011",
+  "halcyon_jade_axe_marlin": "UI_ItemIcon_131028",
+  "lunged_stickleback": "UI_ItemIcon_131006",
+  "maintenance_mek_initial_configuration": "UI_ItemIcon_131032",
+  "medaka": "UI_ItemIcon_131000",
+  "peach_of_the_deep_waves": "UI_ItemIcon_131024",
+  "pufferfish": "UI_ItemIcon_131019",
+  "purple_shirakodai": "UI_ItemIcon_131014",
+  "raimei_angelfish": "UI_ItemIcon_131017",
+  "rippling_heartfeather_bass": "UI_ItemIcon_131030",
+  "rusty_koi": "UI_ItemIcon_131012",
+  "sandstorm_angler": "UI_ItemIcon_131025",
+  "snow_strider": "UI_ItemIcon_131010",
+  "streaming_axe_marlin": "UI_ItemIcon_131029",
+  "sunset_cloud_angler": "UI_ItemIcon_131026",
+  "sweet_flower_medaka": "UI_ItemIcon_131002",
+  "true_fruit_angler": "UI_ItemIcon_131023"
+}

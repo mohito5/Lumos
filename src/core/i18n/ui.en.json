@@ -113,7 +113,7 @@
         "description": "This project will help you track your progress in Genshin Impact.",
         "birthdays": {
             "title": "Today's Birthdays",
-            "announcementFormat": "Today is `{name}`'s birthday!",
+            "announcementFormat": "Today is {{name}}'s birthday!",
             "noBirthdayToday": "No birthdays today",
             "imageAlt": "{name}'s birthday",
             "calendar": {

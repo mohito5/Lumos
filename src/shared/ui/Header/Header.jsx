@@ -37,7 +37,7 @@ const Header = () => {
           </button>
         </div>
         <section className={`nav-links bg-bl border p-1 radius-4 gap-4 ${collapsed ? "collapsed" : ""}`} ref={navLinksRef} style={{ position: 'relative' }}>
-          <div className='logo flex-r c-p gap-2 ai-c py-2 px-2 border-b mb-2'>
+          <div className='logo flex-r c-p gap-2 ai-c py-2 px-3 border-b mb-2'>
             <svg className='icon mb-2'><use href='#icon-logo'></use></svg>
             <h5>Lumos</h5>
           </div>
@@ -46,7 +46,7 @@ const Header = () => {
             <svg className="nav-icon icon" alt={t('navigation.home')}><use href="#icon-home"></use></svg>
             <span className="nav-label">{t('navigation.home')}</span>
           </NavLink>
-          <NavLink to="/characters" data-page="characters" className="nav-item gap-2 c-bl gap-2">
+          <NavLink to="/characters" data-page="characters" className="nav-item c-bl gap-2">
             <svg className="nav-icon icon" alt={t('navigation.characters')}><use href="#character"></use></svg>
             <span className="nav-label m-0">{t('navigation.characters')}</span>
           </NavLink>

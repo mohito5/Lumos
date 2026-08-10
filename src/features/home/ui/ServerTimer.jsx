@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const servers = [
     {
         key: 'asia',
-        nameKey: 'serverTimer.serverAsia',
+        nameKey: 'home.serverTimer.serverAsia',
         serverTimezone: 'Asia/Shanghai',
         resetHour: 4, 
         offset: '+08:00',
@@ -15,7 +15,7 @@ const servers = [
     },
     {
         key: 'europe',
-        nameKey: 'serverTimer.serverEurope',
+        nameKey: 'home.serverTimer.serverEurope',
         serverTimezone: 'Europe/Berlin',
         resetHour: 4, 
         offset: '+01:00',
@@ -25,7 +25,7 @@ const servers = [
     },
     {
         key: 'america',
-        nameKey: 'serverTimer.serverAmerica',
+        nameKey: 'home.serverTimer.serverAmerica',
         serverTimezone: 'America/New_York',
         resetHour: 4, 
         offset: '-05:00',
@@ -121,7 +121,7 @@ const ServerItem = ({ server, showServerTime }) => {
         );
     }
 
-    let timeClass = 'time-left border p-1 radius-md background-r color-r';
+    let timeClass = 'time-left p-1 px-2 radius-2 background-r color-r';
     let progressClass = 'normal';
     if (totalMinutes < 60) { timeClass += ' warning'; progressClass = 'warning'; }
     if (totalMinutes < 30) { timeClass += ' urgent'; progressClass = 'urgent'; }
@@ -132,7 +132,7 @@ const ServerItem = ({ server, showServerTime }) => {
 
     return (
         <div className="server-item p-3 radius-4 border gap-4">
-            <div className="server border" style={{ backgroundColor: server.color }}></div>
+            <div className="server border radius-1" style={{ backgroundColor: server.color }}></div>
             <div className="server-info gap-4 flex-c">
                 <div className="server-header">
                     <div className="server-name"><h3>{t(server.nameKey)}</h3></div>
@@ -145,13 +145,13 @@ const ServerItem = ({ server, showServerTime }) => {
                 <div className={timeClass}>
                     <h5>{timeLeftText}</h5>
                 </div>
-                {totalMinutes < 30 && <span className="status-soon background-r border p-1">{t('serverTimer.soon')}</span>}
+                {totalMinutes < 30 && <span className="status-soon background-r radius-2 px-2 p-1">{t('serverTimer.soon')}</span>}
                 <div className="server-progress">
-                    <div className="progress-container flex-r gap-2 items-center">
+                    <div className="progress-container flex-r gap-2 items-strench">
                         <div className="progress-bar radius-2 border p-1">
-                            <div className={`progress-fill p-1 ${progressClass}`} style={{ width: `${percentage}%` }}></div>
+                            <div className={`progress-fill hd p-1 ${progressClass}`} style={{ width: `${percentage}%` }}></div>
                         </div>
-                        <div className={`progress-percentage border radius-md hd ${progressClass}`}>
+                        <div className={`progress-percentage p-1 px-2 border radius-2 hd ${progressClass}`}>
                             <span>{Math.min(100, Math.max(0, Math.round(percentage * 10) / 10))}%</span>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ const ServerTimer = () => {
     return (
         <section className="gap-4 flex-c">
             <div className="server-timer-header gap-4 flex-c">
-                <h2>{t('serverTimer.title')}</h2>
+                <h2>{t('home.serverTimer.title')}</h2>
                 <div className="header-content gap-2 flex-r">
                     <div className="user-timezone-display radius-4 wd border p-3">
                         <h6>{t('serverTimer.yourTimezone')}: {userTimezone.name} ({userTimezone.gmt})</h6>

@@ -91,7 +91,7 @@
         "description": "Этот проект поможет вам отслеживать ваш прогресс в Genshin Impact.",
         "birthdays": {
             "title": "Сегодняшние дни рождения",
-            "announcementFormat": "Сегодня день рождения у {name}!",
+            "announcementFormat": "Сегодня день рождения у {{name}}!",
             "noBirthdayToday": "Сегодня нет дней рождения",
             "imageAlt": "День рождения {name}",
             "calendar": {

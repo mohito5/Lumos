@@ -1,1 +1,15 @@
-{}
+{
+  "abyss_herald_wicked_torrents": "UI_MonsterIcon_Invoker_Herald_Water_01",
+  "abyss_mage_hydro": "UI_MonsterIcon_Abyss_Water_01",
+  "abyss_mage_pyro": "UI_MonsterIcon_Abyss_Fire_01",
+  "cicin_mage_electro": "UI_MonsterIcon_Fatuus_Summoner_01",
+  "electro_slime": "UI_MonsterIcon_Slime_Electric_02",
+  "hilichurl": "UI_MonsterIcon_Hili_None_01",
+  "hilichurl_berserker": "UI_MonsterIcon_Hili_Fire_Range",
+  "hilichurl_fighter": "UI_MonsterIcon_Hili_None_01",
+  "hilichurl_grenadier": "UI_MonsterIcon_Hili_Fire_Range",
+  "hydro_slime": "UI_MonsterIcon_Slime_Water_02",
+  "pyro_slime": "UI_MonsterIcon_Slime_Fire_02",
+  "ruin_guard": "UI_MonsterIcon_Defender_Noner_01",
+  "ruin_hunter": "UI_MonsterIcon_Formathr_None"
+}

@@ -3,13 +3,13 @@ import React, { useState, useMemo } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import weaponsData from '../../../../data/weapons/index';
+import weaponsData from '../../../../data/weapons';
 import { STATS } from '../../../../shared/config/stats.js';
-import { attackCurves, secondaryStatCurves } from '../../../../data/weapon-stats-curves.js';
+import { attackCurves, secondaryStatCurves } from '../../../../data/weapon-stats-curves';
 import { LEVEL_STEPS, interpolateStatAtLevel } from '../../../../shared/lib/levelCurve.js';
-import { calculateWeaponMaterials } from '../../../../shared/lib/materialsCalculator.js';
+import { findMaterial, calculateWeaponMaterials } from '../../../../shared/lib/materialsCalculator.js';
 
-import WeaponInfoPageView from './WeaponInfoPageView.jsx';
+import WeaponInfoPageView from './WeaponInfoPageView';
 
 const levelSteps = LEVEL_STEPS;
 
@@ -113,6 +113,7 @@ const WeaponInfoPage = () => {
             onLevelChange={setLevelIndex}
             onRefinementChange={setRefinementLevel}
             onIsRangeFromPreviousChange={setIsRangeFromPrevious}
+            findMaterial={findMaterial}
             currentPage={currentPage}
         />
     )

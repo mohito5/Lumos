@@ -82,7 +82,7 @@ header {
   transition: all 0.3s ease;
   box-sizing: border-box;
   z-index: var(--z-index-1);
-  padding: var(--space-1) var(--space-2);
+  padding: var(--space-1) var(--space-3);
   align-items: center;
 }
 

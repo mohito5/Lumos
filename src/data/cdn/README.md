@@ -10,7 +10,7 @@
   артефакты) — с CDN Enka Network: `https://enka.network/ui/{IconName}.png`.
   Используется только для отображения, в OCR не участвует.
 
-Резолвер — `src/core/utils/cdnIcon.js` (`resolveIconUrl`).
+Резолвер — `src/shared/lib/cdnIcon.js` (`resolveIconUrl`).
 
 ## Почему не переключено сразу везде
 
