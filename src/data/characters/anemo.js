@@ -29,7 +29,7 @@ export const anemo = [
       },
       talents: {
         attack: { 
-          icon: "assets/char-talent-icon/varka/attack.png", 
+          icon: "", 
           stats: [
             { name: "hit_1", values: [80.5, 87.1, 93.7, 102.4, 109.0, 116.5, 126.3, 136.1, 145.9, 156.8] },
             { name: "hit_2", values: [78.2, 84.6, 91.0, 99.5, 105.9, 113.2, 122.7, 132.2, 141.7, 152.3] },
@@ -63,7 +63,8 @@ export const anemo = [
     rarity: RARITY.LEGENDARY,
     element: VISION.ANEMO,
     weapon: WEAPON_TYPE.BOW,
-    birthday: '1-2',
+    birthday: '12-10',
+    avatar: 'assets/avatar/Chasca_Profile.webp',
     avatar_icon: 'assets/avatar-icon/chasca_icon.png',
     baseStats: {
         [STATS.HP]: [762.7, 1978.3, 4403.3, 5685.5, 6819.8, 7960.1, 9108.1, 9796.7],
@@ -72,12 +73,12 @@ export const anemo = [
     },
     ascensionStat: STATS.CRIT_RATE,
     ascensionMaterials: {
-        ascension_gems: 'vayuda_turquoise',
-        local_specialties: 'withering_purpurbloom',
-        common_enemy_drops: 'juvenile_fang',
-        normal_boss_drops: 'ensnaring_gaze',
-        talent_books: 'books_of_conflict',
-        weekly_boss_drops: 'silken_feather'
+        [MATERIAL_GROUP.ASCENSION_GEMS]: 'vayuda_turquoise',
+        [MATERIAL_GROUP.LOCAL_SPECIALTIES]: 'withering_purpurbloom',
+        [MATERIAL_GROUP.COMMON_ENEMY_DROPS]: 'juvenile_fang',
+        [MATERIAL_GROUP.NORMAL_BOSS_DROPS]: 'ensnaring_gaze',
+        [MATERIAL_GROUP.TALENT_BOOKS]: 'books_of_conflict',
+        [MATERIAL_GROUP.WEEKLY_BOSS_DROPS] : 'silken_feather'
     },
     talents: {
         attack: {

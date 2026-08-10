@@ -617,10 +617,13 @@ export const initSync = async (): Promise<{ data: AppData; isCloudSupported: boo
         (finalData as unknown as Record<string, unknown>)[field] = chosen;
 
         // Показываем уведомление только для значимых данных (не пустых)
-        const isEmpty = Array.isArray(chosen)
-            ? (chosen as unknown[]).length === 0
-            : Object.keys(chosen as object).length === 0;
-
+        const isEmpty =
+            chosen == null
+            ? true
+                : Array.isArray(chosen)
+                ? chosen.length === 0
+                : Object.keys(chosen).length === 0;
+                
         if (!isEmpty || cloud === null) {
             showNotification(notifMsg, notifType, 3500);
         }

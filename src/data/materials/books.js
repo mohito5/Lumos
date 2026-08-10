@@ -16,7 +16,7 @@ export const books = [
     {
         id: 'guide_of_freedom',
         sid: 'm2',
-        icon: "assets/book/freedom1.png", 
+        icon: "assets/book/freedom2.png", 
         farmDays: [DAYS.MONDAY, DAYS.THURSDAY, DAYS.SUNDAY],
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_FREEDOM],
@@ -26,13 +26,14 @@ export const books = [
     {
         id: 'philosophies_of_freedom',
         sid: 'm3',
-        icon: "assets/book/freedom1.png", 
+        icon: "assets/book/freedom3.png", 
         farmDays: [DAYS.MONDAY, DAYS.THURSDAY, DAYS.SUNDAY],
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_FREEDOM],
         rarity: RARITY.EPIC,
         region: REGION.MONDSTADT
     },
+    //
     {
         id: 'teachings_of_resistance',
         sid: 'm4',
@@ -63,6 +64,7 @@ export const books = [
         rarity: RARITY.EPIC,
         region: REGION.MONDSTADT
     },
+    // баллада
     {
         id: 'teachings_of_ballad',
         sid: 'm5',
@@ -96,15 +98,35 @@ export const books = [
         rarity: RARITY.EPIC,
         region: REGION.MONDSTADT
     },
+    // # Ли Юэ
     {
         id: 'teachings_of_prosperity',
         sid: 'm6',
-        icon: "assets/book/prosperity1.png",
+        icon: "assets/book/prosperity1.webp",
         farmDays: [DAYS.MONDAY, DAYS.THURSDAY, DAYS.SUNDAY],
         type: MATERIAL_TYPE.CHARACTER_TALENT,
-        tier: MATERIAL_TIER.BOOK_T1,
         group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_PROSPERITY],
-        family: MATERIAL_FAMILY.PROSPERITY,
+        rarity: RARITY.UNCOMMON,
+        region: REGION.LIYUE
+    },
+    {
+        id: 'guide_of_prosperity',
+        sid: '',
+        icon: "assets/book/prosperity2.webp",
+        farmDays: [DAYS.MONDAY, DAYS.THURSDAY, DAYS.SUNDAY],
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_PROSPERITY],
+        rarity: RARITY.RARE,
+        region: REGION.LIYUE
+    },
+    {
+        id: 'philosophies_of_prosperity',
+        sid: '',
+        icon: "assets/book/prosperity3.webp",
+        farmDays: [DAYS.MONDAY, DAYS.THURSDAY, DAYS.SUNDAY],
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_PROSPERITY],
+        rarity: RARITY.EPIC,
         region: REGION.LIYUE
     },
     {

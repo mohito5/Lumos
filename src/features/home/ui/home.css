@@ -53,7 +53,9 @@
     width: var(--space-3);
   }
   
-
+.mini-calendar-month {
+  text-align: center;
+}
   
  
   
@@ -234,8 +236,6 @@
   
   
   
-  
-  
   .progress-percentage {
     
     
@@ -300,5 +300,5 @@
 
   .banner-image { position: relative;
     z-index: 1;
-    filter: drop-shadow(-16px 0px var(--billberry));
+    filter: drop-shadow(-16px 0px var(--color));
   }

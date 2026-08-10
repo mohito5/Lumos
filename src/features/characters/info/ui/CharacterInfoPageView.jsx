@@ -7,6 +7,8 @@ import TalentSection from './TalentSection.jsx';
 import MaterialCard from '../../../../shared/ui/materials/MaterialCard.jsx';
 import { resolveMaterialDisplay } from '../../../../shared/lib/materialsCalculator.js';
 import Range from '../../../../shared/ui/Range/Range.jsx';
+import { resolveIconUrl } from '../../../../shared/lib/cdnIcon.js';
+import constellationTalentIcons from '../../../../data/cdn/constellationTalentIcons.generated.json';
 
 const CharacterInfoPageView = ({
     character,
@@ -63,7 +65,10 @@ const CharacterInfoPageView = ({
                     </div>
                     <div className="stats-display gap-1 flex-c">
                         <div className='justify-between border radius-1 p-1 flex'>
-                            <p>{t('stats:hp')}:</p>
+                            <div className='flex gap-2'>
+                                <svg className='icon-md'><use href='#icon-stat-atk'></use></svg>
+                                <p>{t('stats:hp')}:</p>
+                            </div>
                             <p>{baseHp}</p>
                         </div>
                         <div className='justify-between border radius-1 p-1 flex'>
@@ -127,20 +132,25 @@ const CharacterInfoPageView = ({
 
             <article key="constellations" className="grid-item flex-c gap-4">
                 <h2>{t('ui:character.constellations', 'Созвездия')}</h2>
-                <div className="constellations-section border radius-4 p-3">
+                <div className="constellations-section border radius-4 p-3 gap-2 flex-c">
                     {character.constellations ? (
                         Object.keys(character.constellations).map((constKey, index) => {
                             const constellation = character.constellations[constKey];
                             const constName = charLocale[`${constKey}_name`];
                             const constDesc = charLocale[`${constKey}_desc`];
                             if (!constName || !constDesc) return null;
+                            const constIconUrl = resolveIconUrl(
+                                { enkaIconMap: constellationTalentIcons },
+                                `${character.id}:const:${constKey.slice(1)}`,
+                                constellation.icon
+                            );
                             return (
-                                <div key={constKey} className="skill" style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '1rem' }}>
-                                    {constellation.icon && <img loading="lazy" src={`/${constellation.icon}`} alt={constName} style={{ width: '48px', height: '48px', marginRight: '1rem' }} />}
-                                    <div>
+                                <div key={constKey} className="skill gap-2 flex-c" style={{ display: 'flex', alignItems: 'flex-start' }}>
+                                    <div className='flex radius-1 p-1 background-r color-r'>
+                                        {constIconUrl && <img loading="lazy" className='border radius-4 icon-xl' src={constIconUrl} alt={constName} style={{ width: '48px', height: '48px', marginRight: '1rem' }} />}
                                         <h3>{`${t('ui:character.constellation', 'Созвездие')} ${index + 1}: ${constName}`}</h3>
-                                        <p dangerouslySetInnerHTML={{ __html: constDesc }} />
                                     </div>
+                                    <p dangerouslySetInnerHTML={{ __html: constDesc }} />
                                 </div>
                             );
                         })

@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { materialsById } from '../../../../data/materials/index.js';
 import { calculateCharacterCostRange } from '../../../../shared/lib/materialsCalculator.js';
 import MaterialCard from '../../../../shared/ui/materials/MaterialCard.jsx';
+import { resolveIconUrl } from '../../../../shared/lib/cdnIcon.js';
+import constellationTalentIcons from '../../../../data/cdn/constellationTalentIcons.generated.json';
 
 const TalentSection = ({ talentType, character, talentData }) => {
     const { t } = useTranslation(['materials', 'characters', 'ui', 'common']);
@@ -34,10 +36,16 @@ const TalentSection = ({ talentType, character, talentData }) => {
         return calculateCharacterCostRange(talentType, from, level, character);
     }, [level, isTotalCost, character, talentType]);
 
+    const talentIconUrl = resolveIconUrl(
+        { enkaIconMap: constellationTalentIcons },
+        `${character.id}:talent:${talentType}`,
+        talentData.icon
+    );
+
     return (
         <div className="skill flex-c">
-            <div className='flex'>
-                {talentData.icon && <img className='border radius-full' loading="lazy" src={`/${talentData.icon}`} alt={talentName} style={{ width: '48px', height: '48px', marginRight: '1rem' }} />}
+            <div className='flex p-1 background-r color-r radius-2'>
+                {talentIconUrl && <img className='border radius-1 background-blue' loading="lazy" src={talentIconUrl} alt={talentName} style={{ width: '48px', height: '48px', marginRight: '1rem' }} />}
                 <h3>{talentName}</h3>
             </div>
             <div className='flex-c gap-2'>

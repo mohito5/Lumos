@@ -47,7 +47,7 @@ const MiniCalendar = ({ date, birthdaysThisMonth, onNavClick }) => {
 
     return (
         <div className="mini-calendar border radius-1 p-1 gap-1 f-c">
-            <div className="mini-calendar-nav f-r jc-sb">
+            <div className="mini-calendar-nav flex-r items-start jc-sb">
                 <button className="nav-btn flex p-1 border prev background-r color-r radius-1" onClick={() => onNavClick('prev')}>
                     <svg className='icon-mini'><use href='#icon-arrow-left'></use></svg>
                 </button>
