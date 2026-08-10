@@ -1,4 +1,200 @@
 {
-    "ascended_sample_queen":{"name":"Вознесённый образец: Королева"},
-    "kuuvyaka_stamp_mold":{"name": "Штамповочная форма Кууваяки"}
+    "ascended_sample_queen": {
+        "name": "Вознесённый образец: Королева"
+    },
+    "kuuvyaka_stamp_mold": {
+        "name": "Штамповочная форма Кууваяки"
+    },
+    "ensnaring_gaze": {
+        "name": "Сковывающий взгляд"
+    },
+    "silken_feather": {
+        "name": "Шелковистое перо"
+    },
+    "marionette_core": {
+        "name": "Ядро марионетки"
+    },
+    "gilded_scale": {
+        "name": "Позолоченная чешуя"
+    },
+    "hurricane_seed": {
+        "name": "Семя урагана"
+    },
+    "tail_of_boreas": {
+        "name": "Хвост Борея"
+    },
+    "dvalins_plume": {
+        "name": "Перо из хвоста Двалина"
+    },
+    "juvenile_jade": {
+        "name": "Незрелый нефрит"
+    },
+    "shadow_of_the_warrior": {
+        "name": "Тень воина"
+    },
+    "spirit_locket_of_boreas": {
+        "name": "Шкатулка с духом Борея"
+    },
+    "runic_fang": {
+        "name": "Рунический клык"
+    },
+    "the_meaning_of_aeons": {
+        "name": "Смысл эонов"
+    },
+    "light_guiding_tetrahedron": {
+        "name": "Светопроводящий тетраэдр"
+    },
+    "puppet_strings": {
+        "name": "Нити марионетки"
+    },
+    "precision_kuuvahki_stamping_die": {
+        "name": "Штамповочная форма куувяки"
+    },
+    "storm_beads": {
+        "name": "Штормовой жемчуг"
+    },
+    "molten_moment": {
+        "name": "Расплавленный миг"
+    },
+    "dragonheirs_false_fin": {
+        "name": "Ложный плавник Дракона глубин"
+    },
+    "lightning_prism": {
+        "name": "Призма молнии"
+    },
+    "ring_of_boreas": {
+        "name": "Кольцо Борея"
+    },
+    "thunderclap_fruitcore": {
+        "name": "Плод грома"
+    },
+    "mudra_of_the_malefic_general": {
+        "name": "Мудра зловещего генерала"
+    },
+    "dvalins_sigh": {
+        "name": "Вздох Двалина"
+    },
+    "ashen_heart": {
+        "name": "Пепельное сердце"
+    },
+    "dvalins_claw": {
+        "name": "Коготь Двалина"
+    },
+    "bloodjade_branch": {
+        "name": "Ветвь кровавой яшмы"
+    },
+    "lightbearing_scale_feather": {
+        "name": "Светящееся чешуйчатое перо"
+    },
+    "eroded_scale_feather": {
+        "name": "Истлевшее чешуйчатое перо"
+    },
+    "quelled_creeper": {
+        "name": "Подавленная лоза"
+    },
+    "majestic_hooked_beak": {
+        "name": "Клюв короля плесенников"
+    },
+    "tears_of_the_calamitous_god": {
+        "name": "Слёзы очищения божества бедствий"
+    },
+    "pseudo_stamens": {
+        "name": "Псевдотычинки"
+    },
+    "mirror_of_mushin": {
+        "name": "Зеркало Мусин"
+    },
+    "dakas_bell": {
+        "name": "Пустой колокольчик"
+    },
+    "artificed_spare_clockwork_component_coppelia": {
+        "name": "Запасная деталь чудного механизма: Коппелия"
+    },
+    "lightless_silk_string": {
+        "name": "Тёмная шёлковая нить"
+    },
+    "basalt_pillar": {
+        "name": "Базальтовая колонна"
+    },
+    "tusk_of_monoceros_caeli": {
+        "name": "Рог небесного кита"
+    },
+    "riftborn_regalia": {
+        "name": "Эмблема Разрыва"
+    },
+    "perpetual_heart": {
+        "name": "Сердце бесконечного механизма"
+    },
+    "hoarfrost_core": {
+        "name": "Инеевое ядро"
+    },
+    "crystalline_bloom": {
+        "name": "Цветение кристалла"
+    },
+    "dragon_lords_crown": {
+        "name": "Корона лорда драконов"
+    },
+    "hellfire_butterfly": {
+        "name": "Бабочка адского пламени"
+    },
+    "shard_of_a_foul_legacy": {
+        "name": "Осколок дьявольского меча"
+    },
+    "gold_inscribed_secret_source_core": {
+        "name": "Ядро таинственного источника с золотой надписью"
+    },
+    "eroded_horn": {
+        "name": "Истлевший рог"
+    },
+    "everflame_seed": {
+        "name": "Пылающее семя"
+    },
+    "smoldering_pearl": {
+        "name": "Тлеющая жемчужина"
+    },
+    "dew_of_repudiation": {
+        "name": "Роса отречения"
+    },
+    "cleansing_heart": {
+        "name": "Очищающее сердце"
+    },
+    "perpetual_caliber": {
+        "name": "Вечный механизм"
+    },
+    "fragment_of_a_golden_melody": {
+        "name": "Фрагмент золотой мелодии"
+    },
+    "fading_candle": {
+        "name": "Угасающая свеча"
+    },
+    "remnant_of_the_dreadwing": {
+        "name": "Останки крыла ужаса"
+    },
+    "counterfeit_resin": {
+        "name": "Поддельная смола"
+    },
+    "cyclic_military_kuuvahki_core": {
+        "name": "Циклическое военное ядро куувяки"
+    },
+    "eroded_sunfire": {
+        "name": "Истлевшее солнечное пламя"
+    },
+    "overripe_flamegranate": {
+        "name": "Перезревший пламегранат"
+    },
+    "radiant_antler": {
+        "name": "Сияющий рог"
+    },
+    "mask_of_the_virtuous_doctor": {
+        "name": "Маска мудрого лекаря"
+    },
+    "sparkless_statue_core": {
+        "name": "Ядро безумной статуи"
+    },
+    "ascended_sample_rook": {
+        "name": "Вознёсшийся образец: Ладья"
+    },
+    "prismatic_severed_tail": {
+        "name": "Призматический отсечённый хвост"
+    }
 }

@@ -27,6 +27,8 @@ const ROOT = path.resolve(__dirname, '../..');
 const MAT_DIR = path.join(ROOT, 'src/data/materials');
 const LOC_DIR = path.join(ROOT, 'src/data-locales/materials');
 
+const PLACEHOLDER_ICON = 'assets/tmp256.png'; // тот же плейсхолдер, что уже используется в gems.js/common.js
+
 // sid — короткий id для компакт-формата сохранений (см. type.d.ts) — ОБЯЗАН
 // быть уникальным: коллизия на пустой строке однажды уже проявилась как
 // падение тестов (несколько материалов "делили" один пустой sid, из-за чего
@@ -102,7 +104,19 @@ export function findByFamilyAndRarity(familyTag, rarity) {
     return null;
 }
 
+let DRY_RUN = false;
+/** Вызывается один раз из вызывающего скрипта, если он запущен с --dry-run —
+ *  без этого ensureMaterial() всё равно писал файлы на диск даже в "сухом"
+ *  прогоне (поймано на реальном использовании: --dry-run для нового
+ *  персонажа должен был ничего не менять, а материалы для него всё равно
+ *  дописывались в каталог). matchа/newlyAdded по-прежнему обновляются в
+ *  памяти — отчёт "что было бы добавлено" в консоли остаётся честным. */
+export function setDryRun(value) {
+    DRY_RUN = value;
+}
+
 function appendObjectToArrayFile(fileName, arrayName, objSource) {
+    if (DRY_RUN) return;
     const filePath = path.join(MAT_DIR, fileName);
     let content = fs.readFileSync(filePath, 'utf8');
     const closeMatch = content.match(/\]\s*;?\s*$/);
@@ -122,6 +136,7 @@ function appendObjectToArrayFile(fileName, arrayName, objSource) {
 }
 
 function appendLocaleEntry(locFile, id, nameEn, nameRu) {
+    if (DRY_RUN) return;
     for (const [lang, name] of [['en', nameEn], ['ru', nameRu]]) {
         const filePath = path.join(LOC_DIR, lang, locFile);
         const data = fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, 'utf8')) : {};

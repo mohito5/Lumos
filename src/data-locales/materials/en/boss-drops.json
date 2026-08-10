@@ -1,4 +1,200 @@
 {
-    "ascended_sample_queen": {"name": "Ascended Sample: Queen"},
-    "kuuvyaka_stamp_mold": {"name": "Kuuvayaka Stamp Mold"}
+    "ascended_sample_queen": {
+        "name": "Ascended Sample: Queen"
+    },
+    "kuuvyaka_stamp_mold": {
+        "name": "Kuuvayaka Stamp Mold"
+    },
+    "ensnaring_gaze": {
+        "name": "Ensnaring Gaze"
+    },
+    "silken_feather": {
+        "name": "Silken Feather"
+    },
+    "marionette_core": {
+        "name": "Marionette Core"
+    },
+    "gilded_scale": {
+        "name": "Gilded Scale"
+    },
+    "hurricane_seed": {
+        "name": "Hurricane Seed"
+    },
+    "tail_of_boreas": {
+        "name": "Tail of Boreas"
+    },
+    "dvalins_plume": {
+        "name": "Dvalin's Plume"
+    },
+    "juvenile_jade": {
+        "name": "Juvenile Jade"
+    },
+    "shadow_of_the_warrior": {
+        "name": "Shadow of the Warrior"
+    },
+    "spirit_locket_of_boreas": {
+        "name": "Spirit Locket of Boreas"
+    },
+    "runic_fang": {
+        "name": "Runic Fang"
+    },
+    "the_meaning_of_aeons": {
+        "name": "The Meaning of Aeons"
+    },
+    "light_guiding_tetrahedron": {
+        "name": "Light Guiding Tetrahedron"
+    },
+    "puppet_strings": {
+        "name": "Puppet Strings"
+    },
+    "precision_kuuvahki_stamping_die": {
+        "name": "Precision Kuuvahki Stamping Die"
+    },
+    "storm_beads": {
+        "name": "Storm Beads"
+    },
+    "molten_moment": {
+        "name": "Molten Moment"
+    },
+    "dragonheirs_false_fin": {
+        "name": "Dragonheir's False Fin"
+    },
+    "lightning_prism": {
+        "name": "Lightning Prism"
+    },
+    "ring_of_boreas": {
+        "name": "Ring of Boreas"
+    },
+    "thunderclap_fruitcore": {
+        "name": "Thunderclap Fruitcore"
+    },
+    "mudra_of_the_malefic_general": {
+        "name": "Mudra of the Malefic General"
+    },
+    "dvalins_sigh": {
+        "name": "Dvalin's Sigh"
+    },
+    "ashen_heart": {
+        "name": "Ashen Heart"
+    },
+    "dvalins_claw": {
+        "name": "Dvalin's Claw"
+    },
+    "bloodjade_branch": {
+        "name": "Bloodjade Branch"
+    },
+    "lightbearing_scale_feather": {
+        "name": "Lightbearing Scale-Feather"
+    },
+    "eroded_scale_feather": {
+        "name": "Eroded Scale-Feather"
+    },
+    "quelled_creeper": {
+        "name": "Quelled Creeper"
+    },
+    "majestic_hooked_beak": {
+        "name": "Majestic Hooked Beak"
+    },
+    "tears_of_the_calamitous_god": {
+        "name": "Tears of the Calamitous God"
+    },
+    "pseudo_stamens": {
+        "name": "Pseudo-Stamens"
+    },
+    "mirror_of_mushin": {
+        "name": "Mirror of Mushin"
+    },
+    "dakas_bell": {
+        "name": "Daka's Bell"
+    },
+    "artificed_spare_clockwork_component_coppelia": {
+        "name": "Artificed Spare Clockwork Component — Coppelia"
+    },
+    "lightless_silk_string": {
+        "name": "Lightless Silk String"
+    },
+    "basalt_pillar": {
+        "name": "Basalt Pillar"
+    },
+    "tusk_of_monoceros_caeli": {
+        "name": "Tusk of Monoceros Caeli"
+    },
+    "riftborn_regalia": {
+        "name": "Riftborn Regalia"
+    },
+    "perpetual_heart": {
+        "name": "Perpetual Heart"
+    },
+    "hoarfrost_core": {
+        "name": "Hoarfrost Core"
+    },
+    "crystalline_bloom": {
+        "name": "Crystalline Bloom"
+    },
+    "dragon_lords_crown": {
+        "name": "Dragon Lord's Crown"
+    },
+    "hellfire_butterfly": {
+        "name": "Hellfire Butterfly"
+    },
+    "shard_of_a_foul_legacy": {
+        "name": "Shard of a Foul Legacy"
+    },
+    "gold_inscribed_secret_source_core": {
+        "name": "Gold-Inscribed Secret Source Core"
+    },
+    "eroded_horn": {
+        "name": "Eroded Horn"
+    },
+    "everflame_seed": {
+        "name": "Everflame Seed"
+    },
+    "smoldering_pearl": {
+        "name": "Smoldering Pearl"
+    },
+    "dew_of_repudiation": {
+        "name": "Dew of Repudiation"
+    },
+    "cleansing_heart": {
+        "name": "Cleansing Heart"
+    },
+    "perpetual_caliber": {
+        "name": "Perpetual Caliber"
+    },
+    "fragment_of_a_golden_melody": {
+        "name": "Fragment of a Golden Melody"
+    },
+    "fading_candle": {
+        "name": "Fading Candle"
+    },
+    "remnant_of_the_dreadwing": {
+        "name": "Remnant of the Dreadwing"
+    },
+    "counterfeit_resin": {
+        "name": "Counterfeit Resin"
+    },
+    "cyclic_military_kuuvahki_core": {
+        "name": "Cyclic Military Kuuvahki Core"
+    },
+    "eroded_sunfire": {
+        "name": "Eroded Sunfire"
+    },
+    "overripe_flamegranate": {
+        "name": "Overripe Flamegranate"
+    },
+    "radiant_antler": {
+        "name": "Radiant Antler"
+    },
+    "mask_of_the_virtuous_doctor": {
+        "name": "Mask of the Virtuous Doctor"
+    },
+    "sparkless_statue_core": {
+        "name": "Sparkless Statue Core"
+    },
+    "ascended_sample_rook": {
+        "name": "Ascended Sample: Rook"
+    },
+    "prismatic_severed_tail": {
+        "name": "Prismatic Severed Tail"
+    }
 }

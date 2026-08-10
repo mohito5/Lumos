@@ -1,10 +1,86 @@
 {
-    "vajrada_amethyst_sliver": { "name": "Vajrada Amethyst Sliver" },
-    "vayuda_turquoise_sliver": {"name": "Vayuda Turquoise Sliver"},
-    "vajrada_amethyst_fragment":{"name": "Vajrada Amethyst Fragment"} ,
-    "vayuda_turquoise_fragment":{"name": "Vayuda Turquoise Fragment"} ,
-    "vajrada_amethyst_chunk":{"name": "Vajrada Amethyst Chunk"},
-    "vayuda_turquoise_chunk":{"name": "Vayuda Turquoise Chunk"} ,
-    "vajrada_amethyst_gemstone":{"name": "Vajrada Amethyst Gemstone"} ,
-    "vayuda_turquoise_gemstone":{"name": "Vayuda Turquoise Gemstone"} 
+    "vajrada_amethyst_sliver": {
+        "name": "Vajrada Amethyst Sliver"
+    },
+    "vayuda_turquoise_sliver": {
+        "name": "Vayuda Turquoise Sliver"
+    },
+    "vajrada_amethyst_fragment": {
+        "name": "Vajrada Amethyst Fragment"
+    },
+    "vayuda_turquoise_fragment": {
+        "name": "Vayuda Turquoise Fragment"
+    },
+    "vajrada_amethyst_chunk": {
+        "name": "Vajrada Amethyst Chunk"
+    },
+    "vayuda_turquoise_chunk": {
+        "name": "Vayuda Turquoise Chunk"
+    },
+    "vajrada_amethyst_gemstone": {
+        "name": "Vajrada Amethyst Gemstone"
+    },
+    "vayuda_turquoise_gemstone": {
+        "name": "Vayuda Turquoise Gemstone"
+    },
+    "nagadus_emerald_sliver": {
+        "name": "Nagadus Emerald Sliver"
+    },
+    "nagadus_emerald_fragment": {
+        "name": "Nagadus Emerald Fragment"
+    },
+    "nagadus_emerald_chunk": {
+        "name": "Nagadus Emerald Chunk"
+    },
+    "nagadus_emerald_gemstone": {
+        "name": "Nagadus Emerald Gemstone"
+    },
+    "prithiva_topaz_sliver": {
+        "name": "Prithiva Topaz Sliver"
+    },
+    "prithiva_topaz_fragment": {
+        "name": "Prithiva Topaz Fragment"
+    },
+    "prithiva_topaz_chunk": {
+        "name": "Prithiva Topaz Chunk"
+    },
+    "prithiva_topaz_gemstone": {
+        "name": "Prithiva Topaz Gemstone"
+    },
+    "shivada_jade_sliver": {
+        "name": "Shivada Jade Sliver"
+    },
+    "shivada_jade_fragment": {
+        "name": "Shivada Jade Fragment"
+    },
+    "shivada_jade_chunk": {
+        "name": "Shivada Jade Chunk"
+    },
+    "shivada_jade_gemstone": {
+        "name": "Shivada Jade Gemstone"
+    },
+    "agnidus_agate_sliver": {
+        "name": "Agnidus Agate Sliver"
+    },
+    "agnidus_agate_fragment": {
+        "name": "Agnidus Agate Fragment"
+    },
+    "agnidus_agate_chunk": {
+        "name": "Agnidus Agate Chunk"
+    },
+    "agnidus_agate_gemstone": {
+        "name": "Agnidus Agate Gemstone"
+    },
+    "varunada_lazurite_sliver": {
+        "name": "Varunada Lazurite Sliver"
+    },
+    "varunada_lazurite_fragment": {
+        "name": "Varunada Lazurite Fragment"
+    },
+    "varunada_lazurite_chunk": {
+        "name": "Varunada Lazurite Chunk"
+    },
+    "varunada_lazurite_gemstone": {
+        "name": "Varunada Lazurite Gemstone"
+    }
 }

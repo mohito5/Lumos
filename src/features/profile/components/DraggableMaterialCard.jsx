@@ -14,7 +14,7 @@ const DraggableMaterialCard = ({ material, t, i18n, quantity, onQuantityChange }
     });
 
     const rarityClass = `rarity-${material.rarity}`;
-    const iconPath = `/${material.icon}`;
+    const iconPath = `${material.icon}`;
 
     const style = transform ? { transform: CSS.Translate.toString(transform) } : undefined;
 
@@ -24,9 +24,9 @@ const DraggableMaterialCard = ({ material, t, i18n, quantity, onQuantityChange }
             style={style}
             {...attributes}
             {...listeners}
-            className={classNames('material-card b-d br-4 p-2 g-2 f-c', rarityClass, { 'dragging': isDragging })}
+            className={classNames('material-card border radius-4 p-1 gap-2 flex-c', { 'dragging': isDragging })}
         >
-            <div className="material-card-body bg-d br-2">
+            <div className={classNames('material-card-body radius-3', rarityClass)}>
                 <img src={iconPath} alt={materialName} className="material-image" loading="lazy" />
             </div>
             <div className="material-card-footer">
@@ -40,7 +40,7 @@ const DraggableMaterialCard = ({ material, t, i18n, quantity, onQuantityChange }
                     // версии). Без stopPropagation клик по инпуту иногда
                     // перехватывался бы стартом drag вместо фокуса/ввода.
                     onPointerDown={(e) => e.stopPropagation()}
-                    className="quantity-input p-1 bg-d"
+                    className="quantity-input p-1 border background-r color radius-3"
                 />
             </div>
         </div>

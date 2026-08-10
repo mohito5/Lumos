@@ -133,5 +133,35 @@
     },
     "philosophies_of_order": {
         "name": "Философия о Порядке"
+    },
+    "teachings_of_conflict": {
+        "name": "Учения о «Раздоре»"
+    },
+    "philosophies_of_conflict": {
+        "name": "Философия о «Раздоре»"
+    },
+    "teachings_of_vagrancy": {
+        "name": "Учения о «Скитании»"
+    },
+    "philosophies_of_vagrancy": {
+        "name": "Философия о «Скитании»"
+    },
+    "teachings_of_moonlight": {
+        "name": "Учения о «Лунном свете»"
+    },
+    "philosophies_of_moonlight": {
+        "name": "Философия о «Лунном свете»"
+    },
+    "teachings_of_contention": {
+        "name": "Учения о «Соперничестве»"
+    },
+    "philosophies_of_contention": {
+        "name": "Философия о «Соперничестве»"
+    },
+    "teachings_of_elysium": {
+        "name": "Учения о «Рае»"
+    },
+    "philosophies_of_elysium": {
+        "name": "Философия о «Рае»"
     }
 }

@@ -1,8 +1,146 @@
 {
-    "slime-condensate": { "name": "Слизь слайма" },
-    "slime-secretions": { "name": "Секреции слайма" },
-    "slime-concentrate": { "name": "Концентрат слайма" },
-    "chaos-device": { "name": "Устройство хаоса" },
-    "chaos-circuit": { "name": "Схема хаоса" },
-    "chaos-core": { "name": "Ядро хаоса" }
+    "slime-condensate": {
+        "name": "Слизь слайма"
+    },
+    "slime-secretions": {
+        "name": "Секреции слайма"
+    },
+    "slime-concentrate": {
+        "name": "Концентрат слайма"
+    },
+    "chaos-device": {
+        "name": "Устройство хаоса"
+    },
+    "chaos-circuit": {
+        "name": "Схема хаоса"
+    },
+    "chaos-core": {
+        "name": "Ядро хаоса"
+    },
+    "juvenile_fang": {
+        "name": "Молодой клык"
+    },
+    "seasoned_fang": {
+        "name": "Клык взрослого"
+    },
+    "tyrants_fang": {
+        "name": "Клык тирана"
+    },
+    "treasure_hoarder_insignia": {
+        "name": "Печать Похитителей сокровищ"
+    },
+    "silver_raven_insignia": {
+        "name": "Печать серебряного ворона"
+    },
+    "golden_raven_insignia": {
+        "name": "Печать золотого ворона"
+    },
+    "damaged_mask": {
+        "name": "Разбитая маска"
+    },
+    "stained_mask": {
+        "name": "Грязная маска"
+    },
+    "ominous_mask": {
+        "name": "Зловещая маска"
+    },
+    "whopperflower_nectar": {
+        "name": "Нектар попрыгуньи"
+    },
+    "shimmering_nectar": {
+        "name": "Мерцающий нектар"
+    },
+    "energy_nectar": {
+        "name": "Элементальный нектар"
+    },
+    "faded_red_satin": {
+        "name": "Выцветший красный шёлк"
+    },
+    "trimmed_red_silk": {
+        "name": "Окаймлённый красный шёлк"
+    },
+    "rich_red_brocade": {
+        "name": "Златотканый красный шёлк"
+    },
+    "broken_drive_shaft": {
+        "name": "Сломанный вал"
+    },
+    "reinforced_drive_shaft": {
+        "name": "Усиленный вал"
+    },
+    "precision_drive_shaft": {
+        "name": "Высокоточный вал"
+    },
+    "old_handguard": {
+        "name": "Старая гарда"
+    },
+    "kageuchi_handguard": {
+        "name": "Гарда кагэути"
+    },
+    "famed_handguard": {
+        "name": "Прославленная гарда"
+    },
+    "divining_scroll": {
+        "name": "Свиток божественной магии"
+    },
+    "sealed_scroll": {
+        "name": "Свиток печати"
+    },
+    "forbidden_curse_scroll": {
+        "name": "Свиток запретного проклятья"
+    },
+    "firm_arrowhead": {
+        "name": "Прочный наконечник стрелы"
+    },
+    "sharp_arrowhead": {
+        "name": "Острый наконечник стрелы"
+    },
+    "weathered_arrowhead": {
+        "name": "Старый наконечник стрелы"
+    },
+    "tattered_warrant": {
+        "name": "Потрёпанный мандат"
+    },
+    "immaculate_warrant": {
+        "name": "Безупречный мандат"
+    },
+    "frost_etched_warrant": {
+        "name": "Заиндевевший мандат"
+    },
+    "fungal_spores": {
+        "name": "Споры плесенника"
+    },
+    "luminescent_pollen": {
+        "name": "Светящаяся пыльца"
+    },
+    "crystalline_cyst_dust": {
+        "name": "Пыль кристаллоцистов"
+    },
+    "spectral_husk": {
+        "name": "Призрачная оболочка"
+    },
+    "spectral_heart": {
+        "name": "Призрачное сердце"
+    },
+    "spectral_nucleus": {
+        "name": "Призрачное ядро"
+    },
+    "recruits_insignia": {
+        "name": "Шеврон рядового"
+    },
+    "sergeants_insignia": {
+        "name": "Шеврон сержанта"
+    },
+    "lieutenants_insignia": {
+        "name": "Шеврон офицера"
+    },
+    "sentrys_wooden_whistle": {
+        "name": "Деревянный свисток дозорного"
+    },
+    "warriors_metal_whistle": {
+        "name": "Металлический свисток воина"
+    },
+    "saurian_crowned_warriors_golden_whistle": {
+        "name": "Золотой свисток коронованного заврианами воина"
+    }
 }

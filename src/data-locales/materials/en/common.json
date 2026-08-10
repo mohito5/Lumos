@@ -1,9 +1,19 @@
 {
-    "mora": { "name": "Mora" },
-    "crown_of_insight": { "name": "Crown of Insight" },
-    "wanderer,s_advice": { "name": "Wanderer's Advice" },
-    "Adventurer,s_experience": { "name": "Adventurer's Experience" },
-    "hero,s_wit": { "name": "Hero's Wit" },
+    "mora": {
+        "name": "Mora"
+    },
+    "crown_of_insight": {
+        "name": "Crown of Insight"
+    },
+    "wanderer,s_advice": {
+        "name": "Wanderer's Advice"
+    },
+    "Adventurer,s_experience": {
+        "name": "Adventurer's Experience"
+    },
+    "hero,s_wit": {
+        "name": "Hero's Wit"
+    },
     "unknown": {
         "local_specialty": "Unknown local specialty",
         "talent_book": "Unknown talent book",
@@ -14,5 +24,122 @@
         "ascension_material": "Unknown ascension material",
         "material": "Unknown material",
         "hint": "Not specified in character/weapon data — please verify the exact material manually"
+    },
+    "withering_purpurbloom": {
+        "name": "Withering Purpurbloom"
+    },
+    "sea_ganoderma": {
+        "name": "Sea Ganoderma"
+    },
+    "cecilia": {
+        "name": "Cecilia"
+    },
+    "dandelion_seed": {
+        "name": "Dandelion Seed"
+    },
+    "qingxin": {
+        "name": "Qingxin"
+    },
+    "windwheel_aster": {
+        "name": "Windwheel Aster"
+    },
+    "crystal_marrow": {
+        "name": "Crystal Marrow"
+    },
+    "onikabuto": {
+        "name": "Onikabuto"
+    },
+    "henna_berry": {
+        "name": "Henna Berry"
+    },
+    "amakumo_fruit": {
+        "name": "Amakumo Fruit"
+    },
+    "cor_lapis": {
+        "name": "Cor Lapis"
+    },
+    "scarab": {
+        "name": "Scarab"
+    },
+    "small_lamp_grass": {
+        "name": "Small Lamp Grass"
+    },
+    "noctilucous_jade": {
+        "name": "Noctilucous Jade"
+    },
+    "dendrobium": {
+        "name": "Dendrobium"
+    },
+    "valberry": {
+        "name": "Valberry"
+    },
+    "kalpalata_lotus": {
+        "name": "Kalpalata Lotus"
+    },
+    "moonfall_silver": {
+        "name": "Moonfall Silver"
+    },
+    "nilotpala_lotus": {
+        "name": "Nilotpala Lotus"
+    },
+    "rukkhashava_mushrooms": {
+        "name": "Rukkhashava Mushrooms"
+    },
+    "sand_grease_pupa": {
+        "name": "Sand Grease Pupa"
+    },
+    "jueyun_chili": {
+        "name": "Jueyun Chili"
+    },
+    "glaze_lily": {
+        "name": "Glaze Lily"
+    },
+    "sango_pearl": {
+        "name": "Sango Pearl"
+    },
+    "sakura_bloom": {
+        "name": "Sakura Bloom"
+    },
+    "violetgrass": {
+        "name": "Violetgrass"
+    },
+    "calla_lily": {
+        "name": "Calla Lily"
+    },
+    "silk_flower": {
+        "name": "Silk Flower"
+    },
+    "philanemo_mushroom": {
+        "name": "Philanemo Mushroom"
+    },
+    "naku_weed": {
+        "name": "Naku Weed"
+    },
+    "fluorescent_fungus": {
+        "name": "Fluorescent Fungus"
+    },
+    "starconch": {
+        "name": "Starconch"
+    },
+    "padisarah": {
+        "name": "Padisarah"
+    },
+    "rainbow_rose": {
+        "name": "Rainbow Rose"
+    },
+    "pine_amber": {
+        "name": "Pine Amber"
+    },
+    "quenepa_berry": {
+        "name": "Quenepa Berry"
+    },
+    "winter_icelea": {
+        "name": "Winter Icelea"
+    },
+    "portable_bearing": {
+        "name": "Portable Bearing"
+    },
+    "saurian_claw_succulent": {
+        "name": "Saurian Claw Succulent"
     }
 }

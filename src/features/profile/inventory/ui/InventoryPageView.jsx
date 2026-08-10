@@ -51,7 +51,7 @@ const InventoryPageView = ({
                         </button>
                     </div>
                     <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} t={t} />
-                    <div className="material-grid g-2">
+                    <div className="material-grid gap-2">
                         {filteredMaterials.map(material => (
                             <DraggableMaterialCard 
                                 key={material.id}

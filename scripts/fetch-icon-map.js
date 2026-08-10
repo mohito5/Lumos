@@ -10,6 +10,8 @@
 //
 // Запуск:  node scripts/fetch-icon-map.js
 // Только конкретные категории:  node scripts/fetch-icon-map.js characters weapons
+// Только одна сущность (после того как её добавили через update-character-data.js
+// или руками): node scripts/fetch-icon-map.js --only=Furina
 // Категории: characters, weapons, artifacts, creatures, fish
 //
 // Формат выходных файлов — см. src/data/cdn/README.md:
@@ -26,12 +28,28 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const CDN_DIR = path.join(ROOT, 'src/data/cdn');
 
-const requestedCategories = process.argv.slice(2);
+const rawArgs = process.argv.slice(2);
+const ONLY = rawArgs.find((a) => a.startsWith('--only='))?.split('=')[1];
+const requestedCategories = rawArgs.filter((a) => !a.startsWith('--only='));
 const shouldRun = (name) => requestedCategories.length === 0 || requestedCategories.includes(name);
 
+/** Сливает с уже существующим содержимым файла, а не перезаписывает
+ *  целиком — важно для --only=Имя (иначе он стёр бы иконки всех остальных,
+ *  ведь для остальных в этом прогоне ничего не вычисляется). При обычном
+ *  полном прогоне результат тот же, что и при перезаписи (пересчитываются
+ *  вообще все id), так что слияние — универсально безопасный вариант. */
 function writeJson(fileName, obj) {
-    const sorted = Object.fromEntries(Object.entries(obj).sort(([a], [b]) => a.localeCompare(b)));
-    fs.writeFileSync(path.join(CDN_DIR, fileName), JSON.stringify(sorted, null, 2) + '\n');
+    const filePath = path.join(CDN_DIR, fileName);
+    const existing = fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, 'utf8')) : {};
+    const merged = { ...existing, ...obj };
+    const sorted = Object.fromEntries(Object.entries(merged).sort(([a], [b]) => a.localeCompare(b)));
+    fs.writeFileSync(filePath, JSON.stringify(sorted, null, 2) + '\n');
+}
+
+/** Фильтрует список сущностей категории под --only=Имя, если он задан. */
+function filterOnly(items) {
+    if (!ONLY) return items;
+    return items.filter((it) => it.id === ONLY);
 }
 
 function report(label, matched, total, misses) {
@@ -41,7 +59,7 @@ function report(label, matched, total, misses) {
 
 // ---------------------------------------------------------------------------
 async function runCharacters() {
-    const characters = (await import('../src/data/characters/index.js')).default;
+    const characters = filterOnly((await import('../src/data/characters/index.js')).default);
     const characterIcons = {};
     const constellationTalentIcons = {};
     let matched = 0;
@@ -84,7 +102,7 @@ async function runCharacters() {
 
 // ---------------------------------------------------------------------------
 async function runWeapons() {
-    const weapons = (await import('../src/data/weapons/index.js')).default;
+    const weapons = filterOnly((await import('../src/data/weapons/index.js')).default);
     const weaponIcons = {};
     let matched = 0;
     const misses = [];
@@ -105,7 +123,7 @@ async function runWeapons() {
 
 // ---------------------------------------------------------------------------
 async function runArtifacts() {
-    const artifacts = (await import('../src/data/artifacts/index.js')).default;
+    const artifacts = filterOnly((await import('../src/data/artifacts/index.js')).default);
     const artifactIcons = {};
     let matched = 0;
     const misses = [];
@@ -132,7 +150,7 @@ async function runArtifacts() {
 
 // ---------------------------------------------------------------------------
 async function runCreatures() {
-    const creatures = (await import('../src/data/creatures/index.js')).default;
+    const creatures = filterOnly((await import('../src/data/creatures/index.js')).default);
     const creatureIcons = {};
     let matched = 0;
     const misses = [];
@@ -167,11 +185,12 @@ async function runFish() {
         const content = fs.readFileSync(path.join(fishDir, file), 'utf8');
         for (const m of content.matchAll(/id:\s*'([^']+)'/g)) fishes.push({ id: m[1] });
     }
+    const filteredFishes = filterOnly(fishes);
     const fishIcons = {};
     let matched = 0;
     const misses = [];
 
-    for (const f of fishes) {
+    for (const f of filteredFishes) {
         const entity = resolveEntity('animals', f.id, { resultLanguage: 'English' });
         if (!entity?.images?.filename_icon) {
             misses.push(f.id);
@@ -182,7 +201,7 @@ async function runFish() {
     }
 
     writeJson('fishIcons.generated.json', fishIcons);
-    report('рыбы', matched, fishes.length, misses);
+    report('рыбы', matched, filteredFishes.length, misses);
 }
 
 // ---------------------------------------------------------------------------

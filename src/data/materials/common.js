@@ -5,7 +5,7 @@ export const common = [
         sid: 'm21',
         icon: "assets/mora.png",
         type: MATERIAL_TYPE.COMMON_CURRENCIES,
-        rarity: RARITY.COMMON
+        rarity: RARITY.RARE
     },
     {   // корона 
         id: 'crown_of_insight',

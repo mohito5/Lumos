@@ -66,14 +66,19 @@ const CharacterInfoPageView = ({
                     <div className="stats-display gap-1 flex-c">
                         <div className='justify-between border radius-1 p-1 flex'>
                             <div className='flex gap-2'>
-                                <svg className='icon-md'><use href='#icon-stat-atk'></use></svg>
+                                <svg className='icon-md'><use href='#icon-stat-hp'></use></svg>
                                 <p>{t('stats:hp')}:</p>
                             </div>
                             <p>{baseHp}</p>
                         </div>
-                        <div className='justify-between border radius-1 p-1 flex'>
-                            <p>{t('stats:atk')}:</p>
-                            <p>{baseAtk}</p>
+                        <div className='gap-1 flex'>
+                            <div className='p-1 border radius-1 flex'>
+                                <svg className='icon-md'><use href='#icon-stat-atk'></use></svg>
+                            </div>
+                            <div className='flex justify-between border wd p-1 px-2 radius-1'>
+                                <p>{t('stats:atk')}:</p>
+                                <p>{baseAtk}</p>
+                            </div>
                         </div>
                         <div className='justify-between border radius-1 p-1 flex'>
                             <p>{t('stats:def')}:</p>

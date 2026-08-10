@@ -49,7 +49,9 @@ const TalentSection = ({ talentType, character, talentData }) => {
                 <h3>{talentName}</h3>
             </div>
             <div className='flex-c gap-2'>
-                <p dangerouslySetInnerHTML={{ __html: talentDescription }}></p>
+                <p style={{ whiteSpace: 'pre-line' }}>
+                    {talentDescription}
+                </p>
 
                 <div className="talent-calculator-section gap-2 flex-c">
                     <h4>{t('ui:character.talentStats', 'Атрибуты таланта')}</h4>

@@ -12,11 +12,22 @@
 //
 // Запуск:            node scripts/update-character-data.js
 // Только один герой:  node scripts/update-character-data.js --only=Ganyu
+// Новый персонаж:     node scripts/update-character-data.js --only=Furina
+//                     (если "Furina" ещё не встречается ни в одном из
+//                     src/data/characters/*.js — создаёт новый объект с
+//                     нуля, а не обновляет существующий; файл/элемент
+//                     определяются автоматически из genshin-db)
 // Без записи файлов:  node scripts/update-character-data.js --dry-run
 //
 // Персонажей из SKIP_IDS (уже заполнены вручную) скрипт НЕ трогает —
 // решение сознательное, см. обсуждение с Сергеем: у Varka/Mavuika/Flins
 // данные уже введены руками, перезаписывать их не нужно.
+//
+// После добавления НОВОГО персонажа его иконок здесь не будет (этот
+// скрипт ими не занимается) — нужно ещё прогнать
+// scripts/fetch-icon-map.js --only=Furina (тот же принцип "новый — сам
+// определит, что добавить" реализован и там, см. его собственный
+// заголовок).
 // ============================================================================
 
 import fs from 'node:fs';
@@ -27,7 +38,7 @@ import {
     rarityRef, visionRef, visionKey, weaponTypeRef, ascensionStatRef,
     gemFamilyForElement, slugify, bookFamilySlug, classifyMaterialKind,
 } from './lib/project-schema-map.mjs';
-import { ensureMaterial, getNewlyAddedReport } from './lib/materials-catalog.mjs';
+import { ensureMaterial, getNewlyAddedReport, setDryRun } from './lib/materials-catalog.mjs';
 import { printValue, codeRef } from './lib/js-print.mjs';
 import { MATERIAL_GROUP } from '../src/shared/config/constants.js';
 
@@ -38,13 +49,14 @@ const LOC_DIR = path.join(ROOT, 'src/data-locales/characters');
 const COMMON_I18N_DIR = path.join(ROOT, 'src/core/i18n');
 
 // см. шапку файла
-const SKIP_IDS = new Set(['Varka', 'Mavuika', 'Flins']);
+const SKIP_IDS = new Set(['Amber', 'Chasca']);
 
 const ELEMENT_FILES = ['anemo', 'electro', 'dendro', 'geo', 'cryo', 'pyro', 'hydro'];
 
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes('--dry-run');
 const ONLY = args.find((a) => a.startsWith('--only='))?.split('=')[1];
+setDryRun(DRY_RUN);
 
 // ---------------------------------------------------------------------------
 // Базовые характеристики: 8 контрольных уровней (KEY_LEVELS в
@@ -276,6 +288,38 @@ function findMatchingBraceEnd(text) {
     throw new Error('не нашёл закрывающую скобку объекта персонажа (несбалансированные {})');
 }
 
+/** Ищет id персонажа во ВСЕХ 7 файлах разом (не только в "ожидаемом" по
+ *  элементу — см. историю разработки: Razor, например, лежит в electro.js,
+ *  хотя по игровым данным он Electro и это на самом деле правильно, но
+ *  бывают и настоящие расхождения) — нужно, чтобы --only=Имя корректно
+ *  решало "обновить существующего" или "добавить нового", а не полагалось
+ *  на угадывание файла по элементу ДО того, как мы вообще знаем, есть ли
+ *  персонаж в проекте. */
+function findCharacterAnywhere(id) {
+    for (const fileName of ELEMENT_FILES) {
+        const filePath = path.join(CHAR_DIR, `${fileName}.js`);
+        const content = fs.readFileSync(filePath, 'utf8');
+        const block = findCharacterBlock(content, id);
+        if (block) return { fileName, filePath, content, block };
+    }
+    return null;
+}
+
+/** Добавляет НОВЫЙ объект персонажа в конец массива в файле элемента — та
+ *  же логика "срезать висячую запятую, чтобы не задвоить", что и в
+ *  materials-catalog.mjs (там задвоенная запятая роняла массив в дыру —
+ *  см. историю разработки, тот баг стоил довольно дорого, повторять не хочется). */
+function appendCharacterToFile(filePath, objSource) {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const closeMatch = content.match(/\]\s*;?\s*$/);
+    if (!closeMatch) throw new Error(`${filePath}: не нашёл закрывающее "]" в конце файла`);
+    const beforeClose = content.slice(0, closeMatch.index);
+    const trimmedBefore = beforeClose.replace(/,\s*$/, '');
+    const isEmpty = /\[\s*$/.test(trimmedBefore);
+    content = `${trimmedBefore}${isEmpty ? '' : ','}\n${objSource}\n];\n`;
+    fs.writeFileSync(filePath, content);
+}
+
 // ---------------------------------------------------------------------------
 function mergeLocaleFile(filePath, characterId, entry) {
     let data = {};
@@ -299,9 +343,7 @@ function mergeCommonI18n() {
 }
 
 // ---------------------------------------------------------------------------
-async function processCharacter(existingChar, fileName, fileContent) {
-    const id = existingChar.id;
-
+async function buildCharacterData(id, existingBlockText) {
     const enChar = resolveEntity('characters', id, { resultLanguage: 'English' });
     if (!enChar) return { id, status: 'not_found' };
     const ruChar = resolveEntity('characters', id, { resultLanguage: 'Russian' });
@@ -313,13 +355,26 @@ async function processCharacter(existingChar, fileName, fileContent) {
     const elementKey = visionKey(enChar.elementText);
 
     // --- поля персонажа (data/characters/*.js) ---
-    const block = findCharacterBlock(fileContent, id);
-    const preserved = {
-        id,
-        enkaId: extractField(block?.text || '', 'enkaId'),
-        birthday: extractField(block?.text || '', 'birthday'),
-        avatar_icon: extractField(block?.text || '', 'avatar_icon'),
-    };
+    // Если блок уже существует — сохраняем то, что не относится к зоне
+    // ответственности этого скрипта (enkaId/birthday/иконка руками
+    // подобраны). Если персонажа ещё нет в проекте вообще (см. --only=Имя
+    // на несуществующем персонаже, main()) — берём то же самое из
+    // genshin-db: c.id ЧИСЛЕННО совпадает с enkaId (проверено на Аяке —
+    // 10000002 в обоих местах), birthdaymmdd — тот же формат, что и в
+    // проекте, только с "/" вместо "-". avatar_icon НЕ придумываем — своего
+    // локального ассета у нового персонажа ещё нет, полагаемся на CDN
+    // (после этого скрипта нужно ещё прогнать fetch-icon-map.js).
+    const preserved = existingBlockText
+        ? {
+            enkaId: extractField(existingBlockText, 'enkaId'),
+            birthday: extractField(existingBlockText, 'birthday'),
+            avatar_icon: extractField(existingBlockText, 'avatar_icon'),
+        }
+        : {
+            enkaId: enChar.id,
+            birthday: enChar.birthdaymmdd?.replace('/', '-'),
+            avatar_icon: undefined,
+        };
 
     const ascensionMaterials = buildAscensionMaterials(enChar, elementKey, { costs: enTalents?.costs });
 
@@ -329,7 +384,7 @@ async function processCharacter(existingChar, fileName, fileContent) {
     });
 
     const newCharObj = {
-        id: preserved.id,
+        id,
         ...(preserved.enkaId !== undefined ? { enkaId: preserved.enkaId } : {}),
         rarity: rarityRef(enChar.rarity),
         element: visionRef(enChar.elementText),
@@ -355,7 +410,7 @@ async function processCharacter(existingChar, fileName, fileContent) {
     };
 
     return {
-        id, status: 'ok', elementKey, block, newCharObj,
+        id, status: 'ok', elementKey, newCharObj,
         localeEn: buildLocaleEntry(enChar, enTalents, enConsts),
         localeRu: buildLocaleEntry(ruChar, ruTalents, ruConsts),
     };
@@ -393,7 +448,57 @@ function buildLocaleEntry(char, talents, consts) {
 }
 
 // ---------------------------------------------------------------------------
+/** --only=Имя, которого ещё нет ни в одном файле — создаём новый объект
+ *  персонажа с нуля (элемент/файл определяются из genshin-db) вместо
+ *  обновления существующего. Массовый прогон (без --only) в этот режим
+ *  никогда не уходит — добавление нового персонажа всегда явное действие. */
+async function runAddNewCharacter(id) {
+    console.log(`  "${id}" не найден ни в одном файле src/data/characters/ — добавляю как нового персонажа`);
+
+    let data;
+    try {
+        data = await buildCharacterData(id, null);
+    } catch (e) {
+        console.error(`  ❌ ${id}: ${e.stack || e.message}`);
+        return;
+    }
+    if (data.status === 'not_found') {
+        console.warn(`  ⚠ ${id}: не нашёл и в genshin-db — проверьте написание (регистр как в проекте: "KamisatoAyaka", не "kamisato_ayaka")`);
+        return;
+    }
+
+    const fileName = data.elementKey.toLowerCase();
+    if (!ELEMENT_FILES.includes(fileName)) {
+        console.error(`  ❌ ${id}: элемент "${data.elementKey}" не соответствует ни одному из файлов ${ELEMENT_FILES.join('/')}`);
+        return;
+    }
+    const filePath = path.join(CHAR_DIR, `${fileName}.js`);
+    const objSource = printValue(data.newCharObj, 0);
+
+    if (!DRY_RUN) {
+        appendCharacterToFile(filePath, objSource);
+        if (data.localeEn) mergeLocaleFile(path.join(LOC_DIR, 'en', `${fileName}.json`), id, data.localeEn);
+        if (data.localeRu) mergeLocaleFile(path.join(LOC_DIR, 'ru', `${fileName}.json`), id, data.localeRu);
+        mergeCommonI18n();
+    }
+
+    console.log(`  ✓ добавлен новый персонаж "${id}" в ${fileName}.js (элемент: ${data.elementKey})`);
+    console.log(`    enkaId и birthday взяты из genshin-db (сверьте на всякий случай), avatar_icon не задан —`);
+    console.log(`    иконка будет идти через CDN после "node scripts/fetch-icon-map.js --only=${id}" (см. ниже).`);
+    const newMats = getNewlyAddedReport();
+    if (newMats.length) {
+        console.log(`    Новых материалов в каталоге: ${newMats.length} (плейсхолдер-иконка assets/tmp256.png)`);
+    }
+    if (DRY_RUN) console.log('\n(--dry-run: файлы НЕ записаны)');
+}
+
+// ---------------------------------------------------------------------------
 async function main() {
+    if (ONLY && !SKIP_IDS.has(ONLY) && !findCharacterAnywhere(ONLY)) {
+        await runAddNewCharacter(ONLY);
+        return;
+    }
+
     const results = { ok: [], skipped: [], not_found: [], errors: [] };
 
     for (const fileName of ELEMENT_FILES) {
@@ -409,9 +514,11 @@ async function main() {
                 continue;
             }
 
+            const block = findCharacterBlock(fileContent, existingChar.id);
+
             let outcome;
             try {
-                outcome = await processCharacter(existingChar, fileName, fileContent);
+                outcome = await buildCharacterData(existingChar.id, block?.text || null);
             } catch (e) {
                 results.errors.push({ id: existingChar.id, error: e.message });
                 console.error(`  ❌ ${existingChar.id}: ${e.stack || e.message}`);
@@ -423,14 +530,14 @@ async function main() {
                 console.warn(`  ⚠ ${existingChar.id}: не нашёл в genshin-db, пропускаю`);
                 continue;
             }
-            if (!outcome.block) {
+            if (!block) {
                 results.errors.push({ id: existingChar.id, error: 'не нашёл блок персонажа в файле для замены' });
                 console.error(`  ❌ ${existingChar.id}: не нашёл исходный блок в ${fileName}.js — пропускаю запись`);
                 continue;
             }
 
             // --- запись data/characters/{file}.js: точечная замена блока ---
-            const oldBlockText = outcome.block.text;
+            const oldBlockText = block.text;
             const objEnd = findMatchingBraceEnd(oldBlockText);
             const tail = oldBlockText.slice(objEnd); // ",\n" перед следующим блоком ИЛИ "\n];\n" если это последний персонаж файла
             const newObjSource = printValue(outcome.newCharObj, 0);

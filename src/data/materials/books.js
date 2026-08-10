@@ -250,4 +250,174 @@ export const books = [
         family: MATERIAL_FAMILY.ORDER,
         region: REGION.FONTAINE
     },
+    {
+        id: 'teachings_of_conflict',
+        sid: 'm110',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_conflict'],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'philosophies_of_conflict',
+        sid: 'm111',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_conflict'],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_diligence',
+        sid: 'm118',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_DILIGENCE],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_light',
+        sid: 'm137',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_LIGHT],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_transience',
+        sid: 'm140',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_TRANSIENCE],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_admonition',
+        sid: 'm147',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_ADMONITION],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'teachings_of_vagrancy',
+        sid: 'm153',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_vagrancy'],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'philosophies_of_vagrancy',
+        sid: 'm154',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_vagrancy'],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_gold',
+        sid: 'm176',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_GOLD],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_elegance',
+        sid: 'm179',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_ELEGANCE],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_ingenuity',
+        sid: 'm184',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_INGENUITY],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'teachings_of_moonlight',
+        sid: 'm195',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_moonlight'],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'philosophies_of_moonlight',
+        sid: 'm196',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_moonlight'],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_praxis',
+        sid: 'm205',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_PRAXIS],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'teachings_of_contention',
+        sid: 'm250',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_contention'],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'philosophies_of_contention',
+        sid: 'm251',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_contention'],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_order',
+        sid: 'm270',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_ORDER],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'teachings_of_elysium',
+        sid: 'm274',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_elysium'],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'philosophies_of_elysium',
+        sid: 'm275',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_elysium'],
+        rarity: RARITY.EPIC
+    }
 ];

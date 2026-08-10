@@ -1,10 +1,86 @@
 {
-    "vajrada_amethyst_sliver":{"name": "Осколок аметиста Ваджрада"},
-    "vayuda_turquoise_sliver":{"name":"Осколок бирюзы Вайюда"} ,
-    "vajrada_amethyst_fragment":{"name":"Фрагмент аметиста Ваджрада"} ,
-    "vayuda_turquoise_fragment":{"name":"Фрагмент бирюзы Вайюда"} ,
-    "vajrada_amethyst_chunk":{"name":"Кусок аметиста Ваджрада"} ,
-    "vayuda_turquoise_chunk":{"name":"Кусок бирюзы Вайюда"} ,
-    "vajrada_amethyst_gemstone":{"name":"Драгоценный аметист Ваджрада"} ,
-    "vayuda_turquoise_gemstone":{"name":"Драгоценная бирюза Вайюда"}
+    "vajrada_amethyst_sliver": {
+        "name": "Осколок аметиста Ваджрада"
+    },
+    "vayuda_turquoise_sliver": {
+        "name": "Осколок бирюзы Вайюда"
+    },
+    "vajrada_amethyst_fragment": {
+        "name": "Фрагмент аметиста Ваджрада"
+    },
+    "vayuda_turquoise_fragment": {
+        "name": "Фрагмент бирюзы Вайюда"
+    },
+    "vajrada_amethyst_chunk": {
+        "name": "Кусок аметиста Ваджрада"
+    },
+    "vayuda_turquoise_chunk": {
+        "name": "Кусок бирюзы Вайюда"
+    },
+    "vajrada_amethyst_gemstone": {
+        "name": "Драгоценный аметист Ваджрада"
+    },
+    "vayuda_turquoise_gemstone": {
+        "name": "Драгоценная бирюза Вайюда"
+    },
+    "nagadus_emerald_sliver": {
+        "name": "Осколок изумруда Нагадус"
+    },
+    "nagadus_emerald_fragment": {
+        "name": "Фрагмент изумруда Нагадус"
+    },
+    "nagadus_emerald_chunk": {
+        "name": "Кусок изумруда Нагадус"
+    },
+    "nagadus_emerald_gemstone": {
+        "name": "Драгоценный изумруд Нагадус"
+    },
+    "prithiva_topaz_sliver": {
+        "name": "Осколок топаза Притхива"
+    },
+    "prithiva_topaz_fragment": {
+        "name": "Фрагмент топаза Притхива"
+    },
+    "prithiva_topaz_chunk": {
+        "name": "Кусок топаза Притхива"
+    },
+    "prithiva_topaz_gemstone": {
+        "name": "Драгоценный топаз Притхива"
+    },
+    "shivada_jade_sliver": {
+        "name": "Осколок нефрита Шивада"
+    },
+    "shivada_jade_fragment": {
+        "name": "Фрагмент нефрита Шивада"
+    },
+    "shivada_jade_chunk": {
+        "name": "Кусок нефрита Шивада"
+    },
+    "shivada_jade_gemstone": {
+        "name": "Драгоценный нефрит Шивада"
+    },
+    "agnidus_agate_sliver": {
+        "name": "Осколок агата Агнидус"
+    },
+    "agnidus_agate_fragment": {
+        "name": "Фрагмент агата Агнидус"
+    },
+    "agnidus_agate_chunk": {
+        "name": "Кусок агата Агнидус"
+    },
+    "agnidus_agate_gemstone": {
+        "name": "Драгоценный агат Агнидус"
+    },
+    "varunada_lazurite_sliver": {
+        "name": "Осколок лазурита Варунада"
+    },
+    "varunada_lazurite_fragment": {
+        "name": "Фрагмент лазурита Варунада"
+    },
+    "varunada_lazurite_chunk": {
+        "name": "Кусок лазурита Варунада"
+    },
+    "varunada_lazurite_gemstone": {
+        "name": "Драгоценный лазурит Варунада"
+    }
 }

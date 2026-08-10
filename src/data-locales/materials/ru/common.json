@@ -1,9 +1,19 @@
 {
-    "mora": { "name": "Мора" },
-    "crown_of_insight": { "name": "Корона прозрения" },
-    "wanderer,s_advice": { "name": "Опыт искателя приключений" },
-    "Adventurer,s_experience": { "name": "Опыт путешественника" },
-    "hero,s_wit": { "name": "Опыт героя" },
+    "mora": {
+        "name": "Мора"
+    },
+    "crown_of_insight": {
+        "name": "Корона прозрения"
+    },
+    "wanderer,s_advice": {
+        "name": "Опыт искателя приключений"
+    },
+    "Adventurer,s_experience": {
+        "name": "Опыт путешественника"
+    },
+    "hero,s_wit": {
+        "name": "Опыт героя"
+    },
     "unknown": {
         "local_specialty": "Неизвестная диковина",
         "talent_book": "Неизвестная книга талантов",
@@ -14,5 +24,122 @@
         "ascension_material": "Неизвестный материал возвышения",
         "material": "Неизвестный материал",
         "hint": "Не указано в данных персонажа/оружия — уточни материал вручную"
+    },
+    "withering_purpurbloom": {
+        "name": "Сухой пурпурник"
+    },
+    "sea_ganoderma": {
+        "name": "Морской гриб"
+    },
+    "cecilia": {
+        "name": "Сесилия"
+    },
+    "dandelion_seed": {
+        "name": "Семена одуванчика"
+    },
+    "qingxin": {
+        "name": "Цветок цинсинь"
+    },
+    "windwheel_aster": {
+        "name": "Ветряная астра"
+    },
+    "crystal_marrow": {
+        "name": "Кристальный костный мозг"
+    },
+    "onikabuto": {
+        "name": "Оникабуто"
+    },
+    "henna_berry": {
+        "name": "Красноплодник"
+    },
+    "amakumo_fruit": {
+        "name": "Плод облачной травы"
+    },
+    "cor_lapis": {
+        "name": "Кор ляпис"
+    },
+    "scarab": {
+        "name": "Скарабей"
+    },
+    "small_lamp_grass": {
+        "name": "Трава-светяшка"
+    },
+    "noctilucous_jade": {
+        "name": "Полуночный нефрит"
+    },
+    "dendrobium": {
+        "name": "Кровоцвет"
+    },
+    "valberry": {
+        "name": "Валяшка"
+    },
+    "kalpalata_lotus": {
+        "name": "Лотос кальпалата"
+    },
+    "moonfall_silver": {
+        "name": "Серебро захода луны"
+    },
+    "nilotpala_lotus": {
+        "name": "Лотос нилотпала"
+    },
+    "rukkhashava_mushrooms": {
+        "name": "Грибы руккхашава"
+    },
+    "sand_grease_pupa": {
+        "name": "Личинка песчаного жировика"
+    },
+    "jueyun_chili": {
+        "name": "Заоблачный перчик"
+    },
+    "glaze_lily": {
+        "name": "Глазурная лилия"
+    },
+    "sango_pearl": {
+        "name": "Жемчужина Санго"
+    },
+    "sakura_bloom": {
+        "name": "Цвет сакуры"
+    },
+    "violetgrass": {
+        "name": "Стеклянные колокольчики"
+    },
+    "calla_lily": {
+        "name": "Лилия калла"
+    },
+    "silk_flower": {
+        "name": "Шелковица"
+    },
+    "philanemo_mushroom": {
+        "name": "Гриб филанемо"
+    },
+    "naku_weed": {
+        "name": "Трава наку"
+    },
+    "fluorescent_fungus": {
+        "name": "Светящийся гриб"
+    },
+    "starconch": {
+        "name": "Звёздная ракушка"
+    },
+    "padisarah": {
+        "name": "Падисара"
+    },
+    "rainbow_rose": {
+        "name": "Радужная роза"
+    },
+    "pine_amber": {
+        "name": "Сосновый янтарь"
+    },
+    "quenepa_berry": {
+        "name": "Ягода квенепа"
+    },
+    "winter_icelea": {
+        "name": "Шпороцветник"
+    },
+    "portable_bearing": {
+        "name": "Переносной подшипник"
+    },
+    "saurian_claw_succulent": {
+        "name": "Лапа завриана"
     }
 }

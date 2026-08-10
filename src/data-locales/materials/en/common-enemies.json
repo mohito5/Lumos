@@ -1,8 +1,146 @@
 {
-    "slime-condensate": { "name": "Slime Condensate" },
-    "slime-secretions": { "name": "Slime Secretions" },
-    "slime-concentrate": { "name": "Slime Concentrate" },
-    "chaos-device": { "name": "Chaos Device" },
-    "chaos-circuit": { "name": "Chaos Circuit" },
-    "chaos-core": { "name": "Chaos Core" }
+    "slime-condensate": {
+        "name": "Slime Condensate"
+    },
+    "slime-secretions": {
+        "name": "Slime Secretions"
+    },
+    "slime-concentrate": {
+        "name": "Slime Concentrate"
+    },
+    "chaos-device": {
+        "name": "Chaos Device"
+    },
+    "chaos-circuit": {
+        "name": "Chaos Circuit"
+    },
+    "chaos-core": {
+        "name": "Chaos Core"
+    },
+    "juvenile_fang": {
+        "name": "Juvenile Fang"
+    },
+    "seasoned_fang": {
+        "name": "Seasoned Fang"
+    },
+    "tyrants_fang": {
+        "name": "Tyrant's Fang"
+    },
+    "treasure_hoarder_insignia": {
+        "name": "Treasure Hoarder Insignia"
+    },
+    "silver_raven_insignia": {
+        "name": "Silver Raven Insignia"
+    },
+    "golden_raven_insignia": {
+        "name": "Golden Raven Insignia"
+    },
+    "damaged_mask": {
+        "name": "Damaged Mask"
+    },
+    "stained_mask": {
+        "name": "Stained Mask"
+    },
+    "ominous_mask": {
+        "name": "Ominous Mask"
+    },
+    "whopperflower_nectar": {
+        "name": "Whopperflower Nectar"
+    },
+    "shimmering_nectar": {
+        "name": "Shimmering Nectar"
+    },
+    "energy_nectar": {
+        "name": "Energy Nectar"
+    },
+    "faded_red_satin": {
+        "name": "Faded Red Satin"
+    },
+    "trimmed_red_silk": {
+        "name": "Trimmed Red Silk"
+    },
+    "rich_red_brocade": {
+        "name": "Rich Red Brocade"
+    },
+    "broken_drive_shaft": {
+        "name": "Broken Drive Shaft"
+    },
+    "reinforced_drive_shaft": {
+        "name": "Reinforced Drive Shaft"
+    },
+    "precision_drive_shaft": {
+        "name": "Precision Drive Shaft"
+    },
+    "old_handguard": {
+        "name": "Old Handguard"
+    },
+    "kageuchi_handguard": {
+        "name": "Kageuchi Handguard"
+    },
+    "famed_handguard": {
+        "name": "Famed Handguard"
+    },
+    "divining_scroll": {
+        "name": "Divining Scroll"
+    },
+    "sealed_scroll": {
+        "name": "Sealed Scroll"
+    },
+    "forbidden_curse_scroll": {
+        "name": "Forbidden Curse Scroll"
+    },
+    "firm_arrowhead": {
+        "name": "Firm Arrowhead"
+    },
+    "sharp_arrowhead": {
+        "name": "Sharp Arrowhead"
+    },
+    "weathered_arrowhead": {
+        "name": "Weathered Arrowhead"
+    },
+    "tattered_warrant": {
+        "name": "Tattered Warrant"
+    },
+    "immaculate_warrant": {
+        "name": "Immaculate Warrant"
+    },
+    "frost_etched_warrant": {
+        "name": "Frost-Etched Warrant"
+    },
+    "fungal_spores": {
+        "name": "Fungal Spores"
+    },
+    "luminescent_pollen": {
+        "name": "Luminescent Pollen"
+    },
+    "crystalline_cyst_dust": {
+        "name": "Crystalline Cyst Dust"
+    },
+    "spectral_husk": {
+        "name": "Spectral Husk"
+    },
+    "spectral_heart": {
+        "name": "Spectral Heart"
+    },
+    "spectral_nucleus": {
+        "name": "Spectral Nucleus"
+    },
+    "recruits_insignia": {
+        "name": "Recruit's Insignia"
+    },
+    "sergeants_insignia": {
+        "name": "Sergeant's Insignia"
+    },
+    "lieutenants_insignia": {
+        "name": "Lieutenant's Insignia"
+    },
+    "sentrys_wooden_whistle": {
+        "name": "Sentry's Wooden Whistle"
+    },
+    "warriors_metal_whistle": {
+        "name": "Warrior's Metal Whistle"
+    },
+    "saurian_crowned_warriors_golden_whistle": {
+        "name": "Saurian-Crowned Warrior's Golden Whistle"
+    }
 }
