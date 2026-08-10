@@ -1,0 +1,1 @@
+const o="UI_EquipIcon_Bow_Recluse",_={"amos-bow":"UI_EquipIcon_Bow_Amos","aquila-favonia":"UI_EquipIcon_Sword_Falcon","primordial-jade-winged-spear":"UI_EquipIcon_Pole_Morax",rust:o,"sacrificial-sword":"UI_EquipIcon_Sword_Fossil","skyward-harp":"UI_EquipIcon_Bow_Dvalin","wolfs-gravestone":"UI_EquipIcon_Claymore_Wolfmound"};export{_ as w};
