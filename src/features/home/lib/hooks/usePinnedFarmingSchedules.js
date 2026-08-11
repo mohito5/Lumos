@@ -7,6 +7,8 @@ import { weaponsById } from '../../../../data/weapons/index';
 import { calculateCharacterMaterials, calculateWeaponMaterials, expandBuildData } from '../../../../shared/lib/materialsCalculator';
 import { buildFarmingSchedule } from '../../../../shared/lib/farmingSchedule';
 import { LEVEL_MILESTONES } from '../../../../shared/config/constants';
+import { resolveIconUrl } from '../../../../shared/lib/cdnIcon';
+import characterIcons from '../../../../data/cdn/characterIcons.generated.json';
 import i18n from '../../../../core/i18n/i18n-config';
 
 const DEFAULT_CHAR_BUILD = {
@@ -57,7 +59,7 @@ export function usePinnedFarmingSchedules() {
                     type: 'character',
                     itemId: pin.itemId,
                     itemName: i18n.t(`${pin.itemId}.name`, { ns: 'characters', defaultValue: pin.itemId }),
-                    itemIcon: character.icon,
+                    itemIcon: resolveIconUrl({ enkaIconMap: characterIcons }, character.id, character.avatar_icon),
                     schedule: buildFarmingSchedule(allMaterials, inventory),
                 });
             } else if (pin.type === 'weapon') {

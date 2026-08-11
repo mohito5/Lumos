@@ -14,7 +14,7 @@ const HomePage = () => {
   const { t } = useTranslation('ui');
 
   return (
-    <section className="page home wd m-0">
+    <section>
       <MasonryGrid>
         <article className="grid-item">
           <div className="title flex-c gap-4">

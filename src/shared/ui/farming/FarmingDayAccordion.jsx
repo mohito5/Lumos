@@ -11,8 +11,8 @@ const WIDTH_TRANSITION_MS = 380;
 const MaterialRow = ({ material }) => {
     const { t } = useTranslation(['ui']);
     return (
-        <li className="farming-accordion-material">
-            <img loading="lazy" src={`/${material.icon}`} alt="" className="farming-accordion-material-icon" />
+        <li className="farming-accordion-material border flex">
+            <img loading="lazy" src={`${material.icon}`} alt="" className="farming-accordion-material-icon radius-full" />
             <span className="farming-accordion-material-name">
                 {material.name}
                 {material.category === 'weeklyBoss' && (
@@ -174,7 +174,7 @@ const FarmingDayAccordion = ({ schedule }) => {
                                     role="tab"
                                     aria-selected={isActive}
                                     ref={(el) => { panelRefs.current[index] = el; }}
-                                    className={`farming-accordion-panel${isActive ? ' is-active' : ''}${isToday ? ' is-today' : ''}`}
+                                    className={`radius-1 border background farming-accordion-panel${isActive ? ' is-active' : ''}${isToday ? ' is-today' : ''}`}
                                     onClick={() => handlePanelClick(index)}
                                 >
                                     <span className="farming-accordion-daylabel">

@@ -34,13 +34,13 @@ const FarmingScheduleWidget = () => {
     };
 
     return (
-        <div className="farming-schedule-widget">
+        <div className="farming-schedule-widget gap-4 flex-c">
             <h2>{t('home.farmingSchedule.title', { ns: 'ui' })}</h2>
             {entries.map((entry) => (
-                <div key={`${entry.type}-${entry.itemId}`} className="character-schedule border radius-6 p-4 gap-3 f-c">
-                    <h3>
-                        <img loading="lazy" src={`/${entry.itemIcon}`} alt="" className="item-icon" />
-                        <span>{entry.itemName}</span>
+                <div key={`${entry.type}-${entry.itemId}`} className="character-schedule border radius-4 p-3 gap-2 flex-c">
+                    <div className='flex gap-2 item-info'>
+                        <img loading="lazy" src={`${entry.itemIcon}`} alt="" className="item-icon border radius-1" />
+                        <h3 className='border'>{entry.itemName}</h3>
                         <button
                             type="button"
                             onClick={() => handleRemoveClick(entry.itemId, entry.type, entry.itemName)}
@@ -49,7 +49,7 @@ const FarmingScheduleWidget = () => {
                         >
                             &times;
                         </button>
-                    </h3>
+                    </div>
                     <FarmingDayAccordion schedule={entry.schedule} />
                 </div>
             ))}

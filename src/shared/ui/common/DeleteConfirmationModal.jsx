@@ -36,7 +36,7 @@ const DeleteConfirmationModal = ({ isOpen, onClose, onConfirm, itemName, type })
         : t('deleteConfirmation.message', { itemName });
 
     return (
-        <div className="modal-overlay">
+        <div className="modal overlay">
             <div className="modal-content">
                 <h2>{title}</h2>
                 <p>{message}</p>

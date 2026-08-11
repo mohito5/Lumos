@@ -9,8 +9,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 0;
     min-height: 0;
-    flex: 1 1 auto;
+    
 }
 
 .farming-accordion-controls {
@@ -18,6 +19,7 @@
     align-items: stretch;
     gap: var(--space-2);
     min-height: 0;
+    min-width: 0;
     flex: 1 1 auto;
 }
 
@@ -28,7 +30,7 @@
     justify-content: center;
     width: 28px;
     border: 1px solid var(--border);
-    border-radius: var(--radius-4);
+    border-radius: var(--radius-2);
     background: var(--background);
     color: var(--text-color);
     cursor: pointer;
@@ -56,6 +58,7 @@
     scroll-behavior: smooth;
     flex: 1 1 auto;
     min-height: 0;
+    min-width: 0;
     max-height: 420px;
     touch-action: pan-x;
     cursor: grab;
@@ -82,13 +85,10 @@
     flex: 0 0 40px;
     min-width: 40px;
     height: 100%;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-5);
     overflow: hidden;
     cursor: pointer;
     padding: 0;
-    background: var(--overlay);
-    color: var(--text-color);
+    color: var(--color);
     box-sizing: border-box;
     transition: flex-basis 0.35s cubic-bezier(0.22, 1, 0.36, 1),
                 min-width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
@@ -96,7 +96,7 @@
 }
 
 .farming-accordion-panel.is-today {
-    border-color: var(--star5);
+    border-color: var(--lime);
 }
 
 .farming-accordion-panel.is-active {
@@ -104,14 +104,14 @@
     flex-direction: column;
     align-items: stretch;
     flex: 1 1 240px;
-    min-width: 220px;
+    min-width: 240px;
     background: var(--background);
-    border-color: var(--text-color);
+    border-color: var(--color);
     cursor: default;
 }
 
 .farming-accordion-panel.is-active.is-today {
-    border-color: var(--star5);
+    border-color: var(--lime);
 }
 
 .farming-accordion-daylabel {
@@ -122,8 +122,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Lumo H', sans-serif;
-    font-size: clamp(11px, 1.4vmin, 14px);
+    
+    
     text-transform: uppercase;
     letter-spacing: 0.03em;
     white-space: nowrap;
@@ -194,19 +194,15 @@
 }
 
 .farming-accordion-material-icon {
-    width: 32px;
-    height: 32px;
-    flex: 0 0 auto;
-    object-fit: contain;
+    max-width: var(--icon-xl);
+    max-height: var(--icon-xl);
     background: var(--overlay);
-    border-radius: var(--radius-4);
-    padding: 3px;
     box-sizing: border-box;
 }
 
 .farming-accordion-material-name {
     flex: 1 1 auto;
-    font-size: clamp(12px, 1.5vmin, 14px);
+    
 }
 
 .farming-accordion-material-tag {
@@ -225,8 +221,8 @@
     padding: 2px 10px;
     border: 1px solid var(--border);
     border-radius: 999px;
-    font-size: clamp(11px, 1.3vmin, 13px);
-    opacity: 0.8;
+    
+    
 }
 
 @media (prefers-reduced-motion: reduce) {
