@@ -18,7 +18,7 @@ const MiniCalendar = ({ date, birthdaysThisMonth, onNavClick }) => {
 
     if (!Array.isArray(months) || !Array.isArray(weekdays) || months.length === 0 || weekdays.length === 0) {
         console.error("Calendar translations are missing or not in the correct format.");
-        return <div>{t('pages.home.birthdays.calendarError')}</div>;
+        return <div>{t('ui:home.birthdays.calendarError')}</div>;
     }
     
     const currentDay = new Date().getDate();
@@ -104,10 +104,10 @@ const BirthdayBanner = () => {
 
   const birthdayAnnouncement = birthdayChars.length > 0
     ? t('home.birthdays.announcementFormat', { name: characterNames })
-    : t('home.birthdays.noBirthdayToday');
+    : t('home.birthdays.noBirthdayToday', {ns:'ui'});
 
-  const birthdayImage = birthdayChars.length > 0 ? birthdayChars[0].avatar : t('pages.home.birthdays.noBirthdayToday');
-  const imageAlt = birthdayChars.length > 0 ? t('pages.home.birthdays.imageAlt', { name: characterNames }) : t('pages.home.birthdays.noBirthdayToday');
+  const birthdayImage = birthdayChars.length > 0 ? birthdayChars[0].avatar : t('ui:home.birthdays.noBirthdayToday');
+  const imageAlt = birthdayChars.length > 0 ? t('ui:home.birthdays.imageAlt', { name: characterNames }) : t('ui:home.birthdays.noBirthdayToday');
 
   return (
     <div className="birthday-banner flex-c border radius-4 p-3 gap-4">

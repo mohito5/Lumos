@@ -1,0 +1,41 @@
+.talent-description {
+  white-space: pre-line;
+}
+
+.talent-description__element {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.talent-description__element--pyro {
+  color: var(--pyro);
+}
+
+.talent-description__element--hydro {
+  color: var(--hydro);
+}
+
+.talent-description__element--cryo {
+  color: var(--cryo);
+}
+
+.talent-description__element--electro {
+  color: var(--electro);
+}
+
+.talent-description__element--anemo {
+  color: var(--anemo);
+}
+
+.talent-description__element--geo {
+  color: var(--geo);
+}
+
+.talent-description__element--dendro {
+  color: var(--dendro);
+}
+
+.talent-description__element--physical {
+  color: var(--physical);
+}

@@ -6,6 +6,7 @@ import { calculateCharacterCostRange } from '../../../../shared/lib/materialsCal
 import MaterialCard from '../../../../shared/ui/materials/MaterialCard.jsx';
 import { resolveIconUrl } from '../../../../shared/lib/cdnIcon.js';
 import constellationTalentIcons from '../../../../data/cdn/constellationTalentIcons.generated.json';
+import TalentDescription from './TalentDescription.jsx';
 
 const TalentSection = ({ talentType, character, talentData }) => {
     const { t } = useTranslation(['materials', 'characters', 'ui', 'common']);
@@ -49,9 +50,7 @@ const TalentSection = ({ talentType, character, talentData }) => {
                 <h3>{talentName}</h3>
             </div>
             <div className='flex-c gap-2'>
-                <p style={{ whiteSpace: 'pre-line' }}>
-                    {talentDescription}
-                </p>
+                <TalentDescription text={talentDescription}/>
 
                 <div className="talent-calculator-section gap-2 flex-c">
                     <h4>{t('ui:character.talentStats', 'Атрибуты таланта')}</h4>

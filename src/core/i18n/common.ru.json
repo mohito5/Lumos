@@ -375,5 +375,13 @@
     "azure_devour_dmg": "Урон Лазурного поглощения",
     "four_winds_ascension_cd": "Время отката Восхождения четырёх ветров",
     "skill_1_hit_dmg": "Урон 1-й атаки навыка",
-    "skill_2_hit_dmg": "Урон 2-й атаки навыка"
+    "skill_2_hit_dmg": "Урон 2-й атаки навыка",
+    "flowfrost_arrow_dmg": "Урон стрелы потока инея",
+    "rimestar_flare_dmg": "Урон Сигнала ледяной звезды",
+    "rimestar_shard_dmg": "Урон Осколка ледяной звезды",
+    "soulwind_duration": "Длительность Ветра духа",
+    "cast_healing": "Лечение навыка",
+    "eagleplume_healing": "Лечение Орлиного пера",
+    "eagleplume_healing_interval": "Интервал лечения Орлиного пера",
+    "eagleplume_duration": "Длительность Орлиного пера"
 }

@@ -30,40 +30,6 @@
     },
     "pages": {
         "home": {
-            "title": "Welcome to Lumos",
-            "welcome": "This project will help you track your progress in Genshin Impact.",
-            "birthdays": {
-                "title": "Today's Birthdays",
-                "announcementFormat": "Today is {name}'s birthday!",
-                "noBirthdayToday": "No birthdays today",
-                "imageAlt": "{name}'s birthday",
-                "calendar": {
-                    "error": "Error loading calendar.",
-                    "months": [
-                        "January",
-                        "February",
-                        "March",
-                        "April",
-                        "May",
-                        "June",
-                        "July",
-                        "August",
-                        "September",
-                        "October",
-                        "November",
-                        "December"
-                    ],
-                    "weekdays": [
-                        "Mo",
-                        "Tu",
-                        "We",
-                        "Th",
-                        "Fr",
-                        "Sa",
-                        "Su"
-                    ]
-                }
-            },
             "serverTimer": {
                 "title": "Server Reset Timers",
                 "serverAsia": "Asia Server",
@@ -115,7 +81,7 @@
             "title": "Today's Birthdays",
             "announcementFormat": "Today is {{name}}'s birthday!",
             "noBirthdayToday": "No birthdays today",
-            "imageAlt": "{name}'s birthday",
+            "imageAlt": "{{name}}'s birthday",
             "calendar": {
                 "error": "Error loading calendar.",
                 "months": [

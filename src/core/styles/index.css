@@ -22,3 +22,4 @@
     @import '../../shared/ui/Range/Range.css';
     @import './components/scrollbar.css';
    
+    @import '../../features/characters/info/styles/TalentDescription.css';

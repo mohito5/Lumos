@@ -1349,4 +1349,160 @@ export const cryo = [
         }
     }
 }
+,
+{
+    id: 'Mika',
+    enkaId: 10000080,
+    rarity: RARITY.EPIC,
+    element: VISION.CRYO,
+    weapon: WEAPON_TYPE.POLEARM,
+    avatar: 'assets/avatar/Mika_Profile.webp',
+    birthday: '8-11',
+    baseStats: {
+        [STATS.HP]: [1048.6, 2693.7, 5764.8, 7373, 8795.7, 10217.4, 11640, 12506.2],
+        [STATS.ATK]: [18.7, 48, 102.8, 131.5, 156.9, 182.2, 207.6, 223],
+        [STATS.DEF]: [59.8, 153.6, 328.8, 420.5, 501.6, 582.7, 663.8, 713.2]
+    },
+    ascensionStat: STATS.HP_PERCENT,
+    ascensionMaterials: {
+        ascension_gems: 'shivada_jade',
+        local_specialties: 'wolfhook',
+        common_enemy_drops: 'recruits_insignia',
+        normal_boss_drops: 'pseudo_stamens',
+        talent_books: 'books_of_ballad',
+        weekly_boss_drops: 'mirror_of_mushin'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.4326, 0.4678, 0.5031, 0.5534, 0.5886, 0.6288, 0.6842, 0.7395, 0.7948, 0.8552]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.415, 0.4488, 0.4826, 0.5308, 0.5646, 0.6032, 0.6563, 0.7094, 0.7625, 0.8204]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.545, 0.5894, 0.6338, 0.6971, 0.7415, 0.7922, 0.8619, 0.9316, 1.0013, 1.0774]
+                },
+                {
+                    name: 'hit_4',
+                    values: [0.2761, 0.2986, 0.3211, 0.3532, 0.3757, 0.4014, 0.4367, 0.472, 0.5073, 0.5459]
+                },
+                {
+                    name: 'hit_5',
+                    values: [0.7087, 0.7664, 0.8241, 0.9065, 0.9642, 1.0301, 1.1208, 1.2115, 1.3021, 1.401]
+                },
+                {
+                    name: 'charged_dmg',
+                    values: [1.1275, 1.2192, 1.311, 1.4421, 1.5339, 1.6388, 1.783, 1.9272, 2.0714, 2.2287]
+                },
+                {
+                    name: 'charged_stamina_cost',
+                    values: [25, 25, 25, 25, 25, 25, 25, 25, 25, 25]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.6393, 0.6914, 0.7434, 0.8177, 0.8698, 0.9293, 1.011, 1.0928, 1.1746, 1.2638]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.2784, 1.3824, 1.4865, 1.6351, 1.7392, 1.8581, 2.0216, 2.1851, 2.3486, 2.527]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'flowfrost_arrow_dmg',
+                    values: [0.672, 0.7224, 0.7728, 0.84, 0.8904, 0.9408, 1.008, 1.0752, 1.1424, 1.2096]
+                },
+                {
+                    name: 'rimestar_flare_dmg',
+                    values: [0.84, 0.903, 0.966, 1.05, 1.113, 1.176, 1.26, 1.344, 1.428, 1.512]
+                },
+                {
+                    name: 'rimestar_shard_dmg',
+                    values: [0.252, 0.2709, 0.2898, 0.315, 0.3339, 0.3528, 0.378, 0.4032, 0.4284, 0.4536]
+                },
+                {
+                    name: 'atk_spd_bonus',
+                    values: [0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2, 0.21, 0.22]
+                },
+                {
+                    name: 'soulwind_duration',
+                    values: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+                },
+                {
+                    name: 'cd',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'cast_healing',
+                    values: [0.1217, 0.1308, 0.1399, 0.1521, 0.1612, 0.1704, 0.1825, 0.1947, 0.2069, 0.219]
+                },
+                {
+                    name: 'eagleplume_healing',
+                    values: [0.0243, 0.0261, 0.028, 0.0304, 0.0322, 0.034, 0.0365, 0.0389, 0.0413, 0.0438]
+                },
+                {
+                    name: 'eagleplume_healing_interval',
+                    values: [2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5]
+                },
+                {
+                    name: 'eagleplume_duration',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                },
+                {
+                    name: 'cd',
+                    values: [18, 18, 18, 18, 18, 18, 18, 18, 18, 18]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [70, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+}
 ];

@@ -371,5 +371,13 @@
     "azure_devour_dmg": "Azure Devour DMG",
     "four_winds_ascension_cd": "Four Winds' Ascension CD",
     "skill_1_hit_dmg": "Skill 1-Hit DMG",
-    "skill_2_hit_dmg": "Skill 2-Hit DMG"
+    "skill_2_hit_dmg": "Skill 2-Hit DMG",
+    "flowfrost_arrow_dmg": "Flowfrost Arrow DMG",
+    "rimestar_flare_dmg": "Rimestar Flare DMG",
+    "rimestar_shard_dmg": "Rimestar Shard DMG",
+    "soulwind_duration": "Soulwind Duration",
+    "cast_healing": "Cast Healing",
+    "eagleplume_healing": "Eagleplume Healing",
+    "eagleplume_healing_interval": "Eagleplume Healing Interval",
+    "eagleplume_duration": "Eagleplume Duration"
 }

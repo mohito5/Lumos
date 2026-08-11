@@ -1,4 +1,4 @@
-import { RARITY, VISION, WEAPON_TYPE, MATERIAL_FAMILY, MATERIAL_GROUP } from "../../shared/config/constants.js";
+import { RARITY, VISION, WEAPON_TYPE, MATERIAL_FAMILY, MATERIAL_GROUP, MATERIAL_TYPE } from "../../shared/config/constants.js";
 import { STATS } from "../../shared/config/stats.js";
 
 
@@ -20,12 +20,12 @@ export const anemo = [
     },
     ascensionStat: STATS.CRIT_DMG,
     ascensionMaterials: {
-        ascension_gems: 'vayuda_turquoise',
-        local_specialties: 'wolfhook',
-        common_enemy_drops: 'broken_drive_shaft',
-        normal_boss_drops: 'prismatic_severed_tail',
-        talent_books: 'books_of_freedom',
-        weekly_boss_drops: 'ascended_sample_rook'
+        [MATERIAL_GROUP.ASCENSION_GEMS] : MATERIAL_GROUP.VAYUDA_TURQUOISE,
+        [MATERIAL_GROUP.NORMAL_BOSS_DROPS]: MATERIAL_GROUP.PRISMATIC_SEVERED_TAIL,
+        [MATERIAL_GROUP.LOCAL_SPECIALTIES]: MATERIAL_GROUP.WOLFHOOK,
+        [MATERIAL_GROUP.TALENT_BOOKS]:MATERIAL_GROUP.BOOKS_FREEDOM,
+        [MATERIAL_GROUP.COMMON_ENEMY_DROPS] : MATERIAL_GROUP.SLIME_MATERIALS,
+        [MATERIAL_GROUP.WEEKLY_BOSS_DROPS] : MATERIAL_GROUP.ASCENDED_SAMPLE_QUEEN
     },
     talents: {
         attack: {
@@ -179,7 +179,7 @@ export const anemo = [
             icon: ''
         }
     }
-},
+    },
     {
     id: 'Chasca',
     rarity: RARITY.LEGENDARY,
