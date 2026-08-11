@@ -17,6 +17,18 @@ import './core/styles/components/list.css';
 // запускается максимально рано, чтобы ловить и последующие ошибки монтирования.
 void initErrorTracking();
 
+// Обновление после деплоя при устаревшем динамическом chunk
+window.addEventListener('vite:preloadError', (event) => {
+    event.preventDefault();
+
+    const reloadKey = 'lumos-chunk-reload';
+
+    if (!sessionStorage.getItem(reloadKey)) {
+        sessionStorage.setItem(reloadKey, '1');
+        window.location.reload();
+    }
+});
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Telegram-мини-приложение при запуске дописывает в window.location.hash
 // собственные launch-параметры — например
