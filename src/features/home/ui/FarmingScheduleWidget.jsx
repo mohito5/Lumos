@@ -40,7 +40,7 @@ const FarmingScheduleWidget = () => {
                 <div key={`${entry.type}-${entry.itemId}`} className="character-schedule border radius-4 p-3 gap-2 flex-c">
                     <div className='flex gap-2 item-info'>
                         <img loading="lazy" src={`${entry.itemIcon}`} alt="" className="item-icon border radius-1" />
-                        <h3 className='border'>{entry.itemName}</h3>
+                        <h3>{entry.itemName}</h3>
                         <button
                             type="button"
                             onClick={() => handleRemoveClick(entry.itemId, entry.type, entry.itemName)}

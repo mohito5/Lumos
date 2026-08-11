@@ -11,8 +11,8 @@ const WIDTH_TRANSITION_MS = 380;
 const MaterialRow = ({ material }) => {
     const { t } = useTranslation(['ui']);
     return (
-        <li className="farming-accordion-material border flex">
-            <img loading="lazy" src={`${material.icon}`} alt="" className="farming-accordion-material-icon radius-full" />
+        <li className="farming-accordion-material flex">
+            <img loading="lazy" src={`${material.icon}`} alt="" className={`farming-accordion-material-icon border radius-full rarity-${material.id.rarity}`} />
             <span className="farming-accordion-material-name">
                 {material.name}
                 {material.category === 'weeklyBoss' && (

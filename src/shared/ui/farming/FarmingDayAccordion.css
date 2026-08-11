@@ -196,7 +196,7 @@
 .farming-accordion-material-icon {
     max-width: var(--icon-xl);
     max-height: var(--icon-xl);
-    background: var(--overlay);
+    
     box-sizing: border-box;
 }
 
@@ -231,4 +231,17 @@
         transition: none;
         scroll-behavior: auto;
     }
+}
+
+.rarity-5 {
+  background-color: var(--geo);
+}
+.farming-accordion-material-icon.rarity-4 {
+  background: var(--epic);
+}
+.farming-accordion-material-icon.rarity-3 {
+  background-color: var(--rare);
+}
+.rarity-2 {
+  background-color: var(--uncommon);
 }

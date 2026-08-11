@@ -21,5 +21,6 @@
     @import './components/background.css';
     @import '../../shared/ui/Range/Range.css';
     @import './components/scrollbar.css';
+    @import './components/card.css';
    
     @import '../../features/characters/info/styles/TalentDescription.css';
