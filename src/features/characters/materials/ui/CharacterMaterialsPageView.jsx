@@ -44,7 +44,7 @@ const CharacterMaterialsPageView = ({
             </article>
             
             <article key="selectors" className="grid-item">
-                <div className="selectors-container border radius-4 p-2">
+                <div className="selectors-container border radius-4 p-3">
                     <LevelSelector type="level" from={buildData.levelRange.from} to={buildData.levelRange.to} onChange={onRangeChange} t={t} />
                     <LevelSelector type="attack" from={buildData.attackRange.from} to={buildData.attackRange.to} onChange={onRangeChange} t={t} />
                     <LevelSelector type="skill" from={buildData.skillRange.from} to={buildData.skillRange.to} onChange={onRangeChange} t={t} />
@@ -53,8 +53,8 @@ const CharacterMaterialsPageView = ({
             </article>
 
             <article key="button" className="grid-item" column={1}>
-                <div className="action-buttons border flex p-2 radius-4 items-center gap-2">
-                    <div className="use-inventory-checkbox">
+                <div className="action-buttons border flex p-3 radius-4 items-center gap-2 wrap">
+                    <div className="use-inventory-checkbox border p-1 radius-1 items-center flex gap-2 px-2">
                         <input 
                             type="checkbox" 
                             id="use-inventory-checkbox" 
@@ -63,7 +63,7 @@ const CharacterMaterialsPageView = ({
                         />
                         <label htmlFor="use-inventory-checkbox">{t('ui.useInventory')}</label>
                     </div>
-                    <button onClick={onSave} disabled={!isDirty}>
+                    <button onClick={onSave} disabled={!isDirty} className='border radius-1 p-1 px-2'>
                         {saveExists ? t('buttons.update') : t('buttons.save')}
                     </button>
                     {saveExists && (

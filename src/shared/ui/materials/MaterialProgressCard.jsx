@@ -38,15 +38,17 @@ const MaterialProgressCard = React.memo(({ materialKey, calculatedAmount, ownedA
 
     return (
         <div className={`border color gap-1 p-1 radius-4 material-item${isUnknown ? ' material-item-unknown' : ''}`}>
-            <div className="border flex-r wd">
-                <img loading="lazy" className={`icon-xl icon border rarity-${materialKey.rarity}`} src={`/${icon}`} alt={name} title={isUnknown ? t('unknown.hint', { ns: 'materials', defaultValue: 'Не указано в данных персонажа/оружия — уточни материал вручную' }) : undefined} />
-                <div className="material-total-container">
-                    <span className="material-name">{name}</span>
+            <div className="border flex-r wd gap-2">
+                <img loading="lazy" className={`icon-xl radius-3 icon border rarity-${materialKey.rarity}`} src={`${icon}`} alt={name} title={isUnknown ? t('unknown.hint', { ns: 'materials', defaultValue: 'Не указано в данных персонажа/оружия — уточни материал вручную' }) : undefined} />
+                <div className="material-total-container border wd flex color">
+                    <span className="material-name color">{name}</span>
+                </div>
+            </div>
+            <div className='border'>
                 <span className="material-amount needed-amount">{formatNumber(neededAmount)}</span>
                  
                     <span className="material-total-label">{t('ui:total', 'Всего')}:</span>
                     <span className="material-total-amount">{formatNumber(calculatedAmount)}</span>
-                </div>
             </div>
             <div className="material-details border">
                 {!isUnknown && (

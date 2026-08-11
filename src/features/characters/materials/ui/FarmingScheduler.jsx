@@ -68,7 +68,7 @@ const FarmingScheduler = ({ allMaterials, inventory, character, canPin = true })
 
     return (
         <>
-            <button type="button" className="farming-scheduler-trigger" onClick={() => setIsModalOpen(true)}>
+            <button type="button" className="farming-scheduler-trigger border color p-1 px-2 radius-1" onClick={() => setIsModalOpen(true)}>
                 {t('materials_page.view_schedule', { ns: 'ui' })}
             </button>
 

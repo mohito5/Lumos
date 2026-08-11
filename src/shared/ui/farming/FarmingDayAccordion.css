@@ -232,16 +232,3 @@
         scroll-behavior: auto;
     }
 }
-
-.rarity-5 {
-  background-color: var(--geo);
-}
-.farming-accordion-material-icon.rarity-4 {
-  background: var(--epic);
-}
-.farming-accordion-material-icon.rarity-3 {
-  background-color: var(--rare);
-}
-.rarity-2 {
-  background-color: var(--uncommon);
-}
