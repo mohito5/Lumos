@@ -12,17 +12,6 @@
     },
     "pages": {
         "home": {
-            "serverTimer": {
-                "title": "Таймер сброса серверов",
-                "serverAsia": "Азиатский сервер",
-                "serverEurope": "Европейский сервер",
-                "serverAmerica": "Американский сервер",
-                "timeLeft": "Осталось: {{hours}}ч {{minutes}}м",
-                "soon": "Скоро сброс!",
-                "yourTimezone": "Ваш часовой пояс",
-                "showServerTime": "Показать серверное время",
-                "showLocalTime": "Показать локальное время"
-            },
             "talentBooks": {
                 "title": "Книги талантов",
                 "todayWeekdays": "Сегодня"
@@ -98,13 +87,10 @@
             "showServerTime": "Показать серверное время",
             "showLocalTime": "Показать локальное время"
         },
-        "talentBooks": {
-            "title": "Книги талантов",
-            "todayWeekdays": "Сегодня"
-        },
         "dailyFarmableMaterials": {
+            "talentMaterials": "Книги талантов",
             "weaponMaterials": "Материалы оружия",
-            "title": "Материалы дня",
+            "title": "Материалы доступные сегодня",
             "todayWeekdays": "Сегодня"
         },
         "farmingSchedule": {

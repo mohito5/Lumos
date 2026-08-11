@@ -126,7 +126,7 @@ const ServerItem = ({ server, showServerTime }) => {
     if (totalMinutes < 60) { timeClass += ' warning'; progressClass = 'warning'; }
     if (totalMinutes < 30) { timeClass += ' urgent'; progressClass = 'urgent'; }
 
-    const timeLeftText = t('serverTimer.timeLeft', { hours: String(hours).padStart(2, '0'), minutes: String(minutes).padStart(2, '0') });
+    const timeLeftText = t('ui:home.serverTimer.timeLeft', { hours: String(hours).padStart(2, '0'), minutes: String(minutes).padStart(2, '0') });
     const totalCycleMinutes = 24 * 60;
     const percentage = ((totalCycleMinutes - totalMinutes - (seconds / 60)) / totalCycleMinutes) * 100;
 
@@ -169,15 +169,15 @@ const ServerTimer = () => {
     return (
         <section className="gap-4 flex-c">
             <div className="server-timer-header gap-4 flex-c">
-                <h2>{t('home.serverTimer.title')}</h2>
+                <h2>{t('home.serverTimer.title', {ns:'ui'})}</h2>
                 <div className="header-content gap-2 flex-r">
                     <div className="user-timezone-display radius-4 wd border p-3">
-                        <h6>{t('serverTimer.yourTimezone')}: {userTimezone.name} ({userTimezone.gmt})</h6>
+                        <h6>{t('home.serverTimer.yourTimezone', {ns:'ui'})}: {userTimezone.name} ({userTimezone.gmt})</h6>
                     </div>
-                    <div className="timezone-switch-container radius-4 wd border p-3">
+                    <div className="timezone-switch-container radius-4 wd border p-3 flex align-center">
                         <label className="timezone-switch gap-2">
                             <input type="checkbox" checked={showServerTime} onChange={() => setShowServerTime(!showServerTime)} />
-                            <span><h6>{t(showServerTime ? 'serverTimer.showLocalTime' : 'serverTimer.showServerTime')}</h6></span>
+                            <span><h6>{t(showServerTime ? 'ui:home.serverTimer.showLocalTime' : 'ui:home.serverTimer.showServerTime')}</h6></span>
                         </label>
                     </div>
                 </div>

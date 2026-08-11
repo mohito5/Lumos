@@ -87,26 +87,24 @@ const DailyFarmableMaterialsBlock = () => {
   const translateGroupName = (groupKey) => t(`materials:groups.${groupKey}.name`, { defaultValue: groupKey });
   const translateRegionName = (regionKey) => t(`ui:region.${regionKey}`);
 
-  const titleKey = selectedView === VIEW_TYPE.BOOKS ? 'ui:pages.home.talentBooks.todayWeekdays' : 'ui:pages.home.weaponMaterials.todayWeekdays';
+  const titleKey = 'ui:home.dailyFarmableMaterials.todayWeekdays';
   const descriptionKey = selectedView === VIEW_TYPE.BOOKS ? 'ui:talent_books.description' : 'ui:weapon_materials.description';
   const resetTimeKey = selectedView === VIEW_TYPE.BOOKS ? 'ui:talent_books.reset_time' : 'ui:talent_books.reset_time';
 
-  const titleHeadline = selectedView === VIEW_TYPE.BOOKS ? 'ui:home.talentBooks.title' : 'ui:home.dailyFarmableMaterials.weaponMaterials';
-
   return (
     <section className='flex-c gap-4'>
-        <h2>{t(titleHeadline)}</h2>
+        <h2>{t('home.dailyFarmableMaterials.title', {ns:'ui'})}</h2>
         <div className="daily-materials-block radius-4 border p-3 gap-2 flex-c">
-            <div className=" gap-2 flec-c">
-                <p className="current-day">{t(titleKey)} : {t(`days.${currentDay}`)}</p>
-                <div className="view-switcher gap-2 flex">
-                    <label>
+            <div className="gap-2 flex-c">
+                <h3 className="current-day">{t(titleKey)} : {t(`days.${currentDay}`)}</h3>
+                <div className="view-switcher gap-2 flex-c border p-1 radius-2">
+                    <label className='flex gap-2'>
                         <input type="radio" name="material-type" value={VIEW_TYPE.BOOKS} checked={selectedView === VIEW_TYPE.BOOKS} onChange={() => setSelectedView(VIEW_TYPE.BOOKS)} />
-                        {t('ui:pages.home.common.talentBooks')}
+                        <span>{t('ui:home.dailyFarmableMaterials.talentMaterials')}</span>
                     </label>
-                    <label>
+                    <label className='flex gap-2'>
                         <input type="radio" name="material-type" value={VIEW_TYPE.WEAPONS} checked={selectedView === VIEW_TYPE.WEAPONS} onChange={() => setSelectedView(VIEW_TYPE.WEAPONS)} />
-                        {t('ui:pages.home.common.weaponMaterials')}
+                        <span>{t('ui:home.dailyFarmableMaterials.weaponMaterials')}</span>
                     </label>
                 </div>
             </div>
@@ -114,11 +112,11 @@ const DailyFarmableMaterialsBlock = () => {
       <div className="daily-materials-content flex-c gap-2">
         {Object.entries(materialsByRegionAndFamily).map(([regionKey, families]) => (
             <div key={regionKey} className="region-container gap-2 flex-c">
-                <h3 className="region-title background-r color-r p-1 radius-1">{translateRegionName(regionKey)}</h3>
+                <h4 className="region-title background-r color-r p-1 radius-1">{translateRegionName(regionKey)}</h4>
                 <div className="families-grid">
                     {Object.entries(families).map(([familyKey, materials]) => (
                         <div key={familyKey} className="family-card flex-c gap-2">
-                            <h4 className="family-name">{translateGroupName(familyKey)}</h4>
+                            <h5 className="family-name">{translateGroupName(familyKey)}</h5>
                             <div className="cards-container flex gap-1">
                                 {materials.map(material => (
                                     <div key={material.id} className="material-item p-1 gap-1 flex-c border radius-4">

@@ -30,17 +30,6 @@
     },
     "pages": {
         "home": {
-            "serverTimer": {
-                "title": "Server Reset Timers",
-                "serverAsia": "Asia Server",
-                "serverEurope": "Europe Server",
-                "serverAmerica": "America Server",
-                "timeLeft": "Time left: {{hours}}h {{minutes}}m",
-                "soon": "Reset soon!",
-                "yourTimezone": "Your timezone",
-                "showServerTime": "Show server time",
-                "showLocalTime": "Show local time"
-            },
             "talentBooks": {
                 "title": "Talent Books",
                 "todayWeekdays": "Today's weekdays"
@@ -120,11 +109,8 @@
             "showServerTime": "Show server time",
             "showLocalTime": "Show local time"
         },
-        "talentBooks": {
-            "title": "Talent Books",
-            "todayWeekdays": "Today's weekdays"
-        },
         "dailyFarmableMaterials": {
+            "talentMaterials": "Talent Books",
             "weaponMaterials": "Weapon Materials",
             "title": "Materials of the Day",
             "todayWeekdays": "Today's weekdays"
