@@ -1,43 +1,8 @@
-import { MATERIAL_TIER, VISION, MATERIAL_TYPE, MATERIAL_GROUP, RARITY } from "../../shared/config/constants.js";
+import { MATERIAL_TIER, VISION, RARITY } from "../../shared/config/constants.js";
+import {MATERIAL_TYPE, MATERIAL_GROUP } from "../../shared/config/material_type.js";
+
 
 export const gems = [
-    // ## камни электро
-    {
-        id: 'vajrada_amethyst_sliver',
-        sid: 'm35',
-        icon: "assets/tmp256.png",
-        element: VISION.ELECTRO,
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ASCENSION_GEMS, VISION.ELECTRO],
-        rarity: RARITY.UNCOMMON
-    },
-    {
-        id: 'vajrada_amethyst_fragment',
-        sid: 'm37',
-        icon: "assets/tmp256 (1).png",
-        element: VISION.ELECTRO,
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ASCENSION_GEMS, VISION.ELECTRO],
-        rarity: RARITY.RARE
-    },
-    {
-        id: 'vajrada_amethyst_chunk',
-        sid: 'm39',
-        icon: "assets/tmp256 (2).png",
-        element: VISION.ELECTRO,
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ASCENSION_GEMS, VISION.ELECTRO],
-        rarity: RARITY.EPIC
-    },
-    {
-        id: 'vajrada_amethyst_gemstone',
-        sid: 'm41',
-        icon: "assets/tmp256 (3).png",
-        element: VISION.ELECTRO,
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ASCENSION_GEMS, VISION.ELECTRO],
-        rarity: RARITY.LEGENDARY
-    },
     // # камни анемо
     {
         id: 'vayuda_turquoise_sliver',
@@ -193,49 +158,44 @@ export const gems = [
         group: [MATERIAL_GROUP.ASCENSION_GEMS, 'shivada_jade'],
         rarity: RARITY.LEGENDARY,
         element: VISION.CRYO
-    }
-,
-    {
+    },
+    { // ПИРО КАМНИ 
         id: 'agnidus_agate_sliver',
         sid: 'm242',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/gems/pyro/Agnidus_Sliver.webp',
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.ASCENSION_GEMS, 'agnidus_agate'],
+        group: [MATERIAL_GROUP.ASCENSION_GEMS, MATERIAL_GROUP.AGNIDUS_AGATE],
         rarity: RARITY.UNCOMMON,
         element: VISION.PYRO
-    }
-,
+    },
     {
         id: 'agnidus_agate_fragment',
         sid: 'm243',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/gems/pyro/Agnidus_Fragment.webp',
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.ASCENSION_GEMS, 'agnidus_agate'],
+        group: [MATERIAL_GROUP.ASCENSION_GEMS, MATERIAL_GROUP.AGNIDUS_AGATE],
         rarity: RARITY.RARE,
         element: VISION.PYRO
-    }
-,
+    },
     {
         id: 'agnidus_agate_chunk',
         sid: 'm244',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/gems/pyro/Agnidus_Chunk.webp',
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.ASCENSION_GEMS, 'agnidus_agate'],
+        group: [MATERIAL_GROUP.ASCENSION_GEMS, MATERIAL_GROUP.AGNIDUS_AGATE],
         rarity: RARITY.EPIC,
         element: VISION.PYRO
-    }
-,
+    },
     {
         id: 'agnidus_agate_gemstone',
         sid: 'm245',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/gems/pyro/Agnidus_Gemstone.webp',
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.ASCENSION_GEMS, 'agnidus_agate'],
+        group: [MATERIAL_GROUP.ASCENSION_GEMS, MATERIAL_GROUP.AGNIDUS_AGATE],
         rarity: RARITY.LEGENDARY,
         element: VISION.PYRO
-    }
-,
-    {
+    },
+    { // $ffffff
         id: 'varunada_lazurite_sliver',
         sid: 'm259',
         icon: 'assets/tmp256.png',

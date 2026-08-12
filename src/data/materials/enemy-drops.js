@@ -459,4 +459,13 @@ export const enemyDrops = [
         group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.MEShing_GEAR],
         rarity: RARITY.RARE
     }
+,
+    {
+        id: 'chaos_gear',
+        sid: 'm313',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'chaos_gear'],
+        rarity: RARITY.UNCOMMON
+    }
 ];

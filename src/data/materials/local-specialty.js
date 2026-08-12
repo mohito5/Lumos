@@ -1,4 +1,5 @@
-import { MATERIAL_TIER, MATERIAL_TYPE, MATERIAL_GROUP, RARITY } from "../../shared/config/constants.js";
+import { MATERIAL_TIER, RARITY } from "../../shared/config/constants.js";
+import { MATERIAL_TYPE, MATERIAL_GROUP } from "../../shared/config/material_type.js";
 
 export const localSpecialty = [
     {
@@ -8,15 +9,6 @@ export const localSpecialty = [
         icon: "assets/localSpecial/frostlampFlower.webp",
         tier: MATERIAL_TIER.LOCAL_SPECIALTY
     },
-    {
-        id: 'wolfhook',
-        sid: 'm44',
-        icon: "assets/local-spec/wolfhook.png",
-        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
-        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.WOLFHOOK],
-        rarity : RARITY.COMMON,
-    }
-,
     {
         id: 'withering_purpurbloom',
         sid: 'm105',
@@ -36,24 +28,6 @@ export const localSpecialty = [
     }
 ,
     {
-        id: 'cecilia',
-        sid: 'm120',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
-        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'cecilia'],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'dandelion_seed',
-        sid: 'm123',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
-        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'dandelion_seed'],
-        rarity: RARITY.COMMON
-    }
-,
-    {
         id: 'qingxin',
         sid: 'm128',
         icon: 'assets/tmp256.png',
@@ -62,15 +36,7 @@ export const localSpecialty = [
         rarity: RARITY.COMMON
     }
 ,
-    {
-        id: 'windwheel_aster',
-        sid: 'm131',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
-        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'windwheel_aster'],
-        rarity: RARITY.COMMON
-    }
-,
+
     {
         id: 'crystal_marrow',
         sid: 'm136',
@@ -126,18 +92,9 @@ export const localSpecialty = [
     }
 ,
     {
-        id: 'small_lamp_grass',
-        sid: 'm171',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
-        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'small_lamp_grass'],
-        rarity: RARITY.COMMON
-    }
-,
-    {
         id: 'noctilucous_jade',
         sid: 'm175',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/local-spec/Small_Lamp_Grass.webp',
         type: MATERIAL_TYPE.LOCAL_SPECIALTY,
         group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'noctilucous_jade'],
         rarity: RARITY.COMMON
@@ -152,15 +109,7 @@ export const localSpecialty = [
         rarity: RARITY.COMMON
     }
 ,
-    {
-        id: 'valberry',
-        sid: 'm182',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
-        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'valberry'],
-        rarity: RARITY.COMMON
-    }
-,
+    
     {
         id: 'kalpalata_lotus',
         sid: 'm183',
@@ -252,15 +201,6 @@ export const localSpecialty = [
     }
 ,
     {
-        id: 'calla_lily',
-        sid: 'm240',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
-        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'calla_lily'],
-        rarity: RARITY.COMMON
-    }
-,
-    {
         id: 'silk_flower',
         sid: 'm253',
         icon: 'assets/tmp256.png',
@@ -269,16 +209,7 @@ export const localSpecialty = [
         rarity: RARITY.COMMON
     }
 ,
-    {
-        id: 'philanemo_mushroom',
-        sid: 'm254',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
-        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'philanemo_mushroom'],
-        rarity: RARITY.COMMON
-    }
-,
-    {
+      {
         id: 'naku_weed',
         sid: 'm256',
         icon: 'assets/tmp256.png',
@@ -401,15 +332,6 @@ export const localSpecialty = [
         icon: 'assets/tmp256.png',
         type: MATERIAL_TYPE.LOCAL_SPECIALTY,
         group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'skysplit_gembloom'],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'etherwing_moth',
-        sid: 'm308',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
-        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'etherwing_moth'],
         rarity: RARITY.COMMON
     }
 ,

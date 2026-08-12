@@ -1,5 +1,6 @@
-import { RARITY, VISION, WEAPON_TYPE, MATERIAL_FAMILY, MATERIAL_GROUP } from "../../shared/config/constants.js";
+import { RARITY, VISION, WEAPON_TYPE, MATERIAL_FAMILY } from "../../shared/config/constants.js";
 import { STATS } from "../../shared/config/stats.js";
+import { MATERIAL_TYPE, MATERIAL_GROUP } from "../../shared/config/material_type.js";
 
 export const electro = [
     {
@@ -17,7 +18,7 @@ export const electro = [
     },
     ascensionStat: STATS.CRIT_DMG,
     ascensionMaterials: {
-        ascension_gems: 'vajrada_amethyst',
+        [MATERIAL_GROUP.ASCENSION_GEMS] : MATERIAL_GROUP.VAJRADA_AMETHYST,
         local_specialties: 'frostlamp_flower',
         common_enemy_drops: 'broken_drive_shaft',
         normal_boss_drops: 'precision_kuuvahki_stamping_die',

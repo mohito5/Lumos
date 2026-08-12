@@ -1,4 +1,5 @@
-import { RARITY, VISION, WEAPON_TYPE, MATERIAL_FAMILY, MATERIAL_GROUP, MATERIAL_TYPE } from "../../shared/config/constants.js";
+import { RARITY, VISION, WEAPON_TYPE, MATERIAL_FAMILY, MATERIAL_GROUP } from "../../shared/config/constants.js";
+import { MATERIAL_TYPE } from "../../shared/config/material_type.js";
 import { STATS } from "../../shared/config/stats.js";
 
 

@@ -1,7 +1,8 @@
 import { materialsData } from '../../data/materials';
 import { CHARACTER_LEVEL_UP_COST, CHARACTER_TALENT_COST } from '../../data/character-materials-data';
 import { WEAPON_ASCENSION_COST } from '../../data/weapon-materials-data';
-import { LEVEL_MILESTONES, MATERIAL_TYPE, MATERIAL_GROUP } from '../../shared/config/constants';
+import { LEVEL_MILESTONES } from '../../shared/config/constants';
+import { MATERIAL_TYPE, MATERIAL_GROUP } from '../../shared/config/material_type';
 
 /**
  * Раньше расчёт «сколько чего нужно» жил как локальная функция прямо в

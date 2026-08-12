@@ -29,7 +29,7 @@ export const MATERIAL_GROUP = {
   AGNIDUS_AGATE: 'agnidus_agate',
   VARUNADA_LAZURITE: 'varunada_lazurite',
   PRITHIVA_TOPAZ: 'prithiva_topaz',
-  VARJADA_AMETHYST: 'vajrada_amethyst',
+  VAJRADA_AMETHYST: 'vajrada_amethyst',
   NAGADUS_EMERALD: 'nagadus_emerald',
   SHIVADA_JADE: 'shivada_jade',
 
@@ -37,6 +37,7 @@ export const MATERIAL_GROUP = {
   NOBUSHI_HANDGUARDS: 'nobushi_handguards',
   HILICHURL_MASKS: 'hilichurl_masks',
   HILICHURL_ARROWHEADS: 'hilichurl_arrowheads',
+  HILICHURL_SHOOTER: 'Hilichurl Shooter',
   SAMACHURL_SCROLLS: 'samachurl_scrolls',
   SLIME_MATERIALS: 'slime_materials',
   HUMANOID_RUIN_MACHINE: 'humanoid_ruin_machine',
@@ -80,6 +81,8 @@ export const MATERIAL_GROUP = {
 
   // Local speciality
   WOLFHOOK: 'wolfhook',
+  SMALL_LAMP_GRASS: 'small_lamp_grass',
+  CECILIA: 'cecilia',
 
   // Specific talent books group
   BOOKS_FREEDOM: 'books_of_freedom',
