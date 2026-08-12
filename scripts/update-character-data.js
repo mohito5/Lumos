@@ -49,7 +49,7 @@ const LOC_DIR = path.join(ROOT, 'src/data-locales/characters');
 const COMMON_I18N_DIR = path.join(ROOT, 'src/core/i18n');
 
 // см. шапку файла
-const SKIP_IDS = new Set(['Amber', 'Chasca']);
+const SKIP_IDS = new Set(['Amber', 'Chasca', 'Varka']);
 
 const ELEMENT_FILES = ['anemo', 'electro', 'dendro', 'geo', 'cryo', 'pyro', 'hydro'];
 

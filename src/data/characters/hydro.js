@@ -1647,4 +1647,151 @@ export const hydro = [
         }
     }
 }
+,
+{
+    id: 'Neuvillette',
+    enkaId: 10000087,
+    rarity: RARITY.LEGENDARY,
+    element: VISION.HYDRO,
+    weapon: WEAPON_TYPE.CATALYST,
+    birthday: '12-18',
+    baseStats: {
+        [STATS.HP]: [1144, 2967.5, 6604.9, 8528.3, 10229.6, 11940.1, 13662.1, 14695.1],
+        [STATS.ATK]: [16.2, 42.1, 93.6, 120.9, 145, 169.3, 193.7, 208.3],
+        [STATS.DEF]: [44.9, 116.4, 259.1, 334.5, 401.3, 468.4, 535.9, 576.4]
+    },
+    ascensionStat: STATS.CRIT_DMG,
+    ascensionMaterials: {
+        ascension_gems: 'varunada_lazurite',
+        local_specialties: 'lumitoile',
+        common_enemy_drops: 'transoceanic_pearl',
+        normal_boss_drops: 'fontemer_unihorn',
+        talent_books: 'books_of_equity',
+        weekly_boss_drops: 'everamber'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.5458, 0.5867, 0.6276, 0.6822, 0.7231, 0.7641, 0.8187, 0.8732, 0.9278, 0.9824]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.4625, 0.4971, 0.5318, 0.5781, 0.6128, 0.6474, 0.6937, 0.7399, 0.7862, 0.8324]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.7234, 0.7776, 0.8319, 0.9042, 0.9585, 1.0127, 1.0851, 1.1574, 1.2297, 1.3021]
+                },
+                {
+                    name: 'charged_dmg',
+                    values: [1.368, 1.4706, 1.5732, 1.71, 1.8126, 1.9152, 2.052, 2.1888, 2.3256, 2.4624]
+                },
+                {
+                    name: 'charged_stamina_cost',
+                    values: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
+                },
+                {
+                    name: 'charged_attack_equitable_judgment',
+                    values: [0.0732, 0.0791, 0.0851, 0.0936, 0.0996, 0.1064, 0.1157, 0.1251, 0.1345, 0.1447]
+                },
+                {
+                    name: 'heal_amount',
+                    values: [0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16]
+                },
+                {
+                    name: 'hp_loss',
+                    values: [0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.5683, 0.6145, 0.6608, 0.7269, 0.7731, 0.826, 0.8987, 0.9714, 1.0441, 1.1234]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.1363, 1.2288, 1.3213, 1.4535, 1.5459, 1.6517, 1.797, 1.9423, 2.0877, 2.2462]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'skill_dmg',
+                    values: [0.1286, 0.1383, 0.1479, 0.1608, 0.1704, 0.1801, 0.193, 0.2058, 0.2187, 0.2316]
+                },
+                {
+                    name: 'spiritbreath_thorn_dmg',
+                    values: [0.208, 0.2236, 0.2392, 0.26, 0.2756, 0.2912, 0.312, 0.3328, 0.3536, 0.3744]
+                },
+                {
+                    name: 'spiritbreath_thorn_interval',
+                    values: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+                },
+                {
+                    name: 'sourcewater_droplet_duration',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                },
+                {
+                    name: 'cd',
+                    values: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'skill_dmg',
+                    values: [0.2226, 0.2393, 0.256, 0.2782, 0.2949, 0.3116, 0.3339, 0.3561, 0.3784, 0.4006]
+                },
+                {
+                    name: 'waterfall_dmg',
+                    values: [0.0911, 0.0979, 0.1047, 0.1138, 0.1206, 0.1275, 0.1366, 0.1457, 0.1548, 0.1639]
+                },
+                {
+                    name: 'cd',
+                    values: [18, 18, 18, 18, 18, 18, 18, 18, 18, 18]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [70, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+}
 ];

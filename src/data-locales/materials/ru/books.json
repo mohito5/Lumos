@@ -163,5 +163,11 @@
     },
     "philosophies_of_elysium": {
         "name": "Философия о «Рае»"
+    },
+    "teachings_of_kindling": {
+        "name": "Учения о «Сжигании»"
+    },
+    "philosophies_of_kindling": {
+        "name": "Философия о «Сжигании»"
     }
 }

@@ -75,7 +75,7 @@ const CharacterMaterialsPageView = ({
                 </div>
             </article>
 
-            <article key="materials" className="grid-item" column={2}>
+            <article key="materials" className="grid-item flex-c gap-4" column={2}>
                 <h2>{t('character.materials.total', {ns: 'ui'})}</h2>
                 <section className="all">
                      <MaterialsGrid 

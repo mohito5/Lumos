@@ -141,5 +141,23 @@
     },
     "saurian_claw_succulent": {
         "name": "Saurian Claw Succulent"
+    },
+    "glowing_hornshroom": {
+        "name": "Glowing Hornshroom"
+    },
+    "lumitoile": {
+        "name": "Lumitoile"
+    },
+    "subdetection_unit": {
+        "name": "Subdetection Unit"
+    },
+    "skysplit_gembloom": {
+        "name": "Skysplit Gembloom"
+    },
+    "etherwing_moth": {
+        "name": "Etherwing Moth"
+    },
+    "brilliant_chrysanthemum": {
+        "name": "Brilliant Chrysanthemum"
     }
 }

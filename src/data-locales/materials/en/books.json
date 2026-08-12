@@ -163,5 +163,11 @@
     },
     "philosophies_of_elysium": {
         "name": "Philosophies of Elysium"
+    },
+    "teachings_of_kindling": {
+        "name": "Teachings of Kindling"
+    },
+    "philosophies_of_kindling": {
+        "name": "Philosophies of Kindling"
     }
 }

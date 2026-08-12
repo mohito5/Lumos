@@ -367,4 +367,58 @@ export const localSpecialty = [
         group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'saurian_claw_succulent'],
         rarity: RARITY.COMMON
     }
+,
+    {
+        id: 'glowing_hornshroom',
+        sid: 'm289',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'glowing_hornshroom'],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'lumitoile',
+        sid: 'm293',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'lumitoile'],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'subdetection_unit',
+        sid: 'm300',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'subdetection_unit'],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'skysplit_gembloom',
+        sid: 'm303',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'skysplit_gembloom'],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'etherwing_moth',
+        sid: 'm308',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'etherwing_moth'],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'brilliant_chrysanthemum',
+        sid: 'm312',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, 'brilliant_chrysanthemum'],
+        rarity: RARITY.COMMON
+    }
 ];

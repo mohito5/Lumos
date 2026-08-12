@@ -141,5 +141,23 @@
     },
     "saurian_claw_succulent": {
         "name": "Лапа завриана"
+    },
+    "glowing_hornshroom": {
+        "name": "Мерцающий рогатый гриб"
+    },
+    "lumitoile": {
+        "name": "Темнозвёздник"
+    },
+    "subdetection_unit": {
+        "name": "Миниатюрный детектор"
+    },
+    "skysplit_gembloom": {
+        "name": "Заоблачный камнелист"
+    },
+    "etherwing_moth": {
+        "name": "Эфирокрылый мотылёк"
+    },
+    "brilliant_chrysanthemum": {
+        "name": "Сверкающая хризантема"
     }
 }

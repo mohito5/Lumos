@@ -142,5 +142,23 @@
     },
     "saurian_crowned_warriors_golden_whistle": {
         "name": "Saurian-Crowned Warrior's Golden Whistle"
+    },
+    "transoceanic_pearl": {
+        "name": "Transoceanic Pearl"
+    },
+    "transoceanic_chunk": {
+        "name": "Transoceanic Chunk"
+    },
+    "xenochromatic_crystal": {
+        "name": "Xenochromatic Crystal"
+    },
+    "meshing_gear": {
+        "name": "Meshing Gear"
+    },
+    "mechanical_spur_gear": {
+        "name": "Mechanical Spur Gear"
+    },
+    "artificed_dynamic_gear": {
+        "name": "Artificed Dynamic Gear"
     }
 }

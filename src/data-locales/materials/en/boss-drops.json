@@ -196,5 +196,29 @@
     },
     "prismatic_severed_tail": {
         "name": "Prismatic Severed Tail"
+    },
+    "mark_of_the_binding_blessing": {
+        "name": "Mark of the Binding Blessing"
+    },
+    "fontemer_unihorn": {
+        "name": "Fontemer Unihorn"
+    },
+    "everamber": {
+        "name": "Everamber"
+    },
+    "plume_of_the_fallen_watcher": {
+        "name": "Plume of the Fallen Watcher"
+    },
+    "madmans_restraint": {
+        "name": "Madman's Restraint"
+    },
+    "ascended_sample_knight": {
+        "name": "Ascended Sample: Knight"
+    },
+    "tourbillon_device": {
+        "name": "\"Tourbillon Device\""
+    },
+    "primordial_greenbloom": {
+        "name": "Primordial Greenbloom"
     }
 }

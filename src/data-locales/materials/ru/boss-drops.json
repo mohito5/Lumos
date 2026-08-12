@@ -196,5 +196,29 @@
     },
     "prismatic_severed_tail": {
         "name": "Призматический отсечённый хвост"
+    },
+    "mark_of_the_binding_blessing": {
+        "name": "Метка связывающего благословения"
+    },
+    "fontemer_unihorn": {
+        "name": "Рог Фонтмера"
+    },
+    "everamber": {
+        "name": "Вечный янтарь"
+    },
+    "plume_of_the_fallen_watcher": {
+        "name": "Перо падшего созерцателя"
+    },
+    "madmans_restraint": {
+        "name": "Оковы безумца"
+    },
+    "ascended_sample_knight": {
+        "name": "Вознёсшийся образец: Конь"
+    },
+    "tourbillon_device": {
+        "name": "Турбийон"
+    },
+    "primordial_greenbloom": {
+        "name": "Первозданный цветок оазиса"
     }
 }

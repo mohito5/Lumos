@@ -420,4 +420,40 @@ export const books = [
         group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_elysium'],
         rarity: RARITY.EPIC
     }
+,
+    {
+        id: 'teachings_of_kindling',
+        sid: 'm291',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_kindling'],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'philosophies_of_kindling',
+        sid: 'm292',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, 'books_of_kindling'],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_equity',
+        sid: 'm298',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_EQUITY],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'philosophies_of_justice',
+        sid: 'm309',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_JUSTICE],
+        rarity: RARITY.EPIC
+    }
 ];

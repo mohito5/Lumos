@@ -405,4 +405,58 @@ export const enemyDrops = [
         group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'sentrys_wooden_whistle'],
         rarity: RARITY.RARE
     }
+,
+    {
+        id: 'transoceanic_pearl',
+        sid: 'm294',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'transoceanic_pearl'],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'transoceanic_chunk',
+        sid: 'm296',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'transoceanic_pearl'],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'xenochromatic_crystal',
+        sid: 'm297',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'transoceanic_pearl'],
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'meshing_gear',
+        sid: 'm304',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.MEShing_GEAR],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'mechanical_spur_gear',
+        sid: 'm305',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.MEShing_GEAR],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'artificed_dynamic_gear',
+        sid: 'm306',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.MEShing_GEAR],
+        rarity: RARITY.RARE
+    }
 ];

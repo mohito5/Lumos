@@ -142,5 +142,23 @@
     },
     "saurian_crowned_warriors_golden_whistle": {
         "name": "Золотой свисток коронованного заврианами воина"
+    },
+    "transoceanic_pearl": {
+        "name": "Жемчужина иноморья"
+    },
+    "transoceanic_chunk": {
+        "name": "Обломок из иноморья"
+    },
+    "xenochromatic_crystal": {
+        "name": "Ксенохромный кристалл"
+    },
+    "meshing_gear": {
+        "name": "Сцепляющаяся шестерня"
+    },
+    "mechanical_spur_gear": {
+        "name": "Шестерня механизма"
+    },
+    "artificed_dynamic_gear": {
+        "name": "Изощрённая динамическая шестерня"
     }
 }

@@ -601,4 +601,76 @@ export const bossDrops = [
         group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.PRISMATIC_SEVERED_TAIL],
         rarity: RARITY.EPIC
     }
+,
+    {
+        id: 'mark_of_the_binding_blessing',
+        sid: 'm290',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
+        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, 'mark_of_the_binding_blessing'],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'fontemer_unihorn',
+        sid: 'm295',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
+        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, 'fontemer_unihorn'],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'everamber',
+        sid: 'm299',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'everamber'],
+        rarity: RARITY.LEGENDARY
+    }
+,
+    {
+        id: 'plume_of_the_fallen_watcher',
+        sid: 'm301',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
+        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, 'plume_of_the_fallen_watcher'],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'madmans_restraint',
+        sid: 'm302',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'madmans_restraint'],
+        rarity: RARITY.LEGENDARY
+    }
+,
+    {
+        id: 'ascended_sample_knight',
+        sid: 'm307',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'ascended_sample_knight'],
+        rarity: RARITY.LEGENDARY
+    }
+,
+    {
+        id: 'tourbillon_device',
+        sid: 'm310',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
+        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, 'tourbillon_device'],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'primordial_greenbloom',
+        sid: 'm311',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'primordial_greenbloom'],
+        rarity: RARITY.LEGENDARY
+    }
 ];

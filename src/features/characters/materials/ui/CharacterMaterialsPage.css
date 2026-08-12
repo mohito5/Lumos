@@ -15,12 +15,6 @@
   transition: transform 0.3s ease;
 }
 
-.characters{display: flex;flex-direction: column; padding: 2vw;}
-
-.character-detail-page #char-name {
-  
-  color: var(--dark);
-}
 .level, 
 .mat-attack,
 .mat-skill,
@@ -70,16 +64,11 @@ section.all .materials-container.all-materials-grid {
 /* Materials container styling */
 .materials-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(24vw, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   
   
 }
-@media only screen and (orientation: landscape) {.materials-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12vw, 1fr));
-  
-  
-}}
+
 /* Material item styling */
 .material-item {
   display: flex; 
@@ -96,7 +85,7 @@ section.all .materials-container.all-materials-grid {
 
 .material-name {
   font-weight: 600;
-  color: #333;
+  
   
   line-height: 1.3;
 }
@@ -254,25 +243,15 @@ section.all .materials-container.all-materials-grid {
 
 
 
-/* Секция "Все материалы" */
-section.all .materials-container.all-materials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(32vw, 1fr));
-    gap: 1vw;
-    
-    width: 100%;
-    box-sizing: border-box;
-    
-}
+
 
 /* Элементы в grid (для секции "all") - КОЛОНОЧНАЯ СТРУКТУРА */
 section.all .materials-container.all-materials-grid .all-grid-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    aspect-ratio: 4/3;
-    border-radius: 4vw;
-    padding: 2vw;
+    
+    
     
     
     
@@ -320,7 +299,7 @@ section.all .materials-container.all-materials-grid .all-grid-item .material-nam
 section.all .materials-container.all-materials-grid .all-grid-item .material-amount {
     display: block;
      flex-shrink: 0;
-    white-space: nowrap;
+    
     text-align: right;
     min-width: fit-content;
     overflow: hidden;
@@ -353,10 +332,9 @@ section.all .materials-container.all-materials-grid .all-grid-item .material-inp
 
 /* Текст "Осталось" в grid */
 section.all .materials-container.all-materials-grid .all-grid-item .material-remaining {
-    font-size: 12px;
-    color: #888;
+    
     text-align: center;
-    white-space: nowrap;
+    
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
