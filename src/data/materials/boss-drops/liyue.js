@@ -1,0 +1,67 @@
+import { RARITY, VISION, WEAPON_TYPE, MATERIAL_TYPE, MATERIAL_GROUP, REGION } from "../../../shared/config/constants.js";
+
+export const bossDropsLiyue = [
+
+    {
+        id: 'shadow_of_the_warrior',
+        sid: 'm123',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, MATERIAL_GROUP.SHADOW_OF_THE_WARRIOR],
+        rarity: RARITY.LEGENDARY
+    }
+,
+    {
+        id: 'dragon_lords_crown',
+        sid: 'm151',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, MATERIAL_GROUP.DRAGON_LORDS_CROWN],
+        rarity: RARITY.LEGENDARY
+    }
+,
+    {
+        id: 'cleansing_heart',
+        sid: 'm158',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
+        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.CLEANSING_HEART],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'gilded_scale',
+        sid: 'm176',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, MATERIAL_GROUP.GILDED_SCALE],
+        rarity: RARITY.LEGENDARY
+    }
+,
+    {
+        id: 'bloodjade_branch',
+        sid: 'm220',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, MATERIAL_GROUP.BLOODJADE_BRANCH],
+        rarity: RARITY.LEGENDARY
+    }
+,
+    {
+        id: 'tusk_of_monoceros_caeli',
+        sid: 'm246',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, MATERIAL_GROUP.TUSK_OF_MONOCEROS_CAELI],
+        rarity: RARITY.LEGENDARY
+    }
+,
+    {
+        id: 'shard_of_a_foul_legacy',
+        sid: 'm259',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, MATERIAL_GROUP.SHARD_OF_A_FOUL_LEGACY],
+        rarity: RARITY.LEGENDARY
+    }
+];

@@ -163,5 +163,23 @@
     },
     "chaos_gear": {
         "name": "Chaos Gear"
+    },
+    "treasured_flower": {
+        "name": "Treasured Flower"
+    },
+    "chaos_axis": {
+        "name": "Chaos Axis"
+    },
+    "chaos_bolt": {
+        "name": "Chaos Bolt"
+    },
+    "chaos_module": {
+        "name": "Chaos Module"
+    },
+    "chaos_oculus": {
+        "name": "Chaos Oculus"
+    },
+    "chaos_storage": {
+        "name": "Chaos Storage"
     }
 }

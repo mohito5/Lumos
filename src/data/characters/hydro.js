@@ -1794,4 +1794,592 @@ export const hydro = [
         }
     }
 }
+,
+{
+    id: 'Dahlia',
+    enkaId: 10000115,
+    rarity: RARITY.EPIC,
+    element: VISION.HYDRO,
+    weapon: WEAPON_TYPE.SWORD,
+    birthday: '5-25',
+    baseStats: {
+        [STATS.HP]: [1048.6, 2693.7, 5764.8, 7373, 8795.7, 10217.4, 11640, 12506.2],
+        [STATS.ATK]: [15.8, 40.7, 87.1, 111.4, 132.9, 154.4, 175.9, 189],
+        [STATS.DEF]: [46.9, 120.5, 258, 330, 393.6, 457.2, 520.9, 559.7]
+    },
+    ascensionStat: STATS.HP_PERCENT,
+    ascensionMaterials: {
+        ascension_gems: 'varunada_lazurite',
+        local_specialties: 'calla_lily',
+        common_enemy_drops: 'firm_arrowhead',
+        normal_boss_drops: 'secret_source_airflow_accumulator',
+        talent_books: 'books_of_ballad',
+        weekly_boss_drops: 'eroded_scale_feather'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.4355, 0.4709, 0.5064, 0.557, 0.5924, 0.633, 0.6887, 0.7443, 0.8, 0.8608]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.401, 0.4336, 0.4663, 0.5129, 0.5455, 0.5829, 0.6341, 0.6854, 0.7367, 0.7927]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.2374, 0.2568, 0.2761, 0.3037, 0.323, 0.3451, 0.3755, 0.4059, 0.4362, 0.4694]
+                },
+                {
+                    name: 'hit_4',
+                    values: [0.6566, 0.71, 0.7635, 0.8398, 0.8932, 0.9543, 1.0383, 1.1223, 1.2063, 1.2979]
+                },
+                {
+                    name: 'charged_dmg',
+                    values: [0.3988, 0.4312, 0.4637, 0.51, 0.5425, 0.5796, 0.6306, 0.6816, 0.7326, 0.7883]
+                },
+                {
+                    name: 'charged_stamina_cost',
+                    values: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.6393, 0.6914, 0.7434, 0.8177, 0.8698, 0.9293, 1.011, 1.0928, 1.1746, 1.2638]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.2784, 1.3824, 1.4865, 1.6351, 1.7392, 1.8581, 2.0216, 2.1851, 2.3486, 2.527]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'skill_dmg',
+                    values: [2.328, 2.5026, 2.6772, 2.91, 3.0846, 3.2592, 3.492, 3.7248, 3.9576, 4.1904]
+                },
+                {
+                    name: 'skill_cd',
+                    values: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'skill_dmg',
+                    values: [4.064, 4.3688, 4.6736, 5.08, 5.3848, 5.6896, 6.096, 6.5024, 6.9088, 7.3152]
+                },
+                {
+                    name: 'shield_of_sacred_favor_dmg_absorption',
+                    values: [0.0336, 0.0361, 0.0386, 0.042, 0.0445, 0.047, 0.0504, 0.0538, 0.0571, 0.0605]
+                },
+                {
+                    name: 'favonian_favor_duration',
+                    values: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [60, 60, 60, 60, 60, 60, 60, 60, 60, 60]
+                },
+                {
+                    name: 'cd',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+}
+,
+{
+    id: 'Sigewinne',
+    enkaId: 10000095,
+    rarity: RARITY.LEGENDARY,
+    element: VISION.HYDRO,
+    weapon: WEAPON_TYPE.BOW,
+    birthday: '3-30',
+    baseStats: {
+        [STATS.HP]: [1039.1, 2695.5, 5999.5, 7746.5, 9291.9, 10845.6, 12409.7, 13348],
+        [STATS.ATK]: [15, 38.9, 86.5, 111.7, 134, 156.4, 179, 192.5],
+        [STATS.DEF]: [38.9, 100.9, 224.5, 289.9, 347.8, 405.9, 464.4, 499.6]
+    },
+    ascensionStat: STATS.HP_PERCENT,
+    ascensionMaterials: {
+        ascension_gems: 'varunada_lazurite',
+        local_specialties: 'romaritime_flower',
+        common_enemy_drops: 'transoceanic_pearl',
+        normal_boss_drops: 'water_that_failed_to_transcend',
+        talent_books: 'books_of_equity',
+        weekly_boss_drops: 'lightless_eye_of_the_maelstrom'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.5261, 0.569, 0.6118, 0.673, 0.7158, 0.7647, 0.832, 0.8993, 0.9666, 1.04]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.5107, 0.5523, 0.5939, 0.6532, 0.6948, 0.7423, 0.8076, 0.873, 0.9383, 1.0095]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.7829, 0.8466, 0.9104, 1.0014, 1.0651, 1.138, 1.2381, 1.3382, 1.4384, 1.5476]
+                },
+                {
+                    name: 'aimed_shot',
+                    values: [0.4386, 0.4743, 0.51, 0.561, 0.5967, 0.6375, 0.6936, 0.7497, 0.8058, 0.867]
+                },
+                {
+                    name: 'fully_charged_aimed_shot',
+                    values: [1.24, 1.333, 1.426, 1.55, 1.643, 1.736, 1.86, 1.984, 2.108, 2.232]
+                },
+                {
+                    name: 'mini_stration_bubble_dmg',
+                    values: [0.248, 0.2666, 0.2852, 0.31, 0.3286, 0.3472, 0.372, 0.3968, 0.4216, 0.4464]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.5683, 0.6145, 0.6608, 0.7269, 0.7731, 0.826, 0.8987, 0.9714, 1.0441, 1.1234]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.1363, 1.2288, 1.3213, 1.4535, 1.5459, 1.6517, 1.797, 1.9423, 2.0877, 2.2462]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'bolstering_bubblebalm_dmg',
+                    values: [0.0228, 0.0245, 0.0262, 0.0285, 0.0302, 0.0319, 0.0342, 0.0365, 0.0388, 0.041]
+                },
+                {
+                    name: 'bolstering_bubblebalm_healing',
+                    values: [0.028, 0.0301, 0.0322, 0.035, 0.0371, 0.0392, 0.042, 0.0448, 0.0476, 0.0504]
+                },
+                {
+                    name: 'final_bounce_healing',
+                    values: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+                },
+                {
+                    name: 'surging_blade_dmg',
+                    values: [0.0068, 0.0074, 0.0079, 0.0086, 0.0091, 0.0096, 0.0103, 0.0109, 0.0116, 0.0123]
+                },
+                {
+                    name: 'surging_blade_interval',
+                    values: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+                },
+                {
+                    name: 'cd',
+                    values: [18, 18, 18, 18, 18, 18, 18, 18, 18, 18]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'skill_dmg',
+                    values: [0.1177, 0.1265, 0.1354, 0.1471, 0.156, 0.1648, 0.1766, 0.1883, 0.2001, 0.2119]
+                },
+                {
+                    name: 'duration',
+                    values: [2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5]
+                },
+                {
+                    name: 'cd',
+                    values: [18, 18, 18, 18, 18, 18, 18, 18, 18, 18]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [70, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+}
+,
+{
+    id: 'Furina',
+    enkaId: 10000089,
+    rarity: RARITY.LEGENDARY,
+    element: VISION.HYDRO,
+    weapon: WEAPON_TYPE.SWORD,
+    birthday: '10-13',
+    baseStats: {
+        [STATS.HP]: [1191.7, 3091.1, 6880.1, 8883.6, 10655.9, 12437.6, 14231.3, 15307.4],
+        [STATS.ATK]: [19, 49.3, 109.7, 141.6, 169.8, 198.2, 226.8, 244],
+        [STATS.DEF]: [54.1, 140.5, 312.6, 403.7, 484.2, 565.1, 646.6, 695.5]
+    },
+    ascensionStat: STATS.CRIT_RATE,
+    ascensionMaterials: {
+        ascension_gems: 'varunada_lazurite',
+        local_specialties: 'lakelight_lily',
+        common_enemy_drops: 'whopperflower_nectar',
+        normal_boss_drops: 'water_that_failed_to_transcend',
+        talent_books: 'books_of_justice',
+        weekly_boss_drops: 'lightless_mass'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.4839, 0.5232, 0.5626, 0.6189, 0.6583, 0.7033, 0.7652, 0.8271, 0.889, 0.9565]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.4373, 0.4729, 0.5085, 0.5593, 0.5949, 0.6356, 0.6915, 0.7475, 0.8034, 0.8644]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.5512, 0.5961, 0.6409, 0.705, 0.7499, 0.8012, 0.8717, 0.9422, 1.0127, 1.0896]
+                },
+                {
+                    name: 'hit_4',
+                    values: [0.733, 0.7926, 0.8523, 0.9375, 0.9972, 1.0654, 1.1591, 1.2529, 1.3466, 1.4489]
+                },
+                {
+                    name: 'charged_dmg',
+                    values: [0.7422, 0.8026, 0.863, 0.9493, 1.0097, 1.0788, 1.1737, 1.2686, 1.3635, 1.4671]
+                },
+                {
+                    name: 'charged_stamina_cost',
+                    values: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.6393, 0.6914, 0.7434, 0.8177, 0.8698, 0.9293, 1.011, 1.0928, 1.1746, 1.2638]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.2784, 1.3824, 1.4865, 1.6351, 1.7392, 1.8581, 2.0216, 2.1851, 2.3486, 2.527]
+                },
+                {
+                    name: 'spiritbreath_thorn_surging_blade_dmg',
+                    values: [0.0946, 0.1023, 0.11, 0.121, 0.1287, 0.1375, 0.1496, 0.1617, 0.1738, 0.187]
+                },
+                {
+                    name: 'spiritbreath_thorn_surging_blade_dmg_interval',
+                    values: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'ousia_bubble_dmg',
+                    values: [0.0786, 0.0845, 0.0904, 0.0983, 0.1042, 0.1101, 0.118, 0.1258, 0.1337, 0.1416]
+                },
+                {
+                    name: 'duration',
+                    values: [30, 30, 30, 30, 30, 30, 30, 30, 30, 30]
+                },
+                {
+                    name: 'gentilhomme_usher_dmg',
+                    values: [0.0596, 0.0641, 0.0685, 0.0745, 0.079, 0.0834, 0.0894, 0.0954, 0.1013, 0.1073]
+                },
+                {
+                    name: 'surintendante_chevalmarin_dmg',
+                    values: [0.0323, 0.0347, 0.0372, 0.0404, 0.0428, 0.0452, 0.0485, 0.0517, 0.0549, 0.0582]
+                },
+                {
+                    name: 'mademoiselle_crabaletta_dmg',
+                    values: [0.0829, 0.0891, 0.0953, 0.1036, 0.1098, 0.116, 0.1243, 0.1326, 0.1409, 0.1492]
+                },
+                {
+                    name: 'gentilhomme_usher_hp_consumption',
+                    values: [0.024, 0.024, 0.024, 0.024, 0.024, 0.024, 0.024, 0.024, 0.024, 0.024]
+                },
+                {
+                    name: 'surintendante_chevalmarin_hp_consumption',
+                    values: [0.016, 0.016, 0.016, 0.016, 0.016, 0.016, 0.016, 0.016, 0.016, 0.016]
+                },
+                {
+                    name: 'mademoiselle_crabaletta_hp_consumption',
+                    values: [0.036, 0.036, 0.036, 0.036, 0.036, 0.036, 0.036, 0.036, 0.036, 0.036]
+                },
+                {
+                    name: 'singer_of_many_waters_healing',
+                    values: [0.048, 0.0516, 0.0552, 0.06, 0.0636, 0.0672, 0.072, 0.0768, 0.0816, 0.0864]
+                },
+                {
+                    name: 'cd',
+                    values: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'skill_dmg',
+                    values: [0.1141, 0.1226, 0.1312, 0.1426, 0.1511, 0.1597, 0.1711, 0.1825, 0.1939, 0.2053]
+                },
+                {
+                    name: 'duration',
+                    values: [18, 18, 18, 18, 18, 18, 18, 18, 18, 18]
+                },
+                {
+                    name: 'maximum_fanfare',
+                    values: [300, 300, 300, 300, 300, 300, 300, 300, 300, 300]
+                },
+                {
+                    name: 'fanfare_to_dmg_increase_conversion_ratio',
+                    values: [0.0007, 0.0009, 0.0011, 0.0013, 0.0015, 0.0017, 0.0019, 0.0021, 0.0023, 0.0025]
+                },
+                {
+                    name: 'fanfare_to_incoming_healing_bonus_conversion_ratio',
+                    values: [0.0001, 0.0002, 0.0003, 0.0004, 0.0005, 0.0006, 0.0007, 0.0008, 0.0009, 0.001]
+                },
+                {
+                    name: 'cd',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [60, 60, 60, 60, 60, 60, 60, 60, 60, 60]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+}
+,
+{
+    id: 'Mualani',
+    enkaId: 10000102,
+    rarity: RARITY.LEGENDARY,
+    element: VISION.HYDRO,
+    weapon: WEAPON_TYPE.CATALYST,
+    birthday: '8-3',
+    baseStats: {
+        [STATS.HP]: [1182.1, 3066.4, 6825.1, 8812.6, 10570.6, 12338.1, 14117.5, 15184.9],
+        [STATS.ATK]: [14.2, 36.7, 81.7, 105.5, 126.5, 147.7, 169, 181.8],
+        [STATS.DEF]: [44.4, 115.2, 256.3, 331, 397, 463.4, 530.2, 570.3]
+    },
+    ascensionStat: STATS.CRIT_RATE,
+    ascensionMaterials: {
+        ascension_gems: 'varunada_lazurite',
+        local_specialties: 'sprayfeather_gill',
+        common_enemy_drops: 'sentrys_wooden_whistle',
+        normal_boss_drops: 'mark_of_the_binding_blessing',
+        talent_books: 'books_of_contention',
+        weekly_boss_drops: 'lightless_mass'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.514, 0.5525, 0.5911, 0.6425, 0.681, 0.7195, 0.7709, 0.8223, 0.8737, 0.9251]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.4463, 0.4797, 0.5132, 0.5578, 0.5913, 0.6248, 0.6694, 0.714, 0.7586, 0.8033]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.7003, 0.7529, 0.8054, 0.8754, 0.928, 0.9805, 1.0505, 1.1206, 1.1906, 1.2606]
+                },
+                {
+                    name: 'charged_dmg',
+                    values: [1.4288, 1.536, 1.6431, 1.786, 1.8932, 2.0003, 2.1432, 2.2861, 2.429, 2.5718]
+                },
+                {
+                    name: 'charged_stamina_cost',
+                    values: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.5683, 0.6145, 0.6608, 0.7269, 0.7731, 0.826, 0.8987, 0.9714, 1.0441, 1.1234]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.1363, 1.2288, 1.3213, 1.4535, 1.5459, 1.6517, 1.797, 1.9423, 2.0877, 2.2462]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'sharkys_bite_base_dmg',
+                    values: [0.0868, 0.0933, 0.0998, 0.1085, 0.115, 0.1215, 0.1302, 0.1389, 0.1476, 0.1562]
+                },
+                {
+                    name: 'wave_momentum_dmg_bonus',
+                    values: [0.0434, 0.0467, 0.0499, 0.0543, 0.0575, 0.0608, 0.0651, 0.0694, 0.0738, 0.0781]
+                },
+                {
+                    name: 'sharkys_surging_bite_additional_dmg_bonus',
+                    values: [0.217, 0.2333, 0.2496, 0.2713, 0.2875, 0.3038, 0.3255, 0.3472, 0.3689, 0.3906]
+                },
+                {
+                    name: 'sharkys_bite_cd',
+                    values: [1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8]
+                },
+                {
+                    name: 'nightsoul_point_limit',
+                    values: [60, 60, 60, 60, 60, 60, 60, 60, 60, 60]
+                },
+                {
+                    name: 'cd',
+                    values: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'skill_dmg',
+                    values: [0.5844, 0.6282, 0.6721, 0.7305, 0.7743, 0.8181, 0.8766, 0.935, 0.9935, 1.0519]
+                },
+                {
+                    name: 'cd',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [60, 60, 60, 60, 60, 60, 60, 60, 60, 60]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+}
 ];

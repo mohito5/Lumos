@@ -163,5 +163,23 @@
     },
     "chaos_gear": {
         "name": "Механизм хаоса"
+    },
+    "treasured_flower": {
+        "name": "Заветный цветок"
+    },
+    "chaos_axis": {
+        "name": "Ось хаоса"
+    },
+    "chaos_bolt": {
+        "name": "Анкер хаоса"
+    },
+    "chaos_module": {
+        "name": "Модуль хаоса"
+    },
+    "chaos_oculus": {
+        "name": "Око хаоса"
+    },
+    "chaos_storage": {
+        "name": "Сосуд хаоса"
     }
 }

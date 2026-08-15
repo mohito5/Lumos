@@ -159,5 +159,35 @@
     },
     "brilliant_chrysanthemum": {
         "name": "Сверкающая хризантема"
+    },
+    "beryl_conch": {
+        "name": "Берилловая ракушка"
+    },
+    "lumidouce_bell": {
+        "name": "Ламповый колокольчик"
+    },
+    "clearwater_jade": {
+        "name": "Нефрит чистой воды"
+    },
+    "romaritime_flower": {
+        "name": "Ромарин"
+    },
+    "trishiraite": {
+        "name": "Тришираит"
+    },
+    "lakelight_lily": {
+        "name": "Лилия озёрного света"
+    },
+    "dracolite": {
+        "name": "Драколит"
+    },
+    "mourning_flower": {
+        "name": "Цветы скорби"
+    },
+    "spring_of_the_first_dewdrop": {
+        "name": "Источник первой росы"
+    },
+    "sprayfeather_gill": {
+        "name": "Морское перо"
     }
 }

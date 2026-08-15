@@ -133,3 +133,81 @@ export function classifyMaterialKind(materialInfo, context) {
     }
     return 'unknown';
 }
+
+// ============================================================================
+// Определение региона — нужно для раскладки материалов по папкам
+// (data/materials/{local-specialty,books,boss-drops,enemy-drops}/<регион>.js,
+// см. scripts/lib/materials-catalog.mjs). genshin-db даёт регион НАПРЯМУЮ
+// только для местных диковинок (typeText: "Local Specialty (Liyue)") —
+// для остального ниже курируемые таблицы по игровым знаниям, не выведены
+// из genshin-db механически. Где заведомо не уверен — таблица НЕ содержит
+// запись, вызывающий код тогда кладёt в other.js/common.js, а не гадает.
+// ============================================================================
+
+const REGION_KEYS = ['mondstadt', 'liyue', 'inazuma', 'sumeru', 'fontaine', 'natlan', 'snezhnaya'];
+
+/** "Local Specialty (Liyue)" -> "liyue". genshin-db даёт это напрямую, тут
+ *  просто разбор текста, без угадывания. */
+export function regionFromLocalSpecialtyTypeText(typeText) {
+    const m = String(typeText || '').match(/Local Specialty \(([^)]+)\)/);
+    if (!m) return null;
+    const key = m[1].toLowerCase();
+    return REGION_KEYS.includes(key) ? key : null;
+}
+
+// Семья книги таланта -> регион. Устоявшееся, хорошо известное игровое
+// деление (не меняется между патчами) — 3 семьи на регион.
+const BOOK_FAMILY_REGION = {
+    freedom: 'mondstadt', resistance: 'mondstadt', ballad: 'mondstadt',
+    prosperity: 'liyue', diligence: 'liyue', gold: 'liyue',
+    transience: 'inazuma', elegance: 'inazuma', light: 'inazuma',
+    admonition: 'sumeru', ingenuity: 'sumeru', praxis: 'sumeru',
+    justice: 'fontaine', order: 'fontaine', kindling: 'fontaine', equity: 'fontaine',
+};
+/** bookFamilySlug()-результат ("freedom") -> регион, либо null если семья
+ *  не из таблицы выше (новый регион/семья, которую ещё не видели). */
+export function regionForBookFamily(familySlug) {
+    return BOOK_FAMILY_REGION[familySlug] || null;
+}
+
+// Боссовый материал -> регион, по названию БОССА (не материала — материалы
+// часто называются иначе). Покрывает только уверенные, хорошо известные
+// случаи; неполный список — лучше честный "не знаю" (-> other.js), чем
+// приписать боссу не тот регион.
+const BOSS_NAME_REGION = {
+    'stormterror': 'mondstadt', 'dvalin': 'mondstadt', 'andrius': 'mondstadt', 'wolf of the north': 'mondstadt',
+    'azhdaha': 'liyue', 'childe': 'liyue', 'tartaglia': 'liyue', 'rhodeia': 'liyue', 'oceanid': 'liyue',
+    'raiden': 'inazuma', 'shogun': 'inazuma', 'maguu kenki': 'inazuma', 'golden wolflord': 'inazuma',
+    'thunder manifestation': 'inazuma', 'perpetual mechanical array': 'inazuma',
+    'wenut': 'sumeru', 'jadeplume terrorshroom': 'sumeru', 'aeonblight drake': 'sumeru', 'apep': 'sumeru',
+    'all-devouring narwhal': 'sumeru', 'setekh wenut': 'sumeru',
+    'narwhal': 'fontaine', 'usher': 'fontaine', 'emperor of fire and iron': 'fontaine',
+};
+/** sources-текст genshin-db ("Dropped by Lv. 30+ Cryo Regisvines") -> регион
+ *  через поиск известного имени босса внутри строки, либо null. */
+export function regionForBossSource(sourcesText) {
+    const haystack = String(sourcesText || '').toLowerCase();
+    for (const [name, region] of Object.entries(BOSS_NAME_REGION)) {
+        if (haystack.includes(name)) return region;
+    }
+    return null;
+}
+
+// Семья дропа с обычных/элитных существ -> регион, ТОЛЬКО для явно
+// региональных семей (по названию источника). Всё, чего нет в этой таблице,
+// по умолчанию считается общим (common.js) — так безопаснее, чем ошибочно
+// закрепить за одним регионом то, что на самом деле есть везде.
+const ENEMY_DROP_KEYWORD_REGION = {
+    nobushi: 'inazuma', 'kairagi': 'inazuma', shuumatsuban: 'inazuma',
+    eremite: 'sumeru', 'consecrated': 'sumeru', 'jinni': 'sumeru',
+    'fontaine': 'fontaine', 'meropide': 'fontaine',
+};
+/** Название материала/источника -> регион по ключевым словам, либо null
+ *  (=> common.js) если не найдено явное совпадение. */
+export function regionForEnemyDropKeyword(text) {
+    const haystack = String(text || '').toLowerCase();
+    for (const [kw, region] of Object.entries(ENEMY_DROP_KEYWORD_REGION)) {
+        if (haystack.includes(kw)) return region;
+    }
+    return null;
+}

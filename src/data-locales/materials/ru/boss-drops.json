@@ -220,5 +220,41 @@
     },
     "primordial_greenbloom": {
         "name": "Первозданный цветок оазиса"
+    },
+    "talisman_of_the_enigmatic_land": {
+        "name": "Талисман загадочной земли"
+    },
+    "secret_source_airflow_accumulator": {
+        "name": "Аккумулятор воздушного потока таинственного источника"
+    },
+    "evergloom_ring": {
+        "name": "Кольцо вечного мрака"
+    },
+    "worldspan_fern": {
+        "name": "Объявший небосвод папоротник"
+    },
+    "lightless_eye_of_the_maelstrom": {
+        "name": "Тёмный глаз вихря"
+    },
+    "denial_and_judgment": {
+        "name": "Отрицание и вердикт"
+    },
+    "cloudseam_scale": {
+        "name": "Облачные доспехи"
+    },
+    "water_that_failed_to_transcend": {
+        "name": "Вода, не достигшая перехода"
+    },
+    "artificed_spare_clockwork_component_coppelius": {
+        "name": "Запасная деталь чудного механизма: Коппелиус"
+    },
+    "lightless_mass": {
+        "name": "Тёмная масса"
+    },
+    "emperors_resolution": {
+        "name": "Приговор императора"
+    },
+    "elixir_of_the_heretic": {
+        "name": "Еретический эликсир"
     }
 }

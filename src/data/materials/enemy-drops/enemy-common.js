@@ -14,7 +14,6 @@ export const enemyCommon = [
         id: 'slime-secretions',
         sid: 'm30',
         icon: "assets/Slime_Secretions.webp",
-        tier: MATERIAL_TIER.ENEMY_MAT_1_T2,
         type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
         group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SLIME_MATERIALS],
         rarity: RARITY.UNCOMMON
@@ -30,9 +29,26 @@ export const enemyCommon = [
     {
         id: 'firm-arrowhead',
         sid: 'm314',
+        icon: 'assets/enemy/common/Firm_Arrowhead.webp',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.HILICHURL_SHOOTER],
+        rarity: RARITY.COMMON
+    },
+    {
+        id: 'sharp-arrowhead',
+        sid: 'm315',
+        icon: 'assets/enemy/common/Item_Sharp_Arrowhead.webp',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.HILICHURL_SHOOTER],
+        rarity: RARITY.UNCOMMON
+    },
+    {
+        id: 'weathered-arrowhead',
+        sid: 'm316',
         icon: '',
         type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.HILICHURL_ARROWHEADS],
-        rarity: RARITY.COMMON
-    }
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.HILICHURL_SHOOTER],
+        rarity: RARITY.RARE
+    },
+
 ]

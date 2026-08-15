@@ -43,21 +43,116 @@ function nextSid() {
     return `m${nextSidNumber++}`;
 }
 
-const KIND_TARGET = {
-    gem: { file: 'gems.js', arrayName: 'gems', locFile: 'gems.json' },
-    local_specialty: { file: 'local-specialty.js', arrayName: 'localSpecialty', locFile: 'common.json' },
-    common_enemy_drop: { file: 'enemy-drops.js', arrayName: 'enemyDrops', locFile: 'common-enemies.json' },
-    boss_material: { file: 'boss-drops.js', arrayName: 'bossDrops', locFile: 'boss-drops.json' },
-    weekly_boss_material: { file: 'boss-drops.js', arrayName: 'bossDrops', locFile: 'boss-drops.json' },
-    talent_book: { file: 'books.js', arrayName: 'books', locFile: 'books.json' },
+const FOLDER_KIND_CONFIG = {
+    gem: { folder: 'gems', prefix: 'gems', locFile: 'gems.json', dimension: 'element' },
+    local_specialty: { folder: 'local-specialty', prefix: 'localSpecialty', locFile: 'common.json', dimension: 'region' },
+    talent_book: { folder: 'books', prefix: 'books', locFile: 'books.json', dimension: 'region' },
+    boss_material: { folder: 'boss-drops', prefix: 'bossDrops', locFile: 'boss-drops.json', dimension: 'region' },
+    weekly_boss_material: { folder: 'boss-drops', prefix: 'bossDrops', locFile: 'boss-drops.json', dimension: 'region' },
+    common_enemy_drop: { folder: 'enemy-drops', prefix: 'enemyDrops', locFile: 'common-enemies.json', dimension: 'region' },
+};
+// weapon_ascension_material сюда не входит — Сергей просил по папкам только
+// материалы возвышения/талантов ПЕРСОНАЖЕЙ, оружейный camень остаётся
+// плоским weapon-ascension.js как был (60 существующих записей, менять не
+// просили).
+const FLAT_KIND_TARGET = {
+    weapon_ascension_material: { file: 'weapon-ascension.js', arrayName: 'weaponAscension', locFile: 'weapon-ascension.json' },
 };
 
+// dimension: 'region' -> подпапка = 'other', пока вызывающий код (см.
+// project-schema-map.mjs: guessRegionFor*) не передаст конкретный регион
+// через info.region. Если так и не передан — кладём в other.js, а не
+// пытаемся угадывать (лучше явный "не знаю", чем тихая ошибка).
+function resolveSubfileKey(kind, info) {
+    const cfg = FOLDER_KIND_CONFIG[kind];
+    if (cfg.dimension === 'element') return (info.element || 'unknown').toLowerCase();
+    if (cfg.dimension === 'region') {
+        // common_enemy_drop — единственный случай, где "регион не определён"
+        // означает "общий, встречается везде" (common.js), а не "не знаю,
+        // разберитесь сами" (other.js) — так и просил Сергей: "common.js
+        // сохранять, если в нескольких регионах". Для местных
+        // диковинок/книг/боссовых материалов регион всегда РОВНО один,
+        // поэтому там неопределённость — честно other.js, а не common.
+        if (kind === 'common_enemy_drop') return info.region || 'common';
+        return info.region || 'other';
+    }
+    return 'other';
+}
 // live-каталог: то, что уже было в файлах на момент старта, ПЛЮС всё, что
 // этот прогон уже добавил сам (чтобы не задублировать материал, если он
 // нужен нескольким персонажам за один запуск).
 const byName = new Map(materialsData.map((m) => [normName(m.__enName || ''), m]));
 const byId = new Map(materialsData.map((m) => [m.id, m]));
 const newlyAdded = []; // { kind, id, name_en, name_ru, rarity } — для финального отчёта
+const newlyAddedConstants = []; // { key, tag } — новые MATERIAL_GROUP.*, добавленные в constants.js этим прогоном
+
+const CONSTANTS_PATH = path.join(ROOT, 'src/shared/config/constants.js');
+
+// Живое зеркало MATERIAL_GROUP: начинается с того, что реально в файле на
+// старте (у Сергея там уже ~40 constant'ов, зарегистрированных заранее,
+// раньше самих данных) + всё, что этот прогон сам добавляет — иначе
+// повторный поиск в течение одного запуска не увидел бы то, что было
+// добавлено чуть раньше в этом же прогоне.
+const materialGroupCache = new Map(Object.entries(MATERIAL_GROUP));
+
+/** BOOKS_OF_FREEDOM -> BOOKS_FREEDOM (так исторически называют константы
+ *  книг талантов в этом проекте, "OF" выкидывается) — для остальных тегов
+ *  просто UPPER_SNAKE_CASE как есть. */
+function constantKeyFromTag(tag) {
+    return tag.toUpperCase().replace(/^BOOKS_OF_/, 'BOOKS_');
+}
+
+/**
+ * Ищет tag среди уже известных значений MATERIAL_GROUP (включая то, что этот
+ * же прогон уже добавил) — если нашёл, возвращает имя константы. Если нет —
+ * ДОБАВЛЯЕТ новую константу в src/shared/config/constants.js (не только в
+ * памяти) и возвращает её имя. Раньше вместо этого просто писали сырую
+ * строку в group[] — Сергею приходилось руками дополнять constants.js после
+ * каждого прогона, что и является причиной этой правки.
+ */
+function ensureMaterialGroupConst(tag) {
+    for (const [key, value] of materialGroupCache) {
+        if (value === tag) return key;
+    }
+    const key = constantKeyFromTag(tag);
+    if (materialGroupCache.has(key)) {
+        // Имя константы занято под ДРУГОЕ значение — маловероятно, но на
+        // всякий случай не перезаписываем чужое, различаем суффиксом.
+        let n = 2;
+        while (materialGroupCache.has(`${key}_${n}`)) n++;
+        return ensureMaterialGroupConstRaw(`${key}_${n}`, tag);
+    }
+    return ensureMaterialGroupConstRaw(key, tag);
+}
+
+function ensureMaterialGroupConstRaw(key, tag) {
+    materialGroupCache.set(key, tag);
+    if (!DRY_RUN) {
+        let content = fs.readFileSync(CONSTANTS_PATH, 'utf8');
+        const startMatch = content.match(/export const MATERIAL_GROUP\s*=\s*\{/);
+        if (!startMatch) throw new Error('не нашёл "export const MATERIAL_GROUP = {" в constants.js');
+        const braceStart = startMatch.index + startMatch[0].length - 1;
+        let depth = 0;
+        let i = braceStart;
+        for (; i < content.length; i++) {
+            if (content[i] === '{') depth++;
+            else if (content[i] === '}') { depth--; if (depth === 0) break; }
+        }
+        const braceEnd = i;
+        const body = content.slice(braceStart + 1, braceEnd);
+        const trimmedBody = body.replace(/,?\s*$/, '');
+        const isEmpty = trimmedBody.trim() === '';
+        const newBody = `${trimmedBody}${isEmpty ? '' : ','}\n  ${key}: '${tag}',\n`;
+        content = content.slice(0, braceStart + 1) + newBody + content.slice(braceEnd);
+        fs.writeFileSync(CONSTANTS_PATH, content);
+    }
+    newlyAddedConstants.push({ key, tag });
+    return key;
+}
+
+export function getNewlyAddedConstantsReport() {
+    return newlyAddedConstants;
+}
 
 function normName(s) {
     return String(s).trim().toLowerCase();
@@ -135,6 +230,37 @@ function appendObjectToArrayFile(fileName, arrayName, objSource) {
     fs.writeFileSync(filePath, content);
 }
 
+/**
+ * То же самое, что appendObjectToArrayFile, но для новой структуры "папка с
+ * файлами по региону/элементу" (local-specialty/, books/, gems/,
+ * boss-drops/, enemy-drops/) — если нужного файла региона/элемента ещё нет
+ * (напр. первый материал из Натлана), создаёт его и дописывает импорт в
+ * index.js папки. Если файл уже есть — досыпает в конец как
+ * appendObjectToArrayFile.
+ */
+function appendToFolderStructure(folder, prefix, subfileKey, objSource) {
+    if (DRY_RUN) return;
+    const folderPath = path.join(MAT_DIR, folder);
+    fs.mkdirSync(folderPath, { recursive: true });
+    const subfilePath = path.join(folderPath, `${subfileKey}.js`);
+    const varName = `${prefix}${subfileKey[0].toUpperCase()}${subfileKey.slice(1).replace(/[-_](\w)/g, (_, c) => c.toUpperCase())}`;
+
+    if (!fs.existsSync(subfilePath)) {
+        const header = `import { RARITY, VISION, WEAPON_TYPE, MATERIAL_TYPE, MATERIAL_GROUP, REGION } from "../../../shared/config/constants.js";\n\nexport const ${varName} = [\n];\n`;
+        fs.writeFileSync(subfilePath, header);
+
+        const indexPath = path.join(folderPath, 'index.js');
+        let indexContent = fs.readFileSync(indexPath, 'utf8');
+        const importLine = `import { ${varName} } from './${subfileKey}.js';\n`;
+        if (!indexContent.includes(importLine)) {
+            indexContent = importLine + indexContent;
+            indexContent = indexContent.replace(/(\.\.\.\w+,?\n)(\];)/, `$1    ...${varName},\n$2`);
+            fs.writeFileSync(indexPath, indexContent);
+        }
+    }
+    appendObjectToArrayFile(`${folder}/${subfileKey}.js`, varName, objSource);
+}
+
 function appendLocaleEntry(locFile, id, nameEn, nameRu) {
     if (DRY_RUN) return;
     for (const [lang, name] of [['en', nameEn], ['ru', nameRu]]) {
@@ -158,8 +284,9 @@ export function ensureMaterial(kind, info) {
     const existing = findExistingByName(info.nameEn);
     if (existing) return { id: existing.id, isNew: false };
 
-    const target = KIND_TARGET[kind];
-    if (!target) throw new Error(`Неизвестный kind материала: ${kind}`);
+    const target = FLAT_KIND_TARGET[kind];
+    const folderCfg = FOLDER_KIND_CONFIG[kind];
+    if (!target && !folderCfg) throw new Error(`Неизвестный kind материала: ${kind}`);
 
     const id = slugify(info.nameEn);
     if (byId.has(id)) {
@@ -184,6 +311,7 @@ export function ensureMaterial(kind, info) {
         boss_material: 'MATERIAL_GROUP.NORMAL_BOSS_DROPS',
         weekly_boss_material: 'MATERIAL_GROUP.WEEKLY_BOSS_DROPS',
         talent_book: 'MATERIAL_GROUP.TALENT_BOOKS',
+        weapon_ascension_material: 'MATERIAL_GROUP.WEAPON_ASCENSION_MATERIALS',
     }[kind];
 
     const typeConst = {
@@ -193,23 +321,29 @@ export function ensureMaterial(kind, info) {
         boss_material: 'MATERIAL_TYPE.CHARACTER_ASCENTION',
         weekly_boss_material: 'MATERIAL_TYPE.CHARACTER_TALENT',
         talent_book: 'MATERIAL_TYPE.CHARACTER_TALENT',
+        // сверено с реальными записями weapon-ascension.js — там именно
+        // WEAPON_ENHANCEMENT_MATERIALS, не CHARACTER_ASCENTION (моя более
+        // ранняя догадка была неверна — файл содержал 60 готовых записей,
+        // на которых это не проявлялось, пока не понадобился НОВЫЙ материал)
+        weapon_ascension_material: 'MATERIAL_TYPE.WEAPON_ENHANCEMENT_MATERIALS',
     }[kind];
 
-    // familyTag уже приходит как ГОТОВАЯ строка-значение (MATERIAL_GROUP.XXX
-    // либо сырой slug для локал-специалити/босс-материала без отдельной
-    // константы) — здесь просто решаем, писать ли его как ссылку на код.
-    const familyIsRegisteredConst = Object.values(MATERIAL_GROUP).includes(info.familyTag)
-        && Object.entries(MATERIAL_GROUP).some(([, v]) => v === info.familyTag);
-    const familyValue = familyIsRegisteredConst
-        ? codeRef(`MATERIAL_GROUP.${Object.entries(MATERIAL_GROUP).find(([, v]) => v === info.familyTag)[0]}`)
-        : info.familyTag;
+    // familyTag приходит как сырой slug (напр. 'sea_ganoderma') — ищем/
+    // регистрируем для него константу MATERIAL_GROUP.* (не просто строку,
+    // см. ensureMaterialGroupConst выше — раньше тут была сырая строка,
+    // из-за чего Сергею приходилось дописывать constants.js руками).
+    const familyKey = ensureMaterialGroupConst(info.familyTag);
+    const familyValue = codeRef(`MATERIAL_GROUP.${familyKey}`);
 
     const obj = {
         id: finalId,
         sid: nextSid(),
         icon: PLACEHOLDER_ICON,
         type: codeRef(typeConst),
-        group: [codeRef(genericGroupConst), familyValue],
+        // weapon-ascension.js — единственный файл, где group — ОДНО значение,
+        // не [общее, конкретное] как везде (сверено на 60 существующих
+        // записях: group: MATERIAL_GROUP.DANDELION_GLADIATOR, без массива).
+        group: kind === 'weapon_ascension_material' ? familyValue : [codeRef(genericGroupConst), familyValue],
         rarity: codeRef(`RARITY.${Object.entries(RARITY).find(([, v]) => v === info.rarity)?.[0] ?? 'COMMON'}`),
     };
     if (info.element) {
@@ -217,8 +351,17 @@ export function ensureMaterial(kind, info) {
     }
 
     const objSource = printValue(obj, 0);
-    appendObjectToArrayFile(target.file, target.arrayName, objSource);
-    appendLocaleEntry(target.locFile, finalId, info.nameEn, info.nameRu);
+    const locFile = target ? target.locFile : folderCfg.locFile;
+    if (target) {
+        appendObjectToArrayFile(target.file, target.arrayName, objSource);
+    } else {
+        const subfileKey = resolveSubfileKey(kind, info);
+        appendToFolderStructure(folderCfg.folder, folderCfg.prefix, subfileKey, objSource);
+        if (subfileKey === 'other') {
+            console.warn(`  ⚠ "${info.nameEn}" -> data/materials/${folderCfg.folder}/other.js (регион не определён — переложите вручную, если знаете какой)`);
+        }
+    }
+    appendLocaleEntry(locFile, finalId, info.nameEn, info.nameRu);
 
     const record = { id: finalId, group: [genericGroupConst.split('.')[1], info.familyTag], rarity: info.rarity, __enName: info.nameEn };
     newlyAdded.push({ kind, id: finalId, nameEn: info.nameEn, nameRu: info.nameRu, rarity: info.rarity });

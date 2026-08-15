@@ -1,0 +1,85 @@
+import { RARITY, VISION, WEAPON_TYPE, MATERIAL_TYPE, MATERIAL_GROUP, REGION } from "../../../shared/config/constants.js";
+
+export const localSpecialtyLiyue = [
+
+    {
+        id: 'qingxin',
+        sid: 'm117',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.QINGXIN],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'silk_flower',
+        sid: 'm156',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.SILK_FLOWER],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'cor_lapis',
+        sid: 'm203',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.COR_LAPIS],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'noctilucous_jade',
+        sid: 'm213',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.NOCTILUCOUS_JADE],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'jueyun_chili',
+        sid: 'm234',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.JUEYUN_CHILI],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'glaze_lily',
+        sid: 'm248',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.GLAZE_LILY],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'violetgrass',
+        sid: 'm257',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.VIOLETGRASS],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'starconch',
+        sid: 'm264',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.STARCONCH],
+        rarity: RARITY.COMMON
+    }
+,
+    {
+        id: 'clearwater_jade',
+        sid: 'm324',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.LOCAL_SPECIALTY,
+        group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.CLEARWATER_JADE],
+        rarity: RARITY.COMMON
+    }
+];

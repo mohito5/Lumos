@@ -2,33 +2,6 @@ import { MATERIAL_TIER, MATERIAL_TYPE, MATERIAL_GROUP, RARITY } from "../../shar
 
 export const enemyDrops = [
     {
-        id: 'slime-condensate',
-        sid: 'm29',
-        icon: "assets/Slime_Condensate.webp",
-        tier: MATERIAL_TIER.ENEMY_MAT_1_T1,
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SLIME_MATERIALS],
-        rarity: RARITY.COMMON
-    },
-    {
-        id: 'slime-secretions',
-        sid: 'm30',
-        icon: "assets/Slime_Secretions.webp",
-        tier: MATERIAL_TIER.ENEMY_MAT_1_T2,
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SLIME_MATERIALS],
-        rarity: RARITY.UNCOMMON
-    },
-    {
-        id: 'slime-concentrate',
-        sid: 'm31',
-        icon: "assets/Slime_Concentrate.webp",
-        tier: MATERIAL_TIER.ENEMY_MAT_1_T3,
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SLIME_MATERIALS],
-        rarity: RARITY.RARE
-    },
-    {
         id: 'juvenile_fang',
         sid: 'm106',
         icon: 'assets/tmp256.png',
@@ -245,33 +218,6 @@ export const enemyDrops = [
     }
 ,
     {
-        id: 'firm_arrowhead',
-        sid: 'm172',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'firm_arrowhead'],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'sharp_arrowhead',
-        sid: 'm173',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'firm_arrowhead'],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'weathered_arrowhead',
-        sid: 'm174',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'firm_arrowhead'],
-        rarity: RARITY.RARE
-    }
-,
-    {
         id: 'tattered_warrant',
         sid: 'm191',
         icon: 'assets/tmp256.png',
@@ -467,5 +413,14 @@ export const enemyDrops = [
         type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
         group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'chaos_gear'],
         rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'treasured_flower',
+        sid: 'm317',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'treasured_flower'],
+        rarity: RARITY.RARE
     }
 ];

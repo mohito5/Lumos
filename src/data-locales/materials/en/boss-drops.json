@@ -220,5 +220,41 @@
     },
     "primordial_greenbloom": {
         "name": "Primordial Greenbloom"
+    },
+    "talisman_of_the_enigmatic_land": {
+        "name": "Talisman of the Enigmatic Land"
+    },
+    "secret_source_airflow_accumulator": {
+        "name": "Secret Source Airflow Accumulator"
+    },
+    "evergloom_ring": {
+        "name": "Evergloom Ring"
+    },
+    "worldspan_fern": {
+        "name": "Worldspan Fern"
+    },
+    "lightless_eye_of_the_maelstrom": {
+        "name": "Lightless Eye of the Maelstrom"
+    },
+    "denial_and_judgment": {
+        "name": "Denial and Judgment"
+    },
+    "cloudseam_scale": {
+        "name": "Cloudseam Scale"
+    },
+    "water_that_failed_to_transcend": {
+        "name": "Water That Failed To Transcend"
+    },
+    "artificed_spare_clockwork_component_coppelius": {
+        "name": "Artificed Spare Clockwork Component — Coppelius"
+    },
+    "lightless_mass": {
+        "name": "Lightless Mass"
+    },
+    "emperors_resolution": {
+        "name": "Emperor's Resolution"
+    },
+    "elixir_of_the_heretic": {
+        "name": "Elixir of the Heretic"
     }
 }

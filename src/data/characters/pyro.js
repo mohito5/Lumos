@@ -1965,4 +1965,624 @@ export const pyro = [
         }
     }
 }
+,
+{
+    id: 'Chevreuse',
+    enkaId: 10000090,
+    rarity: RARITY.EPIC,
+    element: VISION.PYRO,
+    weapon: WEAPON_TYPE.POLEARM,
+    birthday: '1-10',
+    baseStats: {
+        [STATS.HP]: [1003, 2576.6, 5514.2, 7052.5, 8413.3, 9773.1, 11134, 11962.4],
+        [STATS.ATK]: [16.2, 41.6, 89.1, 113.9, 135.9, 157.9, 179.9, 193.3],
+        [STATS.DEF]: [50.7, 130.3, 278.7, 356.5, 425.3, 494, 562.8, 604.7]
+    },
+    ascensionStat: STATS.HP_PERCENT,
+    ascensionMaterials: {
+        ascension_gems: 'agnidus_agate',
+        local_specialties: 'lumidouce_bell',
+        common_enemy_drops: 'meshing_gear',
+        normal_boss_drops: 'fontemer_unihorn',
+        talent_books: 'books_of_order',
+        weekly_boss_drops: 'lightless_eye_of_the_maelstrom'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.5313, 0.5745, 0.6178, 0.6796, 0.7228, 0.7722, 0.8402, 0.9082, 0.9761, 1.0502]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.4931, 0.5332, 0.5734, 0.6307, 0.6709, 0.7167, 0.7798, 0.8429, 0.9059, 0.9747]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.2764, 0.299, 0.3215, 0.3536, 0.3761, 0.4018, 0.4372, 0.4725, 0.5079, 0.5465]
+                },
+                {
+                    name: 'hit_4',
+                    values: [0.7726, 0.8355, 0.8984, 0.9882, 1.0511, 1.123, 1.2218, 1.3206, 1.4195, 1.5273]
+                },
+                {
+                    name: 'charged_dmg',
+                    values: [1.2169, 1.316, 1.415, 1.5565, 1.6556, 1.7688, 1.9244, 2.0801, 2.2357, 2.4055]
+                },
+                {
+                    name: 'charged_stamina_cost',
+                    values: [25, 25, 25, 25, 25, 25, 25, 25, 25, 25]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.6393, 0.6914, 0.7434, 0.8177, 0.8698, 0.9293, 1.011, 1.0928, 1.1746, 1.2638]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.2784, 1.3824, 1.4865, 1.6351, 1.7392, 1.8581, 2.0216, 2.1851, 2.3486, 2.527]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'press_dmg',
+                    values: [1.152, 1.2384, 1.3248, 1.44, 1.5264, 1.6128, 1.728, 1.8432, 1.9584, 2.0736]
+                },
+                {
+                    name: 'hold_dmg',
+                    values: [1.728, 1.8576, 1.9872, 2.16, 2.2896, 2.4192, 2.592, 2.7648, 2.9376, 3.1104]
+                },
+                {
+                    name: 'overcharged_ball_dmg',
+                    values: [2.824, 3.0358, 3.2476, 3.53, 3.7418, 3.9536, 4.236, 4.5184, 4.8008, 5.0832]
+                },
+                {
+                    name: 'hp_regeneration_over_time',
+                    values: [0.0267, 0.0287, 0.0307, 0.0333, 0.0353, 0.0373, 0.04, 0.0427, 0.0453, 0.048]
+                },
+                {
+                    name: 'healing_duration',
+                    values: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+                },
+                {
+                    name: 'surging_blade_dmg',
+                    values: [0.288, 0.3096, 0.3312, 0.36, 0.3816, 0.4032, 0.432, 0.4608, 0.4896, 0.5184]
+                },
+                {
+                    name: 'surging_blade_interval',
+                    values: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+                },
+                {
+                    name: 'cd',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'explosive_grenade_dmg',
+                    values: [3.6816, 3.9577, 4.2338, 4.602, 4.8781, 5.1542, 5.5224, 5.8906, 6.2587, 6.6269]
+                },
+                {
+                    name: 'secondary_explosive_shell_dmg',
+                    values: [0.4909, 0.5277, 0.5645, 0.6136, 0.6504, 0.6872, 0.7363, 0.7854, 0.8345, 0.8836]
+                },
+                {
+                    name: 'cd',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [60, 60, 60, 60, 60, 60, 60, 60, 60, 60]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+}
+,
+{
+    id: 'Dehya',
+    enkaId: 10000079,
+    rarity: RARITY.LEGENDARY,
+    element: VISION.PYRO,
+    weapon: WEAPON_TYPE.CLAYMORE,
+    birthday: '4-7',
+    baseStats: {
+        [STATS.HP]: [1220.2, 3165.3, 7045.3, 9096.8, 10911.6, 12736.1, 14572.9, 15674.8],
+        [STATS.ATK]: [20.7, 53.6, 119.3, 154.1, 184.8, 215.7, 246.8, 265.5],
+        [STATS.DEF]: [48.9, 126.8, 282.2, 364.4, 437.1, 510.2, 583.8, 627.9]
+    },
+    ascensionStat: STATS.HP_PERCENT,
+    ascensionMaterials: {
+        ascension_gems: 'agnidus_agate',
+        local_specialties: 'sand_grease_pupa',
+        common_enemy_drops: 'faded_red_satin',
+        normal_boss_drops: 'light_guiding_tetrahedron',
+        talent_books: 'books_of_praxis',
+        weekly_boss_drops: 'puppet_strings'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.6212, 0.6717, 0.7223, 0.7945, 0.8451, 0.9029, 0.9823, 1.0618, 1.1412, 1.2279]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.6171, 0.6673, 0.7176, 0.7893, 0.8395, 0.897, 0.9759, 1.0548, 1.1337, 1.2199]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.7663, 0.8287, 0.8911, 0.9802, 1.0425, 1.1138, 1.2118, 1.3099, 1.4079, 1.5148]
+                },
+                {
+                    name: 'hit_4',
+                    values: [0.9529, 1.0305, 1.108, 1.2188, 1.2964, 1.385, 1.5069, 1.6288, 1.7507, 1.8837]
+                },
+                {
+                    name: 'charged_attack_cyclic_dmg',
+                    values: [0.5633, 0.6092, 0.655, 0.7205, 0.7664, 0.8188, 0.8908, 0.9629, 1.0349, 1.1135]
+                },
+                {
+                    name: 'charged_attack_final_dmg',
+                    values: [1.0182, 1.1011, 1.184, 1.3024, 1.3853, 1.48, 1.6102, 1.7405, 1.8707, 2.0128]
+                },
+                {
+                    name: 'charged_stamina_cost',
+                    values: [40, 40, 40, 40, 40, 40, 40, 40, 40, 40]
+                },
+                {
+                    name: 'max_duration',
+                    values: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.7459, 0.8066, 0.8673, 0.954, 1.0147, 1.0841, 1.1795, 1.2749, 1.3703, 1.4744]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.4914, 1.6128, 1.7342, 1.9077, 2.0291, 2.1678, 2.3586, 2.5493, 2.7401, 2.9482]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'indomitable_flame_dmg',
+                    values: [1.1288, 1.2135, 1.2981, 1.411, 1.4957, 1.5803, 1.6932, 1.8061, 1.919, 2.0318]
+                },
+                {
+                    name: 'ranging_flame_dmg',
+                    values: [1.328, 1.4276, 1.5272, 1.66, 1.7596, 1.8592, 1.992, 2.1248, 2.2576, 2.3904]
+                },
+                {
+                    name: 'field_dmg',
+                    values: [0.602, 0.6472, 0.6923, 0.7525, 0.7977, 0.8428, 0.903, 0.9632, 1.0234, 1.0836]
+                },
+                {
+                    name: 'mitigation',
+                    values: [0.32, 0.34, 0.36, 0.38, 0.4, 0.42, 0.44, 0.46, 0.48, 0.5]
+                },
+                {
+                    name: 'redmanes_blood_maximum',
+                    values: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+                },
+                {
+                    name: 'field_duration',
+                    values: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+                },
+                {
+                    name: 'cd',
+                    values: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'flame_manes_fist_dmg',
+                    values: [0.987, 1.061, 1.135, 1.2337, 1.3078, 1.3818, 1.4805, 1.5792, 1.6779, 1.7766]
+                },
+                {
+                    name: 'incineration_drive_dmg',
+                    values: [1.393, 1.4975, 1.602, 1.7413, 1.8457, 1.9502, 2.0895, 2.2288, 2.3681, 2.5074]
+                },
+                {
+                    name: 'duration',
+                    values: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+                },
+                {
+                    name: 'cd',
+                    values: [18, 18, 18, 18, 18, 18, 18, 18, 18, 18]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [70, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+}
+,
+{
+    id: 'Gaming',
+    enkaId: 10000092,
+    rarity: RARITY.EPIC,
+    element: VISION.PYRO,
+    weapon: WEAPON_TYPE.CLAYMORE,
+    birthday: '12-22',
+    baseStats: {
+        [STATS.HP]: [957.4, 2459.5, 5263.5, 6731.9, 8030.9, 9328.9, 10627.9, 11418.7],
+        [STATS.ATK]: [25.3, 65, 139, 177.8, 212.1, 246.4, 280.7, 301.6],
+        [STATS.DEF]: [58.9, 151.4, 324.1, 414.5, 494.4, 574.3, 654.3, 703]
+    },
+    ascensionStat: STATS.ATK_PERCENT,
+    ascensionMaterials: {
+        ascension_gems: 'agnidus_agate',
+        local_specialties: 'starconch',
+        common_enemy_drops: 'slime_condensate',
+        normal_boss_drops: 'emperors_resolution',
+        talent_books: 'books_of_prosperity',
+        weekly_boss_drops: 'lightless_mass'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.8386, 0.9068, 0.9751, 1.0726, 1.1408, 1.2188, 1.3261, 1.4334, 1.5406, 1.6576]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.7904, 0.8548, 0.9191, 1.011, 1.0754, 1.1489, 1.25, 1.3511, 1.4522, 1.5625]
+                },
+                {
+                    name: 'hit_3',
+                    values: [1.0665, 1.1533, 1.2401, 1.3641, 1.4509, 1.5501, 1.6865, 1.8229, 1.9593, 2.1081]
+                },
+                {
+                    name: 'hit_4',
+                    values: [1.2795, 1.3836, 1.4878, 1.6366, 1.7407, 1.8597, 2.0234, 2.187, 2.3507, 2.5292]
+                },
+                {
+                    name: 'charged_attack_cyclic_dmg',
+                    values: [0.6252, 0.6761, 0.727, 0.7997, 0.8506, 0.9088, 0.9887, 1.0687, 1.1487, 1.2359]
+                },
+                {
+                    name: 'charged_attack_final_dmg',
+                    values: [1.1309, 1.223, 1.315, 1.4465, 1.5386, 1.6438, 1.7884, 1.9331, 2.0777, 2.2355]
+                },
+                {
+                    name: 'charged_stamina_cost',
+                    values: [40, 40, 40, 40, 40, 40, 40, 40, 40, 40]
+                },
+                {
+                    name: 'max_duration',
+                    values: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.6415, 0.6937, 0.7459, 0.8205, 0.8727, 0.9324, 1.0144, 1.0964, 1.1785, 1.268]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.2826, 1.387, 1.4914, 1.6406, 1.745, 1.8643, 2.0284, 2.1924, 2.3565, 2.5354]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'plunging_attack_charmed_cloudstrider_dmg',
+                    values: [2.304, 2.4768, 2.6496, 2.88, 3.0528, 3.2256, 3.456, 3.6864, 3.9168, 4.1472]
+                },
+                {
+                    name: 'hp_cost',
+                    values: [0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15]
+                },
+                {
+                    name: 'cd',
+                    values: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'suanni_man_chai_smash_dmg',
+                    values: [3.704, 3.9818, 4.2596, 4.63, 4.9078, 5.1856, 5.556, 5.9264, 6.2968, 6.6672]
+                },
+                {
+                    name: 'skill_healing',
+                    values: [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3]
+                },
+                {
+                    name: 'wushou_stance_duration',
+                    values: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+                },
+                {
+                    name: 'cd',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [60, 60, 60, 60, 60, 60, 60, 60, 60, 60]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+}
+,
+{
+    id: 'Lyney',
+    enkaId: 10000084,
+    rarity: RARITY.LEGENDARY,
+    element: VISION.PYRO,
+    weapon: WEAPON_TYPE.BOW,
+    birthday: '2-2',
+    baseStats: {
+        [STATS.HP]: [858, 2225.6, 4953.7, 6396.2, 7672.2, 8955.1, 10246.6, 11021.3],
+        [STATS.ATK]: [24.8, 64.2, 143, 184.6, 221.4, 258.5, 295.7, 318.1],
+        [STATS.DEF]: [41.9, 108.6, 241.8, 312.2, 374.5, 437.1, 500.2, 538]
+    },
+    ascensionStat: STATS.CRIT_RATE,
+    ascensionMaterials: {
+        ascension_gems: 'agnidus_agate',
+        local_specialties: 'rainbow_rose',
+        common_enemy_drops: 'recruits_insignia',
+        normal_boss_drops: 'emperors_resolution',
+        talent_books: 'books_of_equity',
+        weekly_boss_drops: 'primordial_greenbloom'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.3879, 0.4194, 0.451, 0.4961, 0.5277, 0.5638, 0.6134, 0.663, 0.7126, 0.7667]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.3801, 0.4111, 0.442, 0.4862, 0.5171, 0.5525, 0.6011, 0.6497, 0.6984, 0.7514]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.2726, 0.2948, 0.317, 0.3487, 0.3709, 0.3963, 0.4311, 0.466, 0.5009, 0.5389]
+                },
+                {
+                    name: 'hit_4',
+                    values: [0.5693, 0.6157, 0.662, 0.7282, 0.7745, 0.8275, 0.9003, 0.9731, 1.046, 1.1254]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.5683, 0.6145, 0.6608, 0.7269, 0.7731, 0.826, 0.8987, 0.9714, 1.0441, 1.1234]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.1363, 1.2288, 1.3213, 1.4535, 1.5459, 1.6517, 1.797, 1.9423, 2.0877, 2.2462]
+                },
+                {
+                    name: 'aimed_shot',
+                    values: [0.4386, 0.4743, 0.51, 0.561, 0.5967, 0.6375, 0.6936, 0.7497, 0.8058, 0.867]
+                },
+                {
+                    name: 'aimed_shot_charge_level_1',
+                    values: [1.24, 1.333, 1.426, 1.55, 1.643, 1.736, 1.86, 1.984, 2.108, 2.232]
+                },
+                {
+                    name: 'prop_arrow_dmg',
+                    values: [1.728, 1.8576, 1.9872, 2.16, 2.2896, 2.4192, 2.592, 2.7648, 2.9376, 3.1104]
+                },
+                {
+                    name: 'hp_cost',
+                    values: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2]
+                },
+                {
+                    name: 'grin_malkin_hat_inherited_hp',
+                    values: [0.64, 0.688, 0.736, 0.8, 0.848, 0.896, 0.96, 1.024, 1.088, 1.152]
+                },
+                {
+                    name: 'grin_malkin_hat_duration',
+                    values: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+                },
+                {
+                    name: 'pyrotechnic_strike_dmg',
+                    values: [2.12, 2.279, 2.438, 2.65, 2.809, 2.968, 3.18, 3.392, 3.604, 3.816]
+                },
+                {
+                    name: 'spiritbreath_thorn_dmg',
+                    values: [0.2755, 0.2962, 0.3168, 0.3444, 0.3651, 0.3857, 0.4133, 0.4408, 0.4684, 0.4959]
+                },
+                {
+                    name: 'spiritbreath_thorn_interval',
+                    values: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'skill_dmg',
+                    values: [1.672, 1.7974, 1.9228, 2.09, 2.2154, 2.3408, 2.508, 2.6752, 2.8424, 3.0096]
+                },
+                {
+                    name: 'skill_dmg_bonus',
+                    values: [0.532, 0.5719, 0.6118, 0.665, 0.7049, 0.7448, 0.798, 0.8512, 0.9044, 0.9576]
+                },
+                {
+                    name: 'hp_regeneration',
+                    values: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2]
+                },
+                {
+                    name: 'cd',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'skill_dmg',
+                    values: [1.54, 1.6555, 1.771, 1.925, 2.0405, 2.156, 2.31, 2.464, 2.618, 2.772]
+                },
+                {
+                    name: 'explosive_firework_dmg',
+                    values: [4.14, 4.4505, 4.761, 5.175, 5.4855, 5.796, 6.21, 6.624, 7.038, 7.452]
+                },
+                {
+                    name: 'duration',
+                    values: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+                },
+                {
+                    name: 'cd',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [60, 60, 60, 60, 60, 60, 60, 60, 60, 60]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+}
 ];

@@ -37,6 +37,7 @@ import genshindb, { resolveEntity } from './lib/genshin-db-bridge.mjs';
 import {
     rarityRef, visionRef, visionKey, weaponTypeRef, ascensionStatRef,
     gemFamilyForElement, slugify, bookFamilySlug, classifyMaterialKind,
+    regionFromLocalSpecialtyTypeText, regionForBookFamily, regionForBossSource, regionForEnemyDropKeyword,
 } from './lib/project-schema-map.mjs';
 import { ensureMaterial, getNewlyAddedReport, setDryRun } from './lib/materials-catalog.mjs';
 import { printValue, codeRef } from './lib/js-print.mjs';
@@ -49,13 +50,16 @@ const LOC_DIR = path.join(ROOT, 'src/data-locales/characters');
 const COMMON_I18N_DIR = path.join(ROOT, 'src/core/i18n');
 
 // см. шапку файла
-const SKIP_IDS = new Set(['Amber', 'Chasca', 'Varka']);
+const SKIP_IDS = new Set(['Varka', 'Mavuika', 'Flins']);
 
 const ELEMENT_FILES = ['anemo', 'electro', 'dendro', 'geo', 'cryo', 'pyro', 'hydro'];
 
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes('--dry-run');
-const ONLY = args.find((a) => a.startsWith('--only='))?.split('=')[1];
+// --only= теперь принимает несколько значений через запятую разом
+// (--only=Ganyu,Furina,Neuvillette) — раньше приходилось гонять скрипт по
+// одному персонажу за раз.
+const ONLY_LIST = args.find((a) => a.startsWith('--only='))?.split('=')[1]?.split(',').map((s) => s.trim()).filter(Boolean) || null;
 setDryRun(DRY_RUN);
 
 // ---------------------------------------------------------------------------
@@ -154,7 +158,7 @@ function buildTalentStats(combatEn, combatRu) {
 // ---------------------------------------------------------------------------
 // Материалы возвышения/талантов — см. scripts/lib/materials-catalog.mjs для
 // того, как регистрируются недостающие записи каталога.
-function classifyAndRegister(kind, itemName, rarity, familyTag, elementKeyForGem) {
+function classifyAndRegister(kind, itemName, rarity, familyTag, elementKeyForGem, region) {
     const infoRu = genshindb.materials(itemName, { resultLanguage: 'Russian' });
     const { id } = ensureMaterial(kind, {
         nameEn: itemName,
@@ -162,6 +166,7 @@ function classifyAndRegister(kind, itemName, rarity, familyTag, elementKeyForGem
         rarity,
         familyTag,
         element: elementKeyForGem,
+        region,
     });
     return id;
 }
@@ -194,15 +199,15 @@ function buildAscensionMaterials(enChar, elementKey, talentsEn) {
             const kind = classifyMaterialKind(info, 'ascension');
             if (kind === 'local_specialty') {
                 const tag = slugify(item.name);
-                classifyAndRegister('local_specialty', item.name, info.rarity, tag);
+                classifyAndRegister('local_specialty', item.name, info.rarity, tag, undefined, regionFromLocalSpecialtyTypeText(info.typeText));
                 result[MATERIAL_GROUP.LOCAL_SPECIALTIES] = tag;
             } else if (kind === 'boss_material') {
                 const tag = slugify(item.name);
-                classifyAndRegister('boss_material', item.name, info.rarity, tag);
+                classifyAndRegister('boss_material', item.name, info.rarity, tag, undefined, regionForBossSource(info.sources?.join(' ')));
                 result[MATERIAL_GROUP.NORMAL_BOSS_DROPS] = tag;
             } else if (kind === 'common_enemy_drop') {
                 if (!enemyDropFamilyTag) enemyDropFamilyTag = slugify(item.name);
-                classifyAndRegister('common_enemy_drop', item.name, info.rarity, enemyDropFamilyTag);
+                classifyAndRegister('common_enemy_drop', item.name, info.rarity, enemyDropFamilyTag, undefined, regionForEnemyDropKeyword(`${item.name} ${info.sources?.join(' ') || ''}`));
                 result[MATERIAL_GROUP.COMMON_ENEMY_DROPS] = enemyDropFamilyTag;
             }
             // kind === 'gem' — уже покрыто выше; 'currency' (Mora) — пропущена явно.
@@ -222,16 +227,16 @@ function buildAscensionMaterials(enChar, elementKey, talentsEn) {
                     const family = bookFamilySlug(item.name);
                     if (family) {
                         const tag = `books_of_${family}`;
-                        classifyAndRegister('talent_book', item.name, info.rarity, tag);
+                        classifyAndRegister('talent_book', item.name, info.rarity, tag, undefined, regionForBookFamily(family));
                         result[MATERIAL_GROUP.TALENT_BOOKS] = tag;
                     }
                 } else if (kind === 'weekly_boss_material') {
                     const tag = slugify(item.name);
-                    classifyAndRegister('weekly_boss_material', item.name, info.rarity, tag);
+                    classifyAndRegister('weekly_boss_material', item.name, info.rarity, tag, undefined, regionForBossSource(info.sources?.join(' ')));
                     result[MATERIAL_GROUP.WEEKLY_BOSS_DROPS] = tag;
                 } else if (kind === 'common_enemy_drop') {
                     if (!enemyDropFamilyTag) enemyDropFamilyTag = slugify(item.name);
-                    classifyAndRegister('common_enemy_drop', item.name, info.rarity, enemyDropFamilyTag);
+                    classifyAndRegister('common_enemy_drop', item.name, info.rarity, enemyDropFamilyTag, undefined, regionForEnemyDropKeyword(`${item.name} ${info.sources?.join(' ') || ''}`));
                     result[MATERIAL_GROUP.COMMON_ENEMY_DROPS] = enemyDropFamilyTag;
                 }
             }
@@ -494,9 +499,12 @@ async function runAddNewCharacter(id) {
 
 // ---------------------------------------------------------------------------
 async function main() {
-    if (ONLY && !SKIP_IDS.has(ONLY) && !findCharacterAnywhere(ONLY)) {
-        await runAddNewCharacter(ONLY);
-        return;
+    if (ONLY_LIST) {
+        for (const name of ONLY_LIST) {
+            if (!SKIP_IDS.has(name) && !findCharacterAnywhere(name)) {
+                await runAddNewCharacter(name);
+            }
+        }
     }
 
     const results = { ok: [], skipped: [], not_found: [], errors: [] };
@@ -508,7 +516,7 @@ async function main() {
         const characters = mod[fileName];
 
         for (const existingChar of characters) {
-            if (ONLY && existingChar.id !== ONLY) continue;
+            if (ONLY_LIST && !ONLY_LIST.includes(existingChar.id)) continue;
             if (SKIP_IDS.has(existingChar.id)) {
                 results.skipped.push(existingChar.id);
                 continue;
