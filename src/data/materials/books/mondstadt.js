@@ -13,7 +13,7 @@ export const booksMondstadt = [
         region: REGION.MONDSTADT
     },
     {
-        id: 'guide_of_freedom',
+        id: 'guide_to_freedom',
         sid: 'm2',
         icon: 'assets/book/freedom1.png',
         farmDays: [DAYS.MONDAY, DAYS.THURSDAY, DAYS.SUNDAY],
@@ -44,7 +44,7 @@ export const booksMondstadt = [
         region: REGION.MONDSTADT
     },
     {
-        id: 'guide_of_resistance',
+        id: 'guide_to_resistance',
         sid: '',
         icon: 'assets/book/resistance2.webp',
         farmDays: [DAYS.TUESDAY, DAYS.FRIDAY, DAYS.SUNDAY],
@@ -76,8 +76,8 @@ export const booksMondstadt = [
     },
 
     {
-        id: 'guide_of_ballad',
-        sid: '',
+        id: 'guide_to_ballad',
+        sid: 'm360',
         icon: 'assets/book/ballad2.webp',
         farmDays: [DAYS.WEDNESDAY, DAYS.SATURDAY, DAYS.SUNDAY],
         type: MATERIAL_TYPE.CHARACTER_TALENT,
@@ -87,7 +87,7 @@ export const booksMondstadt = [
     },
     {
         id: 'philosophies_of_ballad',
-        sid: '',
+        sid: 'm361',
         icon: 'assets/book/ballad3.webp',
         farmDays: [DAYS.WEDNESDAY, DAYS.SATURDAY, DAYS.SUNDAY],
         type: MATERIAL_TYPE.CHARACTER_TALENT,

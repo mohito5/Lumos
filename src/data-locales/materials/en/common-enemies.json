@@ -181,5 +181,77 @@
     },
     "chaos_storage": {
         "name": "Chaos Storage"
+    },
+    "dead_ley_line_branch": {
+        "name": "Dead Ley Line Branch"
+    },
+    "dead_ley_line_leaves": {
+        "name": "Dead Ley Line Leaves"
+    },
+    "ley_line_sprout": {
+        "name": "Ley Line Sprout"
+    },
+    "hunters_sacrificial_knife": {
+        "name": "Hunter's Sacrificial Knife"
+    },
+    "agents_sacrificial_knife": {
+        "name": "Agent's Sacrificial Knife"
+    },
+    "inspectors_sacrificial_knife": {
+        "name": "Inspector's Sacrificial Knife"
+    },
+    "heavy_horn": {
+        "name": "Heavy Horn"
+    },
+    "black_bronze_horn": {
+        "name": "Black Bronze Horn"
+    },
+    "black_crystal_horn": {
+        "name": "Black Crystal Horn"
+    },
+    "concealed_claw": {
+        "name": "Concealed Claw"
+    },
+    "concealed_unguis": {
+        "name": "Concealed Unguis"
+    },
+    "concealed_talon": {
+        "name": "Concealed Talon"
+    },
+    "faded_flaming_hilt": {
+        "name": "Faded Flaming Hilt"
+    },
+    "fractured_flaming_hilt": {
+        "name": "Fractured Flaming Hilt"
+    },
+    "jeweled_flaming_hilt": {
+        "name": "Jeweled Flaming Hilt"
+    },
+    "gloomy_statuette": {
+        "name": "Gloomy Statuette"
+    },
+    "dark_statuette": {
+        "name": "Dark Statuette"
+    },
+    "deathly_statuette": {
+        "name": "Deathly Statuette"
+    },
+    "axis_of_the_secret_source": {
+        "name": "Axis of the Secret Source"
+    },
+    "sheath_of_the_secret_source": {
+        "name": "Sheath of the Secret Source"
+    },
+    "heart_of_the_secret_source": {
+        "name": "Heart of the Secret Source"
+    },
+    "refractive_bud": {
+        "name": "Refractive Bud"
+    },
+    "bewildering_broadleaf": {
+        "name": "Bewildering Broadleaf"
+    },
+    "illusory_leafcoil": {
+        "name": "Illusory Leafcoil"
     }
 }

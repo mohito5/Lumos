@@ -1,3 +1,4 @@
+import { catalysts } from './catalysts.js';
 import { bows } from './bows.js';
 import { claymores } from './claymores.js';
 import { polearms } from './polearms.js';
@@ -11,6 +12,7 @@ const weaponsData = [
     ...polearms,
     ...swords,
     ...weapon_1,
+    ...catalysts,
   ];
 
 /**

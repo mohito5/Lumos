@@ -7,14 +7,32 @@
   },
   "skyward-harp": {
     "name": "Skyward Harp",
-    "description": "A greatbow that symbolizes the Anemo Archon's affiliation with the azure sky. The sound of the bowstring is music to the Anemo Archon's ears, starting with the very first arrow fired.",
+    "description": "A greatbow that symbolizes Dvalin's affiliation with the Anemo Archon. The sound of the bow firing is music to the Anemo Archon's ears. It contains the power of the sky and wind within.",
     "passiveName": "Echoing Ballad",
     "passiveDescription": "Increases CRIT DMG by {0}%. Hits have a {1}% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every {2}s."
   },
   "rust": {
     "name": "Rust",
-    "description": "A completely rusted greatbow. The average person would lack the strength to even lift it, let alone fire it.",
+    "description": "A completely rusted iron greatbow. The average person would lack the strength to even lift it, let alone fire it.",
     "passiveName": "Rapid Firing",
-    "passiveDescription": "Increases Normal Attack DMG by {0}% but decreases Aimed Shot DMG by 10%."
+    "passiveDescription": "Increases Normal Attack DMG by {0}% but decreases Charged Attack DMG by 10%."
+  },
+  "AlleyHunter": {
+    "name": "Alley Hunter",
+    "description": "An intricate, opulent longbow. It once belonged to a gentleman thief who was never caught.",
+    "passiveName": "Oppidan Ambush",
+    "passiveDescription": "While the character equipped with this weapon is in the party but not on the field, their DMG increases by {0}% every second up to a max of {1}%. When the character is on the field for more than 4s, the aforementioned DMG buff decreases by {2}% per second until it reaches 0%."
+  },
+  "AquaSimulacra": {
+    "name": "Aqua Simulacra",
+    "description": "This longbow's color is unpredictable. Under the light, it takes on a lustrous, watery blue.",
+    "passiveName": "The Cleansing Form",
+    "passiveDescription": "HP is increased by {0}%. When there are opponents nearby, the DMG dealt by the wielder of this weapon is increased by {1}%. This will take effect whether the character is on-field or not."
+  },
+  "AstralVulture'sCrimson": {
+    "name": "Astral Vulture's Crimson Plumage",
+    "description": "An ancient longbow crested with red feathers, a sacred relic of the Flower-Feather Clan that has been passed down from generation to generation.",
+    "passiveName": "The Moonring Sighted",
+    "passiveDescription": "For 12s after triggering a Swirl reaction, ATK increases by {0}%. In addition, when 1/2 or more characters in the party are of a different Elemental Type from the equipping character, the DMG dealt by the equipping character's Charged Attacks is increased by {1}% and Elemental Burst DMG dealt is increased by {2}%."
   }
 }

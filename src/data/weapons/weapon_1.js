@@ -12,23 +12,38 @@ export const weapon_1 = [
     enkaId: 15502,
     rarity: RARITY.LEGENDARY,
     type: WEAPON_TYPE.BOW,
-    icon: "/assets/Weapon_Amos.webp",
-    base_attack_curve: attackCurves.rarity_5_608,
+    icon: '/assets/Weapon_Amos.webp',
+    base_attack_curve: [45.9, 121.7, 152.8, 235.2, 266.3, 308.4, 339.6, 382.4, 413.5, 457, 488.1, 532.2, 563.3, 608.1],
     main_stat: {
         stat: STATS.ATK_PERCENT,
-        curve: 'high'
+        curve: [
+            10.8,
+            19.08,
+            19.08,
+            27.81,
+            27.81,
+            32.17,
+            32.17,
+            36.54,
+            36.54,
+            40.89,
+            40.89,
+            45.25,
+            45.25,
+            49.62
+        ]
     },
     passive: [
-      [12, 8],
-      [15, 10],
-      [18, 12],
-      [21, 14],
-      [24, 16]
+        [12, 8],
+        [15, 10],
+        [18, 12],
+        [21, 14],
+        [24, 16]
     ],
     ascensionMaterials: {
-      [MATERIAL_GROUP.WEAPON_ASCENSION_MATERIALS]: MATERIAL_GROUP.DANDELION_GLADIATOR, // Specific material for this weapon
-      [MATERIAL_GROUP.COMMON_ENEMY_DROPS]: MATERIAL_GROUP.SLIME_MATERIALS,
-      [MATERIAL_GROUP.ELITE_ENEMY_DROPS]: MATERIAL_GROUP.HUMANOID_RUIN_MACHINE // Note: Using Clockwork Gears as it's an existing elite drop in our DB
+        weapon_ascension_materials: 'fetters_of_the_dandelion_gladiator',
+        common_enemy_drops: 'slime_condensate',
+        elite_enemy_drops: 'chaos_device'
     }
-  },
+},
 ]

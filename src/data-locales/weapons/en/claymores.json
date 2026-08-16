@@ -4,5 +4,11 @@
     "description": "A longsword used by the Wolf Knight. Originally just a heavy sheet of iron given to the knight by a blacksmith from the city, it became endowed with legendary power owing to his friendship with the wolves.",
     "passiveName": "Wolfish Tracker",
     "passiveDescription": "Increases ATK by {0}%. On hit, attacks against opponents with less than 30% HP increase all party members' ATK by {1}% for 12s. Can only occur once every 30s."
+  },
+  "Akuoumaru": {
+    "name": "Akuoumaru",
+    "description": "The beloved sword of the legendary \"Akuou.\" The blade is huge and majestic, but is surprisingly easy to wield.",
+    "passiveName": "Watatsumi Wavewalker",
+    "passiveDescription": "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by {0}%. A maximum of {1}% increased Elemental Burst DMG can be achieved this way."
   }
 }

@@ -1,3 +1,8 @@
 {
-    
+  "amos-bow": {
+    "name": "Amos' Bow",
+    "description": "An extremely ancient bow that has retained its power despite its original master being long gone. It draws power from everyone and everything in the world, and the further away you are from that which your heart desires, the more powerful it is.",
+    "passiveName": "Strong-Willed",
+    "passiveDescription": "Increases Normal and Charged Attack DMG by {0}%. After a Normal or Charged Attack is fired, DMG dealt increases by a further {1}% every 0.1s the arrow is in the air for up to 5 times."
+  }
 }

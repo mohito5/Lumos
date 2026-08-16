@@ -56,33 +56,6 @@ export const enemyDrops = [
     }
 ,
     {
-        id: 'damaged_mask',
-        sid: 'm124',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'damaged_mask'],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'stained_mask',
-        sid: 'm125',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'damaged_mask'],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'ominous_mask',
-        sid: 'm126',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'damaged_mask'],
-        rarity: RARITY.RARE
-    }
-,
-    {
         id: 'whopperflower_nectar',
         sid: 'm132',
         icon: 'assets/tmp256.png',

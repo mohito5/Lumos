@@ -1177,62 +1177,7 @@ export const geo = [
     }
 }
 ,
-{
-    id: 'Odette',
-    enkaId: 10000100,
-    rarity: RARITY.EPIC,
-    element: VISION.GEO,
-    weapon: WEAPON_TYPE.POLEARM,
-    birthday: '4-22',
-    baseStats: {
-        [STATS.HP]: [989.3, 2541.5, 5439, 6956.3, 8298.6, 9639.9, 10982.1, 11799.3],
-        [STATS.ATK]: [18.2, 46.7, 99.9, 127.7, 152.4, 177, 201.6, 216.6],
-        [STATS.DEF]: [66.4, 170.7, 365.3, 467.2, 557.3, 647.4, 737.5, 792.4]
-    },
-    ascensionStat: STATS.GEO_DMG,
-    ascensionMaterials: {
-        ascension_gems: 'prithiva_topaz',
-        local_specialties: 'quenepa_berry',
-        common_enemy_drops: 'sentrys_wooden_whistle',
-        normal_boss_drops: 'overripe_flamegranate'
-    },
-    talents: {
-        attack: {
-            icon: '',
-            stats: []
-        },
-        skill: {
-            icon: '',
-            stats: []
-        },
-        burst: {
-            icon: '',
-            stats: []
-        }
-    },
-    constellations: {
-        c1: {
-            icon: ''
-        },
-        c2: {
-            icon: ''
-        },
-        c3: {
-            icon: ''
-        },
-        c4: {
-            icon: ''
-        },
-        c5: {
-            icon: ''
-        },
-        c6: {
-            icon: ''
-        }
-    },
-    passives: {}
-}
-,
+
 {
     id: 'Kachina',
     enkaId: 10000100,
@@ -1855,6 +1800,7 @@ export const geo = [
     element: VISION.GEO,
     weapon: WEAPON_TYPE.CLAYMORE,
     birthday: '8-16',
+    avatar: 'assets/avatar/Navia_Profile.webp',
     baseStats: {
         [STATS.HP]: [984.8, 2554.5, 5685.7, 7341.4, 8806, 10278.5, 11760.8, 12650],
         [STATS.ATK]: [27.4, 71, 158, 204, 244.8, 285.7, 326.9, 351.6],

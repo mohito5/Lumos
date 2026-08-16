@@ -35,13 +35,12 @@ export const MATERIAL_GROUP = {
 
   // Specific Enemy Drop Groups
   NOBUSHI_HANDGUARDS: 'nobushi_handguards',
-  HILICHURL_MASKS: 'hilichurl_masks',
-  HILICHURL_ARROWHEADS: 'hilichurl_arrowheads',
+  DAMAGED_MASK: 'damaged_mask',
   HILICHURL_SHOOTER: 'Hilichurl Shooter',
   SAMACHURL_SCROLLS: 'samachurl_scrolls',
   SLIME_MATERIALS: 'slime_materials',
   HUMANOID_RUIN_MACHINE: 'humanoid_ruin_machine',
-  TREASURE_HOARDER_INSIGNIAS: 'treasure_hoarder_insignias',
+  TREASURE_HOARDER: 'treasure_hoarder',
   FATUI_INSIGNIAS: 'fatui_insignias',
   WHOOPERFLOWER_NECTAR: 'whooperflower_nectar',
   SPECTRAL_HUSKS: 'spectral_husks',
@@ -83,6 +82,8 @@ export const MATERIAL_GROUP = {
   WOLFHOOK: 'wolfhook',
   SMALL_LAMP_GRASS: 'small_lamp_grass',
   CECILIA: 'cecilia',
+  CALLA_LILY: 'calla_lily',
+  VALBERRY: 'valberry',
 
   // Specific talent books group
   BOOKS_FREEDOM: 'books_of_freedom',
@@ -103,6 +104,16 @@ export const MATERIAL_GROUP = {
 
 
   // Specific normal boss drops group
+  EVERFLAME_SEED: 'everflame_seed',
+  HOARFROST_CORE: 'hoarfrost_core',
+  LIGHTNING_PRISM: 'lightning_prism',
+
+  
+  DVALIN_MATERIALS:  'dvalin_Materials',
+
+  DVALINS_SIGH: 'dvalins_sigh',
+  DVALINS_CLAW: 'dvalins_claw',
+  SPIRIT_LOCKET_OF_BOREAS: 'spirit_locket_of_boreas',
   PRISMATIC_SEVERED_TAIL: 'prismatic_severed_tail',
   ASCENDED_SAMPLE_QUEEN: 'ascended_sample_queen'
 };

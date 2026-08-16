@@ -40,7 +40,7 @@ export const localSpecialtyMondstadt = [
     {
         id: 'small_lamp_grass',
         sid: 'm209',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/local-spec/Small_Lamp_Grass.webp',
         type: MATERIAL_TYPE.LOCAL_SPECIALTY,
         group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.SMALL_LAMP_GRASS],
         rarity: RARITY.COMMON,
@@ -50,7 +50,7 @@ export const localSpecialtyMondstadt = [
     {
         id: 'valberry',
         sid: 'm219',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/local-spec/Valberry.webp',
         type: MATERIAL_TYPE.LOCAL_SPECIALTY,
         group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.VALBERRY],
         rarity: RARITY.COMMON,
@@ -60,7 +60,7 @@ export const localSpecialtyMondstadt = [
     {
         id: 'calla_lily',
         sid: 'm258',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/local-spec/Calla_Lily.webp',
         type: MATERIAL_TYPE.LOCAL_SPECIALTY,
         group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.CALLA_LILY],
         rarity: RARITY.COMMON,

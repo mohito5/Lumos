@@ -1,6 +1,17 @@
-import { RARITY, VISION, WEAPON_TYPE, MATERIAL_TYPE, MATERIAL_GROUP, REGION } from "../../../shared/config/constants.js";
+import { RARITY, VISION, REGION } from "../../../shared/config/constants.js";
+import { MATERIAL_TYPE, MATERIAL_GROUP } from "../../../shared/config/material_type.js";
 
 export const bossDropsLiyue = [
+    {
+        id: 'everflame_seed',
+        sid: 'm255',
+        icon: 'assets/normal-boss/Everflame_Seed.webp',
+        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
+        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.EVERFLAME_SEED],
+        rarity: RARITY.EPIC
+    },
+
+
 
     {
         id: 'shadow_of_the_warrior',

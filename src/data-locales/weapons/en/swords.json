@@ -7,8 +7,14 @@
   },
   "sacrificial-sword": {
     "name": "Sacrificial Sword",
-    "description": "A ceremonial sword that has become petrified over time. The ambitions of the people it once served are still tangible upon it.",
+    "description": "A ceremonial sword that has become petrified over time. The trinkets on it are still visible. It grants the wielder the power to withstand the winds of time.",
     "passiveName": "Composed",
-    "passiveDescription": "After damaging an opponent with an Elemental Skill, the skill has a {0}% chance to end its own CD. Can only occur once every {1}s."
+    "passiveDescription": "After damaging an opponent with an Elemental Skill, the skill has a {0}% chance to end its own CD. Can only occur once every {1}."
+  },
+  "AmenomaKageuchi": {
+    "name": "Amenoma Kageuchi",
+    "description": "A blade custom made for a famed samurai who could strike down a tengu warrior, known for their incredible agility, in midair.",
+    "passiveName": "Iwakura Succession",
+    "passiveDescription": "After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates {0} Energy for each seed consumed."
   }
 }

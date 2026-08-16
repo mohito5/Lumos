@@ -1,33 +1,7 @@
 import { RARITY, VISION, WEAPON_TYPE, MATERIAL_TYPE, MATERIAL_GROUP, MATERIAL_TIER, MATERIAL_FAMILY, REGION, BOSS_DROP_TYPE } from "../../../shared/config/constants.js";
 
 export const enemyDropsCommon = [
-{
-        id: 'slime-condensate',
-        sid: 'm29',
-        icon: 'assets/Slime_Condensate.webp',
-        tier: null,
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SLIME_MATERIALS],
-        rarity: RARITY.COMMON
-    },
-{
-        id: 'slime-secretions',
-        sid: 'm30',
-        icon: 'assets/Slime_Secretions.webp',
-        tier: null,
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SLIME_MATERIALS],
-        rarity: RARITY.UNCOMMON
-    },
-{
-        id: 'slime-concentrate',
-        sid: 'm31',
-        icon: 'assets/Slime_Concentrate.webp',
-        tier: null,
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SLIME_MATERIALS],
-        rarity: RARITY.RARE
-    },
+    
 {
         id: 'rift_core',
         sid: 'm107',
@@ -132,33 +106,6 @@ export const enemyDropsCommon = [
     }
 ,
     {
-        id: 'damaged_mask',
-        sid: 'm157',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DAMAGED_MASK],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'stained_mask',
-        sid: 'm159',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DAMAGED_MASK],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'ominous_mask',
-        sid: 'm160',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DAMAGED_MASK],
-        rarity: RARITY.RARE
-    }
-,
-    {
         id: 'juvenile_fang',
         sid: 'm164',
         icon: 'assets/tmp256.png',
@@ -185,33 +132,7 @@ export const enemyDropsCommon = [
         rarity: RARITY.RARE
     }
 ,
-    {
-        id: 'treasure_hoarder_insignia',
-        sid: 'm172',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.TREASURE_HOARDER_INSIGNIA],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'silver_raven_insignia',
-        sid: 'm174',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.TREASURE_HOARDER_INSIGNIA],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'golden_raven_insignia',
-        sid: 'm175',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.TREASURE_HOARDER_INSIGNIA],
-        rarity: RARITY.RARE
-    }
-,
+
     {
         id: 'whopperflower_nectar',
         sid: 'm184',
@@ -236,33 +157,6 @@ export const enemyDropsCommon = [
         icon: 'assets/tmp256.png',
         type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
         group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.WHOPPERFLOWER_NECTAR],
-        rarity: RARITY.RARE
-    }
-,
-    {
-        id: 'firm_arrowhead',
-        sid: 'm210',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.FIRM_ARROWHEAD],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'sharp_arrowhead',
-        sid: 'm211',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.FIRM_ARROWHEAD],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'weathered_arrowhead',
-        sid: 'm212',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.FIRM_ARROWHEAD],
         rarity: RARITY.RARE
     }
 ,
@@ -429,33 +323,6 @@ export const enemyDropsCommon = [
     }
 ,
     {
-        id: 'firm_arrowhead',
-        sid: 'm326',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.FIRM_ARROWHEAD],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'sharp_arrowhead',
-        sid: 'm328',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.FIRM_ARROWHEAD],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'weathered_arrowhead',
-        sid: 'm329',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.FIRM_ARROWHEAD],
-        rarity: RARITY.RARE
-    }
-,
-    {
         id: 'chaos_axis',
         sid: 'm350',
         icon: 'assets/tmp256.png',
@@ -499,4 +366,239 @@ export const enemyDropsCommon = [
         group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.CHAOS_STORAGE],
         rarity: RARITY.UNCOMMON
     }
+,
+    {
+        id: 'dead_ley_line_branch',
+        sid: 'm350',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DEAD_LEY_LINE_BRANCH],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'dead_ley_line_leaves',
+        sid: 'm352',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DEAD_LEY_LINE_LEAVES],
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'ley_line_sprout',
+        sid: 'm354',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.LEY_LINE_SPROUT],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'hunters_sacrificial_knife',
+        sid: 'm356',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.HUNTERS_SACRIFICIAL_KNIFE],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'agents_sacrificial_knife',
+        sid: 'm357',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.AGENTS_SACRIFICIAL_KNIFE],
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'inspectors_sacrificial_knife',
+        sid: 'm358',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.INSPECTORS_SACRIFICIAL_KNIFE],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'heavy_horn',
+        sid: 'm359',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.HEAVY_HORN],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'black_bronze_horn',
+        sid: 'm360',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.BLACK_BRONZE_HORN],
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'black_crystal_horn',
+        sid: 'm361',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.BLACK_CRYSTAL_HORN],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'concealed_claw',
+        sid: 'm350',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.CONCEALED_CLAW],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'concealed_unguis',
+        sid: 'm351',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.CONCEALED_UNGUIS],
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'concealed_talon',
+        sid: 'm352',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.CONCEALED_TALON],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'chaos_axis',
+        sid: 'm350',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.CHAOS_AXIS],
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'chaos_oculus',
+        sid: 'm351',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.CHAOS_OCULUS],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'faded_flaming_hilt',
+        sid: 'm356',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.FADED_FLAMING_HILT],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'fractured_flaming_hilt',
+        sid: 'm357',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.FRACTURED_FLAMING_HILT],
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'jeweled_flaming_hilt',
+        sid: 'm358',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.JEWELED_FLAMING_HILT],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'gloomy_statuette',
+        sid: 'm359',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.GLOOMY_STATUETTE],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'dark_statuette',
+        sid: 'm360',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DARK_STATUETTE],
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'deathly_statuette',
+        sid: 'm361',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DEATHLY_STATUETTE],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'axis_of_the_secret_source',
+        sid: 'm366',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.AXIS_OF_THE_SECRET_SOURCE],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'sheath_of_the_secret_source',
+        sid: 'm367',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SHEATH_OF_THE_SECRET_SOURCE],
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'heart_of_the_secret_source',
+        sid: 'm368',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.HEART_OF_THE_SECRET_SOURCE],
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'refractive_bud',
+        sid: 'm369',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.REFRACTIVE_BUD],
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'bewildering_broadleaf',
+        sid: 'm370',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.BEWILDERING_BROADLEAF],
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'illusory_leafcoil',
+        sid: 'm371',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.ILLUSORY_LEAFCOIL],
+        rarity: RARITY.EPIC
+    }
+,
 ];

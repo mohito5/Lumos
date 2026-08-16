@@ -1,0 +1,14 @@
+{
+  "Angelos'Heptades": {
+    "name": "Angelos' Heptades",
+    "description": "A golden box as splendid as the light of the heavens. According to legend, it once belonged to a divine envoy of the Eternal Court.",
+    "passiveName": "Crown of the Final Scion",
+    "passiveDescription": "ATK is increased by {0}%. After the equipping character creates a Shield, they gain \"Pathfinder's Light\" for 20s: Increases your active party member's DMG by {1}% for every 1,000 ATK the equipping character has, up to a maximum of {2}%. Additionally, when the equipping character creates a Shield, they will also gain \"Guide's Contentment\": Restores {3} Elemental Energy to the equipping character. The aforementioned effect can trigger once every 14s, and can also be triggered when any type of chest is opened outside of combat. The equipping character may trigger this effect even when they are an off-field.\nHexerei: Secret Rite: When your own Hexerei character is off-field in the party, they will also gain 50% of the DMG increase from Pathfinder's Light."
+  },
+  "Ash-GravenDrinkingHorn": {
+    "name": "Ash-Graven Drinking Horn",
+    "description": "A ritual vessel passed down amongst the Meztli. They say that this was once a treasure much-valued, yet never used, by the hero \"Giant\" Tupac.",
+    "passiveName": "Tupac's Grip",
+    "passiveDescription": "When an attack hits an opponent, deal AoE DMG equal to {0}% of Max HP at the target's location. This effect can be triggered once every 15s."
+  }
+}

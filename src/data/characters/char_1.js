@@ -10,6 +10,290 @@ import { STATS } from "../../shared/config/stats.js";
 //  [MATERIAL_GROUP.WEEKLY_BOSS_DROPS] : MATERIAL_GROUP.ASCENDED_SAMPLE_QUEEN
 
 export const char_1 = [
+    {
+        id: 'Barbara',
+        enkaId: 10000014,
+        rarity: RARITY.EPIC,
+        element: VISION.HYDRO,
+        weapon: WEAPON_TYPE.CATALYST,
+        birthday: '7-5',
+        avatar: 'assets/avatar/Barbara_Profile.webp',
+        avatar_icon: 'assets/avatar-icon/barbara.png',
+        baseStats: {
+            [STATS.HP]: [820.6, 2108.2, 4511.6, 5770.2, 6883.6, 7996.2, 9109.6, 9787.4],
+            [STATS.ATK]: [13.4, 34.3, 73.4, 93.9, 112, 130.1, 148.3, 159.3],
+            [STATS.DEF]: [56.1, 144.1, 308.3, 394.3, 470.4, 546.5, 622.5, 668.9]
+        },
+        ascensionStat: STATS.HP_PERCENT,
+        ascensionMaterials: {
+            [MATERIAL_GROUP.ASCENSION_GEMS] : MATERIAL_GROUP.VARUNADA_LAZURITE,
+            local_specialties: 'philanemo_mushroom',
+            common_enemy_drops: 'divining_scroll',
+            normal_boss_drops: 'cleansing_heart',
+            [MATERIAL_GROUP.TALENT_BOOKS]:MATERIAL_GROUP.BOOKS_FREEDOM,
+            weekly_boss_drops: 'ring_of_boreas'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.3784, 0.4068, 0.4352, 0.473, 0.5014, 0.5298, 0.5676, 0.6054, 0.6433, 0.6811]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.3552, 0.3818, 0.4085, 0.444, 0.4706, 0.4973, 0.5328, 0.5683, 0.6038, 0.6394]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.4104, 0.4412, 0.472, 0.513, 0.5438, 0.5746, 0.6156, 0.6566, 0.6977, 0.7387]
+                },
+                {
+                    name: 'hit_4',
+                    values: [0.552, 0.5934, 0.6348, 0.69, 0.7314, 0.7728, 0.828, 0.8832, 0.9384, 0.9936]
+                },
+                {
+                    name: 'charged_dmg',
+                    values: [1.6624, 1.7871, 1.9118, 2.078, 2.2027, 2.3274, 2.4936, 2.6598, 2.8261, 2.9923]
+                },
+                {
+                    name: 'charged_stamina_cost',
+                    values: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.5683, 0.6145, 0.6608, 0.7269, 0.7731, 0.826, 0.8987, 0.9714, 1.0441, 1.1234]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.1363, 1.2288, 1.3213, 1.4535, 1.5459, 1.6517, 1.797, 1.9423, 2.0877, 2.2462]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hp_regeneration_per_hit',
+                    values: [0.0075, 0.0081, 0.0086, 0.0094, 0.0099, 0.0105, 0.0113, 0.012, 0.0127, 0.0135]
+                },
+                {
+                    name: 'continuous_regeneration',
+                    values: [0.04, 0.043, 0.046, 0.05, 0.053, 0.056, 0.06, 0.064, 0.068, 0.072]
+                },
+                {
+                    name: 'droplet_dmg',
+                    values: [0.584, 0.6278, 0.6716, 0.73, 0.7738, 0.8176, 0.876, 0.9344, 0.9928, 1.0512]
+                },
+                {
+                    name: 'duration',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                },
+                {
+                    name: 'cd',
+                    values: [32, 32, 32, 32, 32, 32, 32, 32, 32, 32]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'regeneration',
+                    values: [0.176, 0.1892, 0.2024, 0.22, 0.2332, 0.2464, 0.264, 0.2816, 0.2992, 0.3168]
+                },
+                {
+                    name: 'cd',
+                    values: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [80, 80, 80, 80, 80, 80, 80, 80, 80, 80]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+},
+    { //lisa
+        id: 'Lisa',
+        enkaId: 10000006,
+        rarity: RARITY.EPIC,
+        element: VISION.ELECTRO,
+        weapon: WEAPON_TYPE.CATALYST,
+        birthday: '6-9',
+        avatar: 'assets/avatar/Lisa_Profile.webp',
+        avatar_icon: 'assets/avatar-icon/lisa.png',
+        baseStats: {
+            [STATS.HP]: [802.4, 2061.3, 4411.3, 5642, 6730.6, 7818.5, 8907.2, 9569.9],
+            [STATS.ATK]: [19.4, 49.9, 106.7, 136.5, 162.8, 189.1, 215.5, 231.5],
+            [STATS.DEF]: [48.1, 123.5, 264.3, 338, 403.2, 468.4, 533.6, 573.3]
+        },
+        ascensionStat: STATS.ELEMENTAL_MASTERY,
+        ascensionMaterials: {
+            [MATERIAL_GROUP.ASCENSION_GEMS] : MATERIAL_GROUP.VAJRADA_AMETHYST,
+            [MATERIAL_GROUP.LOCAL_SPECIALTIES]: MATERIAL_GROUP.VALBERRY,
+            [MATERIAL_GROUP.COMMON_ENEMY_DROPS] : MATERIAL_GROUP.SLIME_MATERIALS,
+            [MATERIAL_GROUP.NORMAL_BOSS_DROPS]: MATERIAL_GROUP.LIGHTNING_PRISM,
+            [MATERIAL_GROUP.TALENT_BOOKS]:MATERIAL_GROUP.BOOKS_BALLAD,
+            weekly_boss_drops: 'dvalins_claw'
+    },
+    talents: {
+        attack: {
+            icon: '',
+            stats: [
+                {
+                    name: 'hit_1',
+                    values: [0.396, 0.4257, 0.4554, 0.495, 0.5247, 0.5544, 0.594, 0.6336, 0.6732, 0.7128]
+                },
+                {
+                    name: 'hit_2',
+                    values: [0.3592, 0.3861, 0.4131, 0.449, 0.4759, 0.5029, 0.5388, 0.5747, 0.6106, 0.6466]
+                },
+                {
+                    name: 'hit_3',
+                    values: [0.428, 0.4601, 0.4922, 0.535, 0.5671, 0.5992, 0.642, 0.6848, 0.7276, 0.7704]
+                },
+                {
+                    name: 'hit_4',
+                    values: [0.5496, 0.5908, 0.632, 0.687, 0.7282, 0.7694, 0.8244, 0.8794, 0.9343, 0.9893]
+                },
+                {
+                    name: 'charged_dmg',
+                    values: [1.7712, 1.904, 2.0369, 2.214, 2.3468, 2.4797, 2.6568, 2.8339, 3.011, 3.1882]
+                },
+                {
+                    name: 'charged_stamina_cost',
+                    values: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
+                },
+                {
+                    name: 'plunge_dmg',
+                    values: [0.5683, 0.6145, 0.6608, 0.7269, 0.7731, 0.826, 0.8987, 0.9714, 1.0441, 1.1234]
+                },
+                {
+                    name: 'low_high_plunge_dmg',
+                    values: [1.1363, 1.2288, 1.3213, 1.4535, 1.5459, 1.6517, 1.797, 1.9423, 2.0877, 2.2462]
+                }
+            ]
+        },
+        skill: {
+            icon: '',
+            stats: [
+                {
+                    name: 'press_dmg',
+                    values: [0.8, 0.86, 0.92, 1, 1.06, 1.12, 1.2, 1.28, 1.36, 1.44]
+                },
+                {
+                    name: 'press_cd',
+                    values: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+                },
+                {
+                    name: 'non_conductive_hold_dmg',
+                    values: [3.2, 3.44, 3.68, 4, 4.24, 4.48, 4.8, 5.12, 5.44, 5.76]
+                },
+                {
+                    name: 'stack_1_conductive_hold_dmg',
+                    values: [3.68, 3.956, 4.232, 4.6, 4.876, 5.152, 5.52, 5.888, 6.256, 6.624]
+                },
+                {
+                    name: 'stack_2_conductive_hold_dmg',
+                    values: [4.24, 4.558, 4.876, 5.3, 5.618, 5.936, 6.36, 6.784, 7.208, 7.632]
+                },
+                {
+                    name: 'stack_3_conductive_hold_dmg',
+                    values: [4.872, 5.2374, 5.6028, 6.09, 6.4554, 6.8208, 7.308, 7.7952, 8.2824, 8.7696]
+                },
+                {
+                    name: 'holding_cd',
+                    values: [16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+                }
+            ]
+        },
+        burst: {
+            icon: '',
+            stats: [
+                {
+                    name: 'discharge_dmg',
+                    values: [0.3656, 0.393, 0.4204, 0.457, 0.4844, 0.5118, 0.5484, 0.585, 0.6215, 0.6581]
+                },
+                {
+                    name: 'duration',
+                    values: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+                },
+                {
+                    name: 'cd',
+                    values: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
+                },
+                {
+                    name: 'energy_cost',
+                    values: [80, 80, 80, 80, 80, 80, 80, 80, 80, 80]
+                }
+            ]
+        }
+    },
+    constellations: {
+        c1: {
+            icon: ''
+        },
+        c2: {
+            icon: ''
+        },
+        c3: {
+            icon: ''
+        },
+        c4: {
+            icon: ''
+        },
+        c5: {
+            icon: ''
+        },
+        c6: {
+            icon: ''
+        }
+    },
+    passives: {
+        passive1: {
+            icon: ''
+        },
+        passive2: {
+            icon: ''
+        },
+        passive3: {
+            icon: ''
+        }
+    }
+    },
     { // KAEYA
         id: 'Kaeya',
         enkaId: 10000015,
@@ -17,6 +301,7 @@ export const char_1 = [
         element: VISION.CRYO,
         weapon: WEAPON_TYPE.SWORD,
         birthday: '11-30',
+        avatar: 'assets/avatar/Kaeya_Profile.webp',
         avatar_icon: 'assets/avatar-icon/kaeya.png',
         baseStats: {
             [STATS.HP]: [975.6, 2506.4, 5363.8, 6860.1, 8183.8, 9506.6, 10830.3, 11636.2],
@@ -25,12 +310,12 @@ export const char_1 = [
         },
         ascensionStat: STATS.ENERGY_RECHARGE,
         ascensionMaterials: {
-            ascension_gems: 'shivada_jade',
-            local_specialties: 'calla_lily',
-            common_enemy_drops: 'treasure_hoarder_insignia',
-            normal_boss_drops: 'hoarfrost_core',
+            [MATERIAL_GROUP.ASCENSION_GEMS] : MATERIAL_GROUP.SHIVADA_JADE,
+            [MATERIAL_GROUP.LOCAL_SPECIALTIES]: MATERIAL_GROUP.CALLA_LILY,
+            [MATERIAL_GROUP.COMMON_ENEMY_DROPS] : MATERIAL_GROUP.TREASURE_HOARDER,
+            [MATERIAL_GROUP.NORMAL_BOSS_DROPS]: MATERIAL_GROUP.HOARFROST_CORE,
             [MATERIAL_GROUP.TALENT_BOOKS]:MATERIAL_GROUP.BOOKS_BALLAD,
-            weekly_boss_drops: 'spirit_locket_of_boreas'
+            [MATERIAL_GROUP.WEEKLY_BOSS_DROPS] : MATERIAL_GROUP.SPIRIT_LOCKET_OF_BOREAS
         },
     talents: {
         attack: {
@@ -160,9 +445,9 @@ export const char_1 = [
             [MATERIAL_GROUP.ASCENSION_GEMS]: MATERIAL_GROUP.AGNIDUS_AGATE,
             [MATERIAL_GROUP.LOCAL_SPECIALTIES]: MATERIAL_GROUP.SMALL_LAMP_GRASS,
             [MATERIAL_GROUP.COMMON_ENEMY_DROPS] : MATERIAL_GROUP.HILICHURL_SHOOTER,
-            normal_boss_drops: 'everflame_seed',
+            [MATERIAL_GROUP.NORMAL_BOSS_DROPS]: MATERIAL_GROUP.EVERFLAME_SEED,
             [MATERIAL_GROUP.TALENT_BOOKS]:MATERIAL_GROUP.BOOKS_FREEDOM,
-            weekly_boss_drops: 'dvalins_sigh',
+            [MATERIAL_GROUP.WEEKLY_BOSS_DROPS] : MATERIAL_GROUP.DVALINS_SIGH
         },
         talents: {
             attack: {

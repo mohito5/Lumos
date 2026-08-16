@@ -1,16 +1,18 @@
-import  bowsRu  from './ru/bows.json';
-import  claymoresRu  from './ru/claymores.json';
-import  polearmsRu  from './ru/polearms.json';
-import  swordsRu  from './ru/swords.json';
-import  weapon_1Ru  from './ru/weapon_1.json';
+import  bowsEn  from './en/bows.json';
+import  claymoresEn  from './en/claymores.json';
+import  polearmsEn  from './en/polearms.json';
+import  swordsEn  from './en/swords.json';
+import catalystsEn from './en/catalysts.json';
+import  weapon_1En  from './en/weapon_1.json';
 
 
-const weaponsEn = {
-    ...bowsRu,
-    ...claymoresRu,
-    ...polearmsRu,
-    ...swordsRu,
-    ...weapon_1Ru,
+const weaponsRu = {
+    ...bowsEn,
+    ...claymoresEn,
+    ...polearmsEn,
+    ...catalystsEn,
+    ...swordsEn,
+    ...weapon_1En,
 };
 
-export default weaponsEn;
+export default weaponsRu;

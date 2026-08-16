@@ -19,15 +19,6 @@ export const bossDropsOther = [
     }
 ,
     {
-        id: 'hoarfrost_core',
-        sid: 'm119',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.HOARFROST_CORE],
-        rarity: RARITY.EPIC
-    }
-,
-    {
         id: 'quelled_creeper',
         sid: 'm130',
         icon: 'assets/tmp256.png',
@@ -144,15 +135,7 @@ export const bossDropsOther = [
         rarity: RARITY.EPIC
     }
 ,
-    {
-        id: 'lightning_prism',
-        sid: 'm204',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.LIGHTNING_PRISM],
-        rarity: RARITY.EPIC
-    }
-,
+    
     {
         id: 'thunderclap_fruitcore',
         sid: 'm207',
@@ -250,15 +233,6 @@ export const bossDropsOther = [
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, MATERIAL_GROUP.HELLFIRE_BUTTERFLY],
         rarity: RARITY.LEGENDARY
-    }
-,
-    {
-        id: 'everflame_seed',
-        sid: 'm261',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.EVERFLAME_SEED],
-        rarity: RARITY.EPIC
     }
 ,
     {

@@ -80,15 +80,7 @@ export const bossDrops = [
         rarity: RARITY.LEGENDARY
     }
 ,
-    {
-        id: 'dvalins_plume',
-        sid: 'm127',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_TALENT,
-        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'dvalins_plume'],
-        rarity: RARITY.LEGENDARY
-    }
-,
+
     {
         id: 'juvenile_jade',
         sid: 'm129',
@@ -107,15 +99,7 @@ export const bossDrops = [
         rarity: RARITY.LEGENDARY
     }
 ,
-    {
-        id: 'spirit_locket_of_boreas',
-        sid: 'm135',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_TALENT,
-        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'spirit_locket_of_boreas'],
-        rarity: RARITY.LEGENDARY
-    }
-,
+    
     {
         id: 'runic_fang',
         sid: 'm139',
@@ -188,15 +172,7 @@ export const bossDrops = [
         rarity: RARITY.EPIC
     }
 ,
-    {
-        id: 'lightning_prism',
-        sid: 'm163',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, 'lightning_prism'],
-        rarity: RARITY.EPIC
-    }
-,
+    
     {
         id: 'ring_of_boreas',
         sid: 'm164',
@@ -224,15 +200,7 @@ export const bossDrops = [
         rarity: RARITY.LEGENDARY
     }
 ,
-    {
-        id: 'dvalins_sigh',
-        sid: 'm177',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_TALENT,
-        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'dvalins_sigh'],
-        rarity: RARITY.LEGENDARY
-    }
-,
+    
     {
         id: 'ashen_heart',
         sid: 'm180',
@@ -242,15 +210,7 @@ export const bossDrops = [
         rarity: RARITY.LEGENDARY
     }
 ,
-    {
-        id: 'dvalins_claw',
-        sid: 'm181',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_TALENT,
-        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'dvalins_claw'],
-        rarity: RARITY.LEGENDARY
-    }
-,
+    
     {
         id: 'bloodjade_branch',
         sid: 'm185',
@@ -387,15 +347,6 @@ export const bossDrops = [
     }
 ,
     {
-        id: 'hoarfrost_core',
-        sid: 'm235',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, 'hoarfrost_core'],
-        rarity: RARITY.EPIC
-    }
-,
-    {
         id: 'crystalline_bloom',
         sid: 'm236',
         icon: 'assets/tmp256.png',
@@ -447,15 +398,6 @@ export const bossDrops = [
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'eroded_horn'],
         rarity: RARITY.LEGENDARY
-    }
-,
-    {
-        id: 'everflame_seed',
-        sid: 'm255',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, 'everflame_seed'],
-        rarity: RARITY.EPIC
     }
 ,
     {

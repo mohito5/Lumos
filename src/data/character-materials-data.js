@@ -1,4 +1,5 @@
-import { RARITY, MATERIAL_TYPE, MATERIAL_GROUP } from "../shared/config/constants.js";
+import { RARITY} from "../shared/config/constants.js";
+import { MATERIAL_TYPE, MATERIAL_GROUP } from "../shared/config/material_type.js";
 
 const talentCosts = {
     "2": [

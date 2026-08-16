@@ -181,5 +181,77 @@
     },
     "chaos_storage": {
         "name": "Сосуд хаоса"
+    },
+    "dead_ley_line_branch": {
+        "name": "Ветви артерий земли"
+    },
+    "dead_ley_line_leaves": {
+        "name": "Листья артерий земли"
+    },
+    "ley_line_sprout": {
+        "name": "Ростки артерий земли"
+    },
+    "hunters_sacrificial_knife": {
+        "name": "Церемониальный нож охотника"
+    },
+    "agents_sacrificial_knife": {
+        "name": "Церемониальный нож агента"
+    },
+    "inspectors_sacrificial_knife": {
+        "name": "Церемониальный нож инспектора"
+    },
+    "heavy_horn": {
+        "name": "Тяжёлый рог"
+    },
+    "black_bronze_horn": {
+        "name": "Чёрный бронзовый рог"
+    },
+    "black_crystal_horn": {
+        "name": "Чёрный кристаллический рог"
+    },
+    "concealed_claw": {
+        "name": "Скрытый коготь"
+    },
+    "concealed_unguis": {
+        "name": "Скрытый заточенный коготь"
+    },
+    "concealed_talon": {
+        "name": "Скрытый дьявольский коготь"
+    },
+    "faded_flaming_hilt": {
+        "name": "Потускневшая рукоять пламенного меча"
+    },
+    "fractured_flaming_hilt": {
+        "name": "Расколотая рукоять пламенного меча"
+    },
+    "jeweled_flaming_hilt": {
+        "name": "Рукоять пламенного меча с камнем"
+    },
+    "gloomy_statuette": {
+        "name": "Мрачная статуэтка"
+    },
+    "dark_statuette": {
+        "name": "Тёмная статуэтка"
+    },
+    "deathly_statuette": {
+        "name": "Смертельная статуэтка"
+    },
+    "axis_of_the_secret_source": {
+        "name": "Ось таинственного источника"
+    },
+    "sheath_of_the_secret_source": {
+        "name": "Оболочка таинственного источника"
+    },
+    "heart_of_the_secret_source": {
+        "name": "Ядро таинственного источника"
+    },
+    "refractive_bud": {
+        "name": "Преломляющий бутон"
+    },
+    "bewildering_broadleaf": {
+        "name": "Ошеломляющий широколист"
+    },
+    "illusory_leafcoil": {
+        "name": "Иллюзорная листовая спираль"
     }
 }

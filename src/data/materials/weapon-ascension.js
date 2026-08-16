@@ -552,4 +552,76 @@ export const weaponAscension = [
         rarity: RARITY.LEGENDARY,
         farmDays: [DAYS.MONDAY, DAYS.THURSDAY, DAYS.SUNDAY]
     }
+,
+    {
+        id: 'artful_device_fragment',
+        sid: 'm352',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.WEAPON_ENHANCEMENT_MATERIALS,
+        group: MATERIAL_GROUP.ARTFUL_DEVICE_FRAGMENT,
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'artful_device_replica',
+        sid: 'm353',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.WEAPON_ENHANCEMENT_MATERIALS,
+        group: MATERIAL_GROUP.ARTFUL_DEVICE_FRAGMENT,
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'artful_device_inheritance',
+        sid: 'm354',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.WEAPON_ENHANCEMENT_MATERIALS,
+        group: MATERIAL_GROUP.ARTFUL_DEVICE_FRAGMENT,
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'artful_device_wish',
+        sid: 'm355',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.WEAPON_ENHANCEMENT_MATERIALS,
+        group: MATERIAL_GROUP.ARTFUL_DEVICE_FRAGMENT,
+        rarity: RARITY.LEGENDARY
+    }
+,
+    {
+        id: 'night_winds_mystic_consideration',
+        sid: 'm362',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.WEAPON_ENHANCEMENT_MATERIALS,
+        group: MATERIAL_GROUP.NIGHT_WINDS_MYSTIC_CONSIDERATION,
+        rarity: RARITY.UNCOMMON
+    }
+,
+    {
+        id: 'night_winds_mystic_premonition',
+        sid: 'm363',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.WEAPON_ENHANCEMENT_MATERIALS,
+        group: MATERIAL_GROUP.NIGHT_WINDS_MYSTIC_CONSIDERATION,
+        rarity: RARITY.RARE
+    }
+,
+    {
+        id: 'night_winds_mystic_augury',
+        sid: 'm364',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.WEAPON_ENHANCEMENT_MATERIALS,
+        group: MATERIAL_GROUP.NIGHT_WINDS_MYSTIC_CONSIDERATION,
+        rarity: RARITY.EPIC
+    }
+,
+    {
+        id: 'night_winds_mystic_revelation',
+        sid: 'm365',
+        icon: 'assets/tmp256.png',
+        type: MATERIAL_TYPE.WEAPON_ENHANCEMENT_MATERIALS,
+        group: MATERIAL_GROUP.NIGHT_WINDS_MYSTIC_CONSIDERATION,
+        rarity: RARITY.LEGENDARY
+    }
 ];
