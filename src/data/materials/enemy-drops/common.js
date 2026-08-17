@@ -106,33 +106,7 @@ export const enemyDropsCommon = [
     }
 ,
 
-    {
-        id: 'whopperflower_nectar',
-        sid: 'm184',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.WHOPPERFLOWER_NECTAR],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'shimmering_nectar',
-        sid: 'm185',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.WHOPPERFLOWER_NECTAR],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'energy_nectar',
-        sid: 'm186',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.WHOPPERFLOWER_NECTAR],
-        rarity: RARITY.RARE
-    }
-,
+    
     {
         id: 'tattered_warrant',
         sid: 'm222',
@@ -187,33 +161,7 @@ export const enemyDropsCommon = [
         rarity: RARITY.RARE
     }
 ,
-    {
-        id: 'recruits_insignia',
-        sid: 'm249',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.RECRUITS_INSIGNIA],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'sergeants_insignia',
-        sid: 'm250',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.RECRUITS_INSIGNIA],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'lieutenants_insignia',
-        sid: 'm251',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.RECRUITS_INSIGNIA],
-        rarity: RARITY.RARE
-    }
-,
+
     {
         id: 'dead_ley_line_branch',
         sid: 'm267',

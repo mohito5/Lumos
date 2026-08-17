@@ -38,14 +38,5 @@ export const booksOther = [
         rarity: RARITY.EPIC
     }
 ,
-    {
-        id: 'guide_to_gold',
-        sid: 'm372',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_TALENT,
-        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.GUIDE_TO_GOLD],
-        rarity: RARITY.RARE
-    }
-,
     
 ];

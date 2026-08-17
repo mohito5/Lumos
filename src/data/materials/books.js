@@ -4,17 +4,6 @@ export const books = [
    
     // # Ли Юэ
     {
-        id: 'teachings_of_gold',
-        sid: 'm8',
-        icon: "assets/book/gold1.png",
-        farmDays: [DAYS.WEDNESDAY, DAYS.SATURDAY, DAYS.SUNDAY],
-        type: MATERIAL_TYPE.CHARACTER_TALENT,
-        tier: MATERIAL_TIER.BOOK_T1,
-        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_GOLD],
-        family: MATERIAL_FAMILY.GOLD,
-        region: REGION.LIYUE
-    },
-    {
         id: 'teachings_of_transience',
         sid: 'm9',
         icon: "assets/book/transience1.png",
@@ -176,15 +165,7 @@ export const books = [
         rarity: RARITY.EPIC
     }
 ,
-    {
-        id: 'philosophies_of_gold',
-        sid: 'm176',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_TALENT,
-        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_GOLD],
-        rarity: RARITY.EPIC
-    }
-,
+    
     {
         id: 'philosophies_of_elegance',
         sid: 'm179',

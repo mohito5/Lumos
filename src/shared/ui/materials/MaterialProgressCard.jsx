@@ -41,7 +41,7 @@ const MaterialProgressCard = React.memo(({ materialKey, calculatedAmount, ownedA
             <div className="flex-r gap-2">
                 <img loading="lazy" className={`icon-xl radius-3 icon border rarity-${materialKey.rarity}`} src={`${icon}`} alt={name} title={isUnknown ? t('unknown.hint', { ns: 'materials', defaultValue: 'Не указано в данных персонажа/оружия — уточни материал вручную' }) : undefined} />
                 <div className="material-total-container wd flex color">
-                    <span className="material-name color">{name}</span>
+                    <span className=" color">{name}</span>
                 </div>
             </div>
             <div className='flex-c gap-1'>

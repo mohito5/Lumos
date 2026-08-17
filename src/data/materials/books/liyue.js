@@ -26,6 +26,7 @@ export const booksLiyue = [
         id: 'philosophies_of_prosperity',
         sid: 'm182',
         icon: 'assets/book/prosperity3.webp',
+        farmDays: [DAYS.MONDAY, DAYS.THURSDAY, DAYS.SUNDAY],
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_PROSPERITY],
         rarity: RARITY.EPIC,
@@ -62,25 +63,33 @@ export const booksLiyue = [
         rarity: RARITY.EPIC,
         region: REGION.LIYUE
     },
-{
+
+    {
         id: 'teachings_of_gold',
         sid: 'm8',
-        icon: 'assets/book/gold1.png',
-        farmDays: ['wednesday', 'saturday', 'sunday'],
+        icon: 'assets/book/gold1.webp',
+        farmDays: [DAYS.WEDNESDAY, DAYS.SATURDAY, DAYS.SUNDAY],
         type: MATERIAL_TYPE.CHARACTER_TALENT,
-      
         group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_GOLD],
-        
+        rarity: RARITY.UNCOMMON,
         region: REGION.LIYUE
-    }
-,
+    },
+    {
+        id: 'guide_to_gold',
+        sid: 'm372',
+        icon: 'assets/book/gold2.webp',
+        farmDays:[DAYS.WEDNESDAY, DAYS.SATURDAY, DAYS.SUNDAY],
+        type: MATERIAL_TYPE.CHARACTER_TALENT,
+        group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_GOLD],
+        rarity: RARITY.RARE
+    },
     {
         id: 'philosophies_of_gold',
         sid: 'm161',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/book/gold3.webp',
+        farmDays:[DAYS.WEDNESDAY, DAYS.SATURDAY, DAYS.SUNDAY],
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_GOLD],
         rarity: RARITY.EPIC
     }
-,
 ];

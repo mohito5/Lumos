@@ -26,12 +26,12 @@ export const char_1 = [
         },
         ascensionStat: STATS.PHYSICAL_DMG,
         ascensionMaterials: {
-            ascension_gems: 'vajrada_amethyst',
-            local_specialties: 'wolfhook',
-            common_enemy_drops: 'damaged_mask',
-            normal_boss_drops: 'lightning_prism',
-            talent_books: 'books_of_resistance',
-            weekly_boss_drops: 'dvalins_claw'
+            [MATERIAL_GROUP.ASCENSION_GEMS] : MATERIAL_GROUP.VAJRADA_AMETHYST,
+            [MATERIAL_GROUP.NORMAL_BOSS_DROPS]: MATERIAL_GROUP.LIGHTNING_PRISM,
+            [MATERIAL_GROUP.LOCAL_SPECIALTIES]: MATERIAL_GROUP.WOLFHOOK,
+            [MATERIAL_GROUP.TALENT_BOOKS]:MATERIAL_GROUP.BOOKS_RESISTANCE,
+            [MATERIAL_GROUP.COMMON_ENEMY_DROPS] : MATERIAL_GROUP.DAMAGED_MASK,
+            [MATERIAL_GROUP.WEEKLY_BOSS_DROPS] : MATERIAL_GROUP.DVALINS_CLAW
     },
     talents: {
         attack: {

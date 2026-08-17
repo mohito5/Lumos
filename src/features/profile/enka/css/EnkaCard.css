@@ -1,8 +1,8 @@
 .enka-card{
     aspect-ratio: 3/2;
-    padding: 2cqw;
+    padding: 1cqw;
     display: flex; 
-    flex-direction: row;
+    flex-direction: column;
     overflow: hidden;
     z-index: 0;
 }
@@ -22,17 +22,21 @@
     width: 12cqw;
     height: 12cqw;
 }
-.left{ flex: 3;
-    display: flex; flex-direction: column;
+.top{ position: relative; width: 100%;
+    flex: 1; gap: 1cqw;
 }
-.right{ flex: 2; gap: 2cqw; display: flex; flex-direction: column;
+.left{ 
+    flex: 2;
+     
+}
+.right{ flex: 1; gap: 2cqw; display: flex; flex-direction: column;
     z-index: 2;
 }
 .character-banner{
     z-index: 0; 
     position: relative;
     transform: rotate(16deg);
-    left: 6%;
+    
 }
 .character-img {
    width: 100%; object-fit: cover; ; 
@@ -51,7 +55,7 @@
 }
 .background-Electro{ --color: var(--electro); }
 .background-Anemo { --color: var(--anemo); }
-.background {
+.background-card {
     content: ''; 
     position: absolute;
     transform: translate(-32%, 32%) rotate(16deg); 
@@ -70,7 +74,7 @@
     );
     background-size: 4cqw 4cqw; 
 }
-.background::after {
+.background-card::after {
     content: ''; 
     position: absolute;
     transform: translate(96%, -96%) ; 
@@ -98,7 +102,7 @@
 .character-info{
     z-index: 1;
 }
-.banner{display: flex; position: relative; max-height: 64%;}
+.banner{ position: relative; width: 100%;}
 .rarity { top: 0; left: 4%; height: min-content;
     display: inline-block; position: absolute; transform: rotate(16deg);
     gap: 0.5cqw;
@@ -108,12 +112,12 @@
     height: 2.4cqw;
     
 }
-.enka-artifact-card{
+.enka-artifact-card{ padding: 1cqw;
     position: relative;
 }
 
 .enka-artifact-rarity {
-    position: absolute; display: block; top: 10%; left: -5%;
+    position: absolute;  top: 10%; left: -5%;
 }
 
 /* Созвездия: пилюля на 6 иконок, лежит вдоль нижнего края повёрнутого
@@ -202,4 +206,11 @@
     font-size: clamp(0.6rem, 2.6cqw, 0.9rem);
     min-width: 1.4em;
     text-align: center;
+}
+.enka-artifact-icon {
+    width: 4cqw;
+}
+.enka-icon {
+    width: 1.5cqw;
+    height: 1.5cqw;
 }

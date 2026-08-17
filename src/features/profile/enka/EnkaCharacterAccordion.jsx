@@ -21,8 +21,8 @@ const EnkaCharacterAccordion = ({ items, activeIndex, onSelect }) => {
     const activeItem = items[activeIndex] ?? null;
 
     return (
-        <div className="enka-accordion-block wd b">
-            <div className="enka-accordion b" role="tablist" aria-label="Витрина персонажей">
+        <div className="enka-accordion-block wd">
+            <div className="enka-accordion border" role="tablist" aria-label="Витрина персонажей">
                 {items.map((item, index) => {
                     const isActive = index === activeIndex;
                     const { character, level, constellationCount } = item;
@@ -35,7 +35,7 @@ const EnkaCharacterAccordion = ({ items, activeIndex, onSelect }) => {
                             type="button"
                             role="tab"
                             aria-selected={isActive}
-                            className={`enka-accordion-panel${isActive ? ' is-active' : ''}${!character ? ' is-unmapped' : ''}`}
+                            className={`border color enka-accordion-panel${isActive ? ' is-active' : ''}${!character ? ' is-unmapped' : ''}`}
                             onClick={() => onSelect(index)}
                         >
                             {portrait ? (

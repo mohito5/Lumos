@@ -23,7 +23,7 @@ export const localSpecialtyMondstadt = [
     {
         id: 'dandelion_seed',
         sid: 'm179',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/local-spec/Dandelion_Seed.webp',
         type: MATERIAL_TYPE.LOCAL_SPECIALTY,
         group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.DANDELION_SEED],
         rarity: RARITY.COMMON
@@ -31,10 +31,11 @@ export const localSpecialtyMondstadt = [
     {
         id: 'windwheel_aster',
         sid: 'm183',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/local-spec/Windwheel_Aster.webp',
         type: MATERIAL_TYPE.LOCAL_SPECIALTY,
         group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.WINDWHEEL_ASTER],
-        rarity: RARITY.COMMON
+        rarity: RARITY.COMMON,
+        region: REGION.MONDSTADT
     }
 ,
     {

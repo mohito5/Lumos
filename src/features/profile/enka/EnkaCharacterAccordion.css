@@ -19,14 +19,12 @@
     flex: 0 0 12vmin;
     min-width: 8vmin;
     height: 100%;
-    border: none;
+    
     border-radius: 3vmin;
     overflow: hidden;
     cursor: pointer;
     padding: 0;
-    background-color: var(--dark);
-    outline: 3px solid var(--dark);
-    outline-offset: -3px;
+    background: none;
     transition: flex-basis 0.35s cubic-bezier(0.22, 1, 0.36, 1),
                 min-width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
                 outline-color 0.2s ease;
@@ -35,7 +33,7 @@
 .enka-accordion-panel.is-active {
     flex: 1 1 32vmin;
     min-width: 32vmin;
-    outline-color: var(--cherry);
+    background-color: var(--blueberry);
 }
 
 .enka-accordion-panel.is-unmapped {
@@ -74,8 +72,8 @@
     position: absolute;
     left: 1.4vmin;
     bottom: 1.2vmin;
-    font-family: 'Lumo H', sans-serif;
-    font-size: 2.4vmin;
+    
+    
     color: var(--light);
     white-space: nowrap;
     max-width: calc(100% - 2.8vmin);
@@ -118,7 +116,7 @@
     top: 1.2vmin;
     right: 1.2vmin;
     font-family: 'Lumo p', monospace;
-    font-size: 1.8vmin;
+    
     color: var(--dark);
     background-color: var(--star4);
     width: 3.4vmin;

@@ -113,9 +113,9 @@ const EnkaProfile = () => {
                     onChange={(e) => { setUid(e.target.value); setLocalError(null); }}
                     onKeyDown={handleKeyDown}
                     placeholder={t('profile.enkaMode.uidPlaceholder', { ns: 'ui' })}
-                    className="enka-uid-input"
+                    className="enka-uid-input border p-2 px-4 radius-2"
                 />
-                <button onClick={handleFetch} disabled={isLoading} className="enka-fetch-button">
+                <button onClick={handleFetch} disabled={isLoading} className="enka-fetch-button radius-2 p-1 px-2">
                     {isLoading ? t('profile.enkaMode.loading', { ns: 'ui' }) : t('profile.enkaMode.fetchButton', { ns: 'ui' })}
                 </button>
             </div>

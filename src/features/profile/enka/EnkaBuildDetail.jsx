@@ -39,7 +39,7 @@ const TALENT_KEYS = ['attack', 'skill', 'burst'];
 
 const StatRow = ({ type, value, isPercent }) => (
     <div className="enka-stat-row b p-1">
-        <StatIcon type={type} className="enka-stat-icon" title={getStatDisplayName(type)} />
+        <StatIcon type={type} className="enka-icon" title={getStatDisplayName(type)} />
         <span className="enka-stat-value">{value}{isPercent ? '%' : ''}</span>
     </div>
 );
@@ -52,10 +52,10 @@ const WeaponBlock = ({ weaponInfo }) => {
     const iconSrc = (icon ? `https://enka.network/ui/${icon}.png` : null) ?? weapon?.icon;
 
     return (
-        <div className="enka-detail-block c">
+        <div className="enka-detail-block color">
             <div className="enka-detail-card c">
                 <div className="enka-detail-card-body">
-                    <h2 className="enka-detail-name weapon-name c-r bg-r">
+                    <h2 className="enka-detail-name weapon-name color-r background-r">
                         {weapon?.id ?? `не сопоставлено (enkaId ${enkaItemId})`}
                     </h2>
                     <div className="enka-detail-meta c">
@@ -88,31 +88,37 @@ const ArtifactCard = ({ slot, artifact }) => {
     // деструктурируем и не выводим — см. комментарий у названия сета ниже.
 
     return (
-        <div className="enka-artifact-card b">
-            <div className="enka-artifact-header">
-                {/* Подпись слота ("Цветок"/"Перо"/...) скрыта по просьбе — тип
-                    и так понятен по позиции в сетке и иконке набора. */}
-                <span className="enka-artifact-level">+{level}</span>
-            </div>
-            <div className="enka-artifact-set-name">
-                {artifact.icon && <img loading="lazy" src={`https://enka.network/ui/${artifact.icon}.png`} alt={slot} className='i bg-bl' onError={onErrorHide} />}
-                {/* Название сета скрыто по просьбе — сюда добавляется
-                    сопоставление enkaSetId -> нужный id сета в свои данные.
-                    artifact.enkaSetId доступен в объекте, просто не выводится:
-                    {set ?? (setName ? `${setName} (не сопоставлено, enkaId ${enkaSetId})` : `не сопоставлено (enkaId ${enkaSetId})`)} */}
-            </div>
-            <div className="enka-artifact-rarity b bg-bl p-1 f-c">
+        <div className="enka-artifact-card border">
+            
+            <div className="enka-artifact-rarity border bg-bl p-1 flex-c">
                 {Array.from({ length: artifact?.rarity || 0 }).map((_, i) => (
                                 <svg key={i} className=" rarity-star"><use href="#icon-star-small"></use></svg>
                             ))}
             </div>
-            {mainStat && (
-                <div className="enka-stat-row enka-stat-main">
-                    <StatIcon type={mainStat} className="enka-stat-icon" title={getStatDisplayName(mainStat)} />
+            <div className='flex'>
+                <div className="enka-artifact-set-name border">
+                        {artifact.icon && <img loading="lazy" src={`https://enka.network/ui/${artifact.icon}.png`} alt={slot} className='enka-artifact-icon background-r' onError={onErrorHide} />}
+                        {/* Название сета скрыто по просьбе — сюда добавляется
+                            сопоставление enkaSetId -> нужный id сета в свои данные.
+                            artifact.enkaSetId доступен в объекте, просто не выводится:
+                            {set ?? (setName ? `${setName} (не сопоставлено, enkaId ${enkaSetId})` : `не сопоставлено (enkaId ${enkaSetId})`)} */}
+                    </div>
+                <div className='border flex'>
+                    {mainStat && (
+                <div className="enka-stat-row enka-stat-main border">
+                    <StatIcon type={mainStat} className="enka-icon" title={getStatDisplayName(mainStat)} />
                     <span className="enka-stat-value">{mainStatValue}{isPercentStat(mainStat) ? '%' : ''}</span>
                 </div>
             )}
-            <div className="enka-substats">
+                    <div className="enka-artifact-header">
+                        {/* Подпись слота ("Цветок"/"Перо"/...) скрыта по просьбе — тип
+                            и так понятен по позиции в сетке и иконке набора. */}
+                        <span className="enka-artifact-level">+{level}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div className="enka-substats background-r color-r">
                 {substats.map((s, i) => (
                     <StatRow key={i} type={s.type} value={s.value} isPercent={isPercentStat(s.type)} />
                 ))}
@@ -159,23 +165,25 @@ const EnkaBuildDetail = ({ build }) => {
 
     return (
         <div className="enka-build-detail-wrapper">
-            <div ref={cardRef} className="enka-build-detail enka-card b br-4">
-                <div className={`background background-${character.element}`}></div>
-                <svg className='star '><use href='#icon-star-big'></use></svg>
+            <div ref={cardRef} className="enka-build-detail enka-card border background br-4">
+                <div className={`background-card border background-${character.element}`}></div>
+                <svg className='star color'><use href='#icon-star-big'></use></svg>
                 <svg className={`star2 background-${character.element}`}><use href='#icon-star-big'></use></svg>
-                <article className='left'>
-                    <div className='banner'>
-                        <div className='character-banner wd ov-h'>
-                            <img src={portrait} className="character-img" loading="lazy" onError={onErrorHide} />
-                            <img src={portrait} className="character-back" loading="lazy" onError={onErrorHide} />
-                            <div className={`char-back vision-${character.element}`}></div>
-                        </div>
-                        <div className='p-1 bg-bl f-c c-r rarity'>
-                            {Array.from({ length: character?.rarity || 0 }).map((_, i) => (
-                                <svg key={i} className="rarity-star"><use href="#icon-star-mini"></use></svg>
-                            ))}
-                        </div>
-                        <div className='const b p-1'>
+
+                <article className='top flex'>
+                    <article className='left border'>
+                        <div className='banner'>
+                            <div className='character-banner wd ov-h'>
+                                <img src={portraitLocal} className="character-img" loading="lazy" onError={onErrorHide} />
+                                <img src={portraitLocal} className="character-back" loading="lazy" onError={onErrorHide} />
+                                <div className={`char-back vision-${character.element}`}></div>
+                            </div>
+                            <div className='p-1 background-r border flex-c color-r rarity'>
+                                {Array.from({ length: character?.rarity || 0 }).map((_, i) => (
+                                    <svg key={i} className="rarity-star"><use href="#icon-star-mini"></use></svg>
+                                ))}
+                            </div>
+                        <div className='const border p-1'>
                             {/* созвездия: 6 блоков, иконка + is-active если созвездие открыто */}
                             {[0, 1, 2, 3, 4, 5].map((i) => {
                                 const iconName = constIcons?.[i];
@@ -186,7 +194,7 @@ const EnkaBuildDetail = ({ build }) => {
                                             <img
                                                 src={`https://enka.network/ui/${iconName}.png`}
                                                 alt={`C${i + 1}`}
-                                                className="const-icon"
+                                                className="const-icon background"
                                                 loading="lazy"
                                                 onError={onErrorHide}
                                             />
@@ -197,7 +205,7 @@ const EnkaBuildDetail = ({ build }) => {
                                 );
                             })}
                         </div>
-                        <div className='talent b'>{/* таланты: иконка + уровень, порядок атака/навык/взрыв */}
+                        <div className='talent border'>{/* таланты: иконка + уровень, порядок атака/навык/взрыв */}
                             {TALENT_KEYS.map((key) => {
                                 const talentIcon = character?.talents?.[key]?.icon;
                                 const talentLevel = talents?.[key];
@@ -213,34 +221,37 @@ const EnkaBuildDetail = ({ build }) => {
                                 );
                             })}
                         </div>
-                    </div>
-                    <div className="enka-detail-block artifacts b">
-                        <h4 className="enka-detail-title">Артефакты</h4>
-                        <div className="enka-artifacts-grid">
-                            {['flower', 'plume', 'sands', 'goblet', 'circlet'].map(slot => (
-                                <ArtifactCard key={slot} slot={slot} artifact={artifacts[slot]} />
-                            ))}
                         </div>
-                    </div>
-                </article>
-                <article className='right b'>
+                    </article>
+
+                    <article className='right border'>
                     <article className='character-info'>
-                        <div className="enka-char-summary f-c">
-                            <h1 className="enka-char-name c-p bg-bl">{charName}</h1>
-                            <div className="enka-char-meta c-p f">
-                                <p className='bg-bl m-0 p-1'>[Ур. {level}]</p>
-                                <p className='bg-bl m-0 p-1'>[Дружба {friendshipLevel}]</p>
+                        <div className="enka-char-summary flex-c">
+                            <h1 className="enka-char-name color-r background-r">{charName}</h1>
+                            <div className="enka-char-meta color-r flex">
+                                <p className='background-r p-1'>[Ур. {level}]</p>
+                                <p className='background-r p-1'>[Дружба {friendshipLevel}]</p>
                                 
                             </div>
                         </div>
                         
                     </article>
                     <WeaponBlock weaponInfo={weapon} />
-                    <div className="enka-detail-block b">
+                    <div className="enka-detail-block border">
                         <h4 className="enka-detail-title">Статы</h4>
                         <div className="enka-final-stats">
                             {finalStats.map((s) => (
                                 <StatRow key={s.type} type={s.type} value={s.value} isPercent={isPercentStat(s.type)} />
+                            ))}
+                        </div>
+                    </div>
+                    </article>
+                </article>
+                <article>
+                    <div className="enka-detail-block artifacts b">
+                        <div className="enka-artifacts-grid">
+                            {['flower', 'plume', 'sands', 'goblet', 'circlet'].map(slot => (
+                                <ArtifactCard key={slot} slot={slot} artifact={artifacts[slot]} />
                             ))}
                         </div>
                     </div>

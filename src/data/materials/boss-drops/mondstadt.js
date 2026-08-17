@@ -17,7 +17,16 @@ export const bossDropsMondstadt = [
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
         group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.LIGHTNING_PRISM],
         rarity: RARITY.EPIC
-    }
+    },
+    {
+            id: 'hurricane_seed',
+            sid: 'm178',
+            icon: 'assets/normal-boss/Hurricane_Seed.webp',
+            type: MATERIAL_TYPE.CHARACTER_ASCENTION,
+            group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.HURRICANE_SEED],
+            rarity: RARITY.EPIC
+        }
+    ,
 
 
     

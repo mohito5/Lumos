@@ -18,10 +18,12 @@
 }
 
 .enka-build-detail {
-    display: flex;
+    
+
     position: relative;
     gap: 2cqw;
 }
+ 
 
 .enka-download-button {
     align-self: center;
@@ -39,7 +41,6 @@
 }
 
 .enka-char-name {
-    font-family: 'Lumo H', sans-serif;
     padding: 1cqw; text-overflow: ellipsis; 
     text-align: end;
     font-size: 4cqw;

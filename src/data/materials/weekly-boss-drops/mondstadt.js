@@ -13,7 +13,7 @@ export const weeklyBossDropsMondstadt = [
     {
         id: 'dvalins_plume',
         sid: 'm180',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/weekly-boss/Dvalins_Plume.webp',
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, MATERIAL_GROUP.DVALINS_PLUME],
         rarity: RARITY.LEGENDARY
@@ -30,7 +30,7 @@ export const weeklyBossDropsMondstadt = [
     {
         id: 'tail_of_boreas',
         sid: 'm162',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/weekly-boss/Tail_of_Boreas.webp',
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, MATERIAL_GROUP.TAIL_OF_BOREAS],
         rarity: RARITY.LEGENDARY

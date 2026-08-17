@@ -71,15 +71,7 @@ export const bossDrops = [
         rarity: RARITY.EPIC
     }
 ,
-    {
-        id: 'tail_of_boreas',
-        sid: 'm122',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_TALENT,
-        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'tail_of_boreas'],
-        rarity: RARITY.LEGENDARY
-    }
-,
+    
 
     {
         id: 'juvenile_jade',
@@ -173,15 +165,7 @@ export const bossDrops = [
     }
 ,
     
-    {
-        id: 'ring_of_boreas',
-        sid: 'm164',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_TALENT,
-        group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, 'ring_of_boreas'],
-        rarity: RARITY.LEGENDARY
-    }
-,
+    
     {
         id: 'thunderclap_fruitcore',
         sid: 'm167',
@@ -310,15 +294,7 @@ export const bossDrops = [
         rarity: RARITY.LEGENDARY
     }
 ,
-    {
-        id: 'basalt_pillar',
-        sid: 'm221',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, 'basalt_pillar'],
-        rarity: RARITY.EPIC
-    }
-,
+    
     {
         id: 'tusk_of_monoceros_caeli',
         sid: 'm222',

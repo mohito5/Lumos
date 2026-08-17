@@ -1,6 +1,4 @@
-.enka-profile-page {
-    padding: 3vmin 2.5vmin;
-}
+
 
 .enka-page-title {
     line-height: normal;
@@ -17,27 +15,26 @@
     flex: 1;
     min-width: 0;
     font-family: 'Lumo p', monospace;
-    font-size: 2vmin;
-    padding: 1.5vmin 2vmin;
-    border-radius: 3vmin;
-    border: 1px solid var(--light0-5);
-    background-color: var(--dark);
+    font-size: var(--button);
+    
+    background-color: var(--background);
+    
+    
     color: var(--light);
 }
 
 .enka-uid-input:focus {
-    outline: 2px solid var(--cherry);
+    outline: 2px solid var(--blueberry);
     outline-offset: 1px;
 }
 
 .enka-fetch-button {
-    font-family: 'Lumo H', sans-serif;
     
-    padding: 1.5vmin 3vmin;
-    border-radius: 3vmin;
+    
+    
     border: none;
-    background-color: var(--cherry);
-    color: var(--dark);
+    background-color: var(--blueberry);
+    
     cursor: pointer;
     white-space: nowrap;
     transition: opacity 0.15s ease;
@@ -64,8 +61,8 @@
 }
 
 .enka-showcase-title {
-    font-family: 'Lumo H', sans-serif;
-    color: var(--light);
+    
+    
     
     margin: 0;
 }

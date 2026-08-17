@@ -73,15 +73,6 @@ export const bossDropsOther = [
     }
 ,
     {
-        id: 'hurricane_seed',
-        sid: 'm178',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.HURRICANE_SEED],
-        rarity: RARITY.EPIC
-    }
-,
-    {
         id: 'juvenile_jade',
         sid: 'm181',
         icon: 'assets/tmp256.png',
@@ -208,15 +199,7 @@ export const bossDropsOther = [
         rarity: RARITY.EPIC
     }
 ,
-    {
-        id: 'basalt_pillar',
-        sid: 'm245',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.BASALT_PILLAR],
-        rarity: RARITY.EPIC
-    }
-,
+    
     {
         id: 'crystalline_bloom',
         sid: 'm255',

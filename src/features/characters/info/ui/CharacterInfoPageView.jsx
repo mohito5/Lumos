@@ -80,9 +80,14 @@ const CharacterInfoPageView = ({
                                 <p>{baseAtk}</p>
                             </div>
                         </div>
-                        <div className='justify-between border radius-1 p-1 flex'>
-                            <p>{t('stats:def')}:</p>
-                            <p>{baseDef}</p>
+                        <div className='gap-1 flex'>
+                           <div className='p-1 border radius-1 flex'>
+                                <svg className='icon-md'><use href='#icon-stat-def'></use></svg>
+                            </div>
+                            <div className='flex justify-between border wd p-1 px-2 radius-1'>
+                                <p>{t('stats:def')}:</p>
+                                <p>{baseDef}</p>
+                            </div>
                         </div>
                         {ascensionStat && 
                             <div className='justify-between border radius-1 p-1 flex'>

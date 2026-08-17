@@ -163,7 +163,7 @@ const ProfilePage = () => {
     const calculatorSaves = appData.savedCalculate || [];
 
     return (
-        <div className="profile-page-container border wd">
+        <div className="profile-page-container wd">
             <MasonryGrid>
                 <div className="profile-header">
                     <h1>{t('pages.profile.title')}</h1>

@@ -5,7 +5,7 @@ export const gemsGeo = [
     {
         id: 'prithiva_topaz_sliver',
         sid: 'm236',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/gems/geo/Prithiva_Sliver.webp',
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
         group: [MATERIAL_GROUP.ASCENSION_GEMS, MATERIAL_GROUP.PRITHIVA_TOPAZ],
         rarity: RARITY.UNCOMMON,
@@ -14,7 +14,7 @@ export const gemsGeo = [
     {
         id: 'prithiva_topaz_fragment',
         sid: 'm237',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/gems/geo/Prithiva_Fragment.webp',
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
         group: [MATERIAL_GROUP.ASCENSION_GEMS, MATERIAL_GROUP.PRITHIVA_TOPAZ],
         rarity: RARITY.RARE,
@@ -23,7 +23,7 @@ export const gemsGeo = [
     {
         id: 'prithiva_topaz_chunk',
         sid: 'm238',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/gems/geo/Prithiva_Chunk.webp',
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
         group: [MATERIAL_GROUP.ASCENSION_GEMS, MATERIAL_GROUP.PRITHIVA_TOPAZ],
         rarity: RARITY.EPIC,
@@ -32,7 +32,7 @@ export const gemsGeo = [
     {
         id: 'prithiva_topaz_gemstone',
         sid: 'm239',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/gems/geo/Prithiva_Gemstone.webp',
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
         group: [MATERIAL_GROUP.ASCENSION_GEMS, MATERIAL_GROUP.PRITHIVA_TOPAZ],
         rarity: RARITY.LEGENDARY,

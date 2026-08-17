@@ -29,60 +29,6 @@ export const enemyDrops = [
     }
 ,
     {
-        id: 'treasure_hoarder_insignia',
-        sid: 'm114',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'treasure_hoarder_insignia'],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'silver_raven_insignia',
-        sid: 'm116',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'treasure_hoarder_insignia'],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'golden_raven_insignia',
-        sid: 'm117',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'treasure_hoarder_insignia'],
-        rarity: RARITY.RARE
-    }
-,
-    {
-        id: 'whopperflower_nectar',
-        sid: 'm132',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'whopperflower_nectar'],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'shimmering_nectar',
-        sid: 'm133',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'whopperflower_nectar'],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'energy_nectar',
-        sid: 'm134',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, 'whopperflower_nectar'],
-        rarity: RARITY.RARE
-    }
-,
-    {
         id: 'faded_red_satin',
         sid: 'm143',
         icon: 'assets/tmp256.png',

@@ -8,7 +8,8 @@ export const bossDropsLiyue = [
         icon: 'assets/normal-boss/Everflame_Seed.webp',
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
         group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.EVERFLAME_SEED],
-        rarity: RARITY.EPIC
+        rarity: RARITY.EPIC,
+        region : REGION.LIYUE
     },
     {
         id: 'cleansing_heart',
@@ -16,8 +17,19 @@ export const bossDropsLiyue = [
         icon: 'assets/normal-boss/Cleansing_Heart.webp',
         type: MATERIAL_TYPE.CHARACTER_ASCENTION,
         group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.CLEANSING_HEART],
-        rarity: RARITY.EPIC
+        rarity: RARITY.EPIC,
+        region : REGION.LIYUE
     },
+    {
+            id: 'basalt_pillar',
+            sid: 'm221',
+            icon: 'assets/normal-boss/Basalt_Pillar.webp',
+            type: MATERIAL_TYPE.CHARACTER_ASCENTION,
+            group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, 'basalt_pillar'],
+            rarity: RARITY.EPIC,
+            region : REGION.LIYUE
+        }
+    ,
 
 
 
