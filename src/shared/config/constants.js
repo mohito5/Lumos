@@ -413,6 +413,9 @@ export const MATERIAL_GROUP = {
   REFRACTIVE_BUD: 'refractive_bud',
   BEWILDERING_BROADLEAF: 'bewildering_broadleaf',
   ILLUSORY_LEAFCOIL: 'illusory_leafcoil',
+  GUIDE_TO_GOLD: 'guide_to_gold',
+  GUIDE_TO_PROSPERITY: 'guide_to_prosperity',
+  GUIDE_TO_DILIGENCE: 'guide_to_diligence',
 };
 
 export const LEVEL_MILESTONES = [

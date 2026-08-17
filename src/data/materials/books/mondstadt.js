@@ -15,7 +15,7 @@ export const booksMondstadt = [
     {
         id: 'guide_to_freedom',
         sid: 'm2',
-        icon: 'assets/book/freedom1.png',
+        icon: 'assets/book/freedom2.png',
         farmDays: [DAYS.MONDAY, DAYS.THURSDAY, DAYS.SUNDAY],
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_FREEDOM],
@@ -25,7 +25,7 @@ export const booksMondstadt = [
     {
         id: 'philosophies_of_freedom',
         sid: 'm3',
-        icon: 'assets/book/freedom1.png',
+        icon: 'assets/book/freedom3.png',
         farmDays: [DAYS.MONDAY, DAYS.THURSDAY, DAYS.SUNDAY],
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.TALENT_BOOKS, MATERIAL_GROUP.BOOKS_FREEDOM],

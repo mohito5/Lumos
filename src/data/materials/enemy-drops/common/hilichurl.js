@@ -5,7 +5,7 @@ export const enemyDropsCommonHilichurl = [
     { //mask 
         id: 'damaged_mask',
         sid: 'm157',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/enemy/common/Damaged_Mask.webp',
         type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
         group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DAMAGED_MASK],
         rarity: RARITY.COMMON
@@ -13,7 +13,7 @@ export const enemyDropsCommonHilichurl = [
     {
         id: 'stained_mask',
         sid: 'm159',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/enemy/common/Stained_Mask.webp',
         type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
         group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DAMAGED_MASK],
         rarity: RARITY.UNCOMMON
@@ -21,7 +21,7 @@ export const enemyDropsCommonHilichurl = [
     {
         id: 'ominous_mask',
         sid: 'm160',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/enemy/common/Ominous_Mask.webp',
         type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
         group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DAMAGED_MASK],
         rarity: RARITY.RARE
@@ -48,6 +48,30 @@ export const enemyDropsCommonHilichurl = [
         icon: 'assets/enemy/common/Weathered_Arrowhead.webp',
         type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
         group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.HILICHURL_SHOOTER],
+        rarity: RARITY.RARE
+    },
+    {
+        id: 'divining_scroll',
+        sid: 'm146',
+        icon: 'assets/enemy/common/Divining_Scroll.webp',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SAMACHURL],
+        rarity: RARITY.COMMON
+    },
+    {
+        id: 'sealed_scroll',
+        sid: 'm148',
+        icon: 'assets/enemy/common/Sealed_Scroll.webp',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SAMACHURL],
+        rarity: RARITY.UNCOMMON
+    },
+    {
+        id: 'forbidden_curse_scroll',
+        sid: 'm149',
+        icon: 'assets/enemy/common/Forbidden_Curse_Scroll.webp',
+        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
+        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.SAMACHURL],
         rarity: RARITY.RARE
     },
 ]

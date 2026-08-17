@@ -7,6 +7,7 @@ import { pyro } from './pyro.js';
 import { hydro } from './hydro.js';
 
 import { char_1 } from './char_1.js';
+import { char_2 } from './char_2.js';
 
 /** @type {import('../types.js').Character[]} */
 const allCharacters = [
@@ -17,6 +18,7 @@ const allCharacters = [
     ...cryo,
     ...pyro,
     ...hydro,
+    ...char_2,
     ...char_1
 ];
 

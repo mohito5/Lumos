@@ -10,6 +10,14 @@ export const bossDropsLiyue = [
         group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.EVERFLAME_SEED],
         rarity: RARITY.EPIC
     },
+    {
+        id: 'cleansing_heart',
+        sid: 'm265',
+        icon: 'assets/normal-boss/Cleansing_Heart.webp',
+        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
+        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, MATERIAL_GROUP.CLEANSING_HEART],
+        rarity: RARITY.EPIC
+    },
 
 
 

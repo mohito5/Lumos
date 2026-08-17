@@ -79,33 +79,6 @@ export const enemyDropsCommon = [
     }
 ,
     {
-        id: 'divining_scroll',
-        sid: 'm146',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DIVINING_SCROLL],
-        rarity: RARITY.COMMON
-    }
-,
-    {
-        id: 'sealed_scroll',
-        sid: 'm148',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DIVINING_SCROLL],
-        rarity: RARITY.UNCOMMON
-    }
-,
-    {
-        id: 'forbidden_curse_scroll',
-        sid: 'm149',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_WEAPON_ENHANCEMENT,
-        group: [MATERIAL_GROUP.COMMON_ENEMY_DROPS, MATERIAL_GROUP.DIVINING_SCROLL],
-        rarity: RARITY.RARE
-    }
-,
-    {
         id: 'juvenile_fang',
         sid: 'm164',
         icon: 'assets/tmp256.png',

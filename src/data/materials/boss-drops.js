@@ -419,15 +419,6 @@ export const bossDrops = [
     }
 ,
     {
-        id: 'cleansing_heart',
-        sid: 'm265',
-        icon: 'assets/tmp256.png',
-        type: MATERIAL_TYPE.CHARACTER_ASCENTION,
-        group: [MATERIAL_GROUP.NORMAL_BOSS_DROPS, 'cleansing_heart'],
-        rarity: RARITY.EPIC
-    }
-,
-    {
         id: 'perpetual_caliber',
         sid: 'm267',
         icon: 'assets/tmp256.png',

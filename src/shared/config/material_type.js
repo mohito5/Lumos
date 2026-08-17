@@ -37,7 +37,7 @@ export const MATERIAL_GROUP = {
   NOBUSHI_HANDGUARDS: 'nobushi_handguards',
   DAMAGED_MASK: 'damaged_mask',
   HILICHURL_SHOOTER: 'Hilichurl Shooter',
-  SAMACHURL_SCROLLS: 'samachurl_scrolls',
+  SAMACHURL: 'samachurl',
   SLIME_MATERIALS: 'slime_materials',
   HUMANOID_RUIN_MACHINE: 'humanoid_ruin_machine',
   TREASURE_HOARDER: 'treasure_hoarder',
@@ -84,6 +84,9 @@ export const MATERIAL_GROUP = {
   CECILIA: 'cecilia',
   CALLA_LILY: 'calla_lily',
   VALBERRY: 'valberry',
+  PHILANEMO_MUSHROOM: 'philanemo_mushroom',
+
+  JUEYUN_CHILI: 'jueyun_chili',
 
   // Specific talent books group
   BOOKS_FREEDOM: 'books_of_freedom',
@@ -104,6 +107,7 @@ export const MATERIAL_GROUP = {
 
 
   // Specific normal boss drops group
+  CLEANSING_HEART: 'cleansing_heart',
   EVERFLAME_SEED: 'everflame_seed',
   HOARFROST_CORE: 'hoarfrost_core',
   LIGHTNING_PRISM: 'lightning_prism',
@@ -114,6 +118,7 @@ export const MATERIAL_GROUP = {
   DVALINS_SIGH: 'dvalins_sigh',
   DVALINS_CLAW: 'dvalins_claw',
   SPIRIT_LOCKET_OF_BOREAS: 'spirit_locket_of_boreas',
+  RING_OF_BOREAS: 'ring_of_boreas',
   PRISMATIC_SEVERED_TAIL: 'prismatic_severed_tail',
   ASCENDED_SAMPLE_QUEEN: 'ascended_sample_queen'
 };

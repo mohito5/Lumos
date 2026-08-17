@@ -70,7 +70,7 @@ export const localSpecialtyMondstadt = [
     {
         id: 'philanemo_mushroom',
         sid: 'm260',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/local-spec/Philanemo_Mushroom.webp',
         type: MATERIAL_TYPE.LOCAL_SPECIALTY,
         group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.PHILANEMO_MUSHROOM],
         rarity: RARITY.COMMON,

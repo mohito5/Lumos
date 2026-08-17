@@ -9,6 +9,7 @@ export const geo = [
     element: VISION.GEO,
     weapon: WEAPON_TYPE.SWORD,
     birthday: '8-17',
+    avatar: 'assets/avatar/Chiori_Profile.webp',
     avatar_icon: 'assets/avatar-icon/chiori_icon.png',
     baseStats: {
         [STATS.HP]: [890.4, 2309.7, 5140.8, 6637.9, 7962.1, 9293.4, 10633.6, 11437.7],

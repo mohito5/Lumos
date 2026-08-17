@@ -46,7 +46,7 @@ export const weeklyBossDropsMondstadt = [
     {
         id: 'ring_of_boreas',
         sid: 'm205',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/weekly-boss/Ring_of_Boreas.webp',
         type: MATERIAL_TYPE.CHARACTER_TALENT,
         group: [MATERIAL_GROUP.WEEKLY_BOSS_DROPS, MATERIAL_GROUP.RING_OF_BOREAS],
         rarity: RARITY.LEGENDARY

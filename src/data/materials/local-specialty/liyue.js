@@ -1,4 +1,5 @@
-import { RARITY, VISION, WEAPON_TYPE, MATERIAL_TYPE, MATERIAL_GROUP, REGION } from "../../../shared/config/constants.js";
+import { RARITY, REGION } from "../../../shared/config/constants.js";
+import { MATERIAL_TYPE, MATERIAL_GROUP } from "../../../shared/config/material_type.js";
 
 export const localSpecialtyLiyue = [
 
@@ -41,12 +42,11 @@ export const localSpecialtyLiyue = [
     {
         id: 'jueyun_chili',
         sid: 'm234',
-        icon: 'assets/tmp256.png',
+        icon: 'assets/local-spec/Jueyun_Chili.webp',
         type: MATERIAL_TYPE.LOCAL_SPECIALTY,
         group: [MATERIAL_GROUP.LOCAL_SPECIALTIES, MATERIAL_GROUP.JUEYUN_CHILI],
         rarity: RARITY.COMMON
-    }
-,
+    },
     {
         id: 'glaze_lily',
         sid: 'm248',
